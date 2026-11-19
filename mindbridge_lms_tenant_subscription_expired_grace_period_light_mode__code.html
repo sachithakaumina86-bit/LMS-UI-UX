@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>MindBridge LMS</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-bright":"#faf8ff","inverse-surface":"#25304a","secondary-fixed":"#dbe1ff","surface":"#faf8ff","on-primary-fixed":"#001b3f","on-primary-container":"#fefcff","primary":"#005ab6","surface-container-low":"#f2f3ff","tertiary-fixed-dim":"#ffb952","tertiary":"#7f5300","secondary":"#4d5c8e","on-tertiary-container":"#fffbff","inverse-on-surface":"#eef0ff","on-tertiary-fixed-variant":"#633f00","on-primary-fixed-variant":"#00458f","surface-tint":"#005cba","on-surface":"#101b34","on-secondary-fixed-variant":"#354575","on-secondary":"#ffffff","tertiary-container":"#a06900","surface-container-highest":"#d9e2ff","inverse-primary":"#abc7ff","outline":"#717785","on-surface-variant":"#414754","on-tertiary-fixed":"#291800","surface-variant":"#d9e2ff","primary-container":"#0072e4","on-error":"#ffffff","on-primary":"#ffffff","surface-container-high":"#e1e7ff","surface-dim":"#cfd9fb","on-background":"#101b34","primary-fixed":"#d7e3ff","error":"#ba1a1a","surface-container-lowest":"#ffffff","tertiary-fixed":"#ffddb4","secondary-fixed-dim":"#b5c5fd","background":"#faf8ff","on-tertiary":"#ffffff","outline-variant":"#c1c6d6","on-error-container":"#93000a","primary-fixed-dim":"#abc7ff","error-container":"#ffdad6","secondary-container":"#b5c5fd","on-secondary-fixed":"#041847","surface-container":"#eaedff","on-secondary-container":"#405081"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-mobile":"1rem","gutter-mobile":"1rem","space-lg":"1.5rem","space-xl":"2rem",margin:"2rem",gutter:"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","space-md":"1rem"},fontFamily:{"label-sm":["Inter"],"body-lg":["Inter"],"display-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"],title:["Plus Jakarta Sans"],display:["Plus Jakarta Sans"],"label-lg":["Inter"]},fontSize:{"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"display-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],title:["16px",{lineHeight:"24px",fontWeight:"600"}],display:["44px",{lineHeight:"52px",letterSpacing:"-0.02em",fontWeight:"800"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter"><div class="flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><span class="font-title text-title text-on-surface tracking-tight hidden sm:inline-block">MindBridge LMS</span></div><nav class="hidden lg:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-lg shadow-sm"><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="student-portal" href="#">Student Portal</a><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-primary-container text-on-primary-container font-label-lg text-label-lg rounded-lg shadow-sm" data-path="my-courses" href="#">My Courses</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="invoices-and-slips" href="#">Invoices & Slips</a><a class="px-space-md py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors" data-path="support" href="#">Support</a></nav></div><div class="flex-1 max-w-md hidden md:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px]">search</span><input class="w-full pl-10 pr-4 py-1.5 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search courses, modules, invoices..." type="text"/></div></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface"></span></button><div class="flex items-center gap-space-sm pl-space-xs border-l border-outline-variant"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">K. Perera</span><span class="font-label-sm text-[10px] text-primary leading-tight font-medium">Student • Colombo</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-140px)]"><div class="flex flex-col w-full">
+<!-- Subtle decorative ambient glow backdrops (constrained) -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 -right-24 w-96 h-96 bg-primary-fixed-dim/40 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-80 -left-20 w-80 h-80 bg-tertiary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="w-full px-margin py-space-lg flex flex-col gap-space-lg relative z-10">
+<!-- 1. Top Prominent Notice Bar (Grace Period Active) -->
+<section class="w-full bg-surface-container-lowest rounded-xl shadow-md overflow-hidden relative" style="border-top-right-radius: 28px;">
+<div class="w-full bg-tertiary text-on-tertiary px-space-md py-space-sm flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-label-lg text-label-lg tracking-wide uppercase">Academy Subscription Inactive — Grace Period Active</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs font-label-md text-label-md bg-on-tertiary/15 px-3 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[16px]">lock_clock</span>
+<span>Day 9 of 30 Calendar Days</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md bg-gradient-to-r from-surface-container-low via-surface-container-lowest to-surface-container-lowest">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center flex-shrink-0 text-tertiary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">hourglass_top</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface">Apex Combined Mathematics</span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm px-2 py-0.5 rounded">Tenant ID: APX-CMB-2024</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                Your annual plan for Apex Combined Mathematics expired on <span class="font-semibold text-on-surface">Nov 15, 2025</span>. In accordance with MindBridge governance, all student records, marks, and course syllabi remain <span class="text-primary font-medium">100% safe, encrypted, and preserved</span>. No destructive data purging occurs.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full lg:w-auto justify-end flex-wrap">
+<a class="px-space-md py-2.5 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg hover:bg-primary-container shadow-sm transition-all flex items-center gap-space-xs" href="#renewal-section">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Submit Payment Proof</span>
+</a>
+<a class="px-space-md py-2.5 bg-surface-container-high text-on-surface rounded-lg font-label-lg text-label-lg hover:bg-surface-container-highest transition-all flex items-center gap-space-xs" href="#export-section">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Instant Data Backup</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 2. Central Grace Period Management Console -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Panel: Subscription Status, Data Safety & Exports (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Zero Data Loss Guarantee Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md relative overflow-hidden" style="border-top-right-radius: 24px;">
+<div class="flex items-center justify-between flex-wrap gap-space-sm pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-error-container text-error font-label-md text-label-md font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+                  EXPIRED
+                </span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Grace Period Day 9 of 30</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Storage Vault: Active & Secure</span>
+</div>
+<!-- Guarantee Banner -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[32px]">shield_with_heart</span>
+</div>
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-title text-title text-on-surface">Zero Data Loss Guarantee</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  MindBridge never automatically deletes tenant databases. Your student enrolments (<strong class="text-on-surface">1,248 students</strong>), exam question banks (<strong class="text-on-surface">4,890 questions</strong>), and past gradebooks remain totally intact and exportable at all times.
+                </p>
+</div>
+</div>
+<!-- Metric Snapshot Grid -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-xs">
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col text-center">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">1,248</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Students</span>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col text-center">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">4,890</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Exam Questions</span>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col text-center">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">24</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gradebooks (Term 1-3)</span>
+</div>
+</div>
+<!-- Read-Only & Access Matrix -->
+<div class="flex flex-col gap-space-sm pt-space-sm">
+<span class="font-label-lg text-label-lg text-on-surface">Grace Period Operational Status</span>
+<div class="flex flex-col gap-space-xs">
+<!-- Status Row 1 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">folder_shared</span>
+<span class="font-body-md text-body-md text-on-surface">Student Database & Marks Reports</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock_open</span> Fully Accessible
+                  </span>
+</div>
+<!-- Status Row 2 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">history_edu</span>
+<span class="font-body-md text-body-md text-on-surface">Syllabus & Lesson Archive</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock_open</span> Fully Accessible
+                  </span>
+</div>
+<!-- Status Row 3 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm opacity-80">
+<span class="material-symbols-outlined text-outline text-[20px]">videocam_off</span>
+<span class="font-body-md text-body-md text-on-surface">New Enrolments & Video Streaming</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-error-container/60 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pause_circle</span> Temporarily Paused
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Export Console -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md" id="export-section">
+<div class="flex items-start justify-between flex-wrap gap-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Export Complete Academy Data</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Download certified uncorrupted archives anytime during grace retention.</span>
+</div>
+<button class="px-space-md py-2 bg-secondary text-on-secondary rounded-lg font-label-md text-label-md hover:opacity-95 shadow-sm transition-all flex items-center gap-space-xs" id="exportAllBtn" onclick="triggerBatchExport()" type="button">
+<span class="material-symbols-outlined text-[18px]">archive</span>
+<span>Download All (ZIP • 84.2 MB)</span>
+</button>
+</div>
+<!-- Export Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Download Item 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">group</span>
+</div>
+<span class="font-title text-title text-on-surface">Student Enrolments</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Full roster, parent contacts, national IDs & batch tags.</span>
+</div>
+<button class="w-full py-2 bg-surface-container-lowest text-primary font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1" onclick="showFeedback('Student Enrolments CSV export started.')" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span> CSV (3.4 MB)
+                </button>
+</div>
+<!-- Download Item 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">table_chart</span>
+</div>
+<span class="font-title text-title text-on-surface">Marks Ledger</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Term test papers, quiz scores & statistical percentile tables.</span>
+</div>
+<button class="w-full py-2 bg-surface-container-lowest text-tertiary font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1" onclick="showFeedback('Marks Ledger Excel export started.')" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span> Excel (12.1 MB)
+                </button>
+</div>
+<!-- Download Item 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex flex-col gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">data_object</span>
+</div>
+<span class="font-title text-title text-on-surface">Course Structure</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Question schemas, lesson plans, LaTeX equations & notes.</span>
+</div>
+<button class="w-full py-2 bg-surface-container-lowest text-secondary font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1" onclick="showFeedback('Course Structure JSON export started.')" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span> JSON (68.7 MB)
+                </button>
+</div>
+</div>
+<div class="hidden p-3 rounded-lg bg-surface-container-high text-on-surface font-body-sm text-body-sm flex items-center gap-2" id="toastNotification">
+<span class="material-symbols-outlined text-primary text-[18px]">info</span>
+<span id="toastText">Preparing export package...</span>
+</div>
+</div>
+</div>
+<!-- Right Panel: Manual Subscription Renewal via Bank Transfer (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md" id="renewal-section">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Renew Academy Subscription</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Self-Service</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Direct bank transfer or online deposit renewal. Accounts are re-activated instantly once slip verification is logged.
+              </p>
+</div>
+<!-- Price Tier Switcher / Selector -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase font-semibold">Selected Plan Tier</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">15% SAVINGS APPLIED</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">LKR 120,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant"> / Year</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">or LKR 12,000/mo</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-full"></div>
+</div>
+</div>
+<!-- MindBridge Corporate Bank Account Details -->
+<div class="p-space-md rounded-xl bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-title text-title text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">account_balance</span>
+                  Bank Deposit Details
+                </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sri Lanka (LKR)</span>
+</div>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm pt-1">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Bank:</span>
+<span class="font-semibold text-on-surface text-right">Bank of Ceylon (BOC)</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Beneficiary:</span>
+<span class="font-semibold text-on-surface text-right">MindBridge Technologies (Pvt) Ltd</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Account Number:</span>
+<div class="flex items-center gap-1">
+<span class="font-mono font-bold text-primary tracking-wide">8492 0184 9283</span>
+<button class="text-outline hover:text-primary transition-colors" onclick="navigator.clipboard.writeText('849201849283'); alert('Account number copied!');" title="Copy Account Number" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Branch Code:</span>
+<span class="font-medium text-on-surface">018 (Bambalapitiya Corporate)</span>
+</div>
+</div>
+</div>
+<!-- Slip Submission Form -->
+<form class="flex flex-col gap-space-md pt-space-xs" onsubmit="handleSlipSubmit(event)">
+<!-- Dropzone -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Payment Slip or e-Receipt (PDF, PNG, JPG)</label>
+<div class="w-full p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col items-center justify-center text-center cursor-pointer relative group" onclick="document.getElementById('slipInput').click();">
+<input accept="image/*,.pdf" class="hidden" id="slipInput" onchange="fileSelected(this)" type="file"/>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-2">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-medium" id="uploadLabelText">Click or Drag & Drop Deposit Slip</span>
+<span class="font-body-sm text-body-sm text-outline">Max size 15 MB • Clear transaction stamp required</span>
+</div>
+</div>
+<!-- Inputs: Reference No & Date -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="txnRef">Txn / Slip Reference No.</label>
+<input class="w-full px-3 py-2 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="txnRef" placeholder="e.g. BOC-TXN-93821" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="pmtDate">Payment Date</label>
+<input class="w-full px-3 py-2 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="pmtDate" required="" type="date"/>
+</div>
+</div>
+<!-- Notes field -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="payerNotes">Academy Contact / Notes (Optional)</label>
+<input class="w-full px-3 py-2 bg-surface-container-lowest rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="payerNotes" placeholder="e.g. Deposited by Apex Admin Treasurer" type="text"/>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-3 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg hover:bg-primary-container shadow-md transition-all flex items-center justify-center gap-space-xs" id="submitRenewalBtn" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Submit Renewal for Super Admin Review</span>
+</button>
+<div class="hidden p-3 rounded-lg bg-surface-container-high text-primary font-body-sm text-body-sm flex items-center gap-2" id="submitSuccessMsg">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Receipt submitted! Priority verification queued (ETA: under 2 hours).</span>
+</div>
+</form>
+</div>
+<!-- Quick FAQ Accordion Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">help_center</span>
+              Subscription Retention FAQ
+            </span>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<details class="cursor-pointer">
+<summary class="font-medium text-on-surface hover:text-primary">What happens when Day 30 ends?</summary>
+<p class="pt-1.5 pl-3 border-l-2 border-primary text-on-surface-variant">
+                  Your tenant transitions into Deep Vault Archive mode. Your files remain stored securely, but export utilities require manual unlock via Super Admin ticket. MindBridge never executes automated bulk deletion.
+                </p>
+</details>
+<details class="cursor-pointer">
+<summary class="font-medium text-on-surface hover:text-primary">Can students log in during grace?</summary>
+<p class="pt-1.5 pl-3 border-l-2 border-primary text-on-surface-variant">
+                  Students see a friendly maintenance splash screen informing them that term enrollment updates are underway. Their exam submission history remains preserved.
+                </p>
+</details>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Urgent Support & Super Admin Help Strip -->
+<section class="w-full bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title text-title text-on-surface">Need an extension or have questions about customized enterprise features?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Our Colombo-based operations desk handles institutional invoicing, government purchase orders, and multi-branch tiers.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full lg:w-auto justify-end flex-wrap">
+<a class="px-space-md py-2.5 bg-surface-container text-on-surface font-label-md text-label-md rounded-lg hover:bg-surface-container-high transition-colors flex items-center gap-space-xs" href="#">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+<span>Message Super Admin Support</span>
+</a>
+<a class="px-space-md py-2.5 bg-[#25D366] text-white font-label-md text-label-md rounded-lg hover:opacity-90 shadow-sm transition-all flex items-center gap-space-xs" href="https://wa.me/94771234567" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Direct WhatsApp Line (+94 77 123 4567)</span>
+</a>
+</div>
+</section>
+<!-- Institutional Compliance Note Footer Indicator -->
+<div class="w-full flex items-center justify-center text-center py-space-xs">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>MindBridge LMS Cloud Infrastructure • Non-destructive tenant retention policy compliant with Sri Lanka Digital Education Guidelines.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive behavior script -->
+<script>
+    function triggerBatchExport() {
+      const btn = document.getElementById('exportAllBtn');
+      const toast = document.getElementById('toastNotification');
+      const toastText = document.getElementById('toastText');
+      
+      btn.disabled = true;
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Compressing Vault...`;
+      
+      toast.classList.remove('hidden');
+      toastText.innerText = "Generating encrypted package (Apex_Combined_Maths_Vault_2025.zip)...";
+
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">check_circle</span> Archive Ready (84.2 MB)`;
+        toastText.innerText = "Download ready! Archive verified with SHA-256 checksum.";
+      }, 1800);
+    }
+
+    function showFeedback(msg) {
+      const toast = document.getElementById('toastNotification');
+      const toastText = document.getElementById('toastText');
+      toast.classList.remove('hidden');
+      toastText.innerText = msg;
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3500);
+    }
+
+    function fileSelected(input) {
+      if (input.files && input.files[0]) {
+        const fileName = input.files[0].name;
+        document.getElementById('uploadLabelText').innerText = 'Selected: ' + fileName;
+      }
+    }
+
+    function handleSlipSubmit(event) {
+      event.preventDefault();
+      const btn = document.getElementById('submitRenewalBtn');
+      const success = document.getElementById('submitSuccessMsg');
+      
+      btn.disabled = true;
+      btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> Verifying Transfer Data...`;
+      
+      setTimeout(() => {
+        btn.classList.add('hidden');
+        success.classList.remove('hidden');
+      }, 1400);
+    }
+
+    // Set default payment date to today
+    document.addEventListener('DOMContentLoaded', () => {
+      const pmtInput = document.getElementById('pmtDate');
+      if (pmtInput) {
+        const today = new Date().toISOString().split('T')[0];
+        pmtInput.value = today;
+      }
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant py-space-xl"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-gutter"><div class="flex flex-col gap-space-xs text-center md:text-left"><div class="flex items-center justify-center md:justify-start gap-space-sm"><span class="font-title text-body-md text-on-surface font-bold">MindBridge LMS Enterprise</span><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-secondary-container font-label-sm text-[10px]">v3.4-LK</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 MindBridge Education Technologies (Pvt) Ltd. All rights reserved. Registered under the Tertiary and Vocational Education Commission (TVEC), Sri Lanka.</p></div><div class="flex flex-wrap items-center justify-center gap-gutter"><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant"><span class="material-symbols-outlined text-primary text-[18px]">verified_user</span><div class="text-left"><div class="font-label-sm text-[10px] text-on-surface font-bold uppercase tracking-wide">ISO/IEC 27001</div><div class="font-label-sm text-[9px] text-on-surface-variant">Information Security Certified</div></div></div><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant"><span class="material-symbols-outlined text-secondary text-[18px]">policy</span><div class="text-left"><div class="font-label-sm text-[10px] text-on-surface font-bold uppercase tracking-wide">PDPA Compliant</div><div class="font-label-sm text-[9px] text-on-surface-variant">Sri Lanka Data Protection Act</div></div></div><div class="flex items-center gap-space-md"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><span class="text-outline-variant">•</span><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms</a></div></div></div></footer></body></html>

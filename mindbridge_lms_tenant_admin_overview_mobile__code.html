@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MindBridge LMS</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f2f3ff", "on-background": "#101b34", "on-primary-fixed-variant": "#00458f", "on-primary-container": "#fefcff", "error": "#ba1a1a", "on-secondary-container": "#405081", "primary-fixed-dim": "#abc7ff", "secondary": "#4d5c8e", "tertiary-fixed-dim": "#ffb952", "inverse-surface": "#25304a", "surface-container-highest": "#d9e2ff", "on-secondary-fixed": "#041847", "primary-fixed": "#d7e3ff", "primary-container": "#0072e4", "surface-container-lowest": "#ffffff", "surface-container": "#eaedff", "on-primary": "#ffffff", "outline": "#717785", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#354575", "surface-tint": "#005cba", "primary": "#005ab6", "surface-variant": "#d9e2ff", "surface-dim": "#cfd9fb", "outline-variant": "#c1c6d6", "secondary-fixed-dim": "#b5c5fd", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#633f00", "on-error": "#ffffff", "tertiary-fixed": "#ffddb4", "tertiary-container": "#a06900", "on-tertiary-fixed": "#291800", "on-tertiary-container": "#fffbff", "on-tertiary": "#ffffff", "surface-container-high": "#e1e7ff", "surface": "#faf8ff", "background": "#faf8ff", "surface-bright": "#faf8ff", "on-error-container": "#93000a", "secondary-fixed": "#dbe1ff", "on-surface": "#101b34", "secondary-container": "#b5c5fd", "inverse-primary": "#abc7ff", "inverse-on-surface": "#eef0ff", "on-surface-variant": "#414754", "on-primary-fixed": "#001b3f", "tertiary": "#7f5300" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xl": "2rem", "margin": "2rem", "space-xs": "0.25rem", "space-md": "1rem" }, "fontFamily": { "display-mobile": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Inter"], "body-md": ["Inter"], "display": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "title": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "display-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "display": ["44px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}], "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "title": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5 min-w-0"><span class="font-title text-title text-on-surface truncate tracking-tight">MindBridge</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed shrink-0 font-semibold">Admin</span></div><div class="flex items-center gap-1 min-w-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Apex Combined Mathematics • Tenant Admin</span><span class="material-symbols-outlined text-[13px] text-on-surface-variant shrink-0">unfold_more</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center relative rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 min-w-[16px] h-4 px-1 rounded-full bg-error text-on-error font-label-sm text-[10px] leading-4 text-center font-bold flex items-center justify-center">5</span></button><div class="flex items-center gap-1 pl-1 cursor-pointer"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Modals / Overlay Container -->
+<div class="fixed top-20 left-4 right-4 z-50 transform -translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 p-3.5 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl" id="quickActionToast">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Action completed successfully</span>
+</div>
+<div class="px-gutter-mobile py-space-md flex flex-col gap-space-lg">
+<!-- Executive Identity & Operational Header -->
+<section class="flex flex-col gap-space-sm">
+<!-- Tenant Branch Selector & Live Status Pill -->
+<div class="flex items-center justify-between gap-2">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-variant transition-colors shadow-sm" id="branchSwitchBtn">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md font-semibold truncate max-w-[210px]">Colombo Hub (Rotary &amp; Web)</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span>
+</button>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">schedule</span>
+<span>18:15 SLST</span>
+</div>
+</div>
+<!-- Institute Operational Command Greeting Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="absolute -right-10 -bottom-10 w-36 h-36 rounded-full bg-primary-fixed opacity-40 blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-3 relative z-10">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="px-2 py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-bold">LMS Core v4.2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">• Tenant Isolated</span>
+</div>
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">Institute Operations</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ayubowan, Mr. Samantha Perera <span class="text-primary font-semibold">(Managing Registrar)</span></p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[26px]">domain_verification</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Priority Alerts & Administrative Drawer -->
+<section class="flex flex-col gap-2.5">
+<!-- Bank Slip Action Alert Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-3 relative overflow-hidden">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[22px]" style="font-variation-settings: 'FILL' 1;">priority_high</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold">Action Required</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">SLA: 1.8 hrs remaining</span>
+</div>
+<h2 class="font-title text-title text-on-surface mt-1">18 Bank Slips Pending Audit</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Must be cleared prior to the 8:00 PM Live Broadcast unlock for 2025 A/L students.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-11 px-4 rounded-lg bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-[0.98]" onclick="triggerToast('Opening Bank Slip Reconciliation Queue...')">
+<span>Review Slips Queue</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button aria-label="Refresh gateway status" class="h-11 w-11 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors shrink-0" onclick="triggerToast('Automated Bank Bot pinged')">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+</button>
+</div>
+</div>
+<!-- Low SMS Quota Notice -->
+<div class="rounded-xl bg-surface-container-low px-3.5 py-3 flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">sms</span>
+<div class="flex flex-col min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-semibold truncate">SMS Gateway: 340 Units</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] truncate">Dialog &amp; Mobitel OTP pipeline low</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold hover:bg-secondary-container transition-colors shrink-0" onclick="triggerToast('Navigating to SMS Top-up portal')">
+          Recharge
+        </button>
+</div>
+</section>
+<!-- High-Impact KPI Matrix (2x2 Grid) -->
+<section class="flex flex-col gap-2">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Operational Metrics</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live Sync Active</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Metric 1: Total Enrollment -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-container-high text-primary font-bold">+42 m/m</span>
+</div>
+<div class="mt-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Active Students</span>
+<div class="font-headline-sm text-headline-sm text-on-surface tracking-tight mt-0.5">1,420</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="font-body-sm text-[11px]">98.2% attendance</span>
+</div>
+</div>
+</div>
+<!-- Metric 2: Monthly Inflow -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-bold">94%</span>
+</div>
+<div class="mt-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Inflow (LKR)</span>
+<div class="font-headline-sm text-headline-sm text-on-surface tracking-tight mt-0.5">6.39M</div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="font-body-sm text-[11px]">Target: 6.80M</span>
+</div>
+</div>
+</div>
+<!-- Metric 3: Pending Slips -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold">Urgent</span>
+</div>
+<div class="mt-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Bank Slips</span>
+<div class="font-headline-sm text-headline-sm text-on-surface tracking-tight mt-0.5">18 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">Pending</span></div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="font-body-sm text-[11px]">Commercial &amp; BOC</span>
+</div>
+</div>
+</div>
+<!-- Metric 4: Staff Active -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-bold">Starter</span>
+</div>
+<div class="mt-3">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Staff Allocation</span>
+<div class="font-headline-sm text-headline-sm text-on-surface tracking-tight mt-0.5">2 / 2 <span class="font-body-sm text-body-sm text-on-surface-variant font-normal">Seats</span></div>
+<div class="flex items-center gap-1 mt-1 text-on-surface-variant">
+<span class="font-body-sm text-[11px]">100% capacity</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Action Launchpad -->
+<section class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Administrative Quick Actions</h3>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-16 p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors shadow-sm flex items-center gap-3 text-left" onclick="triggerToast('Launching Bank Slip OCR Reader...')">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">document_scanner</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Verify Slip</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Direct OCR scan</span>
+</div>
+</button>
+<button class="h-16 p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors shadow-sm flex items-center gap-3 text-left" onclick="triggerToast('Generating Physical Smart NFC Pass...')">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">contactless</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Issue ID Pass</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">QR / NFC print</span>
+</div>
+</button>
+<button class="h-16 p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors shadow-sm flex items-center gap-3 text-left" onclick="triggerToast('Opening SMS Broadcast Composer...')">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface shrink-0">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">SMS to Parents</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Class reschedule alerts</span>
+</div>
+</button>
+<button class="h-16 p-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors shadow-sm flex items-center gap-3 text-left" onclick="triggerToast('Compiling General Ledger PDF (LKR)...')">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Export Ledger</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">CSV &amp; PDF reports</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Batch Enrollment & Hall Physical Quota Tracker -->
+<section class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between px-1">
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Capacity Monitoring</h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Rotary Hall &amp; Cloud Stream concurrent load</p>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">2 Batches</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Batch 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed w-fit font-bold mb-1">A/L 2025 Theory</span>
+<h4 class="font-title text-title text-on-surface leading-tight">Combined Maths: Mechanics &amp; Calc</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Hall A (Colombo 07) + Web Stream</p>
+</div>
+<span class="font-label-md text-label-md font-bold px-2.5 py-1 rounded-full bg-surface-container text-primary shrink-0">
+              89% Filled
+            </span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 89%;"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-[12px] text-on-surface-variant">
+<span>890 Confirmed Students</span>
+<span class="font-semibold text-on-surface">Cap: 1,000</span>
+</div>
+</div>
+</div>
+<!-- Batch 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed w-fit font-bold mb-1">A/L 2026 Foundation</span>
+<h4 class="font-title text-title text-on-surface leading-tight">Pure Mathematics: Logic &amp; Algebra</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Rotary Main Auditorium + Hybrid</p>
+</div>
+<span class="font-label-md text-label-md font-bold px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shrink-0">
+              88% Filled
+            </span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="w-full bg-surface-container-high h-2.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full transition-all duration-500" style="width: 88%;"></div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-[12px] text-on-surface-variant">
+<span>530 Confirmed Students</span>
+<span class="font-semibold text-on-surface">Cap: 600</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Audit Log Stream -->
+<section class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-label-lg text-label-lg text-on-surface font-bold uppercase tracking-wider">Security &amp; Audit Log</h3>
+<button class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-0.5" onclick="triggerToast('Filtering audit trail...')">
+<span>Full Log</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-3">
+<!-- Log 1 -->
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">receipt</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Slip #APX-9821 Approved</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant shrink-0">18:04 SLST</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant truncate">LKR 4,500 BOC transfer confirmed for Kavindu M.</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-[10px]">Staff: Sandun (Cashier)</span>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Log 2 -->
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Branch Migration Executed</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant shrink-0">17:42 SLST</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant truncate">SL-LRN-90214 moved Colombo Hub → Kandy Branch</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-[10px]">Staff: Samantha (Registrar)</span>
+</div>
+</div>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<!-- Log 3 -->
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">pin</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Physical ID Card Re-Issued</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant shrink-0">16:55 SLST</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant truncate">NFC Card ID #8841-A reprinted (Lost replacement fee charged)</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-[10px]">Terminal #01 (Gate 2)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Multi-Tenant Support & Sri Lanka Hotline Footer -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-2 text-center items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">MindBridge Cloud Multi-Tenant SLA</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Enterprise isolation guaranteed. Sinhala / English dual ticketing line: +94 11 759 2000</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function triggerToast(msg) {
+    const toast = document.getElementById('quickActionToast');
+    const toastMsg = document.getElementById('toastMessage');
+    if (!toast || !toastMsg) return;
+    
+    toastMsg.textContent = msg;
+    toast.classList.remove('-translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('-translate-y-24', 'opacity-0');
+    }, 2400);
+  }
+
+  // Branch Switcher micro-toggle
+  const branchBtn = document.getElementById('branchSwitchBtn');
+  if (branchBtn) {
+    let toggled = false;
+    branchBtn.addEventListener('click', () => {
+      toggled = !toggled;
+      const textSpan = branchBtn.querySelector('span:nth-child(2)');
+      if (textSpan) {
+        textSpan.textContent = toggled ? 'Kandy Central Campus (Gateway)' : 'Colombo Hub (Rotary & Web)';
+      }
+      triggerToast(toggled ? 'Switched view to Kandy Central Branch' : 'Switched view to Colombo Hub');
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(16,27,52,0.06)]" data-active-classes="text-primary font-bold"><div class="flex items-stretch justify-around h-16 px-space-xs"><a aria-current="page" class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] transition-all text-primary font-bold" data-path="overview" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-md text-label-md">Overview</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all relative" data-path="financials" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span class="absolute -top-1 -right-2.5 w-4 h-4 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-[10px] leading-none flex items-center justify-center font-bold">3</span></div><span class="font-label-md text-label-md">Financials</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all" data-path="students" href="#"><span class="material-symbols-outlined text-[24px]">badge</span><span class="font-label-md text-label-md">Students</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all" data-path="staff" href="#"><span class="material-symbols-outlined text-[24px]">manage_accounts</span><span class="font-label-md text-label-md">Staff</span></a></div></nav></body></html>

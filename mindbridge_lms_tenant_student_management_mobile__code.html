@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MindBridge LMS</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f2f3ff", "on-background": "#101b34", "on-primary-fixed-variant": "#00458f", "on-primary-container": "#fefcff", "error": "#ba1a1a", "on-secondary-container": "#405081", "primary-fixed-dim": "#abc7ff", "secondary": "#4d5c8e", "tertiary-fixed-dim": "#ffb952", "inverse-surface": "#25304a", "surface-container-highest": "#d9e2ff", "on-secondary-fixed": "#041847", "primary-fixed": "#d7e3ff", "primary-container": "#0072e4", "surface-container-lowest": "#ffffff", "surface-container": "#eaedff", "on-primary": "#ffffff", "outline": "#717785", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#354575", "surface-tint": "#005cba", "primary": "#005ab6", "surface-variant": "#d9e2ff", "surface-dim": "#cfd9fb", "outline-variant": "#c1c6d6", "secondary-fixed-dim": "#b5c5fd", "on-secondary": "#ffffff", "on-tertiary-fixed-variant": "#633f00", "on-error": "#ffffff", "tertiary-fixed": "#ffddb4", "tertiary-container": "#a06900", "on-tertiary-fixed": "#291800", "on-tertiary-container": "#fffbff", "on-tertiary": "#ffffff", "surface-container-high": "#e1e7ff", "surface": "#faf8ff", "background": "#faf8ff", "surface-bright": "#faf8ff", "on-error-container": "#93000a", "secondary-fixed": "#dbe1ff", "on-surface": "#101b34", "secondary-container": "#b5c5fd", "inverse-primary": "#abc7ff", "inverse-on-surface": "#eef0ff", "on-surface-variant": "#414754", "on-primary-fixed": "#001b3f", "tertiary": "#7f5300" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xl": "2rem", "margin": "2rem", "space-xs": "0.25rem", "space-md": "1rem" }, "fontFamily": { "display-mobile": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Inter"], "body-md": ["Inter"], "display": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "title": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "display-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "display": ["44px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}], "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "title": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5 min-w-0"><span class="font-title text-title text-on-surface truncate tracking-tight">MindBridge</span><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed shrink-0 font-semibold">Admin</span></div><div class="flex items-center gap-1 min-w-0"><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Apex Combined Mathematics • Tenant Admin</span><span class="material-symbols-outlined text-[13px] text-on-surface-variant shrink-0">unfold_more</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center relative rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 min-w-[16px] h-4 px-1 rounded-full bg-error text-on-error font-label-sm text-[10px] leading-4 text-center font-bold flex items-center justify-center">5</span></button><div class="flex items-center gap-1 pl-1 cursor-pointer"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full pb-24">
+<!-- Architectural Bridge Ambient Bar -->
+<div class="px-gutter-mobile pt-3 pb-2 flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Student Roster</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full">Active Term</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Combined Maths • Colombo Central Campus</p>
+</div>
+<!-- Quick Batch Action Trigger -->
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md shadow-sm" id="batch-drawer-btn">
+<span class="material-symbols-outlined text-[18px]">group_work</span>
+<span>Batch Tools</span>
+</button>
+</div>
+<!-- Search & Hardware Scanner Bar -->
+<div class="px-gutter-mobile py-2">
+<div class="relative flex items-center gap-2">
+<div class="relative flex-1 flex items-center bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-outline ml-3 mr-2 text-[20px]">search</span>
+<input class="w-full py-2.5 pr-2 bg-transparent text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none" placeholder="Search Name, Index, NIC, Mobile..." type="text"/>
+<button class="mr-2 p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" title="Scan QR or Student NFC Card">
+<span class="material-symbols-outlined text-[20px]">qr_code_scanner</span>
+</button>
+</div>
+<button class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-lowest text-on-surface-variant shadow-sm hover:text-primary transition-colors relative shrink-0">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="w-2 h-2 rounded-full bg-primary absolute top-2.5 right-2.5"></span>
+</button>
+</div>
+</div>
+<!-- Filter Chips Ribbon (Horizontally Scrollable) -->
+<div class="flex items-center gap-2 px-gutter-mobile py-2 overflow-x-auto no-scrollbar">
+<button class="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm">
+      All (1,420)
+    </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm">
+      2025 A/L (890)
+    </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap shadow-sm">
+      2026 A/L (530)
+    </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-error font-label-md text-label-md whitespace-nowrap shadow-sm flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+      Fee Overdue (34)
+    </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-outline font-label-md text-label-md whitespace-nowrap shadow-sm">
+      Suspended (2)
+    </button>
+</div>
+<!-- Quick Roster Metrics Banner -->
+<div class="px-gutter-mobile py-2">
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-sm grid grid-cols-3 gap-2 text-center relative overflow-hidden">
+<!-- Asymmetric Top-Right Subtle Bridge Curve Decoration -->
+<div class="absolute -top-6 -right-6 w-16 h-16 rounded-full bg-primary-fixed/30 pointer-events-none"></div>
+<div class="flex flex-col items-center justify-center">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">1,420</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Enrolled</span>
+</div>
+<div class="flex flex-col items-center justify-center">
+<div class="flex items-center gap-0.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">+18</span>
+<span class="material-symbols-outlined text-[14px] text-primary">trending_up</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">This Week</span>
+</div>
+<div class="flex flex-col items-center justify-center">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">1,385</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Passes Active</span>
+</div>
+</div>
+</div>
+<!-- Student Card List -->
+<div class="px-gutter-mobile flex flex-col gap-3 pt-2">
+<!-- Card 1: In Good Standing -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden">
+<!-- Bridge Arch Accented Corner -->
+<div class="absolute top-0 right-0 w-12 h-12 bg-surface-container-high rounded-bl-[24px] flex items-top justify-end pr-2 pt-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<div class="flex items-start gap-3">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 shadow-sm" data-alt="Close up professional portrait of a smiling Sri Lankan high school male student wearing a white collared uniform against a bright, softly blurred institutional library backdrop, natural soft studio lighting, ultra clean modern corporate education aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyDU4NBAb1Fh74I1TtNPbFuQR3ldhcuELdZpu8V0cbJFLaMiUo--J9I1GTm1cVsqXc4pW_Az6y0yKjA6lmmqfWQYY0ZBKb3kvjN7JS6-wwaTH0MVY52qzoBFJgwNVxXD2i5Wgm83lHbPiPbBMRXU-ZiAcfWO_1RC8EbBeSyiECjnb1KXnETCY-UedmIBijZI-SHGOMly7TigS76thJ--VEaSZP4nU5Dg3lJ7ruXEs"/>
+<div class="min-w-0 flex-1 pr-6">
+<div class="flex items-center gap-1.5">
+<h3 class="font-title text-title text-on-surface truncate">Kavindu Nirmal Perera</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Index: SL-LRN-89401 • Royal College</p>
+<div class="flex items-center gap-1 mt-1 text-on-secondary-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">functions</span>
+<span>Combined Maths • 2025 Theory (Colombo Hub)</span>
+</div>
+</div>
+</div>
+<!-- Badges Cluster -->
+<div class="flex flex-wrap items-center gap-1.5 mt-3 pt-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Fee Cleared (Oct)
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">badge</span>
+          Turnstile Active
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-tertiary">military_tech</span>
+          94% Attendance
+        </span>
+</div>
+<!-- Action Footer -->
+<div class="flex items-center justify-between gap-2 mt-3 pt-3">
+<button class="flex-1 py-2 px-2.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">badge</span>
+          Issue Hall Pass
+        </button>
+<button class="py-2 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container transition-colors" title="Message Guardian">
+<span class="material-symbols-outlined text-[16px] text-secondary">chat</span>
+          WhatsApp
+        </button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-surface-container transition-colors" title="View Student Ledger">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Payment Overdue / Warning -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden">
+<!-- Status Strip -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<div class="flex items-start gap-3 pt-1">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 shadow-sm" data-alt="Professional studio headshot of a teenage Sri Lankan female student with gentle, studious expression, wearing an academic blue blazer, warm indoor architectural university lighting, high resolution and soft background depth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlS7fCuvzvIMFAHemBOSDTMDO08nCQFKXB5tY-M0dymvVcwGMnGRuHw19r9bfo5sv5UlJbaEI-rJLeZHz-8t_gB7nyW-YZ2MkfMSFO0Wv9FamsqQ_bLK9XA7ugQBAKg68q3aMWE9veSpJ6YrPo5_qjC2e-9828LBlhPjwTWrinlHrFTQYv1hlT1Kt4zxMEcX9U0f67jlBGfgHOCaRCso9hQPyU7YefoLYMwQ_oodA"/>
+<div class="min-w-0 flex-1 pr-6">
+<div class="flex items-center gap-1.5">
+<h3 class="font-title text-title text-on-surface truncate">Amanda Jayawardena</h3>
+<span class="material-symbols-outlined text-error text-[18px]">error</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Index: SL-LRN-89415 • Devi Balika Vidyalaya</p>
+<div class="flex items-center gap-1 mt-1 text-on-secondary-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">functions</span>
+<span>Combined Maths • 2025 Theory</span>
+</div>
+</div>
+</div>
+<!-- Badges Cluster -->
+<div class="flex flex-wrap items-center gap-1.5 mt-3 pt-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+          Fee Pending (Oct: Rs. 6,500)
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-error">lock</span>
+          Pass Suspended
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+          88% Attendance
+        </span>
+</div>
+<!-- Urgent Action Options -->
+<div class="grid grid-cols-2 gap-2 mt-3 pt-3">
+<button class="py-2 px-2 rounded-lg bg-surface-container-high text-error font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-error-container hover:text-on-error-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">sms</span>
+          Reminder SMS
+        </button>
+<button class="py-2 px-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm hover:opacity-95 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">how_to_reg</span>
+          3-Day Grace Pass
+        </button>
+</div>
+</div>
+<!-- Card 3: New Enrollee with Milestone Accent -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden">
+<!-- Golden Accent Stripe for New Achiever/Registrations -->
+<div class="absolute top-0 right-0 w-16 h-16 bg-tertiary-fixed rounded-bl-[32px] flex items-top justify-end pr-2 pt-2">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-[18px]">auto_awesome</span>
+</div>
+<div class="flex items-start gap-3">
+<img class="w-12 h-12 rounded-full object-cover shrink-0 shadow-sm" data-alt="Side angle portrait of a young South Asian teenage boy with modern short haircut looking forward with confidence, wearing casual student polo, sunlit contemporary campus courtyard in background, natural color saturation, sharp detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-uwFFL6DpcVxnTIU4El9ShKFv0CZ7MHzlRtPbP0a6oesbznw7oLqftFlQRZX38KTCeU4R95R0s9VUToOOa_M1-YcsanIE9WH_OwQzZY91cAfWM3jajT3CCkDk-NjEHsxriuL6oFlzqH4ySOPeUoSW_yiXKm1-L4UHJIStM2J9xtbMJ7tUthrcYAes58-ZqLfDT-jQ-qbPh0gwbdoXYr_cs6DOh7Pt4fR3nkjsNp0"/>
+<div class="min-w-0 flex-1 pr-6">
+<div class="flex items-center gap-1.5">
+<h3 class="font-title text-title text-on-surface truncate">Kasun Mihiranga Bandara</h3>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold uppercase">New</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Index: SL-LRN-89450 • Ananda College</p>
+<div class="flex items-center gap-1 mt-1 text-on-secondary-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">school</span>
+<span>2026 A/L Foundation Batch</span>
+</div>
+</div>
+</div>
+<!-- Badges Cluster -->
+<div class="flex flex-wrap items-center gap-1.5 mt-3 pt-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">nfc</span>
+          Verified Universal Pass
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-tertiary font-label-sm text-label-sm">
+          First Month Promo (-15%)
+        </span>
+</div>
+<!-- Footer Actions -->
+<div class="flex items-center justify-between gap-2 mt-3 pt-3">
+<button class="flex-1 py-2 px-2.5 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[16px]">print</span>
+          Print Hall Card
+        </button>
+<button class="flex-1 py-2 px-2.5 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1 hover:opacity-95 transition-opacity">
+<span class="material-symbols-outlined text-[16px]">shuffle</span>
+          Assign Batch
+        </button>
+</div>
+</div>
+</div>
+<!-- Batch Management & Class Migration Drawer (Interactive Toggle) -->
+<div class="hidden px-gutter-mobile mt-4 transition-all duration-300" id="batch-drawer">
+<div class="bg-surface-container-high rounded-2xl p-4 shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">dynamic_feed</span>
+<span class="font-title text-title text-on-surface">Batch Operations</span>
+</div>
+<button class="p-1 rounded-full text-on-surface-variant hover:bg-surface-container" id="batch-drawer-close">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3">
+        Apply synchronized administrative actions to selected cohort segments without individual manual overrides.
+      </p>
+<div class="grid grid-cols-1 gap-2.5">
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container-lowest text-on-surface flex items-center justify-between shadow-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">forward</span>
+<div class="text-left">
+<span class="font-label-lg text-label-lg block leading-tight">Promote 2025 Theory Batch</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Migrate to Revision &amp; Mock Exam Phase</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</button>
+<button class="w-full py-2.5 px-3 rounded-xl bg-surface-container-lowest text-on-surface flex items-center justify-between shadow-sm hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">broadcast_on_personal</span>
+<div class="text-left">
+<span class="font-label-lg text-label-lg block leading-tight">Broadcast SMS to Batch A</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">890 verified guardians queued</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Operational Floating Action Hub (Bottom Affordance) -->
+<div class="fixed bottom-20 left-0 right-0 z-40 px-gutter-mobile pointer-events-none">
+<div class="max-w-md mx-auto flex items-center gap-2.5 pointer-events-auto">
+<button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-lg hover:opacity-95 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>Register Student</span>
+</button>
+<button class="h-12 px-4 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-lg hover:opacity-95 active:scale-[0.98] transition-all shrink-0" title="Turnstile Gate Check-in">
+<span class="material-symbols-outlined text-[22px]">contactless</span>
+<span>Pass Scan</span>
+</button>
+</div>
+</div>
+<!-- Micro-interaction Script for Batch Tools Drawer Toggle -->
+<script>
+    (function() {
+      const toggleBtn = document.getElementById('batch-drawer-btn');
+      const drawer = document.getElementById('batch-drawer');
+      const closeBtn = document.getElementById('batch-drawer-close');
+
+      if (toggleBtn && drawer && closeBtn) {
+        toggleBtn.addEventListener('click', () => {
+          drawer.classList.toggle('hidden');
+          if (!drawer.classList.contains('hidden')) {
+            drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        });
+
+        closeBtn.addEventListener('click', () => {
+          drawer.classList.add('hidden');
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(16,27,52,0.06)]" data-active-classes="text-primary font-bold"><div class="flex items-stretch justify-around h-16 px-space-xs"><a class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-md text-label-md">Overview</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all relative" data-path="financials" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">receipt_long</span><span class="absolute -top-1 -right-2.5 w-4 h-4 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-[10px] leading-none flex items-center justify-center font-bold">3</span></div><span class="font-label-md text-label-md">Financials</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] transition-all text-primary font-bold" data-path="students" href="#"><span class="material-symbols-outlined text-[24px]">badge</span><span class="font-label-md text-label-md">Students</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-all" data-path="staff" href="#"><span class="material-symbols-outlined text-[24px]">manage_accounts</span><span class="font-label-md text-label-md">Staff</span></a></div></nav></body></html>

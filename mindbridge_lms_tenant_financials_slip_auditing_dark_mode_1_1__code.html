@@ -1,0 +1,711 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#abc7ff","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-container":"#b5c5fd","surface-container-low":"#f2f3ff","tertiary-container":"#a06900","surface-variant":"#d9e2ff","tertiary":"#7f5300","secondary-fixed":"#dbe1ff","secondary":"#4d5c8e","surface":"#faf8ff","background":"#faf8ff","secondary-fixed-dim":"#b5c5fd","on-primary-fixed":"#001b3f","inverse-on-surface":"#eef0ff","on-tertiary":"#ffffff","on-surface-variant":"#414754","on-secondary-fixed":"#041847","error":"#ba1a1a","surface-bright":"#faf8ff","on-surface":"#101b34","primary-container":"#0072e4","tertiary-fixed-dim":"#ffb952","surface-tint":"#005cba","on-tertiary-fixed-variant":"#633f00","on-primary-fixed-variant":"#00458f","on-background":"#101b34","inverse-surface":"#25304a","on-tertiary-fixed":"#291800","on-error":"#ffffff","error-container":"#ffdad6","surface-container-high":"#e1e7ff","primary":"#005ab6","on-primary":"#ffffff","outline-variant":"#c1c6d6","primary-fixed-dim":"#abc7ff","on-secondary-container":"#405081","outline":"#717785","surface-container-highest":"#d9e2ff","on-primary-container":"#fefcff","on-secondary-fixed-variant":"#354575","surface-dim":"#cfd9fb","on-error-container":"#93000a","primary-fixed":"#d7e3ff","tertiary-fixed":"#ffddb4","on-tertiary-container":"#fffbff","surface-container":"#eaedff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","gutter-mobile":"1rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","margin":"2rem","margin-mobile":"1rem","gutter":"1.5rem","space-lg":"1.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"],"display-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"title":["Plus Jakarta Sans"],"body-md":["Inter"],"label-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Inter"],"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"label-sm":["Inter"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"title":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"display":["44px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="p-space-md bg-surface-container-low"><div class="flex items-center gap-space-sm mb-space-xs"><div class="w-9 h-9 rounded-lg bg-on-background flex items-center justify-center text-surface-container-lowest font-headline-sm font-bold text-title">AM</div><div class="flex-1 min-w-0"><h2 class="font-title text-title text-on-surface truncate">Apex Combined Maths</h2><p class="font-body-sm text-body-sm text-on-surface-variant truncate">apex-maths.mindbridge.lk</p></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs" type="button"><span class="material-symbols-outlined text-title">unfold_more</span></button></div><div class="flex items-center justify-between pt-space-xs"><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">LK-CENTRAL-04</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">Plan: Standard</span></div></div><div class="px-space-md pt-space-sm pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Tenant Administration</span></div><nav class="flex flex-col gap-0.5 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.06)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">dashboard</span><span class="font-label-lg text-label-lg">Overview</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="students" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">groups</span><span class="font-label-lg text-label-lg">Students</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">4,210</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="courses" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">menu_book</span><span class="font-label-lg text-label-lg">Courses</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">8</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="staff" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">badge</span><span class="font-label-lg text-label-lg">Staff</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-label-sm">warning</span>2/2 Max</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.06)]" data-path="payments-and-slips" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">receipt_long</span><span class="font-label-lg text-label-lg">Payments &amp; Slips</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">14 Pending</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="reports-and-analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">analytics</span><span class="font-label-lg text-label-lg">Reports &amp; Analytics</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="announcements" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">campaign</span><span class="font-label-lg text-label-lg">Announcements</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="activity-and-audit" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">history</span><span class="font-label-lg text-label-lg">Activity &amp; Audit</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="data-and-backups" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">database</span><span class="font-label-lg text-label-lg">Data &amp; Backups</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="settings-and-storefront" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">settings_suggest</span><span class="font-label-lg text-label-lg">Settings &amp; Storefront</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="support-desk" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">headset_mic</span><span class="font-label-lg text-label-lg">Support Desk</span></div></a></nav></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container-low"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm font-semibold text-on-surface">Standard SaaS Plan</span><span class="font-label-sm text-label-sm text-primary font-bold">18d left</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Manual Slip Verification active</p><div class="w-full bg-surface-container-highest rounded-full h-1.5 mb-space-xs"><div class="bg-primary h-1.5 rounded-full" style="width: 68%"></div></div><div class="flex justify-between items-center"><span class="font-label-sm text-label-sm text-on-surface-variant">Storage: 412 GB / S3</span><a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" data-path="settings-and-storefront" href="#">Upgrade</a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">MindBridge LMS</span><span class="text-outline-variant font-light">/</span><span class="font-label-lg text-label-lg text-on-surface-variant font-medium">Apex Maths</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-on-surface-variant text-title">schedule</span><span class="font-label-sm text-label-sm text-on-surface font-medium">SLST 14:32 (GMT+5:30)</span></div><div class="flex items-center bg-surface-container-low p-0.5 rounded-lg"><button class="px-space-sm py-0.5 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm font-bold text-primary shadow-[0_1px_2px_rgba(0,0,0,0.05)]" type="button">EN</button><button class="px-space-sm py-0.5 rounded-DEFAULT font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">සිංහල</button></div><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-title">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:block"><p class="font-label-lg text-label-lg text-on-surface leading-tight">Eng. Kusal Senaratne</p><p class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Master Tenant Admin</p></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- Page Header & Architectural Intro -->
+<section class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-lg">
+<div class="space-y-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold px-space-xs py-0.5 rounded bg-surface-container-high">Finance &amp; Audit Engine</span>
+<span class="text-outline-variant font-bold text-label-sm">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">BOC • Commercial • Sampath Hub</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">Financial Operations &amp; Student Bank Slip Verification</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Verify manual bank deposit receipts, reconcile student enrollments, issue payment receipts, and monitor academy cash flow in Sri Lankan Rupees (LKR).</p>
+</div>
+<!-- Action Group -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container-low transition-all flex items-center gap-space-xs" onclick="document.getElementById('manual-cash-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-title text-primary">point_of_sale</span>
+        Record Desk Cash (Over-the-Counter)
+      </button>
+<button class="px-space-md py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-title text-on-primary">download</span>
+        Export Bank Reconciliation (CSV)
+      </button>
+</div>
+</section>
+<!-- Governance & Policy Notification Canvas -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-space-md mb-space-lg">
+<!-- Zero Commission Architecture Card -->
+<div class="xl:col-span-8 p-space-md bg-surface-container-lowest rounded-xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md relative overflow-hidden">
+<div class="absolute -right-10 -bottom-10 w-44 h-44 bg-primary/5 rounded-full pointer-events-none"></div>
+<div class="flex items-start gap-space-md z-10">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-headline-sm">account_balance</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-title text-title text-on-surface font-bold">Zero Platform Commission Policy</h2>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">0% Vendor Fee</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl leading-relaxed">
+            MindBridge LMS operates on 100% direct teacher-to-student payments. Student fees are deposited directly into your designated institutional bank accounts (<span class="font-medium text-on-surface">BOC / Commercial / Sampath</span>). MindBridge charges 0% transaction commission.
+          </p>
+</div>
+</div>
+<div class="shrink-0 z-10 flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-space-xs py-1 rounded bg-surface-container-low font-mono">BOC: 70419920 Kandy Branch</span>
+</div>
+</div>
+<!-- Refund Escalation Authority Card -->
+<div class="xl:col-span-4 p-space-md bg-tertiary-fixed/20 rounded-xl shadow-sm flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container text-on-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-title">shield_lock</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-label-lg text-label-lg font-bold text-on-tertiary-fixed-variant">Refund Control Notice</h3>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-tertiary text-on-tertiary font-bold uppercase">Root Level</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+          In accordance with platform governance, student course fee refunds belong exclusively to <strong class="text-on-surface">Super Admin Root Clearance</strong>. Tenant Admins can flag or request a refund review on behalf of a student.
+        </p>
+</div>
+</div>
+</section>
+<!-- Financial KPI Metrics Stream -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md mb-space-lg">
+<!-- Total Revenue -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Total Revenue (Oct 2025)</span>
+<span class="w-7 h-7 rounded-md bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-label-lg">payments</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-label-lg text-label-lg text-outline">Rs.</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-black tracking-tight">3,840,000</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">LKR</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs text-primary font-medium">
+<span class="material-symbols-outlined text-label-sm">trending_up</span>
+<span class="font-label-sm text-label-sm">+14.2% vs last month</span>
+</div>
+</div>
+<!-- Verified Bank Slips -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Verified Bank Slips</span>
+<span class="w-7 h-7 rounded-md bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-label-lg">verified</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-black tracking-tight">1,812</span>
+<span class="font-label-md text-label-md text-outline">Clearing</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs truncate">
+        Rs. 3,741,500 LKR auto-enrolled
+      </p>
+</div>
+<!-- Pending Optical Audits -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all relative">
+<div class="absolute top-2 right-2 flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+</div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Pending Audits</span>
+<span class="w-7 h-7 rounded-md bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-label-lg">pending_actions</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-error font-black tracking-tight">14</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Slips</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+        Rs. 98,500 LKR in queues
+      </p>
+</div>
+<!-- Rejected / Fraudulent Slips -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Invalid / Declined</span>
+<span class="w-7 h-7 rounded-md bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-label-lg">cancel</span>
+</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-black tracking-tight">6</span>
+<span class="font-label-md text-label-md text-outline">Unreadable</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">
+        Auto WhatsApp Notice Sent
+      </p>
+</div>
+<!-- Tenant SaaS Plan Health -->
+<div class="p-space-md bg-surface-container-low rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Tenant SaaS Status</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">Standard</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-title text-title text-on-surface font-bold">Rs. 35,000</span>
+<span class="font-body-sm text-body-sm text-outline">/ month</span>
+</div>
+</div>
+<div class="mt-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>Due to Super Admin</span>
+<span class="font-bold text-primary">in 18 days</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-primary h-1.5 rounded-full" style="width: 40%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Dual-Pane Bank Slip Audit Workspace -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT PANEL: Slips Intake Queue (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col">
+<!-- Queue Header & Filter Ribbon -->
+<div class="flex flex-col gap-space-sm mb-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-title text-title text-on-surface font-bold">Slip Verification Queue</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">14 Actionable</span>
+</div>
+<button class="text-primary hover:text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-label-sm">sync</span>
+            Refresh Feeds
+          </button>
+</div>
+<!-- Filter / Quick Search Bar -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-title">search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest" placeholder="Search by student name, ID or slip ref..." type="text">
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1">
+<button class="px-space-sm py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold whitespace-nowrap" type="button">All Banks (14)</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm whitespace-nowrap" type="button">BOC (9)</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm whitespace-nowrap" type="button">Commercial (3)</button>
+<button class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm whitespace-nowrap" type="button">Sampath (2)</button>
+</div>
+</div>
+<!-- Scrollable Slips List -->
+<div class="space-y-space-xs overflow-y-auto max-h-[720px] pr-1">
+<!-- ITEM 1: Active Selected State -->
+<div class="p-space-sm rounded-lg bg-surface-container-high transition-all cursor-pointer shadow-sm relative">
+<div class="absolute left-0 top-3 bottom-3 w-1 bg-primary rounded-r"></div>
+<div class="flex items-start justify-between gap-space-xs pl-2">
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title text-title text-on-surface font-bold truncate">Kasun Chamara Jayasinghe</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-mono">SL-LRN-98421</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">2025 A/L Combined Mathematics Theory Masterclass</p>
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">account_balance</span>
+<span class="font-medium text-on-surface">BOC CDM • Kandy Hub</span>
+<span>•</span>
+<span>10:14 SLST Today</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-title text-title font-black text-primary">Rs. 4,500</p>
+<span class="inline-block mt-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">Pending Audit</span>
+</div>
+</div>
+</div>
+<!-- ITEM 2: In Queue -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title text-title text-on-surface font-bold truncate">Dinithi Harshika Fernando</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">SL-LRN-98429</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">2026 Revision: Advanced Pure Vectors</p>
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">credit_card</span>
+<span class="font-medium text-on-surface">Commercial Bank • Branch Deposit</span>
+<span>•</span>
+<span>09:55 SLST Today</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-title text-title font-black text-on-surface">Rs. 3,800</p>
+<span class="inline-block mt-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">In Queue</span>
+</div>
+</div>
+</div>
+<!-- ITEM 3: In Queue -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title text-title text-on-surface font-bold truncate">Malith Pramoditha Bandara</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">SL-LRN-98110</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">2025 Paper Class &amp; Speed Drill</p>
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">account_balance</span>
+<span class="font-medium text-on-surface">Sampath Bank • CDM Slip</span>
+<span>•</span>
+<span>09:30 SLST Today</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-title text-title font-black text-on-surface">Rs. 4,500</p>
+<span class="inline-block mt-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">In Queue</span>
+</div>
+</div>
+</div>
+<!-- ITEM 4: In Queue -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title text-title text-on-surface font-bold truncate">Nadeesha Madushani Silva</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">SL-LRN-97992</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Applied Mechanics Mastery Module</p>
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">point_of_sale</span>
+<span class="font-medium text-on-surface">BOC • Counter Deposit</span>
+<span>•</span>
+<span>Yesterday 17:40</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-title text-title font-black text-on-surface">Rs. 4,000</p>
+<span class="inline-block mt-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">In Queue</span>
+</div>
+</div>
+</div>
+<!-- ITEM 5: In Queue -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title text-title text-on-surface font-bold truncate">Charith Akalanka Perera</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">SL-LRN-96204</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">2025 A/L Combined Mathematics Theory Masterclass</p>
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">account_balance</span>
+<span class="font-medium text-on-surface">BOC CDM • Kurunegala</span>
+<span>•</span>
+<span>Yesterday 16:15</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-title text-title font-black text-on-surface">Rs. 4,500</p>
+<span class="inline-block mt-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">In Queue</span>
+</div>
+</div>
+</div>
+<!-- ITEM 6: Warning / Unverified -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title text-title text-on-surface font-bold truncate">Sahan Vihanga Wickramasinghe</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">SL-LRN-94002</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">2025 A/L Combined Mathematics Theory Masterclass</p>
+<div class="flex items-center gap-space-xs text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-error">help</span>
+<span class="font-medium text-on-surface">BOC • Mobile Capture Blur</span>
+<span>•</span>
+<span>Yesterday 14:02</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-title text-title font-black text-on-surface">Rs. 4,500</p>
+<span class="inline-block mt-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold">Low Contrast</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Optical Slip Verification & Decision Terminal (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col justify-between">
+<!-- Terminal Header -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-space-md gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Manual Slip Audit Terminal</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold font-mono">AUDIT-RUN #892</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Reviewing submission from <strong>Kasun Chamara Jayasinghe</strong> (SL-LRN-98421)</p>
+</div>
+<div class="flex items-center gap-space-xs self-end sm:self-auto">
+<button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface" title="Rotate Slip" type="button">
+<span class="material-symbols-outlined text-title">rotate_right</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface" title="Zoom In" type="button">
+<span class="material-symbols-outlined text-title">zoom_in</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface" title="Open Fullscreen Raw Receipt" type="button">
+<span class="material-symbols-outlined text-title">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- High-Fidelity Slip Viewer & OCR Data Overlay -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md mb-space-md">
+<!-- The Uploaded Slip Preview Canvas -->
+<div class="md:col-span-6 bg-surface-container-low rounded-xl p-space-sm flex flex-col items-center justify-center relative overflow-hidden group">
+<!-- Realistic Cash Deposit Machine Receipt Styling -->
+<div class="w-full max-w-[280px] bg-surface-container-lowest p-space-md shadow-md rounded font-mono text-on-surface text-[12px] leading-tight space-y-2 relative">
+<div class="text-center pb-2">
+<p class="font-bold text-[14px] text-on-surface uppercase tracking-wider">BANK OF CEYLON</p>
+<p class="text-[10px] text-on-surface-variant">CASH DEPOSIT MACHINE ADVICE</p>
+<p class="text-[10px] text-on-surface-variant">BRANCH: KANDY MAIN (041)</p>
+</div>
+<div class="space-y-1 py-1 text-[11px]">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">DATE/TIME:</span>
+<span class="font-bold">2025-10-24 10:14:02</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">TERMINAL:</span>
+<span class="font-bold">CDM-BOC-KANDY-0941</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">TXN SEQ:</span>
+<span class="font-bold">#48190022</span>
+</div>
+</div>
+<div class="py-1 space-y-1 text-[11px]">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">TO A/C:</span>
+<span class="font-bold text-primary">70419920</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">A/C NAME:</span>
+<span class="font-bold">APEX COMBINED MATHS</span>
+</div>
+</div>
+<div class="pt-2 text-center bg-surface-container-low p-2 rounded">
+<span class="text-[10px] uppercase text-on-surface-variant font-sans font-medium">Deposited Amount Cleared</span>
+<p class="text-[18px] font-bold text-primary">Rs. 4,500.00</p>
+<p class="text-[9px] text-on-surface-variant font-sans">FOUR THOUSAND FIVE HUNDRED RUPEES</p>
+</div>
+<div class="pt-2 text-center text-[10px] text-on-surface-variant space-y-0.5">
+<p class="font-bold text-on-surface">DEPOSITED BY: KASUN C.</p>
+<p>REF: 98421-COMBINED-MATHS</p>
+<p class="text-[9px] italic">Manual Deposit Slip Upload • Verification Required</p>
+</div>
+</div>
+<div class="mt-space-sm flex items-center justify-between w-full px-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="truncate">File: BOC_Deposit_Slip_4500_Kasun.jpg</span>
+<span class="font-semibold text-primary">1.4 MB</span>
+</div>
+</div>
+<!-- Student Context & Automated Optical Verification Checklist -->
+<div class="md:col-span-6 flex flex-col justify-between space-y-space-sm">
+<!-- Student Metadata Card -->
+<div class="p-space-sm bg-surface-container-low rounded-lg space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-semibold uppercase">Learner Profile</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Enrolled Student</span>
+</div>
+<p class="font-title text-title text-on-surface font-bold">Kasun Chamara Jayasinghe</p>
+<div class="grid grid-cols-2 gap-space-xs text-on-surface-variant font-body-sm text-body-sm pt-1">
+<div>
+<span class="text-outline text-label-sm">Contact:</span>
+<p class="font-medium text-on-surface">+94 71 884 1029</p>
+</div>
+<div>
+<span class="text-outline text-label-sm">National ID:</span>
+<p class="font-medium text-on-surface">200518902144</p>
+</div>
+<div class="col-span-2 pt-1">
+<span class="text-outline text-label-sm">Course Target:</span>
+<p class="font-medium text-on-surface truncate">2025 A/L Combined Mathematics Theory</p>
+</div>
+</div>
+</div>
+<!-- Automated Pre-Check Flags -->
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Manual Audit Verification Checklist</span>
+<div class="space-y-1.5">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-title">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Deposit Amount Matches Fee</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Rs. 4,500 LKR</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-title">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Valid Date &amp; Billing Cycle</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Today 10:14</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-title">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Target Account Cleared</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary font-mono">BOC #70419920</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-title">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Unique Slip Reference Hash</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">#CDM-0941</span>
+</div>
+</div>
+</div>
+<!-- Audit Remark Text Field -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-outline font-semibold uppercase">Admin Reconcile Note (Optional)</label>
+<input class="w-full px-space-sm py-2 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest" placeholder="e.g. Verified with online BOC statement batch 4" type="text">
+</div>
+</div>
+</div>
+<!-- Dual Resolution Decision Buttons -->
+<div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<button class="w-full sm:w-auto px-space-md py-2.5 rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg hover:bg-surface-container transition-all flex items-center justify-center gap-space-xs" onclick="alert('Slip flagged. Root Super Admin notified for manual review.')" type="button">
+<span class="material-symbols-outlined text-title text-tertiary">flag</span>
+          Flag for Super Admin
+        </button>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="w-full sm:w-auto px-space-md py-2.5 rounded-lg bg-error-container text-on-error-container font-label-lg text-label-lg hover:opacity-90 transition-all flex items-center justify-center gap-space-xs" onclick="document.getElementById('reject-slip-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-title">cancel</span>
+            Reject Slip
+          </button>
+<button class="w-full sm:w-auto px-space-lg py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container shadow-md transition-all flex items-center justify-center gap-space-xs" onclick="approveAndEnroll()" type="button">
+<span class="material-symbols-outlined text-title text-on-primary">check</span>
+            Approve Slip &amp; Unlock Course Access
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Cleared Transactions & Settlement Log Table -->
+<section class="mt-space-lg bg-surface-container-lowest rounded-xl shadow-sm p-space-md">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-space-md gap-space-xs">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Recent Bank Reconciliations &amp; Fee Receipts</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live audit ledger of manually cleared and counter-settled student receipts.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Export Format:</span>
+<button class="px-space-xs py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-high" type="button">PDF</button>
+<button class="px-space-xs py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-high" type="button">Excel</button>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="px-space-md py-3 rounded-l-lg">Receipt #</th>
+<th class="px-space-md py-3">Student &amp; National ID</th>
+<th class="px-space-md py-3">Enrolled Course</th>
+<th class="px-space-md py-3">Deposit Channel</th>
+<th class="px-space-md py-3">Amount (LKR)</th>
+<th class="px-space-md py-3">Verified By</th>
+<th class="px-space-md py-3">Status</th>
+<th class="px-space-md py-3 rounded-r-lg text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-space-md py-3 font-mono font-bold text-primary">REC-2025-9921</td>
+<td class="px-space-md py-3">
+<p class="font-medium text-on-surface">Minuri Sandasara</p>
+<p class="text-on-surface-variant font-label-sm text-label-sm">SL-LRN-91044</p>
+</td>
+<td class="px-space-md py-3 text-on-surface font-medium truncate max-w-xs">2025 A/L Combined Mathematics Theory</td>
+<td class="px-space-md py-3 text-on-surface-variant">BOC CDM • Colombo 07</td>
+<td class="px-space-md py-3 font-bold text-on-surface">Rs. 4,500</td>
+<td class="px-space-md py-3 text-on-surface-variant">Eng. Kusal Senaratne</td>
+<td class="px-space-md py-3">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">Cleared</span>
+</td>
+<td class="px-space-md py-3 text-right">
+<button class="p-1 text-on-surface-variant hover:text-primary" title="Download Official Receipt PDF" type="button">
+<span class="material-symbols-outlined text-title">receipt</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-space-md py-3 font-mono font-bold text-primary">REC-2025-9920</td>
+<td class="px-space-md py-3">
+<p class="font-medium text-on-surface">Isuru Madhuranga</p>
+<p class="text-on-surface-variant font-label-sm text-label-sm">SL-LRN-90822</p>
+</td>
+<td class="px-space-md py-3 text-on-surface font-medium truncate max-w-xs">2026 Revision: Advanced Pure Vectors</td>
+<td class="px-space-md py-3 text-on-surface-variant">Physical Desk Cash (Serial #9410)</td>
+<td class="px-space-md py-3 font-bold text-on-surface">Rs. 3,800</td>
+<td class="px-space-md py-3 text-on-surface-variant">Tenant Admin / Course Teacher</td>
+<td class="px-space-md py-3">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">Counter Paid</span>
+</td>
+<td class="px-space-md py-3 text-right">
+<button class="p-1 text-on-surface-variant hover:text-primary" title="Download Official Receipt PDF" type="button">
+<span class="material-symbols-outlined text-title">receipt</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-space-md py-3 font-mono font-bold text-primary">REC-2025-9919</td>
+<td class="px-space-md py-3">
+<p class="font-medium text-on-surface">Tharushi Imasha</p>
+<p class="text-on-surface-variant font-label-sm text-label-sm">SL-LRN-89410</p>
+</td>
+<td class="px-space-md py-3 text-on-surface font-medium truncate max-w-xs">2025 Paper Class &amp; Speed Drill</td>
+<td class="px-space-md py-3 text-on-surface-variant">Sampath Vishwa Internet Banking</td>
+<td class="px-space-md py-3 font-bold text-on-surface">Rs. 4,500</td>
+<td class="px-space-md py-3 text-on-surface-variant">Eng. Kusal Senaratne</td>
+<td class="px-space-md py-3">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">Cleared</span>
+</td>
+<td class="px-space-md py-3 text-right">
+<button class="p-1 text-on-surface-variant hover:text-primary" title="Download Official Receipt PDF" type="button">
+<span class="material-symbols-outlined text-title">receipt</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- MODAL 1: Record Desk Cash Over-the-Counter -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-on-background/40 backdrop-blur-sm hidden" id="manual-cash-modal">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl max-w-xl w-full mx-4 p-space-lg space-y-space-md">
+<div class="flex items-center justify-between pb-2">
+<div class="space-y-0.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Record Physical Cash Desk Payment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tenant Admin / Course Teacher direct cash receipting (100% direct payment to teacher account, 0% platform commission).</p>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('manual-cash-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-headline-sm">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<div>
+<label class="font-label-sm text-label-sm text-outline font-semibold uppercase">Student National Learner ID or Mobile</label>
+<div class="relative mt-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-title">person_search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest" placeholder="e.g. SL-LRN-98421 or 077 123 4567" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div>
+<label class="font-label-sm text-label-sm text-outline font-semibold uppercase">Cash Amount (LKR)</label>
+<div class="relative mt-1">
+<span class="absolute left-3 top-2 font-bold text-on-surface-variant text-body-sm">Rs.</span>
+<input class="w-full pl-10 pr-3 py-2 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest font-bold" placeholder="4500" type="number">
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-outline font-semibold uppercase">Paper Receipt Serial #</label>
+<input class="w-full px-3 py-2 mt-1 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest font-mono" placeholder="e.g. BOOK-08 / 1942" type="text">
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-outline font-semibold uppercase">Target Course Enrollment</label>
+<select class="w-full px-3 py-2 mt-1 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest">
+<option>2025 A/L Combined Mathematics Theory Masterclass (Rs. 4,500)</option>
+<option>2026 Revision: Advanced Pure Vectors (Rs. 3,800)</option>
+<option>2025 Paper Class &amp; Speed Drill (Rs. 4,500)</option>
+<option>Applied Mechanics Mastery Module (Rs. 4,000)</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs p-2 rounded bg-surface-container-low">
+<input checked="" class="w-4 h-4 text-primary rounded" id="send-wa" type="checkbox">
+<label class="font-body-sm text-body-sm text-on-surface" for="send-wa">Auto-dispatch instant PDF receipt &amp; admission confirmation via WhatsApp</label>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-all" onclick="document.getElementById('manual-cash-modal').classList.add('hidden')" type="button">
+          Cancel
+        </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container shadow-md transition-all flex items-center gap-1" onclick="submitDeskCash()" type="button">
+<span class="material-symbols-outlined text-title text-on-primary">check_circle</span>
+          Confirm Cash &amp; Enroll
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL 2: Reject Bank Slip Reason Picker -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-on-background/40 backdrop-blur-sm hidden" id="reject-slip-modal">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl max-w-lg w-full mx-4 p-space-lg space-y-space-md">
+<div class="flex items-center justify-between pb-2">
+<div class="space-y-0.5">
+<h3 class="font-headline-sm text-headline-sm text-error font-bold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error">cancel</span>
+            Reject Deposit Slip
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Student will be notified immediately via WhatsApp to submit a replacement receipt.</p>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('reject-slip-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-headline-sm">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<label class="font-label-sm text-label-sm text-outline font-semibold uppercase">Select Discrepancy Reason</label>
+<div class="space-y-2">
+<label class="flex items-start gap-space-xs p-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer">
+<input checked="" class="mt-1 text-primary" name="reject-reason" type="radio">
+<div>
+<p class="font-title text-title text-on-surface text-label-lg font-semibold">Blurry / Illegible Image</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The machine stamp, date, or deposit amount cannot be clearly read.</p>
+</div>
+</label>
+<label class="flex items-start gap-space-xs p-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer">
+<input class="mt-1 text-primary" name="reject-reason" type="radio">
+<div>
+<p class="font-title text-title text-on-surface text-label-lg font-semibold">Underpaid Amount</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The deposited sum is less than the required course monthly fee (Rs. 4,500).</p>
+</div>
+</label>
+<label class="flex items-start gap-space-xs p-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer">
+<input class="mt-1 text-primary" name="reject-reason" type="radio">
+<div>
+<p class="font-title text-title text-on-surface text-label-lg font-semibold">Duplicate / Re-used Slip</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">This reference number or receipt photo was already credited to another student.</p>
+</div>
+</label>
+<label class="flex items-start gap-space-xs p-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer">
+<input class="mt-1 text-primary" name="reject-reason" type="radio">
+<div>
+<p class="font-title text-title text-on-surface text-label-lg font-semibold">Wrong Bank Account Deposited</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deposit was made into an unrecognized or personal non-academy account.</p>
+</div>
+</label>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-outline font-semibold uppercase">Additional Notes for Student</label>
+<textarea class="w-full px-3 py-2 mt-1 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none focus:bg-surface-container-lowest" placeholder="e.g. Please re-upload a clear photo in good daylight." rows="2"></textarea>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-all" onclick="document.getElementById('reject-slip-modal').classList.add('hidden')" type="button">
+          Cancel
+        </button>
+<button class="px-space-lg py-2 rounded-lg bg-error text-on-error font-label-lg text-label-lg hover:opacity-90 shadow-md transition-all flex items-center gap-1" onclick="confirmRejectSlip()" type="button">
+<span class="material-symbols-outlined text-title text-on-error">send</span>
+          Dispatch Rejection Notice
+        </button>
+</div>
+</div>
+</div>
+<script>
+    function approveAndEnroll() {
+      alert("Slip Approved Successfully!\n\n1. Student Kasun Chamara Jayasinghe marked ACTIVE.\n2. Course access granted for '2025 A/L Combined Mathematics'.\n3. Official PDF receipt generated.\n4. Confirmation dispatched via WhatsApp (+94 71 884 1029).");
+    }
+
+    function submitDeskCash() {
+      document.getElementById('manual-cash-modal').classList.add('hidden');
+      alert("Desk Cash Settled!\n\nStudent enrollment activated and receipt queued for printing.");
+    }
+
+    function confirmRejectSlip() {
+      document.getElementById('reject-slip-modal').classList.add('hidden');
+      alert("Slip Rejected.\n\nNotification sent to student to submit a fresh readable deposit receipt.");
+    }
+  </script>
+</div></main></div>
+
+</body></html>

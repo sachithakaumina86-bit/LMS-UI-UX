@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#abc7ff","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-container":"#b5c5fd","surface-container-low":"#f2f3ff","tertiary-container":"#a06900","surface-variant":"#d9e2ff","tertiary":"#7f5300","secondary-fixed":"#dbe1ff","secondary":"#4d5c8e","surface":"#faf8ff","background":"#faf8ff","secondary-fixed-dim":"#b5c5fd","on-primary-fixed":"#001b3f","inverse-on-surface":"#eef0ff","on-tertiary":"#ffffff","on-surface-variant":"#414754","on-secondary-fixed":"#041847","error":"#ba1a1a","surface-bright":"#faf8ff","on-surface":"#101b34","primary-container":"#0072e4","tertiary-fixed-dim":"#ffb952","surface-tint":"#005cba","on-tertiary-fixed-variant":"#633f00","on-primary-fixed-variant":"#00458f","on-background":"#101b34","inverse-surface":"#25304a","on-tertiary-fixed":"#291800","on-error":"#ffffff","error-container":"#ffdad6","surface-container-high":"#e1e7ff","primary":"#005ab6","on-primary":"#ffffff","outline-variant":"#c1c6d6","primary-fixed-dim":"#abc7ff","on-secondary-container":"#405081","outline":"#717785","surface-container-highest":"#d9e2ff","on-primary-container":"#fefcff","on-secondary-fixed-variant":"#354575","surface-dim":"#cfd9fb","on-error-container":"#93000a","primary-fixed":"#d7e3ff","tertiary-fixed":"#ffddb4","on-tertiary-container":"#fffbff","surface-container":"#eaedff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","gutter-mobile":"1rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","margin":"2rem","margin-mobile":"1rem","gutter":"1.5rem","space-lg":"1.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"],"display-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"title":["Plus Jakarta Sans"],"body-md":["Inter"],"label-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Inter"],"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"label-sm":["Inter"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"title":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"display":["44px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased" style="background-color: #080e1d; color: #dde2f8;"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto" style="background-color: #0d1322; border-right: 1px solid #1e2638; box-shadow: 0 4px 20px rgba(0,0,0,0.4);"><div class="flex flex-col"><div class="p-space-md bg-surface-container-low" style="background-color: #151b2b; border-bottom: 1px solid #1e2638;"><div class="flex items-center gap-space-sm mb-space-xs"><div class="w-9 h-9 rounded-lg bg-on-background flex items-center justify-center text-surface-container-lowest font-headline-sm font-bold text-title">AM</div><div class="flex-1 min-w-0"><h2 class="font-title text-title text-on-surface truncate">Apex Combined Maths</h2><p class="font-body-sm text-body-sm text-on-surface-variant truncate">apex-maths.mindbridge.lk</p></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs" type="button"><span class="material-symbols-outlined text-title">unfold_more</span></button></div><div class="flex items-center justify-between pt-space-xs"><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">LK-CENTRAL-04</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">Plan: Standard</span></div></div><div class="px-space-md pt-space-sm pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Tenant Administration</span></div><nav class="flex flex-col gap-0.5 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.06)]"><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.06)]" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">dashboard</span><span class="font-label-lg text-label-lg">Overview</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="students" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">groups</span><span class="font-label-lg text-label-lg">Students</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">4,210</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="courses" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">menu_book</span><span class="font-label-lg text-label-lg">Courses</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">8</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="staff" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">badge</span><span class="font-label-lg text-label-lg">Staff</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-label-sm">warning</span>2/2 Max</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="payments-and-slips" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">receipt_long</span><span class="font-label-lg text-label-lg">Payments &amp; Slips</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">14 Pending</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="reports-and-analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">analytics</span><span class="font-label-lg text-label-lg">Reports &amp; Analytics</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="announcements" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">campaign</span><span class="font-label-lg text-label-lg">Announcements</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="activity-and-audit" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">history</span><span class="font-label-lg text-label-lg">Activity &amp; Audit</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="data-and-backups" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">database</span><span class="font-label-lg text-label-lg">Data &amp; Backups</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="settings-and-storefront" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">settings_suggest</span><span class="font-label-lg text-label-lg">Settings &amp; Storefront</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="support-desk" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">headset_mic</span><span class="font-label-lg text-label-lg">Support Desk</span></div></a></nav></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container-low" style="background-color: #151b2b; border: 1px solid #1e2638;"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm font-semibold text-on-surface">Standard SaaS Plan</span><span class="font-label-sm text-label-sm text-primary font-bold">18d left</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Manual Slip Verification active</p><div class="w-full bg-surface-container-highest rounded-full h-1.5 mb-space-xs"><div class="bg-primary h-1.5 rounded-full" style="width: 68%"></div></div><div class="flex justify-between items-center"><span class="font-label-sm text-label-sm text-on-surface-variant">Storage: 412 GB / S3</span><a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" data-path="settings-and-storefront" href="#">Upgrade</a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg" style="background-color: rgba(13, 19, 34, 0.85); border-bottom: 1px solid #1e2638; backdrop-filter: blur(16px);"><div class="flex items-center gap-space-md"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">MindBridge LMS</span><span class="text-outline-variant font-light">/</span><span class="font-label-lg text-label-lg text-on-surface-variant font-medium">Apex Maths</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-on-surface-variant text-title">schedule</span><span class="font-label-sm text-label-sm text-on-surface font-medium">SLST 14:32 (GMT+5:30)</span></div><div class="flex items-center bg-surface-container-low p-0.5 rounded-lg"><button class="px-space-sm py-0.5 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm font-bold text-primary shadow-[0_1px_2px_rgba(0,0,0,0.05)]" type="button">EN</button><button class="px-space-sm py-0.5 rounded-DEFAULT font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">සිංහල</button></div><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-title">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:block"><p class="font-label-lg text-label-lg text-on-surface leading-tight">Eng. Kusal Senaratne</p><p class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Master Tenant Admin</p></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background px-gutter"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Arch Ambient Glow -->
+<div class="relative w-full overflow-hidden mb-space-lg rounded-xl bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-high p-space-lg shadow-sm" style="background: linear-gradient(135deg, #0d1527 0%, #151f38 50%, #1a2544 100%); border: 1px solid #1e2b48;">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/4 -bottom-10 w-48 h-48 rounded-full bg-tertiary-fixed/30 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex flex-wrap items-center gap-space-sm mb-1">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest shadow-sm text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Verified Multi-Tenant Node #LK-08948
+          </span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-lowest/80 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">cloud_queue</span>
+            Colombo LK-Central AWS Cluster
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-variant text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+            Zero-Take Direct Billing
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Apex Combined Mathematics <span class="font-normal text-on-surface-variant text-headline-md">— Tenant Operations Center</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Advanced A/L combined mathematics streaming pipeline, real-time manual slip reconciliation &amp; intake analytics.
+        </p>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm transition-all hover:scale-[1.01]" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+          New Course
+        </button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+          Manual Enrollment
+        </button>
+<button class="relative inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-error text-on-error font-label-lg text-label-lg shadow-sm hover:brightness-110 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">fact_check</span>
+          Verify Slips
+          <span class="px-1.5 py-0.2 rounded-full bg-surface-container-lowest text-error font-label-sm text-label-sm font-bold">14</span>
+</button>
+<a class="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-surface-container-lowest/90 hover:bg-surface-container text-secondary font-label-lg text-label-lg shadow-sm transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+          Storefront Preview
+          <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Key Performance Metrics Ribbon -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-space-md mb-space-xl"><!-- Card 1: Students --><div class="rounded-xl p-space-md flex flex-col justify-between relative overflow-hidden group hover:shadow-lg transition-all" style="background-color: #151b2b; border: 1px solid #1e2638;"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Total Enrolled</span><div class="w-8 h-8 rounded-lg flex items-center justify-center text-primary" style="background-color: #0d1322;"><span class="material-symbols-outlined text-[18px]">school</span></div></div><div class="mt-space-sm"><div class="flex items-baseline gap-1.5"><span class="font-headline-lg text-headline-lg font-bold text-white">4,210</span><span class="font-label-sm text-label-sm text-primary font-semibold flex items-center"><span class="material-symbols-outlined text-[14px]">arrow_upward</span>18.4%</span></div><div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1"><span>Active this week</span><span class="font-semibold text-white">3,942</span></div></div><div class="w-full h-1 rounded-full mt-space-sm overflow-hidden" style="background-color: #242a3a;"><div class="h-full rounded-full" style="width: 93%; background-color: #3898ff;"></div></div></div><!-- Card 2: Active Courses --><div class="rounded-xl p-space-md flex flex-col justify-between group hover:shadow-lg transition-all" style="background-color: #151b2b; border: 1px solid #1e2638;"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Course Modules</span><div class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary" style="background-color: #0d1322;"><span class="material-symbols-outlined text-[18px]">auto_stories</span></div></div><div class="mt-space-sm"><div class="flex items-baseline gap-2"><span class="font-headline-lg text-headline-lg font-bold text-white">8</span><span class="font-label-sm text-label-sm text-on-surface-variant">Programs</span></div><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm mt-1"><span class="inline-block w-2 h-2 rounded-full" style="background-color: #3898ff;"></span><span>6 Published</span><span class="text-outline-variant">/</span><span class="inline-block w-2 h-2 rounded-full" style="background-color: #00ab76;"></span><span>2 Review</span></div></div><div class="flex gap-1 mt-space-sm"><span class="h-1 rounded-full flex-1" style="background-color: #3898ff;"></span><span class="h-1 rounded-full flex-1" style="background-color: #3898ff;"></span><span class="h-1 rounded-full flex-1" style="background-color: #3898ff;"></span><span class="h-1 rounded-full w-1/4" style="background-color: #ffb95f;"></span></div></div><!-- Card 3: Revenue (LKR) --><div class="rounded-xl p-space-md flex flex-col justify-between group hover:shadow-lg transition-all" style="background-color: #151b2b; border: 1px solid #1e2638;"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Monthly Intake (LKR)</span><div class="w-8 h-8 rounded-lg flex items-center justify-center text-primary" style="background-color: #0d1322;"><span class="material-symbols-outlined text-[18px]">account_balance</span></div></div><div class="mt-space-sm"><div class="flex items-baseline gap-1"><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Rs.</span><span class="font-headline-md text-headline-md font-bold text-white truncate">3,840,000</span></div><div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1"><span class="text-primary font-semibold flex items-center text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px]">trending_up</span>+12% MoM</span><span class="text-label-sm font-label-sm text-outline">0% mindbridge take</span></div></div><div class="w-full h-1 rounded-full mt-space-sm overflow-hidden" style="background-color: #242a3a;"><div class="h-full rounded-full" style="width: 78%; background-color: #3898ff;"></div></div></div><!-- Card 4: Pending Slips --><div class="rounded-xl p-space-md flex flex-col justify-between group hover:shadow-lg transition-all" style="background-color: #151b2b; border: 1px solid #1e2638;"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-error">Audit Queue</span><div class="w-8 h-8 rounded-lg flex items-center justify-center text-error" style="background-color: rgba(147, 0, 10, 0.25);"><span class="material-symbols-outlined text-[18px]">pending_actions</span></div></div><div class="mt-space-sm"><div class="flex items-baseline gap-2"><span class="font-headline-lg text-headline-lg font-bold text-error">14</span><span class="font-label-sm text-label-sm text-on-surface-variant">Bank Slips</span></div><div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1"><span>Tied Value</span><span class="font-semibold text-white">Rs. 98,500</span></div></div><div class="w-full h-1 rounded-full mt-space-sm overflow-hidden" style="background-color: #242a3a;"><div class="bg-error h-full rounded-full" style="width: 48%;"></div></div></div><!-- Card 5: Pending Enrollments --><div class="rounded-xl p-space-md flex flex-col justify-between group hover:shadow-lg transition-all" style="background-color: #151b2b; border: 1px solid #1e2638;"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Portal Access</span><div class="w-8 h-8 rounded-lg flex items-center justify-center text-secondary" style="background-color: #0d1322;"><span class="material-symbols-outlined text-[18px]">how_to_reg</span></div></div><div class="mt-space-sm"><div class="flex items-baseline gap-2"><span class="font-headline-lg text-headline-lg font-bold text-white">28</span><span class="font-label-sm text-label-sm text-on-surface-variant">Registrations</span></div><div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1"><span>Manual Approval</span><span class="text-tertiary font-semibold">Verification Req.</span></div></div><div class="w-full h-1 rounded-full mt-space-sm overflow-hidden" style="background-color: #242a3a;"><div class="h-full rounded-full" style="width: 60%; background-color: #ffb95f;"></div></div></div><!-- Card 6: Live Broadcasts --><div class="rounded-xl p-space-md flex flex-col justify-between group hover:shadow-lg transition-all" style="background-color: #151b2b; border: 1px solid #1e2638;"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Streaming Today</span><div class="w-8 h-8 rounded-lg flex items-center justify-center text-primary" style="background-color: #0d1322;"><span class="material-symbols-outlined text-[18px]">videocam</span></div></div><div class="mt-space-sm"><div class="flex items-baseline gap-2"><span class="font-headline-lg text-headline-lg font-bold text-primary">2</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Live Lectures</span></div><div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm mt-1"><span>Next at 18:30</span><span class="font-semibold text-primary">A/L 2025</span></div></div><div class="w-full h-1 rounded-full mt-space-sm overflow-hidden" style="background-color: #242a3a;"><div class="h-full rounded-full" style="width: 100%; background-color: #3898ff;"></div></div></div></section>
+<!-- Operational Grid (2 Columns: 7/12 & 5/12 on Desktop) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (7 Cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-lg min-w-0">
+<!-- Live Class Gateway Module (Bridge-arch accent) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" style="background-color: #151b2b; border: 1px solid #1e2638; border-top-right-radius: 24px;">
+<div class="bg-primary p-space-md text-on-primary flex items-center justify-between flex-wrap gap-space-sm" style="background: linear-gradient(90deg, #0f274a 0%, #153e77 100%); border-bottom: 1px solid #1e3860;">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-error animate-ping"></span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed">Gateway Ready • Scheduled 18:30 SLST Today</span>
+<h3 class="font-title text-title text-on-primary">Complex Numbers Master Lecture Unit 4</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/20 backdrop-blur-md text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock_open</span>
+            Gateway Active
+          </span>
+</div>
+<div class="p-space-lg flex flex-col md:flex-row gap-space-md items-center justify-between">
+<div class="space-y-1.5 max-w-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<span>Encrypted Zoom Direct Link via MindBridge CDN Proxy</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+              Auto-attendance telemetry tracks student view duration. Gateway unlocks for learners 15 mins prior (18:15 SLST).
+            </p>
+<div class="flex items-center gap-space-md pt-1">
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary text-[16px]">groups</span>
+<span class="font-bold">842</span> registered learners
+              </div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-[16px]">timer</span>
+                Starts in <span class="font-bold text-primary">3h 58m</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs w-full md:w-auto">
+<button class="px-5 py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm flex items-center justify-center gap-2 transition-transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+              Launch Instructor Room
+            </button>
+<button class="px-5 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+              Copy Secure Relay Link
+            </button>
+</div>
+</div>
+</div>
+<!-- Popular Courses & Capacity Tracker -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" style="background-color: #151b2b; border: 1px solid #1e2638;">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Active Course Batches</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time enrollment capacity, monthly fee yield, and student density</p>
+</div>
+<button class="text-primary hover:text-primary-container font-label-md text-label-md font-semibold flex items-center gap-0.5" type="button">
+            Manage Courses <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Course 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex-shrink-0 flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[24px]">functions</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="font-title text-title text-on-surface truncate">2025 A/L Combined Mathematics Theory Masterclass</h4>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold">Theory</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">1,840 Students</span>
+<span>•</span>
+<span class="text-primary font-semibold">94% Attendance</span>
+<span>•</span>
+<span>Rs. 4,500 / mo</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-36 flex flex-col items-end gap-1 flex-shrink-0">
+<div class="flex justify-between w-full text-label-sm font-label-sm text-on-surface-variant">
+<span>Capacity</span>
+<span class="font-semibold text-on-surface">92%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+</div>
+<!-- Course 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex-shrink-0 flex items-center justify-center text-secondary font-bold">
+<span class="material-symbols-outlined text-[24px]">calculate</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="font-title text-title text-on-surface truncate">Pure Mathematics: Complex Numbers &amp; Calculus Fast-Track</h4>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-secondary font-label-sm text-label-sm font-semibold">Modular</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">1,220 Students</span>
+<span>•</span>
+<span class="text-primary font-semibold">89% Attendance</span>
+<span>•</span>
+<span>Rs. 3,800 / mo</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-36 flex flex-col items-end gap-1 flex-shrink-0">
+<div class="flex justify-between w-full text-label-sm font-label-sm text-on-surface-variant">
+<span>Capacity</span>
+<span class="font-semibold text-on-surface">61%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 61%;"></div>
+</div>
+</div>
+</div>
+<!-- Course 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex-shrink-0 flex items-center justify-center text-tertiary font-bold">
+<span class="material-symbols-outlined text-[24px]">precision_manufacturing</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="font-title text-title text-on-surface truncate">Applied Mathematics: Statics &amp; Dynamics Intensive</h4>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-tertiary font-label-sm text-label-sm font-semibold">Revision</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">890 Students</span>
+<span>•</span>
+<span class="text-primary font-semibold">91% Attendance</span>
+<span>•</span>
+<span>Rs. 4,000 / mo</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-36 flex flex-col items-end gap-1 flex-shrink-0">
+<div class="flex justify-between w-full text-label-sm font-label-sm text-on-surface-variant">
+<span>Capacity</span>
+<span class="font-semibold text-on-surface">45%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+</div>
+<!-- Course 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest flex-shrink-0 flex items-center justify-center text-on-surface-variant font-bold">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<h4 class="font-title text-title text-on-surface truncate">2026 A/L Foundation Batch</h4>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm font-semibold">New Intake</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">260 Students</span>
+<span>•</span>
+<span class="text-secondary font-semibold">Pre-enrolling</span>
+<span>•</span>
+<span>Rs. 3,500 / mo</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-36 flex flex-col items-end gap-1 flex-shrink-0">
+<div class="flex justify-between w-full text-label-sm font-label-sm text-on-surface-variant">
+<span>Capacity</span>
+<span class="font-semibold text-on-surface">13%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 13%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Student Engagement & Telemetry Mini Chart (Inline SVG) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" style="background-color: #151b2b; border: 1px solid #1e2638;">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-space-md">
+<div>
+<h3 class="font-title text-title text-on-surface">Weekly Platform Video &amp; Quiz Traffic</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daily unique student authentications (Apex Maths Tenant)</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Live Streams
+            </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span> Recorded Video
+            </span>
+</div>
+</div>
+<div class="w-full h-44 flex flex-col justify-end pt-4">
+<!-- Sparkline / Bar visualization -->
+<div class="h-32 w-full flex items-end justify-between gap-2 px-2">
+<!-- Mon -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full max-w-[28px] bg-primary/20 hover:bg-primary/30 rounded-t h-[65%] relative">
+<div class="w-full bg-primary rounded-t absolute bottom-0 h-[40%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Mon</span>
+</div>
+<!-- Tue -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full max-w-[28px] bg-primary/20 hover:bg-primary/30 rounded-t h-[75%] relative">
+<div class="w-full bg-primary rounded-t absolute bottom-0 h-[55%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Tue</span>
+</div>
+<!-- Wed -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full max-w-[28px] bg-primary/20 hover:bg-primary/30 rounded-t h-[92%] relative">
+<div class="w-full bg-primary rounded-t absolute bottom-0 h-[70%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Wed</span>
+</div>
+<!-- Thu -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full max-w-[28px] bg-primary/20 hover:bg-primary/30 rounded-t h-[80%] relative">
+<div class="w-full bg-primary rounded-t absolute bottom-0 h-[50%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Thu</span>
+</div>
+<!-- Fri -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full max-w-[28px] bg-primary/20 hover:bg-primary/30 rounded-t h-[85%] relative">
+<div class="w-full bg-primary rounded-t absolute bottom-0 h-[60%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Fri</span>
+</div>
+<!-- Sat (Peak Live) -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full max-w-[28px] bg-primary/20 hover:bg-primary/30 rounded-t h-[98%] relative">
+<div class="w-full bg-primary rounded-t absolute bottom-0 h-[85%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Sat</span>
+</div>
+<!-- Sun -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group">
+<div class="w-full max-w-[28px] bg-primary/20 hover:bg-primary/30 rounded-t h-[70%] relative">
+<div class="w-full bg-primary rounded-t absolute bottom-0 h-[45%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Sun</span>
+</div>
+</div>
+<div class="flex justify-between items-center pt-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span>Average concurrent bandwidth: <span class="font-semibold text-on-surface">1.4 Gbps</span></span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">99.98% uptime</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg min-w-0">
+<!-- Urgent Bank Slip Audit Widget -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" style="background-color: #151b2b; border: 1px solid #1e2638;">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-pulse"></span>
+<h3 class="font-title text-title text-on-surface">Pending Bank Slips</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+            14 Unverified
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Students awaiting course unlocking via direct deposit verification.
+        </p>
+<div class="flex flex-col gap-space-sm" id="slip-audit-container">
+<!-- Slip 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between gap-space-sm" id="slip-row-1">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest overflow-hidden flex-shrink-0 relative group cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="A clean, flat macro photograph of a Sri Lankan bank deposit slip from Bank of Ceylon with stamped seal and handwritten rupees amount on high-contrast white paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDR3oHJUAH80WB5Rd6GRUn1MF_ynUaJG-UhI5mnCurv_0kGDaysDSaaqSwh10tqGdgZgd2p4FvkuQGaiWYQE6ea1BYyLQuw4NgZEQtk2J0d1X_wFAPgr2gaEC_08Vah1q-YVUBYjmVvFxKN2nE0tufyL7kkrw091V8hHBZXwLiFxAcj40HP1GKBudI5OKP6NVf25xKnc2wpMqj8LASslfZahxq4m64v3kxvQU0Blc"/>
+<div class="absolute inset-0 bg-on-surface/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+<span class="material-symbols-outlined text-surface-container-lowest text-[18px]">zoom_in</span>
+</div>
+</div>
+<div class="min-w-0">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate font-semibold">Nimash Dhananjaya</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Bank of Ceylon • Branch: Kandy</p>
+<span class="font-label-sm text-label-sm text-primary font-bold">Rs. 4,500 LKR</span>
+</div>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0">
+<button class="p-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary transition-all title='Approve Slip'" onclick="document.getElementById('slip-row-1').classList.add('opacity-40');" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-on-surface-variant transition-all title='Inspect Full Receipt'" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Slip 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between gap-space-sm" id="slip-row-2">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest overflow-hidden flex-shrink-0 relative group cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="A photographed electronic payment transfer receipt from Sampath Bank Vishwa app on a mobile screen displaying transaction reference numbers and timestamp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANkVSNiFtNHTDqqQKNdSkVj0QGxIPapVqpOQZWEdN5grFaTQPDLp2hoS1FBUnUqExu5MPKYZBma_kdqiCVRH5PTbdpe4z6o-79DH2NmC97vMGV9mO-1KwkpKUbDrPcRzv9eIUhuknZ2yXWqhkxmkk9aHjXeFEHqPqXLRy9vJwbuOh1IRUu3V1yK0PTNRHfVW1bag9sgi5ELg9aCrPWBYW1CJTvAbR508bZgxYnm-E"/>
+<div class="absolute inset-0 bg-on-surface/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+<span class="material-symbols-outlined text-surface-container-lowest text-[18px]">zoom_in</span>
+</div>
+</div>
+<div class="min-w-0">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate font-semibold">Rashmika Madushan</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Sampath Vishwa • Online Transfer</p>
+<span class="font-label-sm text-label-sm text-primary font-bold">Rs. 3,800 LKR</span>
+</div>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0">
+<button class="p-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary transition-all" onclick="document.getElementById('slip-row-2').classList.add('opacity-40');" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-on-surface-variant transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Slip 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between gap-space-sm" id="slip-row-3">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-14 h-14 rounded-lg bg-surface-container-highest overflow-hidden flex-shrink-0 relative group cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="A crisp high quality photo of a Commercial Bank cash deposit slip with blue ink stamp and signature for combined mathematics course enrollment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDgv_6dcMNL4EFMJAKiNTIvrf529Dih1NUKBh7eVECJoF9OONEGpttXGDb-HLt-rN5L4JCpDmZ1nrFwdwEmfc7m80r36HxMmxsHqNiifFJNxNalW0mhyEfW98RonCFj9TR_iKXlVIZgUUjYyMLI8O0ZZ6VFfgiD-9HFMXYDK0-Zdx87JxnTvCNXRGMuMjsd8Y-lRZ3TZ7WEqZTBnvksmxqBwOURtBRq62BGVujSQE"/>
+<div class="absolute inset-0 bg-on-surface/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+<span class="material-symbols-outlined text-surface-container-lowest text-[18px]">zoom_in</span>
+</div>
+</div>
+<div class="min-w-0">
+<h5 class="font-label-lg text-label-lg text-on-surface truncate font-semibold">Tharushi Silva</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Commercial Bank • Kurunegala</p>
+<span class="font-label-sm text-label-sm text-primary font-bold">Rs. 4,500 LKR</span>
+</div>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0">
+<button class="p-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary transition-all" onclick="document.getElementById('slip-row-3').classList.add('opacity-40');" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-variant text-on-surface-variant transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">11 additional slips in batch</span>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline flex items-center gap-1" href="#">
+            Open Optical Review Queue <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Staff Capacity Monitor (Strict MindBridge Rule Enforcer) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" style="background-color: #151b2b; border: 1px solid #1e2638;">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">badge</span>
+<h3 class="font-title text-title text-on-surface">Staff Quota Enforcement</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+            2 / 2 Allowed (Cap Reached)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Standard SaaS Plan limits tenant administration seats to 2 concurrent operational users.
+        </p>
+<!-- Current Staff Members -->
+<div class="space-y-space-sm mb-space-md">
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-label-sm text-label-sm font-bold">
+                KS
+              </div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">Eng. Kusal Senaratne</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Tenant Owner • Master Admin</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">Active</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-label-sm text-label-sm font-bold">
+                KP
+              </div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold leading-tight">Kavindi Perera</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Assistant Registrar • Slip Reviewer</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">Active</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-start gap-space-sm mb-space-md">
+<span class="material-symbols-outlined text-outline text-[18px] mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Additional assistant staff or teaching instructors require quota provisioning by MindBridge Super Admin.
+          </p>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">upgrade</span>
+          Request Staff Limit Increase
+        </button>
+</div>
+<!-- Recent Academy Audit Activity Log -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" style="background-color: #151b2b; border: 1px solid #1e2638;">
+<div class="flex items-center justify-between mb-space-md">
+<h3 class="font-title text-title text-on-surface">Tenant Audit Trail</h3>
+<span class="font-label-sm text-label-sm text-outline">Real-time log</span>
+</div>
+<div class="relative pl-6 space-y-space-md before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container-high">
+<!-- Log 1 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-primary"></span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">Course Syllabus Updated</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Added 'Differential Equations Part 3' video by Eng. Kusal</p>
+<span class="font-label-sm text-label-sm text-outline">28 mins ago • IP: 112.134.192.12</span>
+</div>
+</div>
+<!-- Log 2 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">Bank Slip Batch Approved</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kavindi Perera approved 6 slips (Rs. 26,500 LKR total)</p>
+<span class="font-label-sm text-label-sm text-outline">1 hour ago • Verified</span>
+</div>
+</div>
+<!-- Log 3 -->
+<div class="relative">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-error"></span>
+<div>
+<p class="font-label-lg text-label-lg text-error font-semibold">Student Account Restricted</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Duplicate concurrent session flagged for ST-94819</p>
+<span class="font-label-sm text-label-sm text-outline">3 hours ago • Auto-firewall</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-center">
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline" href="#">
+            View Complete Security Audit History
+          </a>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

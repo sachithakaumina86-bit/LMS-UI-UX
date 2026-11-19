@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-dim": "#0d1322", "secondary-fixed-dim": "#ffb95f", "on-error": "#690005", "on-secondary-fixed": "#2a1700", "tertiary-fixed-dim": "#4edea3", "secondary": "#ffb95f", "surface-bright": "#33394a", "on-background": "#dde2f8", "surface-container-high": "#242a3a", "inverse-on-surface": "#2a3040", "surface-container": "#191f2f", "error-container": "#93000a", "inverse-primary": "#005fad", "inverse-surface": "#dde2f8", "surface-container-lowest": "#080e1d", "on-tertiary": "#003824", "on-primary-container": "#002f5b", "primary": "#a4c8ff", "primary-fixed-dim": "#a4c8ff", "background": "#0d1322", "on-error-container": "#ffdad6", "primary-fixed": "#d4e3ff", "surface-container-highest": "#2f3445", "surface": "#0d1322", "on-tertiary-container": "#003623", "surface-variant": "#2f3445", "surface-container-low": "#151b2b", "tertiary-fixed": "#6ffbbe", "on-surface": "#dde2f8", "on-secondary-container": "#5b3800", "outline": "#8a919e", "tertiary-container": "#00ab76", "secondary-fixed": "#ffddb8", "surface-tint": "#a4c8ff", "on-primary": "#00315e", "on-secondary-fixed-variant": "#653e00", "on-secondary": "#472a00", "on-primary-fixed-variant": "#004784", "on-primary-fixed": "#001c3a", "error": "#ffb4ab", "secondary-container": "#ee9800", "on-tertiary-fixed-variant": "#005236", "outline-variant": "#404753", "on-tertiary-fixed": "#002113", "primary-container": "#3898ff", "tertiary": "#4edea3", "on-surface-variant": "#c0c7d5" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "gutter": "1.5rem", "space-md": "1rem", "space-3xl": "4rem", "space-2xs": "0.125rem", "gutter-mobile": "0.75rem", "margin": "2rem", "space-lg": "1.5rem", "space-2xl": "3rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem" }, "fontFamily": { "body-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"] }, "fontSize": { "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col border-r border-outline-variant/30"><div class="h-16 px-gutter flex items-center gap-space-sm border-b border-outline-variant/20"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface font-bold tracking-tight leading-none">MindBridge</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold mt-space-2xs">A/L Maths Core</span></div></div><div class="px-gutter py-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded bg-surface-container-low border border-outline-variant/40"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary font-bold tracking-wide uppercase">Tenant Active</span><span class="font-label-sm text-label-sm text-on-surface-variant ml-auto">2025/2026 A/L</span></div></div><nav class="flex-1 px-space-sm py-space-xs space-y-space-2xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_rgba(56,152,255,0.25)]"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_rgba(56,152,255,0.25)]" data-path="dashboard-overview" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard / Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="course-builder-manager" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span class="font-label-lg text-label-lg">Course Builder &amp; Manager</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="video-content-studio" href="#"><span class="material-symbols-outlined text-[20px]">video_library</span><span class="font-label-lg text-label-lg">Video &amp; Content Studio</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="student-registry-enrolments" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-label-lg text-label-lg">Student Registry &amp; Enrolments</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="staff-governance" href="#"><span class="material-symbols-outlined text-[20px]">shield_person</span><span class="font-label-lg text-label-lg">Staff &amp; 2-Staff Governance</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="financials-slip-auditing" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-lg text-label-lg">Financials &amp; Slip Auditing</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">System Settings</span></a></nav><div class="p-space-sm border-t border-outline-variant/20 bg-surface-container-lowest"><div class="flex items-center gap-space-sm p-space-xs rounded-lg bg-surface-container-low border border-outline-variant/30"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-sm text-label-sm font-bold text-on-surface truncate">Eng. Kusal Senaratne</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Combined Maths Head</span></div><span class="material-symbols-outlined text-outline text-[18px]">verified</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 z-40 bg-surface-dim/90 backdrop-blur-xl border-b border-outline-variant/30 flex items-center justify-between px-gutter"><div class="flex items-center gap-gutter"><div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-low border border-outline-variant/40 hover:border-primary/50 cursor-pointer transition-colors"><span class="material-symbols-outlined text-secondary text-[20px]">domain</span><div class="flex flex-col text-left"><span class="font-label-sm text-label-sm text-outline uppercase font-semibold leading-none">Tenant / Batch</span><span class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[220px]">Apex Combined Mathematics - Colombo &amp; Nugegoda</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-lowest border border-outline-variant/30 w-80"><span class="material-symbols-outlined text-outline text-[18px]">search</span><input class="bg-transparent border-0 outline-none text-on-surface placeholder:text-outline font-body-sm text-body-sm w-full" placeholder="Search index numbers, bank slips, questions..." readonly="" type="text"/></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-space-2xs px-space-sm py-space-xs rounded-full bg-surface-container-high border border-outline-variant/40"><span class="material-symbols-outlined text-primary text-[16px]">dark_mode</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-bold">Obsidian Sync</span></div><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-dim"></span></button><div class="h-6 w-px bg-outline-variant/30 mx-space-2xs"></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden md:flex flex-col text-right"><span class="font-label-md text-label-md font-bold text-on-surface leading-tight">Eng. Kusal Senaratne</span><span class="font-label-sm text-label-sm text-secondary font-semibold">Master Admin</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Command Center Header Area -->
+<div class="px-margin pt-space-md pb-space-lg flex flex-col gap-space-sm bg-surface-container-lowest">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="inline-flex items-center px-space-xs py-space-2xs rounded bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider font-bold">
+            Live Production Node
+          </span>
+<span class="text-outline text-label-sm font-label-sm">•</span>
+<span class="text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+            Turnstiles Synchronized
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-extrabold">
+          Tenant Admin Operations Command
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-2xs">
+          Apex Educational Institute — Dual-Campus Management Hub
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="bg-surface-container-low px-space-md py-space-xs rounded-lg flex flex-col justify-center">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Institution Code</span>
+<span class="font-label-md text-label-md text-primary font-bold tracking-tight">APX-COL-2026</span>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-xs rounded-lg flex flex-col justify-center">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Active Cohort</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">2025/2026 G.C.E. A/L</span>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-xs rounded-lg flex flex-col justify-center">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Operating Base</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Nugegoda &amp; Bambalapitiya</span>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-md text-label-md px-space-md py-space-xs rounded-lg font-bold flex items-center gap-space-2xs transition-all shadow-[0_0_16px_rgba(56,152,255,0.25)] hover:bg-primary hover:text-on-primary" id="refreshPipelineBtn">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+          Sync Telemetry
+        </button>
+</div>
+</div>
+</div>
+<div class="p-margin space-y-space-xl">
+<!-- 4 High-Impact KPI Metrics Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- Metric 1: Monthly Revenue -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between relative overflow-hidden group shadow-lg">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider font-semibold">Monthly Tuition Revenue</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">payments</span>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-lg text-label-lg text-secondary font-bold">LKR</span>
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">8,289,000</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Target: LKR 8.50M</span>
+<span class="text-tertiary font-bold">97.5% Paced</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-xs overflow-hidden">
+<div class="bg-gradient-to-r from-primary-container to-tertiary h-full rounded-full" style="width: 97.5%;"></div>
+</div>
+</div>
+</div>
+<!-- Metric 2: Enrolled Active Students -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between relative overflow-hidden group shadow-lg">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 bg-tertiary/10 rounded-full blur-2xl group-hover:bg-tertiary/20 transition-all"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider font-semibold">Active Student Base</span>
+<span class="material-symbols-outlined text-tertiary text-[22px]">groups</span>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">1,842</span>
+<span class="font-label-md text-label-md text-tertiary font-bold">+64 this week</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Comb. Maths: <strong class="text-on-surface font-semibold">1,220</strong></span>
+<span>Physics: <strong class="text-on-surface font-semibold">622</strong></span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-xs overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 66.2%;"></div>
+<div class="bg-secondary h-full" style="width: 33.8%;"></div>
+</div>
+</div>
+</div>
+<!-- Metric 3: Bank Slips Pending -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between relative overflow-hidden group shadow-lg">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-all"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider font-semibold">Pending Slip Audit</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">pending_actions</span>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-secondary font-extrabold tracking-tight">14</span>
+<span class="font-label-md text-label-md text-on-surface-variant">vouchers awaiting</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Avg. Adjudication: 18m</span>
+<span class="text-tertiary font-semibold flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span> 11 AI-Vetted
+            </span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-space-xs overflow-hidden flex">
+<div class="bg-tertiary h-full" style="width: 78.5%;"></div>
+<div class="bg-secondary-container h-full" style="width: 21.5%;"></div>
+</div>
+</div>
+</div>
+<!-- Metric 4: Staff Governance 2-Staff Limit -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between relative overflow-hidden group shadow-lg">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 bg-primary-container/10 rounded-full blur-2xl group-hover:bg-primary-container/20 transition-all"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider font-semibold">Staff Limit Policy</span>
+<span class="material-symbols-outlined text-primary text-[22px]">admin_panel_settings</span>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">2 / 2</span>
+<span class="font-label-md text-label-md text-tertiary font-bold uppercase tracking-wider">Capped (100%)</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Bursar (1)</span>
+<span>•</span>
+<span>Logistics Lead (1)</span>
+</div>
+<div class="w-full bg-tertiary/20 h-1.5 rounded-full mt-space-xs overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Operational Split: 2/3 Operations Grid + 1/3 Right Rail Governance -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left & Center 8 Columns: Clearance Pipeline & Campus Turnstiles -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- SECTION 1: Real-time Slip Clearance & Adjudication Pipeline -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-lg flex flex-col">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold tracking-tight">
+                  Real-time Slip Clearance &amp; Adjudication Pipeline
+                </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+                Machine-vision verification against Bank of Ceylon &amp; Commercial Bank gateway records
+              </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold">
+                Batch Mode: Dual Signature
+              </span>
+</div>
+</div>
+<!-- Pipeline Visual Stage Flow -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm my-space-md">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">cloud_download</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold block">Phase 1: Ingested</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">14 Slips</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">arrow_forward</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase font-bold block">Phase 2: High AI Match</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">11 Autocleared</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between ring-1 ring-secondary/30">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">priority_high</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold block">Phase 3: Flagged Review</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">3 Slips</span>
+</div>
+</div>
+<span class="px-space-xs py-space-2xs rounded bg-secondary/20 text-secondary font-label-sm text-label-sm font-bold animate-pulse">Action req.</span>
+</div>
+</div>
+<!-- Flagged Slips Table -->
+<div class="mt-space-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wider">
+                Vouchers Requiring Manual Adjudication (3)
+              </span>
+<span class="font-body-sm text-body-sm text-outline">
+                Red stamp smudged or ambiguous teller text
+              </span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="px-space-sm py-space-xs rounded-l">Voucher / Stamp</th>
+<th class="px-space-sm py-space-xs">Student Index &amp; Name</th>
+<th class="px-space-sm py-space-xs">Declared</th>
+<th class="px-space-sm py-space-xs">Anomaly Flag</th>
+<th class="px-space-sm py-space-xs text-right rounded-r">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/60">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-space-sm py-space-sm">
+<div class="relative w-14 h-10 rounded bg-surface-container-lowest overflow-hidden flex items-center justify-center group cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a scanned Sri Lankan bank deposit slip with red rubber stamp ink smudge over account digits under dim inspection lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwjk9-j9u9pfj8GWxxP-cVzKWCF0kPAVYJenimJCGnCqTH1Q5evhW8EgJAYpUXkE19fagBPhRwFo4WbiJamhSut6zchyIiF8beozsjWLTSVWu8WyGBwpQczrTBXtZT489pasRKHcg8bmZpwrN4FOoqSfXsK9t1BGAhhTGWFJvkjj_DsGVVXZt-87yMk7tAMXv3ioDQT11BrU83CUumYbJt_fQWhe22MRN4lDKt8_s"/>
+<span class="absolute inset-0 bg-surface-container-lowest/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-[16px]">zoom_in</span>
+</span>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">APX-2026-M-0894</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">P. Sandaruwan Alwis (Maths)</span>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold">LKR 4,500</span>
+<span class="block text-[10px] text-outline">Commercial Bank - Nugegoda</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-error/15 text-error font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Red Stamp Overlap
+                      </span>
+</td>
+<td class="px-space-sm py-space-sm text-right">
+<button class="bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-label-sm px-space-sm py-space-xs rounded-lg transition-colors font-bold inline-flex items-center gap-space-2xs" onclick="openForensicModal('APX-2026-M-0894', 'P. Sandaruwan Alwis', 'LKR 4,500', 'BOC Branch 108', 'Teller stamp ink bleed overlaps with Reference serial number')">
+<span class="material-symbols-outlined text-[16px]">csv</span>
+                        Inspect Console
+                      </button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-space-sm py-space-sm">
+<div class="relative w-14 h-10 rounded bg-surface-container-lowest overflow-hidden flex items-center justify-center group cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover" data-alt="High contrast macro photo of a handwritten deposit receipt slip with light ballpoint blue pen markings and faint branch authentication stamp." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf1b3Y5kpkHZAuvgULgna528lGMVBYb57Wel0GmAr3b7adPA_oLfM34CYKxl2InaK4ROnisj6wjVHRWwIXJIyMlpiHxiK3MV6HsE4EiPzsR_uwWJPHuK7VkkZdqwvhpcDVjpALPr7ZfDVbd0UkTa1VnLPTYWe1P8XWxwLRnz97JjYvMb6iefiEpUujbQw9srmrK-D6XihJYAwBvEkdYXTEy3S4I2Zcjyls6fey7mw"/>
+<span class="absolute inset-0 bg-surface-container-lowest/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-[16px]">zoom_in</span>
+</span>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">APX-2026-P-1122</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Methma S. Wickramasinghe</span>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold">LKR 4,500</span>
+<span class="block text-[10px] text-outline">BOC - Bambalapitiya</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Low Teller Legibility
+                      </span>
+</td>
+<td class="px-space-sm py-space-sm text-right">
+<button class="bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-label-sm px-space-sm py-space-xs rounded-lg transition-colors font-bold inline-flex items-center gap-space-2xs" onclick="openForensicModal('APX-2026-P-1122', 'Methma S. Wickramasinghe', 'LKR 4,500', 'Commercial Bank - Bambalapitiya', 'Handwritten teller initials require cross verification with daily journal')">
+<span class="material-symbols-outlined text-[16px]">csv</span>
+                        Inspect Console
+                      </button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-space-sm py-space-sm">
+<div class="relative w-14 h-10 rounded bg-surface-container-lowest overflow-hidden flex items-center justify-center group cursor-pointer shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Scanned bank pay-in slip displaying slight motion blur with an unclear currency numerical total in a dark room inspection environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkp0iLcYNY5Sxk8vOSfOEbHHU8bJaRWZW4MZDu4UnCek9HHYpsSzUbfnBgM7Xn5k6JxSSfPGe82FxytJ5xFMzah-tcdQkCJbnL9XLVBHP2x7Yo7AjutnyuaiSmh7BH4v1nfw5a9PGB1fT9Lkz4cRSbCXTsEdKGaniaMomIlL5tdnTgsjODGUih6GjM93gMnEWbO9bueXnuH3Q685Duey9ROM_Wd9eCNxG6V64L2tA"/>
+<span class="absolute inset-0 bg-surface-container-lowest/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary text-[16px]">zoom_in</span>
+</span>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">APX-2026-M-1405</span>
+<span class="text-on-surface-variant font-body-sm text-body-sm">K. Vihan De Silva (Maths)</span>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-bold">LKR 4,500</span>
+<span class="block text-[10px] text-outline">Hatton National Bank</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-error/15 text-error font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Reference Mismatch
+                      </span>
+</td>
+<td class="px-space-sm py-space-sm text-right">
+<button class="bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-sm text-label-sm px-space-sm py-space-xs rounded-lg transition-colors font-bold inline-flex items-center gap-space-2xs" onclick="openForensicModal('APX-2026-M-1405', 'K. Vihan De Silva', 'LKR 4,500', 'HNB City Office', 'Calculated digit mismatch on 6th serial character from bank deposit record')">
+<span class="material-symbols-outlined text-[16px]">csv</span>
+                        Inspect Console
+                      </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Physical Turnstile Campus Attendance Today -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">sensor_door</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold tracking-tight">
+                  Physical Turnstile Attendance Today
+                </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+                Real-time RFID/NFC ingress telemetry from Rotary Nugegoda &amp; Bambalapitiya auditoriums
+              </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-space-2xs px-space-sm py-space-2xs rounded bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+                Hardware Gate Active
+              </span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md mt-space-sm">
+<!-- Hall A: Rotary Nugegoda Morning Combined Maths -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Hall A • Nugegoda Campus</span>
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface">Morning Slot (07:30 - 13:00)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                  2026 Combined Maths Pure Theory
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+                  Lecturer: Eng. Kusal Senaratne • Rotary Hall A
+                </p>
+</div>
+<div class="mt-space-md">
+<div class="flex items-end justify-between mb-space-2xs">
+<div>
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">342</span>
+<span class="font-title-md text-title-md text-outline font-semibold"> / 350 Physical check-ins</span>
+</div>
+<span class="font-label-lg text-label-lg text-tertiary font-bold">97.7%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex">
+<div class="bg-tertiary h-full rounded-full transition-all duration-500" style="width: 97.7%;"></div>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-body-sm font-body-sm text-outline">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">contactless</span>
+                    340 NFC Cards Verified
+                  </span>
+<span>8 Absentees</span>
+</div>
+</div>
+</div>
+<!-- Hall B: Bambalapitiya Afternoon Physics -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Hall B • Bambalapitiya Campus</span>
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface">Afternoon Slot (13:30 - 18:00)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+                  Advanced Mechanics &amp; Waves Practical
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+                  Lead Instructor: Dr. N. Ranasinghe • Main Auditorium
+                </p>
+</div>
+<div class="mt-space-md">
+<div class="flex items-end justify-between mb-space-2xs">
+<div>
+<span class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">210</span>
+<span class="font-title-md text-title-md text-outline font-semibold"> / 250 Registered</span>
+</div>
+<span class="font-label-lg text-label-lg text-primary font-bold">84.0%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 84.0%;"></div>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-body-sm font-body-sm text-outline">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-primary">login</span>
+                    In-flow Ingress Ongoing
+                  </span>
+<span>Gate 2 Open</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (1/3 width): Governance Guardrail, Logistics & Helpdesk -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- 1. Two-Staff Governance Guardrail Card -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-lg flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">policy</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold tracking-tight">
+                2-Staff Governance
+              </h2>
+</div>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase font-bold">
+              Tier 2 Policy
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            MindBridge institutional policy enforces a strict 2-seat delegation rule for this academy branch to safeguard tuition reconciliation.
+          </p>
+<!-- Active Staff Member 1 -->
+<div class="space-y-space-sm my-space-md">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary font-bold text-label-lg shrink-0">
+                DJ
+              </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Mrs. Damayanthi J.</span>
+<span class="text-[10px] font-bold text-tertiary uppercase bg-tertiary/15 px-1.5 py-0.5 rounded">Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Senior Bursar &amp; Cashier</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">check</span> Full Slip Adjudication Authority
+                </span>
+</div>
+</div>
+<!-- Active Staff Member 2 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-label-lg shrink-0">
+                CP
+              </div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Mr. Chaminda Perera</span>
+<span class="text-[10px] font-bold text-tertiary uppercase bg-tertiary/15 px-1.5 py-0.5 rounded">Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Curriculum &amp; Tute Logistics</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary">check</span> Courier &amp; Attendance Manager
+                </span>
+</div>
+</div>
+<!-- Locked 3rd Staff Slot -->
+<div class="bg-surface-container-lowest/60 p-space-sm rounded-lg flex items-center justify-between opacity-80">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-outline block">Add 3rd Staff Member</span>
+<span class="font-body-sm text-body-sm text-outline/80">Restricted by Seat Allocation</span>
+</div>
+</div>
+<button class="bg-surface-container-high text-primary hover:text-on-surface text-label-sm font-label-sm px-space-xs py-space-2xs rounded transition-colors font-semibold">
+                Upgrade
+              </button>
+</div>
+</div>
+<div class="bg-surface-container-high/40 p-space-xs rounded text-center">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Dual Approval Required for Financial Reversal</span>
+</div>
+</div>
+<!-- 2. PromptXpress Islandwide Courier Synchronization -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[22px]">local_shipping</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold tracking-tight">
+                  PromptXpress Logistics
+                </h2>
+</div>
+<span class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                SLT Gateway Live
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Islandwide delivery synchronization of Combined Maths &amp; Physics compendiums.
+            </p>
+</div>
+<div class="my-space-md bg-surface-container-low p-space-md rounded-xl space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-outline">Theory Compendiums Dispatched</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">1,420 Packs</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex">
+<div class="bg-tertiary h-full" style="width: 86%;"></div>
+<div class="bg-secondary h-full" style="width: 14%;"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline">
+<span class="text-tertiary font-semibold">1,221 Delivered</span>
+<span class="text-secondary font-semibold">199 In Transit</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">sync_saved_locally</span>
+              Last synced 4 mins ago
+            </span>
+<a class="text-primary hover:underline font-label-sm text-label-sm font-bold flex items-center gap-space-2xs" href="#">
+              Waybills
+              <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- 3. Cashier WhatsApp Helpdesk Quick Link -->
+<div class="bg-gradient-to-br from-surface-container to-surface-container-high rounded-xl p-space-lg shadow-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[24px]">support_agent</span>
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider font-bold">Cashier Desk Link</span>
+</div>
+<span class="px-space-xs py-space-2xs rounded bg-tertiary/20 text-tertiary font-label-sm text-label-sm font-bold">
+              12 Resolved Today
+            </span>
+</div>
+<div class="my-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">
+              +94 71 987 6543
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-2xs">
+              Direct hotline for students submitting unclear teller deposits and emergency admission slips.
+            </p>
+</div>
+<a class="bg-tertiary-container text-on-tertiary hover:opacity-90 font-label-md text-label-md py-space-xs px-space-md rounded-lg font-bold flex items-center justify-center gap-space-xs transition-opacity shadow-md" href="https://wa.me/94719876543" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+            Launch Cashier WhatsApp Web
+          </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal / Forensic Inspection Drawer for Voucher Review -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-gutter bg-surface-container-lowest/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-200" id="forensicModal">
+<div class="bg-surface-container w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[921px]">
+<!-- Modal Top Bar -->
+<div class="bg-surface-container-high px-space-lg py-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">csv</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">
+              Forensic Voucher Inspection Console
+            </h3>
+<span class="font-body-sm text-body-sm text-outline">Dual-Signatory Adjudication Node • MindBridge Verification OCR</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-space-2xs rounded-lg transition-colors" onclick="closeForensicModal()">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<!-- Modal Body: Split Zoom Canvas & Details -->
+<div class="p-space-lg grid grid-cols-1 md:grid-cols-2 gap-space-lg overflow-y-auto">
+<!-- Left: Image Pan & Zoom Area -->
+<div class="flex flex-col gap-space-xs">
+<div class="relative w-full h-72 bg-surface-container-lowest rounded-xl overflow-hidden flex items-center justify-center group">
+<img class="w-full h-full object-cover" data-alt="Ultra-high-resolution forensic inspection photograph of an official Bank of Ceylon deposit slip showing red ink branch stamp and faint blue handwritten account number details." id="modalSlipImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1coMNGGg3q9M0y5puDQUa3FTXduYHuzVUq_5EX6jymEnEZ36KU1ynZ08Sj2qlX7DenjsmZfK2TGtCILZnoyrWj2fjSSBGxVf-rN8pnFc-IzjRuAxYjGIINXoh5eQM5hl_7jUXU5zYwTVf4gxKZCeNG3IPC8JuCIEISfIwBU_mj5EtUWHRfJ011d-bxlm4mW6pgPctPdAxVXO3QSEFULCh5lrnNI5N3V_Xxn6reeg"/>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between px-space-sm py-space-xs bg-surface-container-lowest/80 backdrop-blur rounded text-[11px] text-on-surface">
+<span>Zoom: 240% (Lossless)</span>
+<span class="text-secondary font-bold">Smudge Detected</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline">
+<span>OCR Confidence: 41.2%</span>
+<span class="text-error font-bold">Flag: Manual Signature Required</span>
+</div>
+</div>
+<!-- Right: Student Metadata & Decision Panel -->
+<div class="flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase block">Student Index</span>
+<span class="font-label-lg text-label-lg text-primary font-bold" id="modalStudentIndex">APX-2026-M-0894</span>
+<span class="font-body-md text-body-md text-on-surface block mt-0.5" id="modalStudentName">P. Sandaruwan Alwis</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase block">Declared Amount</span>
+<span class="font-title-md text-title-md text-on-surface font-bold" id="modalDeclaredAmount">LKR 4,500</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase block">Bank Gateway</span>
+<span class="font-title-md text-title-md text-on-surface font-bold" id="modalBankGateway">Commercial Bank</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold block mb-1">Audit Log Anomaly Note</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="modalAnomalyNote">
+                Teller stamp ink bleed overlaps with Reference serial number. Cross reference with Commercial Bank morning ledger required.
+              </p>
+</div>
+</div>
+<div class="pt-space-sm flex items-center gap-space-sm">
+<button class="flex-1 bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md py-space-sm rounded-lg font-bold flex items-center justify-center gap-space-xs transition-colors shadow-md" onclick="approveSlipAction()">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+              Authorize &amp; Issue Card
+            </button>
+<button class="bg-error/20 hover:bg-error text-error hover:text-on-error font-label-md text-label-md px-space-md py-space-sm rounded-lg font-bold flex items-center gap-space-xs transition-colors" onclick="flagSlipAction()">
+<span class="material-symbols-outlined text-[18px]">block</span>
+              Reject
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function openForensicModal(index, name, amount, bank, note) {
+      document.getElementById('modalStudentIndex').innerText = index;
+      document.getElementById('modalStudentName').innerText = name;
+      document.getElementById('modalDeclaredAmount').innerText = amount;
+      document.getElementById('modalBankGateway').innerText = bank;
+      document.getElementById('modalAnomalyNote').innerText = note;
+      
+      const modal = document.getElementById('forensicModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+      }, 10);
+    }
+
+    function closeForensicModal() {
+      const modal = document.getElementById('forensicModal');
+      modal.classList.add('opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 200);
+    }
+
+    function approveSlipAction() {
+      alert('Voucher validated by Senior Bursar Mrs. Damayanthi Jayawardena. Physical turnstile NFC card updated for admission.');
+      closeForensicModal();
+    }
+
+    function flagSlipAction() {
+      alert('Voucher rejected. Student notified via SMS and WhatsApp helpdesk desk queue initiated.');
+      closeForensicModal();
+    }
+
+    document.getElementById('refreshPipelineBtn')?.addEventListener('click', function() {
+      this.classList.add('animate-spin');
+      setTimeout(() => {
+        this.classList.remove('animate-spin');
+      }, 800);
+    });
+  </script>
+</div></main></div></body></html>

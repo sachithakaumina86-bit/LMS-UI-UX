@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"inverse-primary":"#abc7ff","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-container":"#b5c5fd","surface-container-low":"#f2f3ff","tertiary-container":"#a06900","surface-variant":"#d9e2ff","tertiary":"#7f5300","secondary-fixed":"#dbe1ff","secondary":"#4d5c8e","surface":"#faf8ff","background":"#faf8ff","secondary-fixed-dim":"#b5c5fd","on-primary-fixed":"#001b3f","inverse-on-surface":"#eef0ff","on-tertiary":"#ffffff","on-surface-variant":"#414754","on-secondary-fixed":"#041847","error":"#ba1a1a","surface-bright":"#faf8ff","on-surface":"#101b34","primary-container":"#0072e4","tertiary-fixed-dim":"#ffb952","surface-tint":"#005cba","on-tertiary-fixed-variant":"#633f00","on-primary-fixed-variant":"#00458f","on-background":"#101b34","inverse-surface":"#25304a","on-tertiary-fixed":"#291800","on-error":"#ffffff","error-container":"#ffdad6","surface-container-high":"#e1e7ff","primary":"#005ab6","on-primary":"#ffffff","outline-variant":"#c1c6d6","primary-fixed-dim":"#abc7ff","on-secondary-container":"#405081","outline":"#717785","surface-container-highest":"#d9e2ff","on-primary-container":"#fefcff","on-secondary-fixed-variant":"#354575","surface-dim":"#cfd9fb","on-error-container":"#93000a","primary-fixed":"#d7e3ff","tertiary-fixed":"#ffddb4","on-tertiary-container":"#fffbff","surface-container":"#eaedff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","gutter-mobile":"1rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","margin":"2rem","margin-mobile":"1rem","gutter":"1.5rem","space-lg":"1.5rem"},"fontFamily":{"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"],"display-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"title":["Plus Jakarta Sans"],"body-md":["Inter"],"label-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-lg":["Inter"],"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"label-sm":["Inter"]},"fontSize":{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"title":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"display":["44px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="p-space-md bg-surface-container-low"><div class="flex items-center gap-space-sm mb-space-xs"><div class="w-9 h-9 rounded-lg bg-on-background flex items-center justify-center text-surface-container-lowest font-headline-sm font-bold text-title">AM</div><div class="flex-1 min-w-0"><h2 class="font-title text-title text-on-surface truncate">Apex Combined Maths</h2><p class="font-body-sm text-body-sm text-on-surface-variant truncate">apex-maths.mindbridge.lk</p></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs" type="button"><span class="material-symbols-outlined text-title">unfold_more</span></button></div><div class="flex items-center justify-between pt-space-xs"><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">LK-CENTRAL-04</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">Plan: Standard</span></div></div><div class="px-space-md pt-space-sm pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Tenant Administration</span></div><nav class="flex flex-col gap-0.5 px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.06)]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">dashboard</span><span class="font-label-lg text-label-lg">Overview</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="students" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">groups</span><span class="font-label-lg text-label-lg">Students</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">4,210</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="courses" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">menu_book</span><span class="font-label-lg text-label-lg">Courses</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">8</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary-container font-semibold shadow-[0_1px_4px_rgba(0,0,0,0.06)]" data-path="staff" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">badge</span><span class="font-label-lg text-label-lg">Staff</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold flex items-center gap-0.5"><span class="material-symbols-outlined text-label-sm">warning</span>2/2 Max</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="payments-and-slips" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">receipt_long</span><span class="font-label-lg text-label-lg">Payments &amp; Slips</span></div><span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">14 Pending</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="reports-and-analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">analytics</span><span class="font-label-lg text-label-lg">Reports &amp; Analytics</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="announcements" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">campaign</span><span class="font-label-lg text-label-lg">Announcements</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="activity-and-audit" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">history</span><span class="font-label-lg text-label-lg">Activity &amp; Audit</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="data-and-backups" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">database</span><span class="font-label-lg text-label-lg">Data &amp; Backups</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="settings-and-storefront" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">settings_suggest</span><span class="font-label-lg text-label-lg">Settings &amp; Storefront</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="support-desk" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-title">headset_mic</span><span class="font-label-lg text-label-lg">Support Desk</span></div></a></nav></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container-low"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm font-semibold text-on-surface">Standard SaaS Plan</span><span class="font-label-sm text-label-sm text-primary font-bold">18d left</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Manual Slip Verification active</p><div class="w-full bg-surface-container-highest rounded-full h-1.5 mb-space-xs"><div class="bg-primary h-1.5 rounded-full" style="width: 68%"></div></div><div class="flex justify-between items-center"><span class="font-label-sm text-label-sm text-on-surface-variant">Storage: 412 GB / S3</span><a class="font-label-sm text-label-sm text-primary font-semibold hover:underline" data-path="settings-and-storefront" href="#">Upgrade</a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">MindBridge LMS</span><span class="text-outline-variant font-light">/</span><span class="font-label-lg text-label-lg text-on-surface-variant font-medium">Apex Maths</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-on-surface-variant text-title">schedule</span><span class="font-label-sm text-label-sm text-on-surface font-medium">SLST 14:32 (GMT+5:30)</span></div><div class="flex items-center bg-surface-container-low p-0.5 rounded-lg"><button class="px-space-sm py-0.5 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm font-bold text-primary shadow-[0_1px_2px_rgba(0,0,0,0.05)]" type="button">EN</button><button class="px-space-sm py-0.5 rounded-DEFAULT font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">සිංහල</button></div><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-title">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:block"><p class="font-label-lg text-label-lg text-on-surface leading-tight">Eng. Kusal Senaratne</p><p class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Master Tenant Admin</p></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background px-gutter"><div class="flex flex-col w-full pb-16">
+<!-- Top Banner / Breadcrumb & Status Line -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm pt-space-lg mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Security &amp; Personnel Control</span>
+<span class="text-outline-variant font-light text-body-sm">/</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Tenant Node LK-CENTRAL-04</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Staff Roster &amp; Granular Access Control</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl mt-0.5">
+        Manage authorized personnel, role-based CRUD permissions, and audit logs under the multi-tenant staff quota.
+      </p>
+</div>
+<!-- Quick Stat Pills -->
+<div class="flex items-center gap-space-sm flex-wrap self-start lg:self-center">
+<div class="flex items-center gap-2 px-space-md py-space-xs rounded-xl bg-surface-container-low shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Allocated Seats:</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">2 / 2</span>
+</div>
+<div class="flex items-center gap-2 px-space-md py-space-xs rounded-xl bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-primary text-title">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active RBAC Policies:</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">02 Roles</span>
+</div>
+</div>
+</div>
+<!-- 1. STAFF CEILING ENFORCEMENT BANNER (TOP PRIORITY) -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md mb-space-xl">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-error"></div>
+<div class="p-space-lg sm:p-space-xl flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md max-w-4xl">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+<span class="material-symbols-outlined text-headline-md" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-bold tracking-wide uppercase">
+              Quota Limit Reached
+            </span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">
+              Tier: Standard Institutional (Apex Maths)
+            </span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">
+            Staff Quota Reached: 2 / 2 Seats Utilized (Platform Maximum)
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+            Under the standard MindBridge institutional tier, each tenant is strictly restricted to a maximum of 2 staff accounts (including the Tenant Owner). The <span class="font-semibold text-on-surface">"Add New Staff Member"</span> action is currently locked. Additional seat allocations require a compliance review and provision approval from the MindBridge Super Admin Infrastructure.
+          </p>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-col sm:flex-row xl:flex-col gap-space-xs shrink-0 xl:min-w-[280px]">
+<!-- Disabled Invite Button -->
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container text-outline cursor-not-allowed font-label-lg text-label-lg transition-all" disabled="" title="Staff Quota is saturated (2/2). Release an existing seat or request expansion." type="button">
+<span class="material-symbols-outlined text-title">lock</span>
+<span>+ Invite New Staff Member (2/2)</span>
+</button>
+<!-- Request Increase CTA with Tooltip Interactivity -->
+<div class="relative group w-full">
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm transition-all" onclick="document.getElementById('quotaRequestModal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-title">supervisor_account</span>
+<span>Request Staff Limit Increase</span>
+</button>
+<!-- Hover Popover / Tooltip -->
+<div class="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-200 absolute right-0 top-full mt-2 w-72 p-space-sm rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl z-30 pointer-events-none">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-title shrink-0">info</span>
+<p class="font-body-sm text-body-sm text-inverse-on-surface leading-snug">
+                Super Admin authorization requires tenant identity verification, audit checklist sign-off, and an updated SLA subscription tier.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. CURRENT STAFF ACCOUNTS ROSTER (EXACTLY 2 MEMBERS) -->
+<section class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<h3 class="font-title text-title font-bold text-on-surface">Provisioned Personnel Roster</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Active system administrators assigned to Sri Lanka Central Region Node.</p>
+</div>
+<span class="font-label-sm text-label-sm px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-semibold">
+        Roster Capacity: 100% Bound
+      </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Member 1: Root Tenant Admin / Owner -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-[80px] pointer-events-none"></div>
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded-xl object-cover shadow-sm" data-alt="Professional headshot of a Sri Lankan male senior mathematics instructor with gold-rimmed glasses, navy formal shirt, confident expression, studio softbox lighting, corporate portrait style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9vEo1H5-6G-JUiB6sCJf1t03LkH78XyBtEsze0t-hlXbgiGfGjjl73I9lZC0mRl6TbonSu_6bvOX44EK4ufscnY_2vEgao5D7Zs3tMCgJfrjsR_TGqh-YGVN9gV4lvgy95txUwlOGur3V67sy1ZQQtc2t_BxsYX7Vycf8Q5JeNaiCVNOys56GLoZdywgaSJOJ39lA4CyrVUF3_ojJyHqRVS4GGzFPyFjnfmEmrFw"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-[10px] shadow-sm">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Eng. Kusal Senaratne</h4>
+<span class="material-symbols-outlined text-primary text-title" title="Root Verified">verified</span>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold">
+                    Tenant Owner &amp; Master Lecturer
+                  </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">
+                    Primary Signatory
+                  </span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-semibold shrink-0">
+              Active (Root Tenant Admin)
+            </span>
+</div>
+<!-- Contact Coordinates -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs p-space-sm rounded-lg bg-surface-container-low mb-space-md">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-title text-outline">mail</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">kusal.senaratne@mindbridge.lk</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-title text-outline">call</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">+94 71 987 6543 (WhatsApp)</span>
+</div>
+</div>
+<!-- Permissions Descriptor -->
+<div class="p-space-sm rounded-lg bg-surface-container mb-space-md">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Scope of Authority</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Full Unrestricted Access</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              System root sovereign. Unrestricted read/write/delete authorization across students, multi-tier finance, gateway setups, curriculum publishing, staff provisioning, and billing pipelines.
+            </p>
+</div>
+</div>
+<!-- Non-deletable Safe Actions -->
+<div class="pt-space-sm flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-label-lg text-outline">lock</span>
+<span class="font-label-sm text-label-sm text-outline">Immutable root seat (Protected)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors" type="button">
+              Edit Profile
+            </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-label-lg">history</span>
+<span>Activity Log</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Member 2: Staff Member (Configurable RBAC) -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden ring-2 ring-primary/20">
+<div class="absolute top-3 right-3">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">
+            Configurable Seat
+          </span>
+</div>
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded-xl object-cover shadow-sm" data-alt="Professional headshot of a Sri Lankan female university registrar and accountant in her late twenties with neat hair, beige blazer, warm and focused expression, brightly lit academic office background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_en8PgIL-ocurhPqFzpwoTr06a17Gp3V1mVli-oFnnYs6oZTKGb6ey1pZCrllBSX8iA9v9jMcpwvQbVO40I8LnkBV-x9R4NbGJhNx6VLe8FfEtQv-lyR4WOJnR7rULOqXWaSLMJzK_Wj_kmmUvunBhIdFiES3VL7nsnj-rNChKJcfdjp9ZxWvBEf0DIj6TEVmHBNN7OT6fH4f3pd7D4ZMXI0S9qluhZhodia519k"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[10px] shadow-sm">
+<span class="material-symbols-outlined text-[12px]">tune</span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Kavindi Perera</h4>
+</div>
+<div class="flex flex-wrap items-center gap-1.5 mt-0.5">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-semibold">
+                    Assistant Registrar &amp; Accountant
+                  </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">
+                    Staff ID: MB-APEX-09
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Coordinates & Join Date -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs p-space-sm rounded-lg bg-surface-container-low mb-space-md">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-title text-outline">mail</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">kavindi.perera@apexmaths.lk</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-title text-outline">call</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">+94 77 124 9901 (WhatsApp)</span>
+</div>
+<div class="col-span-full flex items-center gap-2 text-on-surface-variant pt-1 border-t-0">
+<span class="material-symbols-outlined text-title text-outline">calendar_today</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Joined Node: <strong class="text-on-surface">14 Aug 2024</strong> (Active • Last sign-in 24 mins ago)</span>
+</div>
+</div>
+<!-- Permissions Descriptor -->
+<div class="p-space-sm rounded-lg bg-surface-container mb-space-md">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface">Role Matrix Profile</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Custom Operational Privileges</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Assigned to manual slip reconciliation, student registry operations, and course syllabus editing under automated audit logging. Super Admin privileges (refunds, domain wiring) remain locked.
+            </p>
+</div>
+</div>
+<!-- Configurable Actions -->
+<div class="pt-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors flex items-center gap-1.5 shadow-sm" onclick="document.getElementById('permissionMatrixCard').scrollIntoView({ behavior: 'smooth' })" type="button">
+<span class="material-symbols-outlined text-title">edit_attributes</span>
+<span>Edit Custom Permissions</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" onclick="alert('Deactivating this seat will place Kavindi Perera on suspension and release 1 operational slot.')" type="button">
+              Deactivate Seat
+            </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-error-container hover:bg-error text-on-error-container hover:text-on-error font-label-lg text-label-lg transition-colors" onclick="alert('Action requires Primary Owner two-factor PIN verification.')" type="button">
+              Remove Staff
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. GRANULAR CRUD PERMISSIONS MATRIX (CONFIGURABLE FOR STAFF MEMBER) -->
+<section class="rounded-xl bg-surface-container-lowest p-space-lg sm:p-space-xl shadow-md mb-space-xl" id="permissionMatrixCard">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">Policy Editor</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Target: Kavindi Perera (Assistant Registrar)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Granular CRUD Permissions Matrix</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Selectively authorize operational rights. System policies and Super Admin boundary guardrails are enforced at API gateway level.
+        </p>
+</div>
+<!-- Quick Preset Buttons -->
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors" onclick="applyMatrixPreset('academic')" type="button">
+          Preset: Academic Registrar
+        </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors" onclick="applyMatrixPreset('finance')" type="button">
+          Preset: Financial Auditor
+        </button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold shadow-sm transition-all flex items-center gap-1" id="saveMatrixBtn" onclick="savePermissionsFeedback()" type="button">
+<span class="material-symbols-outlined text-title">check</span>
+<span>Commit Policies</span>
+</button>
+</div>
+</div>
+<!-- The Matrix Table Canvas -->
+<div class="overflow-x-auto">
+<table class="w-full text-left min-w-[760px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-lg font-semibold w-1/4">Functional Module</th>
+<th class="py-3 px-space-sm font-semibold text-center">Create</th>
+<th class="py-3 px-space-sm font-semibold text-center">View / Read</th>
+<th class="py-3 px-space-sm font-semibold text-center">Edit / Update</th>
+<th class="py-3 px-space-sm font-semibold text-center">Delete / Revoke</th>
+<th class="py-3 px-space-md rounded-r-lg font-semibold">Special Operational Constraint</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 space-y-1">
+<!-- Category 1: Student Management -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-headline-sm">groups</span>
+<div>
+<div class="font-title text-title font-semibold text-on-surface">Student Management</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Roster, profiling &amp; enrollment</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary opacity-60 cursor-not-allowed" disabled="" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<label class="inline-flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary accent-secondary cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Suspend (Tenant-Only)</span>
+</label>
+<span class="material-symbols-outlined text-outline text-[16px]" title="Suspension cuts class stream access without deleting billing history.">info</span>
+</div>
+</td>
+</tr>
+<!-- Category 2: Course Management -->
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-headline-sm">menu_book</span>
+<div>
+<div class="font-title text-title font-semibold text-on-surface">Course Management</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Syllabus, chapters &amp; materials</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary opacity-60 cursor-not-allowed" disabled="" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<div class="relative inline-flex items-center justify-center p-2 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+<span class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-tertiary-container" title="Triggers Teacher notification and immutable ledger record"></span>
+</div>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-outline accent-outline opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-wrap items-center gap-2">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="w-3.5 h-3.5 rounded text-secondary accent-secondary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Publish/Unpublish</span>
+</label>
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input class="w-3.5 h-3.5 rounded text-secondary accent-secondary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Archive</span>
+</label>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+                  Teacher Alert Wire Active
+                </span>
+</div>
+</td>
+</tr>
+<!-- Category 3: Payment & Slip Audits -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-headline-sm">receipt_long</span>
+<div>
+<div class="font-title text-title font-semibold text-on-surface">Payment &amp; Slip Audits</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Bank deposit verification &amp; bills</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-outline italic">N/A</span>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary opacity-60 cursor-not-allowed" disabled="" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer" title="Verify or Reject Slip">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer" title="Reject Slip Submission">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="w-3.5 h-3.5 rounded text-primary accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Issue Official Receipts</span>
+</label>
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="w-3.5 h-3.5 rounded text-primary accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Approve Bank Slips</span>
+</label>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-error">lock</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">Refund issuance locked to MindBridge Super Admin</span>
+</div>
+</div>
+</td>
+</tr>
+<!-- Category 4: Announcements & Messages -->
+<tr class="bg-surface-container-low/30 hover:bg-surface-container-low transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-headline-sm">campaign</span>
+<div>
+<div class="font-title text-title font-semibold text-on-surface">Announcements &amp; Messages</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Direct chat &amp; institution broadcasts</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary opacity-60 cursor-not-allowed" disabled="" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-4">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="w-3.5 h-3.5 rounded text-primary accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Broadcast Academy Notices</span>
+</label>
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="w-3.5 h-3.5 rounded text-primary accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">1-on-1 Student Chat</span>
+</label>
+</div>
+</td>
+</tr>
+<!-- Category 5: Storefront & Settings -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-headline-sm">settings_suggest</span>
+<div>
+<div class="font-title text-title font-semibold text-on-surface">Storefront &amp; Settings</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Public landing page &amp; metadata</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-sm text-center">
+<span class="font-label-sm text-label-sm text-outline italic">N/A</span>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary cursor-pointer" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-sm text-center">
+<label class="inline-flex items-center justify-center p-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-outline accent-outline opacity-40 cursor-not-allowed" disabled="" type="checkbox"/>
+</label>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-3">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="w-3.5 h-3.5 rounded text-primary accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Edit Contact Details</span>
+</label>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+<span class="font-label-sm text-label-sm text-outline">Custom DNS / apex domain switch locked to Super Admin</span>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Feedback Banner after Save -->
+<div class="hidden mt-space-md p-space-sm rounded-lg bg-surface-container flex items-center justify-between" id="saveFeedbackNotice">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-title">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Policy updates successfully signed and propagated to LK-CENTRAL-04 edge gateway.</span>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="document.getElementById('saveFeedbackNotice').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-title">close</span>
+</button>
+</div>
+</section>
+<!-- 4. AUDIT LOG & MODIFICATION WARNING -->
+<section class="space-y-space-md">
+<!-- Audit Trail Notice Box -->
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-title" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-0.5">
+<h4 class="font-title text-title font-bold text-on-surface">Course Editing Audit Trail &amp; Signatory Integrity</h4>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-tertiary font-bold">Immutable Ledger</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface">Notice:</strong> When a Tenant Admin or Assistant edits a Teacher's course curriculum, an automatic notification is dispatched to the course author, and an immutable audit entry is committed to the tenant ledger. Unauthorized syllabus tampering will result in instant session invalidation.
+        </p>
+</div>
+</div>
+<!-- Recent Staff Actions Table -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<h4 class="font-title text-title font-bold text-on-surface">Real-Time Personnel Audit Ledger</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cryptographically signed chronological logs for LK-CENTRAL-04</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant">
+            Live Stream • Synced 14:32 SLST
+          </span>
+<button class="p-1 rounded text-outline hover:text-on-surface transition-colors" title="Export Ledger CSV" type="button">
+<span class="material-symbols-outlined text-title">download</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left min-w-[700px]">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md rounded-l-lg font-semibold">Timestamp (SLST)</th>
+<th class="py-2.5 px-space-sm font-semibold">Personnel Actor</th>
+<th class="py-2.5 px-space-sm font-semibold">Action Classification</th>
+<th class="py-2.5 px-space-md font-semibold">Audit Event Description</th>
+<th class="py-2.5 px-space-sm rounded-r-lg font-semibold text-right">Verification Hash</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 space-y-0.5">
+<!-- Event 1: Kavindi Perera Bank Slip Approval -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Today, 14:18:02</span>
+<span class="block font-label-sm text-label-sm text-outline">14m ago</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-label-sm">
+                    KP
+                  </div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block leading-tight">Kavindi Perera</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assistant Registrar</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-bold">
+                  Slip Verification
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm text-on-surface">
+                  Approved <span class="font-semibold text-primary">BOC Bank Deposit Slip #49021</span> (Student: Dinuka Jayawardena - Rs. 4,500.00 for 2025 Revision).
+                </div>
+<span class="font-label-sm text-label-sm text-outline">Receipt #RCP-9941 automatically issued via SMS</span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<code class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container text-on-surface-variant font-mono">
+                  0x9f1a...c82d
+                </code>
+</td>
+</tr>
+<!-- Event 2: Eng. Kusal Senaratne Syllabus Update -->
+<tr class="bg-surface-container-low/20 hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Today, 11:05:44</span>
+<span class="block font-label-sm text-label-sm text-outline">3h 26m ago</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-label-sm">
+                    KS
+                  </div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block leading-tight">Eng. Kusal Senaratne</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tenant Owner</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold">
+                  Curriculum Modification
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm text-on-surface">
+                  Updated <span class="font-semibold text-on-surface">2025 Combined Maths Theory syllabus</span> — Added Module 08: Integration &amp; Calculus PDF with watermarking.
+                </div>
+<span class="font-label-sm text-label-sm text-outline">Automated notification pushed to 1,840 enrolled candidates</span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<code class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container text-on-surface-variant font-mono">
+                  0x3b8c...42f1
+                </code>
+</td>
+</tr>
+<!-- Event 3: Previous Slip Rejection by Kavindi -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Yesterday, 16:40:11</span>
+<span class="block font-label-sm text-label-sm text-outline">21h ago</span>
+</td>
+<td class="py-3.5 px-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-label-sm">
+                    KP
+                  </div>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface block leading-tight">Kavindi Perera</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assistant Registrar</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-bold">
+                  Slip Rejected
+                </span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="font-body-sm text-body-sm text-on-surface">
+                  Declined illegible bank transfer slip submission #48991. Reason: Stamp indistinct on Commercial Bank deposit copy.
+                </div>
+<span class="font-label-sm text-label-sm text-outline">Student prompted for high-resolution re-upload</span>
+</td>
+<td class="py-3.5 px-space-sm text-right">
+<code class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container text-on-surface-variant font-mono">
+                  0x12dc...88e4
+                </code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- MODAL: Request Staff Limit Increase (Overlay Dialog) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-md bg-inverse-surface/60 backdrop-blur-sm" id="quotaRequestModal">
+<div class="w-full max-w-lg rounded-xl bg-surface-container-lowest p-space-xl shadow-xl relative">
+<button class="absolute top-4 right-4 p-1 rounded-lg text-outline hover:text-on-surface" onclick="document.getElementById('quotaRequestModal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-headline-sm">close</span>
+</button>
+<div class="flex items-center gap-space-sm mb-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-headline-sm">group_add</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Request Staff Quota Increase</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Submit requisition to MindBridge Multi-Tenant Operations</p>
+</div>
+</div>
+<div class="space-y-space-md mb-space-lg">
+<div class="p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm">
+<strong>Institutional Tier Notice:</strong> Expanding seats beyond 2 requires Super Admin approval, tenant verification, and upgrade to Enterprise Institutional SLA.
+        </div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase font-semibold text-outline mb-1">Requested Seat Count</label>
+<select class="w-full px-space-md py-2 rounded-lg bg-surface-container font-body-md text-body-md text-on-surface focus:outline-none">
+<option>+1 Additional Staff Seat (Total 3 Staff)</option>
+<option selected="">+3 Additional Staff Seats (Total 5 Staff • Recommended for 4,000+ students)</option>
+<option>+5 Custom Institutional Enterprise Pool (Total 7+ Seats)</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase font-semibold text-outline mb-1">Operational Justification / Role Description</label>
+<textarea class="w-full p-space-sm rounded-lg bg-surface-container font-body-md text-body-md text-on-surface focus:outline-none resize-none" placeholder="e.g. Hiring 2 dedicated paper-marking teaching assistants and 1 weekend counter support representative for G.C.E. A/L Combined Maths paper class..." rows="3"></textarea>
+</div>
+<div class="flex items-start gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary accent-primary mt-1" id="modalConfirm" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="modalConfirm">
+            I certify that added staff members will undergo tenant-level data privacy adherence pursuant to LK Personal Data Protection Act No. 9 of 2022.
+          </label>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg" onclick="document.getElementById('quotaRequestModal').classList.add('hidden')" type="button">
+          Cancel
+        </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold shadow-sm" onclick="handleRequestSubmission()" type="button">
+          Dispatch Request to Super Admin
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function handleRequestSubmission() {
+    const modal = document.getElementById('quotaRequestModal');
+    modal.classList.add('hidden');
+    alert('Requisition #REQ-STAFF-8842 dispatched to MindBridge Super Admin Infrastructure. SLA Response window: 4 business hours.');
+  }
+
+  function savePermissionsFeedback() {
+    const notice = document.getElementById('saveFeedbackNotice');
+    notice.classList.remove('hidden');
+    const btn = document.getElementById('saveMatrixBtn');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-title animate-spin">refresh</span><span>Saving...</span>';
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+    }, 600);
+  }
+
+  function applyMatrixPreset(type) {
+    alert(`Applied "${type.toUpperCase()}" template to matrix. Click "Commit Policies" to sign changes.`);
+  }
+</script></main></div></body></html>
