@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>MindBridge LMS — Teacher Assignment &amp; Quick Grading Queue</title>
+<!-- Google Fonts: Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            midnight: {
+              bg: '#080e1d',
+              surface: '#0d1322',
+              'surface-dim': '#080e1d',
+              'surface-bright': '#1e2638',
+              'surface-container': '#151b2b',
+              'surface-container-high': '#1c2438',
+              border: '#1e293b',
+              primary: '#3898ff',
+              'accent-blue': '#0875e8',
+              'on-surface': '#f1f5f9',
+              'text-muted': '#94a3b8',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              rose: '#f43f5e'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-layout">
+    body {
+      background-color: #080e1d;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    /* Custom horizontal scroll bar styling */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    /* Slider Custom Accent */
+    input[type=range]::-webkit-slider-thumb {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background: #3898ff;
+      cursor: pointer;
+      -webkit-appearance: none;
+      border: 2px solid #ffffff;
+      box-shadow: 0 0 10px rgba(56, 152, 255, 0.6);
+    }
+  </style>
+</head>
+<body class="bg-midnight-bg text-midnight-on-surface antialiased min-h-screen pb-28 select-none">
+<!-- BEGIN: TopHeader -->
+<header class="sticky top-0 z-40 bg-midnight-bg/90 backdrop-blur-md border-b border-midnight-border px-4 py-3" data-purpose="top-navigation">
+<div class="flex items-center justify-between">
+<!-- Logo Container -->
+<div class="flex items-center space-x-2">
+<img alt="MindBridge LMS Logo" class="h-9 w-auto object-contain brightness-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdKexBwPxddvvZt5onHWqK596elqrmQnoUtcUdjcz37fy_Ced26wvxGSDp-DAxiz7P2G4xFYQtKOAumcubqQePdMWiDUA0EuLLc6ARNIZ0fXYHFOYLXSmCumS8acifdFG2QmE15YNsfm1ukfu-YAYVNl7kv24pT-v0V2lF74dbE0rxnl5Lj1LlXpmjf995reBvtQ1PLZCusZBY0QvL-8N0JPQH1A8D49KBjA1yRdIcTPphaV0Xl_BE"/>
+</div>
+<!-- Actions: Notification & Faculty Avatar -->
+<div class="flex items-center space-x-3">
+<!-- Notification Bell -->
+<button aria-label="Notifications" class="relative p-2 rounded-xl bg-midnight-surface-container border border-midnight-border text-midnight-text-muted hover:text-white transition-colors" data-purpose="notification-bell" type="button">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-rose-500 rounded-full ring-2 ring-midnight-bg"></span>
+</button>
+<!-- Faculty Avatar -->
+<div class="flex items-center space-x-2" data-purpose="faculty-profile">
+<div class="w-9 h-9 rounded-full bg-gradient-to-tr from-midnight-accent-blue to-midnight-primary p-0.5">
+<div class="w-full h-full rounded-full bg-midnight-surface-bright flex items-center justify-center text-xs font-bold text-white uppercase tracking-wider">
+              KS
+            </div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- END: TopHeader -->
+<!-- BEGIN: TitleBarAndCohort -->
+<section class="px-4 pt-4 pb-2" data-purpose="cohort-selection-section">
+<!-- Title & Queue Status -->
+<div class="flex items-center justify-between mb-2.5">
+<div>
+<h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+          Marking &amp; Paper Review
+        </h1>
+<p class="text-xs text-midnight-text-muted mt-0.5">Automated Optical Parsing &amp; Step Marking</p>
+</div>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-500/10 text-rose-400 border border-rose-500/20">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-500 mr-1.5 animate-pulse"></span> Priority Queue
+      </span>
+</div>
+<!-- Cohort Dropdown Selector -->
+<div class="w-full bg-midnight-surface rounded-xl p-3 border border-midnight-border flex items-center justify-between shadow-sm cursor-pointer hover:border-midnight-primary/50 transition-colors" data-purpose="cohort-dropdown">
+<div class="flex items-center space-x-3 overflow-hidden">
+<div class="w-8 h-8 rounded-lg bg-midnight-accent-blue/10 flex-shrink-0 flex items-center justify-center text-midnight-primary">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="truncate">
+<p class="text-xs font-bold text-white truncate">2025 Theory + Revision (Batch A)</p>
+<p class="text-[11px] text-midnight-text-muted truncate">Apex Combined Maths • Eng. Kusal Senaratne</p>
+</div>
+</div>
+<svg class="w-4 h-4 text-midnight-text-muted flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</section>
+<!-- END: TitleBarAndCohort -->
+<!-- BEGIN: KPIStatsOverview -->
+<section class="px-4 py-2" data-purpose="kpi-metrics-grid">
+<div class="grid grid-cols-3 gap-2.5">
+<!-- KPI 1: Pending Review -->
+<div class="bg-midnight-surface rounded-xl p-2.5 border border-midnight-border flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-medium text-midnight-text-muted">Pending</span>
+<span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+</div>
+<div class="mt-1">
+<span class="text-xl font-bold text-white">28</span>
+<span class="text-[10px] text-rose-400 font-medium block">Urgent Action</span>
+</div>
+</div>
+<!-- KPI 2: Graded Today -->
+<div class="bg-midnight-surface rounded-xl p-2.5 border border-midnight-border flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-medium text-midnight-text-muted">Graded</span>
+<svg class="w-3.5 h-3.5 text-midnight-emerald" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="mt-1">
+<span class="text-xl font-bold text-white">142</span>
+<span class="text-[10px] text-midnight-emerald font-medium block">+18% vs avg</span>
+</div>
+</div>
+<!-- KPI 3: On-Time Clearance -->
+<div class="bg-midnight-surface rounded-xl p-2.5 border border-midnight-border flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-medium text-midnight-text-muted">Clearance</span>
+<svg class="w-3.5 h-3.5 text-midnight-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="mt-1">
+<span class="text-xl font-bold text-white">94%</span>
+<span class="text-[10px] text-midnight-text-muted font-medium block">On Track SLA</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: KPIStatsOverview -->
+<!-- BEGIN: FilterPills -->
+<section class="px-4 py-2" data-purpose="queue-filters">
+<div class="flex items-center space-x-2 overflow-x-auto no-scrollbar py-1">
+<button class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-midnight-primary text-midnight-bg flex items-center space-x-1.5 shadow-sm shadow-midnight-primary/20 flex-shrink-0">
+<span>All</span>
+<span class="px-1.5 py-0.2 rounded-full bg-midnight-bg/20 text-[10px] font-bold">28</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-midnight-surface-container border border-midnight-border text-midnight-on-surface hover:border-rose-500/50 flex items-center space-x-1.5 flex-shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+<span>Urgent</span>
+<span class="text-[10px] text-midnight-text-muted">12</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-midnight-surface-container border border-midnight-border text-midnight-on-surface hover:border-midnight-amber/50 flex items-center space-x-1.5 flex-shrink-0">
+<span>Resubmissions</span>
+<span class="px-1.5 py-0.2 rounded-full bg-midnight-amber/10 text-midnight-amber text-[10px] font-bold">4</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-midnight-surface-container border border-midnight-border text-midnight-on-surface hover:border-midnight-primary/50 flex-shrink-0">
+<span>Flagged</span>
+</button>
+</div>
+</section>
+<!-- END: FilterPills -->
+<!-- BEGIN: ActiveGradingPaperCard -->
+<main class="px-4 py-2 space-y-3" data-purpose="current-paper-in-progress">
+<div class="bg-midnight-surface rounded-2xl border-2 border-midnight-primary/30 p-4 shadow-xl shadow-black/40 relative">
+<!-- Active Paper Marker Header -->
+<div class="flex items-start justify-between border-b border-midnight-border pb-3">
+<div class="flex items-center space-x-3">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-br from-midnight-primary to-midnight-accent-blue flex items-center justify-center text-white font-bold text-sm shadow-md flex-shrink-0">
+            KP
+          </div>
+<div>
+<div class="flex items-center space-x-2">
+<h2 class="text-sm font-bold text-white tracking-wide">Kavindu Nirmal Perera</h2>
+</div>
+<p class="text-xs text-midnight-text-muted">SL-LRN-89401 • Royal College Colombo</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider bg-midnight-primary/15 text-midnight-primary border border-midnight-primary/30">
+          Active Paper
+        </span>
+</div>
+<!-- Assignment Details -->
+<div class="mt-3 bg-midnight-surface-container/60 rounded-xl p-3 border border-midnight-border/80">
+<div class="flex items-center justify-between text-xs font-semibold text-white">
+<span class="truncate pr-2">Assignment 04: Advanced Trigonometric Identities &amp; De Moivre's Expansions</span>
+</div>
+<div class="flex items-center justify-between mt-1 text-[11px] text-midnight-text-muted">
+<span class="flex items-center gap-1">
+<svg class="w-3.5 h-3.5 text-midnight-emerald" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Submitted 1h ago
+          </span>
+<span class="font-mono text-midnight-primary">4 Pages Scan (PDF)</span>
+</div>
+</div>
+<!-- Student Answer Sheets Horizontal Preview Carousel -->
+<div class="mt-3">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-xs font-semibold text-white">Answer Sheet Submissions</span>
+<span class="text-[10px] text-midnight-primary flex items-center gap-1 font-medium">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+            Tap sheet to zoom
+          </span>
+</div>
+<div class="flex space-x-2.5 overflow-x-auto no-scrollbar py-1">
+<!-- Page 1 Thumbnail Mock -->
+<div class="flex-shrink-0 w-28 bg-midnight-surface-bright rounded-lg border border-midnight-primary/40 overflow-hidden relative group cursor-pointer">
+<div class="h-36 bg-midnight-surface-container p-2 flex flex-col justify-between relative">
+<div class="w-full space-y-1.5 opacity-40">
+<div class="h-1 bg-white rounded w-3/4"></div>
+<div class="h-1 bg-white rounded w-5/6"></div>
+<div class="h-1 bg-midnight-primary rounded w-1/2"></div>
+<div class="h-1 bg-white rounded w-4/5"></div>
+<div class="h-1.5 bg-midnight-emerald/70 rounded w-2/3"></div>
+</div>
+<div class="w-full text-center">
+<span class="inline-block px-1.5 py-0.5 rounded text-[9px] bg-emerald-500/20 text-emerald-400 font-bold">Q1-Q3 Verified</span>
+</div>
+<div class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-midnight-emerald flex items-center justify-center text-midnight-bg text-[9px] font-black">
+                ✓
+              </div>
+</div>
+<div class="bg-midnight-surface-high px-2 py-1 text-[11px] text-center font-medium text-white border-t border-midnight-border flex items-center justify-between">
+<span>Pg 1</span>
+<span class="text-midnight-text-muted text-[9px]">40/40</span>
+</div>
+</div>
+<!-- Page 2 Thumbnail Mock -->
+<div class="flex-shrink-0 w-28 bg-midnight-surface-bright rounded-lg border border-midnight-border overflow-hidden relative cursor-pointer">
+<div class="h-36 bg-midnight-surface-container p-2 flex flex-col justify-between relative">
+<div class="w-full space-y-1.5 opacity-40">
+<div class="h-1 bg-white rounded w-full"></div>
+<div class="h-1 bg-white rounded w-2/3"></div>
+<div class="h-1 bg-amber-400 rounded w-4/5"></div>
+<div class="h-1 bg-white rounded w-1/2"></div>
+<div class="h-1 bg-white rounded w-3/4"></div>
+</div>
+<div class="w-full text-center">
+<span class="inline-block px-1.5 py-0.5 rounded text-[9px] bg-amber-500/20 text-amber-300 font-bold">Q4 Step Check</span>
+</div>
+<div class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-midnight-emerald flex items-center justify-center text-midnight-bg text-[9px] font-black">
+                ✓
+              </div>
+</div>
+<div class="bg-midnight-surface-high px-2 py-1 text-[11px] text-center font-medium text-white border-t border-midnight-border flex items-center justify-between">
+<span>Pg 2</span>
+<span class="text-midnight-amber text-[9px]">22/30</span>
+</div>
+</div>
+<!-- Page 3 Thumbnail Mock -->
+<div class="flex-shrink-0 w-28 bg-midnight-surface-bright rounded-lg border border-midnight-border overflow-hidden relative cursor-pointer">
+<div class="h-36 bg-midnight-surface-container p-2 flex flex-col justify-between relative">
+<div class="w-full space-y-1.5 opacity-40">
+<div class="h-1 bg-white rounded w-5/6"></div>
+<div class="h-1 bg-white rounded w-1/2"></div>
+<div class="h-1 bg-white rounded w-3/4"></div>
+<div class="h-1 bg-midnight-primary rounded w-2/3"></div>
+</div>
+<div class="w-full text-center">
+<span class="inline-block px-1.5 py-0.5 rounded text-[9px] bg-emerald-500/20 text-emerald-400 font-bold">Q5-Q8 Full</span>
+</div>
+<div class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-midnight-emerald flex items-center justify-center text-midnight-bg text-[9px] font-black">
+                ✓
+              </div>
+</div>
+<div class="bg-midnight-surface-high px-2 py-1 text-[11px] text-center font-medium text-white border-t border-midnight-border flex items-center justify-between">
+<span>Pg 3</span>
+<span class="text-midnight-emerald text-[9px]">30/30</span>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Grading Copilot & Step Alignment -->
+<div class="mt-3 bg-midnight-surface-container rounded-xl p-3 border border-midnight-primary/20 relative overflow-hidden" data-purpose="ai-copilot-card">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-midnight-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-midnight-primary"></span>
+</span>
+<h3 class="text-xs font-bold text-white tracking-wide">AI Grading Copilot &amp; Step Alignment</h3>
+</div>
+<span class="text-[10px] bg-midnight-primary/20 text-midnight-primary px-2 py-0.5 rounded-full font-bold">96% Scheme Match</span>
+</div>
+<p class="text-[11px] text-midnight-text-muted mt-1 leading-relaxed">
+          OCR complete: 8/8 questions attempted. Optical symbol consistency aligned with Eng. Kusal's Master Marking Scheme. Slight deduction on Q4 step substitution.
+        </p>
+</div>
+<!-- Marking Controls: Score & Slider -->
+<div class="mt-4 pt-3 border-t border-midnight-border space-y-3" data-purpose="score-allocation-interface">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-xs font-semibold text-white">Mark Awarded</span>
+<span class="text-[10px] text-midnight-text-muted block">Out of 100 possible marks</span>
+</div>
+<div class="flex items-baseline space-x-1">
+<span class="text-2xl font-black text-midnight-primary" id="score-display">92</span>
+<span class="text-xs font-semibold text-midnight-text-muted">/ 100</span>
+</div>
+</div>
+<!-- Interactive Range Slider -->
+<div class="relative py-1">
+<input class="w-full h-2 bg-midnight-surface-bright rounded-lg appearance-none cursor-pointer accent-midnight-primary" id="markRange" max="100" min="0" oninput="document.getElementById('score-display').innerText = this.value; document.getElementById('publish-btn-mark').innerText = this.value;" type="range" value="92"/>
+<div class="flex justify-between text-[10px] text-midnight-text-muted mt-1 font-mono">
+<span>0 (Fail)</span>
+<span>40 (Pass)</span>
+<span>75 (Dist.)</span>
+<span>100</span>
+</div>
+</div>
+<!-- Quick Score Preset Pills -->
+<div class="flex items-center space-x-1.5 overflow-x-auto no-scrollbar pt-1">
+<button class="px-2.5 py-1 rounded-lg text-xs font-medium bg-midnight-surface-container border border-midnight-border text-midnight-on-surface hover:bg-midnight-surface-bright">95</button>
+<button class="px-2.5 py-1 rounded-lg text-xs font-bold bg-midnight-primary text-midnight-bg border border-midnight-primary shadow-sm shadow-midnight-primary/30">92</button>
+<button class="px-2.5 py-1 rounded-lg text-xs font-medium bg-midnight-surface-container border border-midnight-border text-midnight-on-surface hover:bg-midnight-surface-bright">85</button>
+<button class="px-2.5 py-1 rounded-lg text-xs font-medium bg-midnight-surface-container border border-midnight-border text-midnight-on-surface hover:bg-midnight-surface-bright">78</button>
+<button class="px-2.5 py-1 rounded-lg text-xs font-medium bg-midnight-amber/10 border border-midnight-amber/30 text-midnight-amber hover:bg-midnight-amber/20">Resubmission</button>
+</div>
+<!-- Quick Rubric Feedback Presets -->
+<div class="pt-2">
+<label class="text-[11px] font-medium text-midnight-text-muted block mb-1.5">Quick Rubric Presets</label>
+<div class="flex flex-wrap gap-1.5">
+<button class="text-[10px] px-2.5 py-1 rounded-md bg-midnight-surface-container-high border border-midnight-border text-midnight-on-surface hover:border-midnight-emerald flex items-center space-x-1">
+<span class="text-midnight-emerald font-bold">+</span>
+<span>Excellent algebraic rigor</span>
+</button>
+<button class="text-[10px] px-2.5 py-1 rounded-md bg-midnight-surface-container-high border border-midnight-border text-midnight-on-surface hover:border-midnight-amber flex items-center space-x-1">
+<span class="text-midnight-amber font-bold">-</span>
+<span>Step marks in Q4</span>
+</button>
+<button class="text-[10px] px-2.5 py-1 rounded-md bg-midnight-surface-container-high border border-midnight-border text-midnight-on-surface hover:border-rose-400 flex items-center space-x-1">
+<span class="text-rose-400">⚠️</span>
+<span>Re-scan page 3 clearer</span>
+</button>
+</div>
+</div>
+<!-- Review Feedback Textarea -->
+<div class="pt-1">
+<label class="text-[11px] font-medium text-midnight-text-muted block mb-1" for="faculty-remarks">Faculty Review Remarks</label>
+<textarea class="w-full bg-midnight-surface-container border border-midnight-border rounded-xl p-2.5 text-xs text-white placeholder-midnight-text-muted/50 focus:border-midnight-primary focus:ring-1 focus:ring-midnight-primary outline-none resize-none leading-relaxed" id="faculty-remarks" placeholder="Add detailed feedback for Kavindu..." rows="2">Flawless trigonometric substitution until Page 2 Question 4 where the cosine argument was not expanded fully. Great presentation overall!</textarea>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-2 pt-2">
+<button class="w-full py-2.5 px-3 rounded-xl border border-midnight-border bg-midnight-surface-container hover:bg-midnight-surface-bright text-xs font-semibold text-midnight-on-surface transition-colors flex items-center justify-center space-x-1.5" type="button">
+<svg class="w-4 h-4 text-midnight-amber" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Request Resubmit</span>
+</button>
+<button class="w-full py-2.5 px-3 rounded-xl bg-midnight-primary hover:bg-midnight-accent-blue text-xs font-bold text-midnight-bg transition-colors shadow-lg shadow-midnight-primary/25 flex items-center justify-center space-x-1.5" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Publish Mark (<span id="publish-btn-mark">92</span>)</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- END: ActiveGradingPaperCard -->
+<!-- BEGIN: WaitingQueueList -->
+<section class="px-4 py-2 mt-2" data-purpose="waiting-submissions-queue">
+<div class="flex items-center justify-between mb-2.5">
+<div>
+<h3 class="text-sm font-bold text-white">Waiting Queue</h3>
+<span class="text-xs text-midnight-text-muted">27 Papers Remaining</span>
+</div>
+<button class="text-xs font-medium text-midnight-primary flex items-center space-x-1 hover:underline">
+<span>Sort: Oldest</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Queue Items List -->
+<div class="space-y-2.5">
+<!-- Student Queue Item 1 -->
+<div class="bg-midnight-surface rounded-xl p-3 border border-midnight-border flex items-center justify-between hover:border-midnight-primary/40 transition-colors">
+<div class="flex items-center space-x-3 overflow-hidden">
+<div class="w-10 h-10 rounded-lg bg-midnight-surface-container flex items-center justify-center font-bold text-xs text-midnight-emerald flex-shrink-0 border border-midnight-border">
+            AJ
+          </div>
+<div class="truncate">
+<div class="flex items-center space-x-2">
+<p class="text-xs font-bold text-white truncate">Amanda Jayawardena</p>
+<span class="px-1.5 py-0.2 rounded text-[9px] font-semibold bg-midnight-amber/15 text-midnight-amber border border-midnight-amber/30">Resubmitted</span>
+</div>
+<p class="text-[11px] text-midnight-text-muted truncate">SL-LRN-89415 • Devi Balika • Statics Drill 02</p>
+</div>
+</div>
+<button class="ml-2 flex-shrink-0 px-3 py-1.5 rounded-lg bg-midnight-surface-bright text-[11px] font-semibold text-white border border-midnight-border hover:border-midnight-primary transition-colors">
+          Grade Now
+        </button>
+</div>
+<!-- Student Queue Item 2 -->
+<div class="bg-midnight-surface rounded-xl p-3 border border-rose-500/30 flex items-center justify-between hover:border-rose-500/50 transition-colors">
+<div class="flex items-center space-x-3 overflow-hidden">
+<div class="w-10 h-10 rounded-lg bg-rose-500/10 flex items-center justify-center font-bold text-xs text-rose-400 flex-shrink-0 border border-rose-500/20">
+            SS
+          </div>
+<div class="truncate">
+<div class="flex items-center space-x-2">
+<p class="text-xs font-bold text-white truncate">Sandun Senanayake</p>
+<span class="px-1.5 py-0.2 rounded text-[9px] font-semibold bg-rose-500/15 text-rose-400 border border-rose-500/30">Flagged</span>
+</div>
+<p class="text-[11px] text-rose-300/80 truncate">SL-LRN-89510 • Ananda College • Formula mismatch alert</p>
+</div>
+</div>
+<button class="ml-2 flex-shrink-0 px-3 py-1.5 rounded-lg bg-rose-500/20 text-[11px] font-semibold text-rose-300 border border-rose-500/30 hover:bg-rose-500/30 transition-colors">
+          Review Flag
+        </button>
+</div>
+<!-- Student Queue Item 3 -->
+<div class="bg-midnight-surface rounded-xl p-3 border border-midnight-border flex items-center justify-between hover:border-midnight-primary/40 transition-colors">
+<div class="flex items-center space-x-3 overflow-hidden">
+<div class="w-10 h-10 rounded-lg bg-midnight-surface-container flex items-center justify-center font-bold text-xs text-white/70 flex-shrink-0 border border-midnight-border">
+            DW
+          </div>
+<div class="truncate">
+<p class="text-xs font-bold text-white truncate">Devinda Wickramasinghe</p>
+<p class="text-[11px] text-midnight-text-muted truncate">Unit 03 Speed Examination Hand-Working</p>
+</div>
+</div>
+<button class="ml-2 flex-shrink-0 px-3 py-1.5 rounded-lg bg-midnight-surface-bright text-[11px] font-semibold text-white border border-midnight-border hover:border-midnight-primary transition-colors">
+          Grade Now
+        </button>
+</div>
+<!-- Student Queue Item 4 -->
+<div class="bg-midnight-surface rounded-xl p-3 border border-midnight-border flex items-center justify-between hover:border-midnight-primary/40 transition-colors">
+<div class="flex items-center space-x-3 overflow-hidden">
+<div class="w-10 h-10 rounded-lg bg-midnight-surface-container flex items-center justify-center font-bold text-xs text-white/70 flex-shrink-0 border border-midnight-border">
+            TD
+          </div>
+<div class="truncate">
+<p class="text-xs font-bold text-white truncate">Tharindu Dilshan</p>
+<p class="text-[11px] text-midnight-text-muted truncate">Assignment 04: Advanced Trigonometric Identities</p>
+</div>
+</div>
+<button class="ml-2 flex-shrink-0 px-3 py-1.5 rounded-lg bg-midnight-surface-bright text-[11px] font-semibold text-white border border-midnight-border hover:border-midnight-primary transition-colors">
+          Grade Now
+        </button>
+</div>
+</div>
+</section>
+<!-- END: WaitingQueueList -->
+<!-- BEGIN: BottomUtilityActionBar -->
+<section class="px-4 py-3" data-purpose="utility-actions">
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded-xl bg-midnight-surface-container-high border border-midnight-border text-xs font-medium text-white hover:border-midnight-primary flex items-center justify-center space-x-1.5">
+<svg class="w-4 h-4 text-midnight-primary" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Auto-Assign 3 TAs</span>
+</button>
+<button class="py-2.5 px-3 rounded-xl bg-midnight-surface-container-high border border-midnight-border text-xs font-medium text-white hover:border-midnight-primary flex items-center justify-center space-x-1.5">
+<svg class="w-4 h-4 text-midnight-text-muted" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Download ZIP (28)</span>
+</button>
+</div>
+</section>
+<!-- END: BottomUtilityActionBar -->
+<!-- BEGIN: FixedBottomNav -->
+<nav class="fixed bottom-0 inset-x-0 z-50 bg-midnight-bg/95 backdrop-blur-lg border-t border-midnight-border px-3 py-2" data-purpose="mobile-ios-tabbar">
+<div class="grid grid-cols-4 max-w-md mx-auto">
+<!-- Tab 1: Dashboard -->
+<button class="flex flex-col items-center justify-center py-1 text-midnight-text-muted hover:text-white transition-colors" type="button">
+<svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px] font-medium">Dashboard</span>
+</button>
+<!-- Tab 2: Grading (Active) -->
+<button class="flex flex-col items-center justify-center py-1 text-midnight-primary" type="button">
+<div class="relative">
+<svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-midnight-primary rounded-full"></span>
+</div>
+<span class="text-[10px] font-bold">Grading</span>
+</button>
+<!-- Tab 3: Lessons -->
+<button class="flex flex-col items-center justify-center py-1 text-midnight-text-muted hover:text-white transition-colors" type="button">
+<svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px] font-medium">Lessons</span>
+</button>
+<!-- Tab 4: Students -->
+<button class="flex flex-col items-center justify-center py-1 text-midnight-text-muted hover:text-white transition-colors" type="button">
+<svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[10px] font-medium">Students</span>
+</button>
+</div>
+</nav>
+<!-- END: FixedBottomNav -->
+</body></html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary":"#4edea3","tertiary-fixed":"#6ffbbe","outline":"#8a919e","inverse-on-surface":"#2a3040","secondary-fixed-dim":"#ffb95f","secondary-fixed":"#ffddb8","surface-bright":"#33394a","on-primary-container":"#002f5b","surface-container":"#191f2f","surface-container-highest":"#2f3445","on-error-container":"#ffdad6","on-background":"#dde2f8","error":"#ffb4ab","inverse-surface":"#dde2f8","background":"#0d1322","secondary":"#ffb95f","surface-container-low":"#151b2b","inverse-primary":"#005fad","primary-fixed-dim":"#a4c8ff","error-container":"#93000a","on-secondary":"#472a00","on-tertiary-fixed":"#002113","surface-container-lowest":"#080e1d","on-secondary-container":"#5b3800","on-tertiary-container":"#003623","tertiary-container":"#00ab76","on-tertiary-fixed-variant":"#005236","on-error":"#690005","surface-variant":"#2f3445","primary-container":"#3898ff","on-primary":"#00315e","surface-dim":"#0d1322","on-tertiary":"#003824","on-secondary-fixed-variant":"#653e00","secondary-container":"#ee9800","on-surface":"#dde2f8","surface-container-high":"#242a3a","primary":"#a4c8ff","surface":"#0d1322","outline-variant":"#404753","primary-fixed":"#d4e3ff","on-primary-fixed":"#001c3a","on-primary-fixed-variant":"#004784","on-secondary-fixed":"#2a1700","tertiary-fixed-dim":"#4edea3","surface-tint":"#a4c8ff","on-surface-variant":"#c0c7d5"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","gutter":"1.5rem","space-2xl":"3rem","space-3xl":"4rem","space-md":"1rem","space-2xs":"0.125rem","space-xs":"0.25rem","space-xl":"2rem","margin":"2rem","gutter-mobile":"0.75rem","margin-mobile":"1rem","space-sm":"0.5rem"},"fontFamily":{"display-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0","fontWeight":"400"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.025em","fontWeight":"800"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"0","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">security</span></div><div><span class="font-label-lg text-label-lg text-on-surface block leading-tight tracking-wide">MindBridge LMS</span><span class="font-label-sm text-label-sm text-primary block leading-none">SUPER ADMIN CORE</span></div></div><span class="px-space-xs py-space-2xs rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm tracking-widest uppercase">PROD</span></div><div class="px-space-md pt-space-lg pb-space-sm"><p class="font-label-sm text-label-sm text-outline uppercase tracking-wider px-space-sm">Master Governance</p></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm font-semibold rounded-xl shadow-[0_0_16px_rgba(56,152,255,0.35)]"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard-command-center" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard / Command Center</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tenant-provisioning-registry" href="#"><span class="material-symbols-outlined text-[20px]">domain_add</span><span>Tenant Provisioning &amp; Registry</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="subscriptions-cloud-backups" href="#"><span class="material-symbols-outlined text-[20px]">cloud_sync</span><span>Subscriptions &amp; Cloud Backups</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="system-audit-logs" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>System Audit Logs</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="platform-settings-governance" href="#"><span class="material-symbols-outlined text-[20px]">settings_ethernet</span><span>Platform Settings &amp; Governance</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant font-body-md text-body-md hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="global-support-desk" href="#"><span class="material-symbols-outlined text-[20px]">contact_support</span><span>Global Support Desk</span></a></nav></div><div class="p-space-md bg-surface-container-lowest"><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline">TELEMETRY HEALTH</span><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span></div><div class="flex items-center justify-between font-label-md text-label-md"><span class="text-on-surface-variant">SLA Target</span><span class="text-tertiary font-title-md text-title-md">99.98%</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5"><div class="bg-tertiary h-1.5 rounded-full w-[99.9%]"></div></div><div class="flex items-center justify-between font-label-sm text-label-sm text-outline pt-space-2xs"><span>SLT/Dialog Colombo</span><span class="text-on-surface">14ms</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.3)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="hidden sm:flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-tight">MindBridge</span><span class="font-label-sm text-label-sm text-outline leading-none">Super Admin Architecture</span></div></div><div class="relative w-72 lg:w-96"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-low rounded-lg pl-9 pr-space-md py-space-xs font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-all" placeholder="Search tenants, batch IDs, SLIC accounts, nodes..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-low"><div class="flex items-center gap-space-2xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface">PROD Cluster</span></div><span class="text-outline text-label-sm">•</span><span class="font-label-sm text-label-sm text-tertiary">Active Health 99.98%</span><span class="text-outline text-label-sm">•</span><span class="font-label-sm text-label-sm text-on-surface-variant">SLT/Dialog 14ms</span></div><button aria-label="Notifications" class="relative p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-low"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="hidden md:flex flex-col text-right"><span class="font-title-md text-title-md text-on-surface leading-tight">Eng. Dhanushka Jayasuriya</span><span class="font-label-sm text-label-sm text-primary leading-none">Chief Platform Architect</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg lg:p-space-xl space-y-space-xl max-w-[1720px] mx-auto w-full">
+<!-- Top Executive Header & Cluster Telemetry Status -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low p-space-lg shadow-xl">
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute right-1/3 -bottom-20 w-80 h-80 bg-tertiary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col 2xl:flex-row 2xl:items-center justify-between gap-space-lg">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase tracking-widest font-semibold flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+              Core Cluster v4.9.2-SL
+            </span>
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              SLT-Mobitel &amp; Dialog Peering: 12ms
+            </span>
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+              Uptime: <strong class="text-tertiary">99.98%</strong>
+</span>
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+              Security: <strong class="text-tertiary">Zero Critical Anomalies</strong>
+</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-baseline gap-space-sm pt-space-xs">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Super Admin Multi-Tenant Command &amp; Platform Health</h1>
+<span class="font-label-md text-label-md text-secondary font-semibold bg-secondary-container/20 px-space-sm py-space-2xs rounded">
+              Cohort: 2025/2026 G.C.E. A/L High-Velocity
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+            Real-time telemetry, Widevine L1 DRM enforcement, Commercial Bank/BOC slip OCR ingest, and island-wide Sri Lankan CDN edge distribution.
+          </p>
+</div>
+<!-- Global Critical Orchestration Actions -->
+<div class="flex flex-wrap items-center gap-space-sm self-start 2xl:self-center">
+<button class="group flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-all shadow-md active:scale-95" id="btn-snapshot">
+<span class="material-symbols-outlined text-secondary text-[18px] group-hover:rotate-180 transition-transform duration-500">database</span>
+<span>Emergency DB Snapshot</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-lg text-label-lg transition-all shadow-md active:scale-95" id="btn-flush-cdn">
+<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
+<span>Flush CDN Edge</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container hover:opacity-90 font-label-lg text-label-lg transition-all shadow-[0_0_16px_rgba(56,152,255,0.35)] active:scale-95">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Add New Tenant</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 4 High-Density Mission-Critical KPI Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-lg">
+<!-- Metric 1: Total Enrolled Learners -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-lg flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform"></div>
+<div class="flex items-center justify-between pb-space-md">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider font-semibold">Active Enrolled Learners</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight font-extrabold">48,920</span>
+<span class="text-tertiary font-label-md text-label-md flex items-center font-bold">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>+18.4%
+            </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Across 18 Institutes Island-wide</span>
+<span class="font-label-sm text-label-sm text-outline">YoY Metric</span>
+</div>
+</div>
+<!-- Micro visual sparkline -->
+<div class="pt-space-md">
+<svg class="w-full h-8 text-primary" fill="none" viewbox="0 0 200 32">
+<path d="M0 24 C 20 22, 40 28, 60 18 C 80 8, 100 20, 120 14 C 140 8, 160 12, 180 4 L 200 2" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M0 24 C 20 22, 40 28, 60 18 C 80 8, 100 20, 120 14 C 140 8, 160 12, 180 4 L 200 2 L 200 32 L 0 32 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+</div>
+<!-- Metric 2: Monthly Gross Tuition -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-lg flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-secondary/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform"></div>
+<div class="flex items-center justify-between pb-space-md">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider font-semibold">Monthly Gross Tuition Paced</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight font-extrabold">LKR 142.8M</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">speed</span> 98.2% Reconciliation Velocity
+            </span>
+<span class="font-label-sm text-label-sm text-outline">Cycle MTD</span>
+</div>
+</div>
+<div class="pt-space-md space-y-1">
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full w-[98.2%]"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Automated Settle</span>
+<span class="text-on-surface">LKR 140.2M cleared</span>
+</div>
+</div>
+</div>
+<!-- Metric 3: Active DRM Live Streams -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-lg flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-tertiary/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform"></div>
+<div class="flex items-center justify-between pb-space-md">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider font-semibold">Active DRM Streams</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">videocam</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight font-extrabold">14</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">Concurrent Live</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Whiteboard 1080p60 Stream Enc</span>
+<span class="px-space-xs py-space-2xs rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold animate-pulse">LIVE NOW</span>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant bg-surface-container-lowest/60 p-space-xs rounded-lg">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Dialog Axiata 4G
+          </span>
+<span class="text-outline">|</span>
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> SLT Fiber FTTH
+          </span>
+</div>
+</div>
+<!-- Metric 4: OCR Slip Ingest Engine -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-lg flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-colors">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary-container/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform"></div>
+<div class="flex items-center justify-between pb-space-md">
+<span class="font-label-md text-label-md text-outline uppercase tracking-wider font-semibold">Slip Machine Vision (OCR)</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-[20px]">document_scanner</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tight font-extrabold">1,840</span>
+<span class="font-body-md text-body-md text-outline">/ day</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-tertiary font-medium">94.2% Auto-Clear Rate</span>
+<span class="px-space-xs py-space-2xs rounded bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-bold">58 Manual Audit</span>
+</div>
+</div>
+<div class="pt-space-md">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline pb-1">
+<span>ML Confidence Index</span>
+<span class="text-on-surface">99.4% precision</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden flex">
+<div class="bg-tertiary h-2 w-[94.2%]"></div>
+<div class="bg-secondary h-2 w-[5.8%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Command Layout: 12-Column Asymmetric Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Left 8 Columns: Multi-Tenant Health & Ingress Matrix -->
+<div class="xl:col-span-8 space-y-space-lg">
+<div class="rounded-xl bg-surface-container-low shadow-xl p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">dns</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Multi-Tenant Academy Ingress Matrix</h2>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Real-time tuition institute cluster status, dedicated live streams, and seat allocations</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary/10 px-space-sm py-space-2xs rounded font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 5 of 18 High-Load Nodes
+              </span>
+<button class="p-space-xs rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface" title="Export tenant telemetry CSV">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- High-Contrast Multi-Tenant Registry Table -->
+<div class="overflow-x-auto -mx-space-lg px-space-lg">
+<table class="w-full text-left border-collapse min-w-[700px]">
+<thead>
+<tr class="bg-surface-container-lowest text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md rounded-l-lg">Institute / Academy</th>
+<th class="py-space-sm px-space-md">Enrolled A/L</th>
+<th class="py-space-sm px-space-md">Gross Run Rate</th>
+<th class="py-space-sm px-space-md">Stream / Edge State</th>
+<th class="py-space-sm px-space-md">Master Staff</th>
+<th class="py-space-sm px-space-md rounded-r-lg text-right">Node SLA</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- Row 1: Apex Colombo -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-bold text-primary">
+                        AC
+                      </div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight font-semibold">Apex Combined Mathematics</span>
+<span class="font-body-sm text-body-sm text-outline block">Colombo &amp; Nugegoda Campuses</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-medium text-on-surface">
+                    1,842 <span class="font-label-sm text-label-sm text-outline">Maths</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface font-semibold">LKR 8.28M</span><span class="text-outline text-label-sm">/mo</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-space-2xs rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> DRM Healthy
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>2/2 Seats <span class="text-outline">(Damayanthi J., Chaminda P.)</span></span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-title-md text-title-md text-tertiary font-bold">100%</span>
+</td>
+</tr>
+<!-- Row 2: Rotary Hall Bambalapitiya -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-bold text-primary-fixed">
+                        RH
+                      </div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight font-semibold">Rotary Hall Bambalapitiya</span>
+<span class="font-body-sm text-body-sm text-outline block">Advanced Level Physics Department</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-medium text-on-surface">
+                    1,450 <span class="font-label-sm text-label-sm text-outline">Phys</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface font-semibold">LKR 5.80M</span><span class="text-outline text-label-sm">/mo</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-space-2xs rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> DRM Healthy
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>2/2 Seats <span class="text-outline">(Prof. Samarakoon, N. Kaluarachchi)</span></span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-title-md text-title-md text-tertiary font-bold">99.9%</span>
+</td>
+</tr>
+<!-- Row 3: Syzygy Gampaha -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-bold text-secondary">
+                        SZ
+                      </div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight font-semibold">Syzygy Institute Gampaha</span>
+<span class="font-body-sm text-body-sm text-outline block">Chemistry Theory &amp; Revision</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-medium text-on-surface">
+                    2,100 <span class="font-label-sm text-label-sm text-outline">Chem</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface font-semibold">LKR 9.45M</span><span class="text-outline text-label-sm">/mo</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-space-2xs rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px] animate-spin">sync</span> Video Transcode Active
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>2/2 Seats <span class="text-outline">(Dr. Ranasinghe, T. Fonseka)</span></span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-title-md text-title-md text-tertiary font-bold">100%</span>
+</td>
+</tr>
+<!-- Row 4: Sasip Nugegoda -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-bold text-tertiary">
+                        SP
+                      </div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight font-semibold">Sasip Nugegoda</span>
+<span class="font-body-sm text-body-sm text-outline block">Biology &amp; Agriculture Stream</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-medium text-on-surface">
+                    1,280 <span class="font-label-sm text-label-sm text-outline">Bio</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface font-semibold">LKR 5.12M</span><span class="text-outline text-label-sm">/mo</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-space-2xs rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Normal Operations
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>2/2 Seats <span class="text-outline">(K. Liyanage, S. Bandara)</span></span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-title-md text-title-md text-tertiary font-bold">99.8%</span>
+</td>
+</tr>
+<!-- Row 5: Apex Kandy -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center font-bold text-secondary">
+                        AK
+                      </div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight font-semibold">Apex Kandy Combined Maths</span>
+<span class="font-body-sm text-body-sm text-outline block">Central Province Regional Hub</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md font-medium text-on-surface">
+                    980 <span class="font-label-sm text-label-sm text-outline">Maths</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface font-semibold">LKR 4.41M</span><span class="text-outline text-label-sm">/mo</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-space-2xs rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">tune</span> Provisioning Batch #02
+                    </span>
+</td>
+<td class="py-space-md px-space-md text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>1/2 Seats <span class="text-secondary">(Awaiting 2nd Master)</span></span>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="font-title-md text-title-md text-tertiary font-bold">100%</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Summary Strip within Card -->
+<div class="pt-space-sm flex flex-wrap items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="flex items-center gap-space-xs text-outline">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock_clock</span>
+              Auto-Failover configured to AWS AP-Southeast-1 (Singapore)
+            </span>
+<span class="text-primary font-semibold hover:underline cursor-pointer">View All 18 Managed Multi-Tenants →</span>
+</div>
+</div>
+<!-- KaTeX & Formula Rendering Performance Strip + Real-time Student Concurrency -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-md flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">functions</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase block">KaTeX Proof Latency</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">1.8ms avg render</span>
+<span class="font-body-sm text-body-sm text-tertiary block">Client-side WebAssembly Engine</span>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-md flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-[24px]">network_ping</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase block">SLT Fiber Cache Hit</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">96.4% Local Hit</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Colombo Edge Pop BGP</span>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-md flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase block">Bursar Slip Auto-Match</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">8,420 Slips Cleared</span>
+<span class="font-body-sm text-body-sm text-outline block">This 7-Day Window</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 4 Columns: Regional Microservice Latency & Threat Feeds -->
+<div class="xl:col-span-4 space-y-space-lg">
+<!-- Regional Edge Node Latency Card -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">hub</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Regional Microservice Latency</h2>
+</div>
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+</div>
+<div class="space-y-space-sm">
+<!-- Colombo Node -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">cell_tower</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight font-semibold">Colombo Edge Node</span>
+<span class="font-body-sm text-body-sm text-outline">SLT / Dialog Peering BGP</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">6ms</span>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">OPTIMAL</span>
+</div>
+</div>
+<!-- Kandy Node -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">router</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight font-semibold">Kandy Edge Node</span>
+<span class="font-body-sm text-body-sm text-outline">Central Highland Relay Pop</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">14ms</span>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">HEALTHY</span>
+</div>
+</div>
+<!-- Galle Node -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">router</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight font-semibold">Galle Edge Node</span>
+<span class="font-body-sm text-body-sm text-outline">Southern Coastal Core Node</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">18ms</span>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">HEALTHY</span>
+</div>
+</div>
+<!-- Jaffna Relay -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">satellite_alt</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight font-semibold">Jaffna Relay Pop</span>
+<span class="font-body-sm text-body-sm text-outline">Northern Peninsula Link</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">22ms</span>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">HEALTHY</span>
+</div>
+</div>
+<!-- AWS Singapore Master Lag -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">cloud_sync</span>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight font-semibold">AWS Singapore Master</span>
+<span class="font-body-sm text-body-sm text-outline">DB Multi-AZ Replication Lag</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">38ms</span>
+<span class="font-label-sm text-label-sm text-secondary block font-semibold">SYNCHRONIZED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Security & Anti-Cheat Threat Vector Feed -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[20px]">shield_lock</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Live Anti-Cheat Threat Vector Feed</h2>
+</div>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-highest text-error font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span> ARM GUARD
+            </span>
+</div>
+<div class="space-y-space-sm max-h-[360px] overflow-y-auto pr-1" id="threat-feed">
+<!-- Threat Item 1: Counterfoil Duplication Blocked -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/80 border-l-2 border-l-error space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">block</span> #SLIP-DUP-BLOCKED
+                </span>
+<span class="text-outline">12s ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                Duplicate BOC Counterfoil detected for Batch #A-2026. Student ID <strong class="text-primary font-mono">ST-74921</strong> rejected automatically by vision hash.
+              </p>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+<span>Tenant: Apex Combined Maths</span>
+<span>•</span>
+<span>Audit Lock applied</span>
+</div>
+</div>
+<!-- Threat Item 2: Dynamic Screen Rip Prevention -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/80 border-l-2 border-l-secondary space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">screen_share</span> Dynamic Watermark Trigger
+                </span>
+<span class="text-outline">48s ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                OSB / OBS Virtual Camera injection detected on student stream playback. Hardware ID burn-in watermark forced.
+              </p>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+<span>Tenant: Rotary Hall Bambalapitiya</span>
+<span>•</span>
+<span class="text-tertiary">Stream Protected</span>
+</div>
+</div>
+<!-- Threat Item 3: Widevine L1 Enforcement -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/80 border-l-2 border-l-tertiary space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified_user</span> Widevine L1 Handshake
+                </span>
+<span class="text-outline">2m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                Hardware-backed decrypt initialized for 142 new students on Syzygy Chemistry Live session. Zero playback revocation.
+              </p>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+<span>DRM Pipeline: Google Widevine Level 1</span>
+</div>
+</div>
+<!-- Threat Item 4: ProctorCam Telemetry -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/80 border-l-2 border-l-outline space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-primary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span> ProctorCam Sri Lanka Telemetry
+                </span>
+<span class="text-outline">4m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">
+                Simulated Mock Exam batch: 840 simultaneous face posture scans verified with 0 false flags across Dialog 4G networks.
+              </p>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+<span>Batch #ME-2025-P2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Infrastructure Topology & Multi-Provider Data Ingress Overview -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">account_tree</span>
+            Island-Wide Content Distribution &amp; Hybrid Peering Architecture
+          </h2>
+<p class="font-body-sm text-body-sm text-outline">
+            High-speed low-latency backbone mapped for high-bandwidth Combined Maths and Physics chalk-and-talk video streams
+          </p>
+</div>
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="w-3 h-3 rounded-full bg-primary"></span> Primary Fiber Ingress (SLT)
+          </div>
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span> Direct BGP Peering (Dialog Axiata)
+          </div>
+</div>
+</div>
+<!-- Infrastructure Nodes Status Bar Graph Visual -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-space-md pt-space-xs">
+<div class="p-space-md rounded-lg bg-surface-container-high space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline block">COLOMBO CORE-01</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block">4.2 Gbps</span>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-primary h-1.5 rounded-full w-[72%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">72% Capacity Utilized</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline block">NUGEGODA RELAY-A</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block">2.8 Gbps</span>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-primary h-1.5 rounded-full w-[54%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">54% Capacity Utilized</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline block">KANDY POP-01</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block">1.9 Gbps</span>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-tertiary h-1.5 rounded-full w-[41%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">41% Capacity Utilized</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline block">GAMPAHA EDGE</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block">2.1 Gbps</span>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-primary h-1.5 rounded-full w-[63%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">63% Capacity Utilized</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline block">GALLE DISTRIB</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block">1.1 Gbps</span>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-tertiary h-1.5 rounded-full w-[28%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">28% Capacity Utilized</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-high space-y-space-xs">
+<span class="font-label-sm text-label-sm text-outline block">JAFFNA CACHE</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold block">890 Mbps</span>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-tertiary h-1.5 rounded-full w-[22%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary block font-semibold">22% Capacity Utilized</span>
+</div>
+</div>
+</div>
+<!-- Persistent Global Operational Toast (Hidden by default, triggered by buttons) -->
+<div class="fixed bottom-6 right-6 transform translate-y-32 opacity-0 transition-all duration-300 z-50 rounded-xl bg-surface-container-highest text-on-surface p-space-md shadow-2xl flex items-center gap-space-md max-w-md" id="action-toast">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary" id="toast-icon-wrapper">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface" id="toast-title">Snapshot Triggered</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="toast-desc">Database image created across AP-Southeast-1 nodes.</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Quick Interactive Feedback for Dashboard Actions
+    const btnSnapshot = document.getElementById('btn-snapshot');
+    const btnFlushCdn = document.getElementById('btn-flush-cdn');
+    const toast = document.getElementById('action-toast');
+    const toastTitle = document.getElementById('toast-title');
+    const toastDesc = document.getElementById('toast-desc');
+    let toastTimeout = null;
+
+    function showToast(title, desc) {
+      if (!toast) return;
+      toastTitle.textContent = title;
+      toastDesc.textContent = desc;
+      toast.classList.remove('translate-y-32', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-32', 'opacity-0');
+      }, 4000);
+    }
+
+    if (btnSnapshot) {
+      btnSnapshot.addEventListener('click', () => {
+        showToast('Snapshot Initiated', 'Point-in-time PostgreSQL master snapshot spawned across AWS Singapore cluster.');
+      });
+    }
+
+    if (btnFlushCdn) {
+      btnFlushCdn.addEventListener('click', () => {
+        showToast('Edge Purge Dispatched', 'BGP CDN Cache purge broadcasted to Colombo, Kandy, Galle, and Jaffna edge nodes.');
+      });
+    }
+
+    // Dynamic Live Anti-Cheat Stream Simulation
+    const threatFeed = document.getElementById('threat-feed');
+    const dynamicEvents = [
+      { code: '#L1-REVOCATION-CHECK', text: 'Browser canvas inspection passed on Apex Colombo Student Session #9021.', meta: 'Tenant: Apex Combined Maths', style: 'border-l-primary', tagColor: 'text-primary' },
+      { code: '#OCR-SLIP-VERIFIED', text: 'Commercial Bank slip #CB-99423 parsed with 99.8% confidence. LKR 6,500 admitted.', meta: 'Tenant: Sasip Nugegoda', style: 'border-l-tertiary', tagColor: 'text-tertiary' },
+      { code: '#GEO-IP-MISMATCH', text: 'Simultaneous login attempt from IP 112.134.x.x (Gampaha) & 175.157.x.x (Colombo). Session invalidated.', meta: 'Tenant: Syzygy Chemistry', style: 'border-l-error', tagColor: 'text-error' }
+    ];
+
+    let eventIdx = 0;
+    setInterval(() => {
+      if (!threatFeed) return;
+      const ev = dynamicEvents[eventIdx % dynamicEvents.length];
+      eventIdx++;
+
+      const item = document.createElement('div');
+      item.className = `p-space-sm rounded-lg bg-surface-container-high/80 border-l-2 ${ev.style} space-y-1 transition-all duration-500 transform translate-x-2 opacity-0`;
+      item.innerHTML = `
+        <div class="flex items-center justify-between font-label-sm text-label-sm">
+          <span class="${ev.tagColor} font-bold flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">notifications_active</span> ${ev.code}
+          </span>
+          <span class="text-outline">Just now</span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface font-medium leading-snug">${ev.text}</p>
+        <div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+          <span>${ev.meta}</span>
+        </div>
+      `;
+
+      threatFeed.insertBefore(item, threatFeed.firstChild);
+      setTimeout(() => {
+        item.classList.remove('translate-x-2', 'opacity-0');
+      }, 50);
+
+      // Keep maximum 6 items in the feed
+      if (threatFeed.children.length > 6) {
+        threatFeed.removeChild(threatFeed.lastChild);
+      }
+    }, 12000);
+  })();
+</script></main></div></body></html>

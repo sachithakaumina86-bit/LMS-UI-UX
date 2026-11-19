@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MindBridge LMS</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary": "#4edea3", "tertiary-fixed": "#6ffbbe", "outline": "#8a919e", "inverse-on-surface": "#2a3040", "secondary-fixed-dim": "#ffb95f", "secondary-fixed": "#ffddb8", "surface-bright": "#33394a", "on-primary-container": "#002f5b", "surface-container": "#191f2f", "surface-container-highest": "#2f3445", "on-error-container": "#ffdad6", "on-background": "#dde2f8", "error": "#ffb4ab", "inverse-surface": "#dde2f8", "background": "#0d1322", "secondary": "#ffb95f", "surface-container-low": "#151b2b", "inverse-primary": "#005fad", "primary-fixed-dim": "#a4c8ff", "error-container": "#93000a", "on-secondary": "#472a00", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#080e1d", "on-secondary-container": "#5b3800", "on-tertiary-container": "#003623", "tertiary-container": "#00ab76", "on-tertiary-fixed-variant": "#005236", "on-error": "#690005", "surface-variant": "#2f3445", "primary-container": "#3898ff", "on-primary": "#00315e", "surface-dim": "#0d1322", "on-tertiary": "#003824", "on-secondary-fixed-variant": "#653e00", "secondary-container": "#ee9800", "on-surface": "#dde2f8", "surface-container-high": "#242a3a", "primary": "#a4c8ff", "surface": "#0d1322", "outline-variant": "#404753", "primary-fixed": "#d4e3ff", "on-primary-fixed": "#001c3a", "on-primary-fixed-variant": "#004784", "on-secondary-fixed": "#2a1700", "tertiary-fixed-dim": "#4edea3", "surface-tint": "#a4c8ff", "on-surface-variant": "#c0c7d5" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "gutter": "1.5rem", "space-2xl": "3rem", "space-3xl": "4rem", "space-md": "1rem", "space-2xs": "0.125rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "2rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "space-sm": "0.5rem" }, fontFamily: { "display-lg-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, fontSize: { "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface truncate">MindBridge</span><span class="px-space-xs py-space-2xs bg-surface-container-high text-primary font-label-sm text-label-sm rounded uppercase tracking-wider">Super Admin</span></div><div class="flex items-center gap-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary truncate">Cluster 01 Online</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full px-gutter-mobile space-y-space-md">
+<!-- Header Section -->
+<div class="pt-space-sm flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">corporate_fare</span>
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Tenants &amp; Provisioning</h1>
+</div>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Cluster Sync
+      </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manage Sri Lankan A/L tuition institutes, branch nodes, and cloud sandbox quotas.</p>
+</div>
+<!-- Search & Filter Controls -->
+<div class="flex flex-col space-y-space-xs">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-10 py-2.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm outline-none focus:bg-surface-container-low transition-all" id="tenantSearch" placeholder="Search academy, code (e.g. APX-01), or director..." type="text"/>
+<button class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px] hover:text-on-surface" onclick="document.getElementById('tenantSearch').value=''">close</button>
+</div>
+<!-- Filter Pills Horizontal Scroll -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 no-scrollbar">
+<button class="filter-pill shrink-0 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm" data-filter="all">
+<span>All</span>
+<span class="bg-primary/20 text-on-primary px-1.5 py-0.2 rounded-full font-label-sm text-label-sm">18</span>
+</button>
+<button class="filter-pill shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" data-filter="active">
+<span>Active</span>
+<span class="bg-surface-container-highest text-tertiary px-1.5 py-0.2 rounded-full font-label-sm text-label-sm">16</span>
+</button>
+<button class="filter-pill shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" data-filter="pending">
+<span>Pending Review</span>
+<span class="bg-secondary-container/20 text-secondary px-1.5 py-0.2 rounded-full font-label-sm text-label-sm">2</span>
+</button>
+<button class="filter-pill shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" data-filter="suspended">
+<span>Suspended</span>
+<span class="bg-surface-container-highest text-outline px-1.5 py-0.2 rounded-full font-label-sm text-label-sm">0</span>
+</button>
+</div>
+</div>
+<!-- Cloud Backup & Snapshot Status Card -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-surface-container to-surface-container-high p-space-md shadow-md">
+<div class="absolute -right-4 -bottom-4 w-28 h-28 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">cloud_sync</span>
+</div>
+<div>
+<span class="font-title-md text-title-md text-on-surface block leading-tight">PostgreSQL &amp; S3 Snapshot</span>
+<span class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> 42.4 GB Encrypted · Today, 03:00 AM
+          </span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant font-mono">RTO 8m</span>
+</div>
+<div class="grid grid-cols-2 gap-2 my-space-xs p-2 rounded-lg bg-surface-container-lowest/60">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Cluster Redundancy</span>
+<span class="font-label-md text-label-md text-on-surface">SLT-Mobitel Tier III + AWS SG</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Last Integrity Hash</span>
+<span class="font-label-sm text-label-sm text-primary font-mono truncate">sha256:d892a...c01</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline-variant">Auto-snapshot every 6 hours</span>
+<button class="px-3 py-1.5 rounded-md bg-surface-container-highest hover:bg-surface-bright text-primary font-label-md text-label-md flex items-center gap-1 transition-all active:scale-95" id="backupTriggerBtn" onclick="triggerSnapshot()">
+<span class="material-symbols-outlined text-[16px]" id="backupIcon">play_circle</span>
+<span id="backupText">Backup Now</span>
+</button>
+</div>
+</div>
+<!-- Section Title: Urgent Attention / Pending -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">gavel</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pending Accreditation</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm">Requires Sign-off</span>
+</div>
+<!-- Pending Application Card: Royal Science Institute -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-lg space-y-space-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container-lowest shrink-0" data-alt="Dark aesthetic crest logo for an elite Sri Lankan Advanced Level science institute in Matara, oceanic navy and luminous amber hues on dark badge, mathematical symbols." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkXcWFagkdx9_IWPh4j_MRiX0gBlrYZu_hqX-aiqzWaFRZuf-jV2PeD0S-zfb38D0WB5CFzSx91w1L980m-9fq6hoEhQ6ng6I51tpyxJ0TQg5Uo46Ud-WXRltRyTkHgD7sMsUm1MGW8Jwui8cGJzBE9BHC5nadFn3F2-EtWyVnVoA_HQ0PBC9KkT5ypaqh5qfBxwG7EL6mXuaIQqswAmxc04fiyeaW7crqWXn3_dw"/>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-title-md text-title-md text-on-surface">Royal Science Institute</h3>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant">Matara</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Dir: Dr. A. Wijesinghe · Target: 1,200 Students</p>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></span>
+</div>
+<!-- Curriculum Badges -->
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-primary font-label-sm text-label-sm">A/L Combined Maths</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-tertiary font-label-sm text-label-sm">Biology Track</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">Sinhala &amp; English Media</span>
+</div>
+<!-- Verification Dossier Pill -->
+<div class="rounded-lg bg-surface-container-lowest p-2.5 space-y-1.5">
+<div class="flex items-center justify-between text-secondary">
+<div class="flex items-center gap-1 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">pending_actions</span>
+<span>Dossier Incomplete (2 Pending)</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Submitted 4h ago</span>
+</div>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">radio_button_unchecked</span>
+<span>NIE Affiliation &amp; Provincial Registration Letter</span>
+</li>
+<li class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">radio_button_unchecked</span>
+<span>Corporate Commercial Bank (Matara Branch) Slip Account</span>
+</li>
+</ul>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="py-2 px-3 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+<span>Review Dossier</span>
+</button>
+<button class="py-2 px-3 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-1 shadow-md hover:bg-primary transition-all active:scale-95" onclick="toggleSandboxModal()">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+<span>Approve Sandbox</span>
+</button>
+</div>
+</div>
+<!-- Section Title: Active Tenants -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Active Production Academies</h2>
+</div>
+<span class="font-label-sm text-label-sm text-outline">16 Total Instances</span>
+</div>
+<!-- Active Tenant Card 1: Apex Combined Maths -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-md space-y-space-sm hover:bg-surface-container/90 transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container-lowest shrink-0" data-alt="Sleek geometric crest logo for Apex Combined Mathematics Institute in Colombo, metallic cobalt blue and dark obsidian theme, clean vectors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2jmjDghZLF9CBAJI4uCLyKb2tTbru9dv5x8iumKiLUxjs7sazCNvONmg8WBFtikKZRzZTUCMWy1saEfH-WLxBR_DssTBL17xvYZVGpSgqAjcG3pQpz297ZBGf0OmSmLA_U4Gd3x-3iAm91iGNTli6hpRwtJI4tEt1Cs4D5fT4kx7KBV-ISzwo91bZSeuUBSW3PJVJnVoqeF55JStPguyAtRmjRbeZG5Rd5UG97lU"/>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-title-md text-title-md text-on-surface">Apex Combined Mathematics</h3>
+<span class="px-2 py-0.2 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm">Production</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Colombo 07 &amp; Nugegoda Campuses</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Tenant Metrics Grid -->
+<div class="grid grid-cols-3 gap-2 p-2.5 rounded-lg bg-surface-container-lowest">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Tuition Revenue</span>
+<span class="font-title-md text-title-md text-secondary">LKR 8.28M</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Staff Security</span>
+<span class="font-title-md text-title-md text-tertiary">2/2 Compliant</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Anti-Cheat Node</span>
+<span class="font-label-md text-label-md text-primary font-semibold flex items-center gap-0.5 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> PromptXpress
+        </span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-0.5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[16px]">psychology</span>
+<span>Lead: Eng. Kusal Senaratne</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm uppercase">Enterprise SLA</span>
+</div>
+</div>
+<!-- Active Tenant Card 2: Rotary Hall Bambalapitiya Physics -->
+<div class="rounded-xl bg-surface-container p-space-md shadow-md space-y-space-sm hover:bg-surface-container/90 transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-lg object-cover bg-surface-container-lowest shrink-0" data-alt="Classic authoritative circular emblem logo for Rotary Hall Physics tuition center in Bambalapitiya, dark navy background with golden atom rings and vector details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Ilh72J1l3_64H3kit91fcu-1v4ne3OUz3mCV23rADwWlXI6OFxYsRlwpci1J5RiMrWUD3ROUtJkQ9bnQdvKcccQobew9g-n8i_vQ5D33uaF5BMKo6NFhOqf9e3AtacsP2CIgrWb6pNek1VWFZCwVBy3vrq6ECkT6BowLk4pn0zYWhuIYhASlKN49jOtv2ih9blSCjGzCr86UL_FnkRdigK6-_JCVxszqwENKozI"/>
+<div>
+<div class="flex items-center gap-1.5 flex-wrap">
+<h3 class="font-title-md text-title-md text-on-surface">Rotary Hall Bambalapitiya</h3>
+<span class="px-2 py-0.2 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Advanced Level Physics Department</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Tenant Details -->
+<div class="grid grid-cols-3 gap-2 p-2.5 rounded-lg bg-surface-container-lowest">
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Active Students</span>
+<span class="font-title-md text-title-md text-on-surface">1,450 Enrolled</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Tier Package</span>
+<span class="font-title-md text-title-md text-primary">Pro Tier</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline block">Mock Exam Load</span>
+<span class="font-title-md text-title-md text-tertiary">99.98% Up</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-0.5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-outline text-[16px]">school</span>
+<span>Lecturer: K. L. Wickramasinghe</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary-fixed-dim font-label-sm text-label-sm">SLT Dedicated VLAN</span>
+</div>
+</div>
+<!-- Provision New Academy CTA Button -->
+<div class="pt-space-xs pb-space-lg">
+<button class="w-full py-3.5 px-space-md rounded-xl bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs shadow-lg shadow-primary-container/20 hover:brightness-110 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[22px]">add_circle</span>
+<span>Provision New Academy Tenant</span>
+</button>
+<p class="text-center font-label-sm text-label-sm text-outline mt-2">Automated DNS, KaTeX CDN routing, and SMS gateway provisioning takes ~90 seconds.</p>
+</div>
+<!-- Provisioning Sandbox Modal (Hidden by default, triggered via JS) -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md hidden flex items-center justify-center p-gutter-mobile" id="sandboxModal">
+<div class="w-full max-w-sm rounded-xl bg-surface-container-high p-space-md space-y-space-md shadow-2xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">dns</span>
+<h4 class="font-title-md text-title-md text-on-surface">Provision Sandbox Instance</h4>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="toggleSandboxModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Ready to allocate dedicated tenant container on AWS Singapore (ap-southeast-1) for <strong>Royal Science Institute</strong>?
+      </p>
+<div class="space-y-2 rounded-lg bg-surface-container-lowest p-2.5 font-mono text-label-sm text-tertiary">
+<div class="flex justify-between">
+<span class="text-outline">Subdomain:</span>
+<span>rsi-matara.mindbridge.lk</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">DB Shard:</span>
+<span>tenant_db_lk_south_09</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Allocated RAM:</span>
+<span>8 GB Dedicated</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="w-1/2 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md" onclick="toggleSandboxModal()">Cancel</button>
+<button class="w-1/2 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-md" onclick="confirmProvision()">Deploy Node</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Ensure the bottom tab navigation highlights the 'Tenants' tab
+  (function initActiveTab() {
+    const tenantNavLink = document.querySelector('nav a[data-path="tenants"]');
+    if (tenantNavLink) {
+      tenantNavLink.classList.remove('text-on-surface-variant');
+      tenantNavLink.classList.add('text-primary', 'font-label-md');
+    }
+    const overviewLink = document.querySelector('nav a[data-path="overview"]');
+    if (overviewLink) {
+      overviewLink.classList.remove('text-primary');
+      overviewLink.classList.add('text-on-surface-variant');
+    }
+  })();
+
+  // Filter Pill Interactivity
+  const filterPills = document.querySelectorAll('.filter-pill');
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => {
+        p.classList.remove('bg-primary-container', 'text-on-primary');
+        p.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      pill.classList.add('bg-primary-container', 'text-on-primary');
+    });
+  });
+
+  // Modal interactions
+  function toggleSandboxModal() {
+    const modal = document.getElementById('sandboxModal');
+    if (modal) {
+      modal.classList.toggle('hidden');
+    }
+  }
+
+  function confirmProvision() {
+    const modal = document.getElementById('sandboxModal');
+    if (modal) {
+      modal.classList.add('hidden');
+    }
+    alert('Deployment initiated for Royal Science Institute! Provisioning webhook triggered.');
+  }
+
+  // Backup action micro-interaction
+  function triggerSnapshot() {
+    const icon = document.getElementById('backupIcon');
+    const text = document.getElementById('backupText');
+    const btn = document.getElementById('backupTriggerBtn');
+    
+    icon.classList.add('animate-spin');
+    text.textContent = 'Streaming...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      icon.classList.remove('animate-spin');
+      icon.textContent = 'check_circle';
+      text.textContent = 'Snapshot Verified';
+      btn.classList.add('text-tertiary');
+      setTimeout(() => {
+        icon.textContent = 'play_circle';
+        text.textContent = 'Backup Now';
+        btn.classList.remove('text-tertiary');
+        btn.disabled = false;
+      }, 3500);
+    }, 1800);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm leading-none">Overview</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-space-2xs transition-colors text-primary font-label-md" data-path="tenants" href="#"><span class="material-symbols-outlined text-[22px]">domain</span><span class="font-label-sm text-label-sm leading-none">Tenants</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="backups-and-billing" href="#"><span class="material-symbols-outlined text-[22px]">cloud_sync</span><span class="font-label-sm text-label-sm leading-none">Backups</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm leading-none">Settings</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="support" href="#"><span class="material-symbols-outlined text-[22px]">support_agent</span><span class="font-label-sm text-label-sm leading-none">Support</span></a></div></nav></body></html>

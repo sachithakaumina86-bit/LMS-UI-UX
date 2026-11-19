@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed": "#002113", "on-error-container": "#ffdad6", "tertiary-container": "#00ab76", "primary-fixed": "#d4e3ff", "secondary-container": "#ee9800", "surface-variant": "#2f3445", "on-tertiary-container": "#003623", "tertiary-fixed-dim": "#4edea3", "primary-container": "#3898ff", "secondary-fixed-dim": "#ffb95f", "primary-fixed-dim": "#a4c8ff", "on-secondary-container": "#5b3800", "surface": "#0d1322", "on-background": "#dde2f8", "on-secondary": "#472a00", "surface-container-highest": "#2f3445", "tertiary": "#4edea3", "on-tertiary": "#003824", "surface-container-high": "#242a3a", "surface-dim": "#0d1322", "outline-variant": "#404753", "surface-bright": "#33394a", "background": "#0d1322", "on-primary": "#00315e", "on-surface": "#dde2f8", "on-secondary-fixed": "#2a1700", "on-tertiary-fixed-variant": "#005236", "surface-container-lowest": "#080e1d", "tertiary-fixed": "#6ffbbe", "surface-container-low": "#151b2b", "secondary": "#ffb95f", "inverse-primary": "#005fad", "primary": "#a4c8ff", "on-error": "#690005", "secondary-fixed": "#ffddb8", "surface-tint": "#a4c8ff", "on-primary-container": "#002f5b", "on-primary-fixed-variant": "#004784", "surface-container": "#191f2f", "on-primary-fixed": "#001c3a", "error-container": "#93000a", "inverse-surface": "#dde2f8", "on-surface-variant": "#c0c7d5", "error": "#ffb4ab", "on-secondary-fixed-variant": "#653e00", "inverse-on-surface": "#2a3040", "outline": "#8a919e" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "0.75rem", "margin": "2rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "gutter": "1.5rem", "space-lg": "1.5rem", "space-md": "1rem", "space-2xs": "0.125rem", "space-xs": "0.25rem", "space-2xl": "3rem", "space-xl": "2rem", "space-3xl": "4rem" }, "fontFamily": { "title-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-lg"><div class="flex flex-col gap-space-lg"><div class="px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">neurology</span></div><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface tracking-tight">MindBridge</span><span class="font-label-sm text-label-sm text-tertiary uppercase">Academic AI Suite</span></div></div><span class="font-label-sm text-label-sm px-space-xs py-space-2xs bg-surface-container-high rounded text-outline">v2.4</span></div><div class="px-space-md"><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[18px]">functions</span></div><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Apex Combined Maths</span><span class="font-label-sm text-label-sm text-on-surface-variant">2025/2026 Batch</span></div></div><span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span></div></div><nav class="flex flex-col gap-space-2xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span>Dashboard / Hub</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container font-headline-sm" data-path="ai-study-companion" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>AI Companion / Studio</span></div><span class="w-2 h-2 rounded-full bg-tertiary"></span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="courses" href="#"><span class="material-symbols-outlined text-[20px]">play_lesson</span><span>Courses &amp; Player</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="examinations" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Examinations &amp; Quizzes</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="assignments" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span>Assignments &amp; Work</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="tuition-and-slip-history" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Tuition &amp; Slip History</span></div><span class="font-label-sm text-label-sm px-space-xs py-space-2xs bg-tertiary-container/30 text-tertiary-fixed-dim rounded">Paid</span></a></nav></div><div class="px-space-md flex flex-col gap-space-sm"><div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface">Oceanic Midnight</span><span class="font-label-sm text-label-sm text-outline">Dark Mode Sync</span></div></div><span class="material-symbols-outlined text-primary text-[18px]">dark_mode</span></div><nav class="flex flex-col gap-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-headline-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="settings-and-profile" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Settings &amp; Profile</span></a></nav></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><span class="font-title-md text-title-md text-on-surface tracking-tight hidden sm:inline">MindBridge</span></div><div class="relative flex-1"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm pl-10 pr-space-md py-space-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary placeholder:text-outline" placeholder="Search lectures, KaTeX proofs, past papers, admissions..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-2xs rounded-full bg-surface-container-high"><span class="material-symbols-outlined text-secondary text-[16px]">school</span><span class="font-label-sm text-label-sm text-on-surface-variant">Combined Maths A/L</span></div><button class="relative w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="h-6 w-px bg-surface-variant"></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Kavindu Bandara</span><span class="font-label-sm text-label-sm text-on-surface-variant">Index #AL-7402</span></div></div></div></header><main class="relative pt-16 w-full px-gutter bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full gap-space-lg pb-space-3xl">
+<!-- Breadcrumb & Workspace Status Header -->
+<header class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-low p-space-lg rounded-xl shadow-md">
+<div class="flex flex-col gap-space-xs">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span>Teacher Workspace</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>AI Curriculum Studio</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Question Bank Generator</span>
+</nav>
+<div class="flex items-center gap-space-md flex-wrap pt-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">AI Question Bank &amp; Algorithmic Paper Studio</h1>
+<div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container-high rounded-full">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold tracking-wide uppercase">Batch Engine 2025/26</span>
+</div>
+</div>
+<!-- Telemetry Tags -->
+<div class="flex items-center gap-space-sm flex-wrap mt-space-2xs">
+<span class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded bg-surface-container text-tertiary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+          NIE 2024 Syllabic Alignment: 100% Verified
+        </span>
+<span class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded bg-surface-container text-primary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+          Model: Socratic Claude-Math v3.2 Fine-Tuned
+        </span>
+<span class="inline-flex items-center gap-space-xs px-space-sm py-space-2xs rounded bg-surface-container text-secondary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[16px]">domain</span>
+          Apex Combined Maths Academy
+        </span>
+</div>
+</div>
+<!-- Header Action CTAs -->
+<div class="flex items-center gap-space-sm flex-wrap self-start lg:self-center">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-lg text-label-lg transition-all shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">terminal</span>
+        Export LaTeX / PDF
+      </button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-lg text-label-lg transition-all shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">assignment_add</span>
+        Push to Mock Room
+      </button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg transition-all shadow-md hover:bg-primary-fixed">
+<span class="material-symbols-outlined text-[20px]">bookmark_add</span>
+        Save to Bank
+      </button>
+</div>
+</header>
+<!-- Two-Column Studio Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Generation Configuration & Guardrails (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Academic Calibration Card -->
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<h2 class="font-title-md text-title-md text-on-surface">Curriculum Parameters</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-space-sm py-space-2xs rounded">AL-MATH-SYLL-2024</span>
+</div>
+<!-- Target Stream Selection -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">Target Discipline / Stream</label>
+<div class="grid grid-cols-2 gap-space-xs p-space-2xs bg-surface-container-lowest rounded-lg">
+<button class="py-space-xs px-space-sm rounded font-label-md text-label-md bg-primary-container text-on-primary-container font-semibold transition-all" type="button">Pure Maths (Paper I)</button>
+<button class="py-space-xs px-space-sm rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" type="button">Applied Maths (Paper II)</button>
+</div>
+</div>
+<!-- Syllabus Unit Dropdown -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant" for="unit-selector">Syllabus Modular Unit</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest text-on-surface font-body-md text-body-md py-space-sm px-space-md rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container" id="unit-selector">
+<option selected="">Unit 08 — Definite Integrals, Riemann Sums &amp; Trigonometric Sub</option>
+<option>Unit 09 — Differential Equations &amp; Real-world Rate Modeling</option>
+<option>Unit 05 — Matrices, Inversion &amp; Linear Determinants</option>
+<option>Unit 03 — Polynomials, Remainder Theorem &amp; Partial Fractions</option>
+<option>Unit 14 — Coplanar Force Systems, Rigid Body Equilibrium</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-md top-1/2 -translate-y-1/2 pointer-events-none text-outline text-[20px]">unfold_more</span>
+</div>
+</div>
+<!-- Paper Question Type & Mark Blueprint -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container text-center cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="font-label-sm text-label-sm text-outline">Part A</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Structured</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">10 Marks</span>
+</div>
+<div class="flex flex-col p-space-sm rounded-lg bg-primary-container text-on-primary-container text-center cursor-pointer shadow-md">
+<span class="font-label-sm text-label-sm font-semibold opacity-90">Part B</span>
+<span class="font-headline-sm text-headline-sm">Full Essay</span>
+<span class="font-label-sm text-label-sm font-bold">25 Marks</span>
+</div>
+<div class="flex flex-col p-space-sm rounded-lg bg-surface-container text-center cursor-pointer hover:bg-surface-container-high transition-colors">
+<span class="font-label-sm text-label-sm text-outline">Section I</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Algorithmic MCQ</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">2 Marks</span>
+</div>
+</div>
+<!-- Cognitive Load & Bloom's Sliders -->
+<div class="flex flex-col gap-space-md pt-space-xs">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between items-center text-label-md font-label-md">
+<span class="text-on-surface">Analytical &amp; Conceptual Depth (Bloom's L5/L6)</span>
+<span class="text-primary font-semibold">Level 4 — Synthesis</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden flex items-center">
+<div class="bg-primary h-full w-[80%] rounded-full"></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex justify-between items-center text-label-md font-label-md">
+<span class="text-on-surface">Algebraic / Computational Density</span>
+<span class="text-secondary font-semibold">Heavy (A/L Distinction Tier)</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden flex items-center">
+<div class="bg-secondary h-full w-[72%] rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Anti-Hallucination & Guardrails Engine -->
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[22px]">security</span>
+<h2 class="font-title-md text-title-md text-on-surface">Algorithmic Guardrails</h2>
+</div>
+<span class="inline-flex items-center gap-space-2xs font-label-sm text-label-sm text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Active
+          </span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Toggle 1 -->
+<label class="flex items-start justify-between gap-space-md p-space-sm rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Strict NIE Marking Scheme Validation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enforces Sri Lanka Examination Department standard M/A/B allocation rules.</span>
+</div>
+<input checked="" class="mt-1 w-5 h-5 accent-primary cursor-pointer rounded" type="checkbox"/>
+</label>
+<!-- Toggle 2 -->
+<label class="flex items-start justify-between gap-space-md p-space-sm rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Sinhala Bilingual Translation (ද්විභාෂා ප්‍රශ්න)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Generates verified academic Sinhala translation with standard mathematical terms.</span>
+</div>
+<input checked="" class="mt-1 w-5 h-5 accent-primary cursor-pointer rounded" type="checkbox"/>
+</label>
+<!-- Toggle 3 -->
+<label class="flex items-start justify-between gap-space-md p-space-sm rounded-lg bg-surface-container-lowest cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Granular Step Breakdown Matrix</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Explicitly partitions Method (M), Accuracy (A), and Independent (B) marks.</span>
+</div>
+<input checked="" class="mt-1 w-5 h-5 accent-primary cursor-pointer rounded" type="checkbox"/>
+</label>
+</div>
+</section>
+<!-- Studio Prompt Directive -->
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<label class="font-title-md text-title-md text-on-surface" for="prompt-input">Target Prompt &amp; Heuristic Directive</label>
+<span class="font-label-sm text-label-sm text-outline">TeX Mode Auto</span>
+</div>
+<div class="relative">
+<textarea class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm p-space-md rounded-lg focus:outline-none focus:bg-surface-container resize-none placeholder:text-outline leading-relaxed" id="prompt-input" rows="4">Generate an essay problem combining Leibniz integral property with trigonometric half-angle substitution, mimicking 2022 A/L Paper II standard. Include a deduction sub-part for \int_0^{\pi/2} \ln(1+\tan x)dx.</textarea>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">token</span>
+<span>Est. Computational Budget: 1,420 Tokens</span>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-lg shadow-primary/20 hover:bg-primary-fixed transition-all" id="regenerate-btn">
+<span class="material-symbols-outlined text-[20px] animate-spin-reverse">auto_awesome</span>
+            Generate AI Question &amp; Rubric
+          </button>
+</div>
+</section>
+<!-- Model Performance Telemetry & Knowledge Graphs -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[24px]">insights</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Vector Index Synced</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Indexed 1,840 G.C.E. A/L past problems (1995–2024)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-space-2xs bg-surface-container rounded text-outline font-mono">LATENCY: 840ms</span>
+</div>
+</div>
+<!-- RIGHT COLUMN: Interactive KaTeX Preview & Step-by-Step Marking Rubric (7 Cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<!-- Studio Control Bar -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-lg py-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-primary animate-pulse"></span>
+<span class="font-title-md text-title-md text-on-surface">Curriculum Output — Draft #04</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-space-2xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit_note</span> Quick Edit
+          </button>
+<button class="px-space-sm py-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-space-2xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">polyline</span> Insert TikZ Plot
+          </button>
+<button class="px-space-sm py-space-xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-space-2xs transition-colors">
+<span class="material-symbols-outlined text-[16px]">refresh</span> Regret Sub-part (b)
+          </button>
+</div>
+</div>
+<!-- Problem Statement Card (Mathematical Canvas) -->
+<article class="bg-surface-container-low rounded-xl p-space-xl flex flex-col gap-space-lg shadow-md">
+<!-- Question Header Meta -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest -mx-space-xl -mt-space-xl px-space-xl py-space-md rounded-t-xl">
+<div class="flex items-center gap-space-md">
+<span class="px-space-sm py-space-2xs rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold">PAPER I — PURE MATHS</span>
+<span class="font-title-md text-title-md text-on-surface">Question 16 (Part B)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-space-2xs rounded bg-surface-container text-secondary font-label-md text-label-md font-bold">[25 Marks Total]</span>
+<button class="px-space-sm py-space-2xs rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:text-primary transition-colors flex items-center gap-space-2xs" id="toggle-sinhala-btn">
+<span class="material-symbols-outlined text-[16px]">translate</span>
+<span id="lang-btn-text">Show Sinhala (සිංහල)</span>
+</button>
+</div>
+</div>
+<!-- Rendered Problem Text (English) -->
+<div class="flex flex-col gap-space-md">
+<div class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+<p class="font-semibold text-primary-fixed mb-space-xs">(a) Standard Integral Transformation:</p>
+<p class="mb-space-md">
+              Let $f(x)$ be a continuous function defined on $[0, a]$. By considering the substitution $u = a - x$, prove that:
+            </p>
+<!-- Mathematical Equation Render Box -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest text-center flex flex-col items-center justify-center font-mono text-headline-sm text-primary tracking-wide shadow-inner my-space-xs overflow-x-auto">
+<span>∫<sub>0</sub><sup>a</sup> f(x) dx = ∫<sub>0</sub><sup>a</sup> f(a - x) dx</span>
+</div>
+<div class="flex justify-end">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">[10 Marks]</span>
+</div>
+</div>
+<div class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+<p class="font-semibold text-primary-fixed mb-space-xs">(b) Integration &amp; Definite Limit Evaluation:</p>
+<p class="mb-space-md">
+              Hence, or otherwise, determine the exact numerical value of the definite integral:
+            </p>
+<!-- KaTeX Integral Box -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest text-center flex flex-col items-center justify-center font-mono text-headline-md text-on-surface tracking-wide shadow-inner my-space-xs overflow-x-auto">
+<div class="flex items-center justify-center gap-space-xs py-space-sm">
+<span class="text-secondary text-headline-xl">I</span>
+<span class="text-on-surface-variant text-headline-md">=</span>
+<span class="text-headline-lg">∫<sub>0</sub><sup>π</sup></span>
+<div class="inline-flex flex-col items-center text-center px-space-xs">
+<span class="pb-1 border-b border-outline-variant">x · sin(x)</span>
+<span class="pt-1">1 + cos<sup>2</sup>(x)</span>
+</div>
+<span class="text-headline-sm text-on-surface-variant">dx</span>
+</div>
+<div class="font-body-sm text-body-sm text-tertiary-fixed font-sans mt-space-xs">
+                Target Verification: Show rigorously that <em>I = π<sup>2</sup> / 4</em>
+</div>
+</div>
+<div class="flex justify-end">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">[15 Marks]</span>
+</div>
+</div>
+</div>
+<!-- Sinhala Bilingual Drawer (Expandable / Toggleable) -->
+<div class="hidden flex-col gap-space-sm p-space-md rounded-xl bg-surface-container-lowest" id="sinhala-drawer">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-md text-label-md text-secondary font-semibold">ද්විභාෂා පරිවර්තනය (National Institute of Education Formatted)</span>
+<span class="material-symbols-outlined text-outline text-[18px]">g_translate</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            (a) $f(x)$ යනු $[0, a]$ මත සන්තතික ශ්‍රිතයක් යැයි ගනිමු. $u = a - x$ ආදේශය භාවිතා කරමින්, $\int_0^a f(x) dx = \int_0^a f(a - x) dx$ බව සාධනය කරන්න.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            (b) ඒ නයින් හෝ අන්‍ය ආකාරයකින්, $\int_0^{\pi} \frac{x \sin x}{1 + \cos^2 x} dx = \frac{\pi^2}{4}$ බව පෙන්වන්න.
+          </p>
+</div>
+<!-- Audit & Similarity Vector Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-tertiary text-[20px]">fingerprint</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">96.4% Algorithmic Novelty</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Zero collision with 1995-2024 past exam keys</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest">
+<span class="material-symbols-outlined text-primary text-[20px]">fact_check</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">100% NIE Syllabic Fidelity</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Validated against Circular ED/09/2023</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Step-by-Step Marking Scheme Matrix Card -->
+<article class="bg-surface-container-low rounded-xl p-space-xl flex flex-col gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">grading</span>
+<h2 class="font-title-md text-title-md text-on-surface">Marking Scheme Matrix (M / A / B Scheme)</h2>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-space-2xs bg-surface-container text-tertiary-fixed rounded font-semibold">Examiner Confidential</span>
+</div>
+<!-- Marking Matrix Table -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- Step 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-md">
+<span class="font-mono font-bold text-label-md text-outline px-space-xs py-space-2xs bg-surface-container rounded">01</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Subpart (a): Substitution Property Application</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Setting $u = a - x \implies du = -dx$, mapping limits $x=0 \to u=a$ and $x=a \to u=0$. Handling negative differential sign.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center">
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-primary font-mono font-bold text-label-md">B2</span>
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-secondary font-mono font-bold text-label-md">M3</span>
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-tertiary font-mono font-bold text-label-md">A5</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-md">
+<span class="font-mono font-bold text-label-md text-outline px-space-xs py-space-2xs bg-surface-container rounded">02</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Subpart (b): Symmetric Integral Summation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Setting $I = \int_0^\pi \frac{(\pi-x)\sin(\pi-x)}{1+\cos^2(\pi-x)}dx$. Adding relations to yield $2I = \pi \int_0^\pi \frac{\sin x}{1+\cos^2 x}dx$.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center">
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-secondary font-mono font-bold text-label-md">M2</span>
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-tertiary font-mono font-bold text-label-md">A3</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-md">
+<span class="font-mono font-bold text-label-md text-outline px-space-xs py-space-2xs bg-surface-container rounded">03</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Subpart (b): Trigonometric Variable Change</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Applying $v = \cos x \implies dv = -\sin x dx$. Splitting integral or transforming boundaries from $1$ to $-1$.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center">
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-secondary font-mono font-bold text-label-md">M3</span>
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-tertiary font-mono font-bold text-label-md">A2</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest flex flex-col md:flex-row md:items-center justify-between gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-space-md">
+<span class="font-mono font-bold text-label-md text-outline px-space-xs py-space-2xs bg-surface-container rounded">04</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Subpart (b): Arctangent Limit Evaluation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Evaluating $[\arctan(v)]_{-1}^1 = \frac{\pi}{4} - (-\frac{\pi}{4}) = \frac{\pi}{2}$. Resolving $2I = \pi(\frac{\pi}{2}) \implies I = \frac{\pi^2}{4}$.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-center">
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-secondary font-mono font-bold text-label-md">M1</span>
+<span class="px-space-sm py-space-2xs rounded bg-surface-container-high text-tertiary font-mono font-bold text-label-md">A4</span>
+</div>
+</div>
+</div>
+<!-- Marking Schema Footer Meta -->
+<div class="flex items-center justify-between pt-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<span>B-Marks: <strong class="text-on-surface">2</strong></span>
+<span>•</span>
+<span>M-Marks: <strong class="text-on-surface">9</strong></span>
+<span>•</span>
+<span>A-Marks: <strong class="text-on-surface">14</strong></span>
+</div>
+<span class="text-secondary font-semibold">Total: 25 Marks</span>
+</div>
+</article>
+<!-- Pedagogical Analysis Card with Rich Chart & Feedback -->
+<section class="bg-surface-container-low rounded-xl p-space-lg flex flex-col gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">analytics</span>
+<h3 class="font-title-md text-title-md text-on-surface">Cognitive Load Profile &amp; Predicted Student Pitfalls</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline">G.C.E. A/L Empirical Model</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md items-center">
+<!-- Inline SVG Visualizer (Cognitive Radar / Distribution) -->
+<div class="flex flex-col items-center justify-center p-space-sm bg-surface-container-lowest rounded-xl">
+<svg class="w-28 h-28 text-primary" viewbox="0 0 100 100">
+<!-- Radial background rings -->
+<circle cx="50" cy="50" fill="none" r="42" stroke="currentColor" stroke-opacity="0.1" stroke-width="2"></circle>
+<circle cx="50" cy="50" fill="none" r="28" stroke="currentColor" stroke-opacity="0.15" stroke-width="2"></circle>
+<circle cx="50" cy="50" fill="none" r="14" stroke="currentColor" stroke-opacity="0.2" stroke-width="2"></circle>
+<!-- Dynamic Radar Shape -->
+<polygon fill="currentColor" fill-opacity="0.25" points="50,12 85,42 70,82 30,82 15,42" stroke="currentColor" stroke-width="2"></polygon>
+<!-- Center Axis Marker -->
+<circle cx="50" cy="50" fill="currentColor" r="3"></circle>
+</svg>
+<span class="font-label-sm text-label-sm text-on-surface mt-space-xs font-semibold">Complexity Index: 8.8 / 10</span>
+</div>
+<!-- Diagnostic Traps Column -->
+<div class="md:col-span-2 flex flex-col gap-space-xs">
+<div class="p-space-xs px-space-sm rounded bg-surface-container-lowest flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">warning</span>
+<span class="font-body-sm text-body-sm text-on-surface">Common Trap: Omitting the negative Jacobian factor when setting $du = -dx$.</span>
+</div>
+<div class="p-space-xs px-space-sm rounded bg-surface-container-lowest flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">warning</span>
+<span class="font-body-sm text-body-sm text-on-surface">Sign Reversal: Disregarding symmetry around $\pi/2$ leading to a false cancellation to zero.</span>
+</div>
+<div class="p-space-xs px-space-sm rounded bg-surface-container-lowest flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Recommended Revision Video: Unit 8.4 Definite Integration Symmetry Theorems.</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Interactive Micro-Interactions Script -->
+<script>
+  (function() {
+    const toggleSinhalaBtn = document.getElementById('toggle-sinhala-btn');
+    const sinhalaDrawer = document.getElementById('sinhala-drawer');
+    const langBtnText = document.getElementById('lang-btn-text');
+    const regenBtn = document.getElementById('regenerate-btn');
+
+    if (toggleSinhalaBtn && sinhalaDrawer && langBtnText) {
+      toggleSinhalaBtn.addEventListener('click', function() {
+        const isHidden = sinhalaDrawer.classList.contains('hidden');
+        if (isHidden) {
+          sinhalaDrawer.classList.remove('hidden');
+          sinhalaDrawer.classList.add('flex');
+          langBtnText.textContent = 'Hide Sinhala';
+        } else {
+          sinhalaDrawer.classList.add('hidden');
+          sinhalaDrawer.classList.remove('flex');
+          langBtnText.textContent = 'Show Sinhala (සිංහල)';
+        }
+      });
+    }
+
+    if (regenBtn) {
+      regenBtn.addEventListener('click', function() {
+        const originalText = regenBtn.innerHTML;
+        regenBtn.disabled = true;
+        regenBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span> Synthesizing LaTeX Proof...';
+        
+        setTimeout(function() {
+          regenBtn.disabled = false;
+          regenBtn.innerHTML = originalText;
+        }, 1200);
+      });
+    }
+  })();
+</script></main></div></body></html>

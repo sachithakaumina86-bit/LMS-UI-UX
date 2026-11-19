@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindBridge LMS — Teacher Workspace Dashboard</title>
+<!-- Tailwind CSS CDN with forms and container-queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration for Oceanic Midnight Dark Theme -->
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            midnight: {
+              950: '#060b14',
+              900: '#080e1d',
+              850: '#0d1322',
+              800: '#151b2b',
+              750: '#1a2236',
+              700: '#1e2638',
+              600: '#2a344d',
+              500: '#3d4b68',
+            },
+            ocean: {
+              400: '#60a5fa',
+              500: '#3898ff',
+              600: '#0875e8',
+              700: '#0258b8',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Lucide Icons via unpkg -->
+<link href="https://cdn.jsdelivr.net/npm/lucide-static@0.344.0/font/lucide.min.css" rel="stylesheet"/>
+<style data-purpose="custom-scrollbars">
+    /* Subtle custom scrollbar for dark theme panels */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080e1d;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e2638;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2a344d;
+    }
+  </style>
+<style data-purpose="sinhala-typography">
+    /* Sinhala script display enhancements */
+    .sinhala-text {
+      font-family: 'Noto Sans Sinhala', 'Iskoola Pota', 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#080e1d] text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-ocean-600 selection:text-white">
+<!-- BEGIN: TopNavbar -->
+<header class="bg-[#0d1322] border-b border-[#1e2638] sticky top-0 z-50 px-4 py-2.5 flex items-center justify-between text-xs" data-purpose="global-header">
+<div class="flex items-center space-x-6">
+<!-- Platform Logo and Branding -->
+<div class="flex items-center space-x-2.5">
+<div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-ocean-600 to-blue-400 flex items-center justify-center font-bold text-white shadow-md shadow-ocean-600/20 text-sm tracking-wider">
+          MB
+        </div>
+<div>
+<div class="font-bold text-white text-sm tracking-tight flex items-center gap-1.5">
+            MindBridge LMS
+            <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+</div>
+<p class="text-[10px] text-slate-400">Learn • Manage • Achieve</p>
+</div>
+</div>
+<!-- Scope Pill -->
+<div class="hidden md:flex items-center space-x-2 bg-[#151b2b] border border-[#2a344d] rounded-full px-3 py-1 text-slate-300">
+<i class="icon-graduation-cap text-ocean-400 text-sm"></i>
+<span class="font-medium text-slate-200">Teacher Portal</span>
+<span class="text-slate-500">|</span>
+<span class="text-slate-400">Apex Combined Maths</span>
+</div>
+</div>
+<!-- Right Header Utilities -->
+<div class="flex items-center space-x-4">
+<!-- Timezone Badge -->
+<div class="hidden lg:flex items-center space-x-1.5 text-slate-400 bg-[#151b2b] px-2.5 py-1 rounded border border-[#1e2638]">
+<i class="icon-clock text-slate-400 text-xs"></i>
+<span class="font-mono text-slate-300">SLST 14:35</span>
+<span class="text-[10px] text-slate-500">(GMT+5:30)</span>
+</div>
+<!-- Language Switcher -->
+<div class="flex items-center bg-[#151b2b] border border-[#1e2638] rounded-md p-0.5 text-[11px] font-medium text-slate-400">
+<span class="px-2 py-0.5 rounded bg-ocean-600 text-white font-semibold">EN</span>
+<span class="px-2 py-0.5 sinhala-text cursor-pointer hover:text-slate-200 transition-colors">සිංහල</span>
+</div>
+<!-- Notification Bell with Count -->
+<div class="relative cursor-pointer p-1.5 rounded-md hover:bg-[#1a2236] text-slate-300 transition-colors">
+<i class="icon-bell text-base"></i>
+<span class="absolute -top-0.5 -right-0.5 bg-rose-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold ring-2 ring-[#0d1322]">
+          4
+        </span>
+</div>
+<!-- User Profile Dropdown -->
+<div class="flex items-center space-x-2 pl-2 border-l border-[#1e2638] cursor-pointer hover:opacity-90">
+<div class="w-8 h-8 rounded-full bg-ocean-600/20 border border-ocean-500/40 text-ocean-400 flex items-center justify-center font-semibold text-xs">
+          KS
+        </div>
+<div class="text-left hidden sm:block">
+<div class="text-xs font-semibold text-white leading-tight flex items-center gap-1">
+            Eng. Kusal Senaratne
+            <i class="icon-chevron-down text-[10px] text-slate-400"></i>
+</div>
+<div class="text-[10px] text-slate-400 leading-tight">Master Lecturer / Tenant Owner</div>
+</div>
+</div>
+</div>
+</header>
+<!-- END: TopNavbar -->
+<div class="flex flex-1">
+<!-- BEGIN: LeftSidebar -->
+<aside class="w-64 bg-[#0d1322] border-r border-[#1e2638] flex flex-col justify-between hidden md:flex" data-purpose="main-sidebar">
+<div class="p-4 space-y-5">
+<!-- Tenant Switcher Box -->
+<div class="bg-[#151b2b] p-3 rounded-xl border border-[#1e2638] flex items-center justify-between shadow-sm">
+<div class="flex items-center space-x-2.5">
+<div class="w-7 h-7 rounded-lg bg-blue-600/30 border border-blue-500/40 flex items-center justify-center text-blue-400 font-bold text-xs">
+              ACM
+            </div>
+<div>
+<div class="text-xs font-bold text-white tracking-tight">Apex Combined Maths</div>
+<div class="text-[10px] text-slate-400 truncate max-w-[125px]">apex-maths.mindbridge.lk</div>
+</div>
+</div>
+<i class="icon-chevrons-up-down text-slate-500 text-xs"></i>
+</div>
+<!-- Navigation Plane 1: Instructional Plane -->
+<div>
+<div class="text-[10px] uppercase font-bold tracking-wider text-slate-500 px-3 mb-2">Instructional Plane</div>
+<nav class="space-y-1">
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg bg-ocean-600 text-white shadow-sm shadow-ocean-600/30" href="#">
+<i class="icon-layout-dashboard text-sm"></i>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<i class="icon-book-open text-sm"></i>
+<span>My Courses</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<i class="icon-compass text-sm"></i>
+<span>Course Builder</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<i class="icon-file-text text-sm"></i>
+<span>Lessons &amp; Materials</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<div class="flex items-center space-x-3">
+<i class="icon-video text-sm"></i>
+<span>Live Classes</span>
+</div>
+<span class="bg-rose-500/20 text-rose-400 border border-rose-500/30 text-[9px] font-bold px-1.5 py-0.5 rounded uppercase">LIVE</span>
+</a>
+</nav>
+</div>
+<!-- Navigation Plane 2: Students & Delivery -->
+<div>
+<div class="text-[10px] uppercase font-bold tracking-wider text-slate-500 px-3 mb-2">Students &amp; Delivery</div>
+<nav class="space-y-1">
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<i class="icon-users text-sm"></i>
+<span>Students</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<i class="icon-clipboard-check text-sm"></i>
+<span>Assignments</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<i class="icon-check-square text-sm"></i>
+<span>Exams / Quizzes</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<i class="icon-help-circle text-sm"></i>
+<span>Question Bank</span>
+</a>
+</nav>
+</div>
+<!-- Navigation Plane 3: Operations & Intelligence -->
+<div>
+<div class="text-[10px] uppercase font-bold tracking-wider text-slate-500 px-3 mb-2">Operations &amp; Intelligence</div>
+<nav class="space-y-1">
+<a class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<div class="flex items-center space-x-3">
+<i class="icon-receipt text-sm"></i>
+<span>Payments &amp; Slips</span>
+</div>
+<span class="bg-amber-500/20 text-amber-400 border border-amber-500/30 text-[9px] font-semibold px-1.5 py-0.5 rounded">Rs. LK</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<i class="icon-award text-sm"></i>
+<span>Certificates</span>
+</a>
+<a class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<div class="flex items-center space-x-3">
+<i class="icon-sparkles text-sm text-ocean-400"></i>
+<span>AI Assistant</span>
+</div>
+<span class="bg-ocean-600/20 text-ocean-400 border border-ocean-500/30 text-[9px] font-mono px-1.5 py-0.5 rounded">v2.4</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<i class="icon-bar-chart-2 text-sm"></i>
+<span>Analytics</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<i class="icon-mail text-sm"></i>
+<span>Messages</span>
+</a>
+<a class="flex items-center space-x-3 px-3 py-2 text-xs font-medium rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition-colors" href="#">
+<i class="icon-settings text-sm"></i>
+<span>Profile &amp; Settings</span>
+</a>
+</nav>
+</div>
+</div>
+<!-- Enterprise Tier Footnote Badge -->
+<div class="p-3 border-t border-[#1e2638] m-3 rounded-xl bg-[#151b2b]/80 border border-[#1e2638]">
+<div class="flex items-center justify-between text-[11px]">
+<div class="flex items-center space-x-2">
+<i class="icon-shield-check text-ocean-400 text-sm"></i>
+<span class="font-medium text-slate-300">Enterprise Tier</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+</div>
+<div class="text-[10px] text-slate-400 mt-1">SLA 99.98% • Online</div>
+</div>
+</aside>
+<!-- END: LeftSidebar -->
+<!-- BEGIN: MainContentArea -->
+<main class="flex-1 bg-[#080e1d] p-5 overflow-y-auto space-y-6" data-purpose="dashboard-main-view">
+<!-- Breadcrumbs & Status Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs pb-3 border-b border-[#1e2638]/60">
+<div class="flex items-center space-x-2 text-slate-400">
+<span>Teacher Portal</span>
+<span>/</span>
+<span>Overview</span>
+<span>/</span>
+<span class="text-ocean-400 font-medium">Apex Combined Mathematics</span>
+</div>
+<div class="flex items-center space-x-4 text-[11px] text-slate-400">
+<div class="flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>CDN Edge: Colombo 03 (Dialog Axiata 4ms)</span>
+</div>
+<div class="flex items-center space-x-1.5 text-amber-400">
+<i class="icon-zap text-xs"></i>
+<span>Dual Sync Active (SLST 14:35)</span>
+</div>
+</div>
+</div>
+<!-- Instructor Master Space Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div>
+<div class="inline-flex items-center gap-2 mb-1.5">
+<span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-ocean-600/20 text-ocean-400 border border-ocean-500/30">
+              Instructor Master Space
+            </span>
+<span class="text-[11px] text-slate-400 font-medium">
+              Eng. Kusal Senaratne (BSc. Eng Hons, Moratuwa)
+            </span>
+</div>
+<h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Teacher Workspace — Academic Command &amp; Studio
+          </h1>
+<p class="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl">
+            Real-time course telemetry, pending student assignments, live broadcasts, and YouTube unlisted video stream status.
+          </p>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-wrap items-center gap-2.5">
+<button class="bg-ocean-600 hover:bg-ocean-500 text-white font-semibold text-xs px-4 py-2.5 rounded-lg flex items-center space-x-2 shadow-md shadow-ocean-600/25 transition-all">
+<i class="icon-plus text-sm"></i>
+<span>+ New Live Class</span>
+</button>
+<button class="bg-[#151b2b] hover:bg-[#1e2638] text-slate-200 border border-[#2a344d] font-semibold text-xs px-4 py-2.5 rounded-lg flex items-center space-x-2 transition-all">
+<i class="icon-folder-plus text-sm"></i>
+<span>+ Create New Course</span>
+</button>
+<button class="bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 font-semibold text-xs px-4 py-2.5 rounded-lg flex items-center space-x-2 transition-all">
+<i class="icon-sparkles text-sm text-amber-400"></i>
+<span>Launch AI Assistant (Gemini)</span>
+</button>
+</div>
+</div>
+<!-- BEGIN: MetricCardsGrid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4" data-purpose="telemetry-kpis">
+<!-- Metric 1: Course Catalog -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-4 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:border-[#2a344d] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Course Catalog</span>
+<div class="text-2xl font-bold text-white mt-1">6 Active</div>
+</div>
+<div class="w-8 h-8 rounded-lg bg-blue-500/10 text-ocean-400 flex items-center justify-center">
+<i class="icon-book-marked text-base"></i>
+</div>
+</div>
+<div class="mt-4 pt-2.5 border-t border-[#1e2638] flex items-center justify-between text-[11px] text-slate-400">
+<span>2 in Draft / Review</span>
+<span class="text-ocean-400 font-semibold">3,942 Enrolled</span>
+</div>
+</div>
+<!-- Metric 2: Total Active Learners -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-4 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:border-[#2a344d] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Total Active Learners</span>
+<div class="text-2xl font-bold text-white mt-1">4,210</div>
+</div>
+<div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+<i class="icon-users text-base"></i>
+</div>
+</div>
+<div class="mt-4 pt-2.5 border-t border-[#1e2638] flex items-center justify-between text-[11px]">
+<span class="text-emerald-400 font-semibold flex items-center gap-0.5">
+<i class="icon-trending-up text-xs"></i> +18% MoM
+            </span>
+<span class="text-slate-400">842 Watching Now</span>
+</div>
+</div>
+<!-- Metric 3: Direct Earnings -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-4 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:border-[#2a344d] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Direct Earnings (Oct)</span>
+<div class="text-2xl font-bold text-white mt-1">Rs. 3.84M</div>
+</div>
+<div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center">
+<i class="icon-wallet text-base"></i>
+</div>
+</div>
+<div class="mt-4 pt-2.5 border-t border-[#1e2638] flex items-center justify-between text-[11px] text-slate-400">
+<span>Direct Teacher Payout</span>
+<span class="bg-amber-500/20 text-amber-300 text-[10px] font-semibold px-1.5 rounded border border-amber-500/30">0% COMM</span>
+</div>
+</div>
+<!-- Metric 4: Pending Action -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-4 flex flex-col justify-between shadow-sm relative overflow-hidden group hover:border-[#2a344d] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Pending Action</span>
+<div class="text-2xl font-bold text-white mt-1">42 Items</div>
+</div>
+<div class="w-8 h-8 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center">
+<i class="icon-alert-triangle text-base"></i>
+</div>
+</div>
+<div class="mt-4 pt-2.5 border-t border-[#1e2638] flex items-center justify-between text-[11px] text-slate-400">
+<span>28 Assignments</span>
+<span class="text-rose-400 font-semibold">14 Slips Unverified</span>
+</div>
+</div>
+<!-- Metric 5: Next Live Stream Accent Card -->
+<div class="bg-gradient-to-br from-ocean-700 to-blue-900 border border-ocean-500/50 rounded-xl p-4 flex flex-col justify-between shadow-md text-white relative">
+<div class="flex items-center justify-between text-[10px] font-bold tracking-wider">
+<span class="uppercase">Next Live Stream</span>
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+</div>
+<div>
+<div class="font-bold text-sm tracking-tight truncate mt-1">Complex Numbers...</div>
+<div class="text-xs text-blue-200 mt-0.5">Starts in <span class="font-semibold text-white">3h 25m</span> (18:30 SLST)</div>
+</div>
+<div class="mt-3 pt-2 border-t border-white/20 flex items-center justify-between text-[11px]">
+<span class="text-blue-100 font-medium">842 Registered</span>
+<a class="text-white font-bold hover:underline flex items-center gap-1" href="#">
+              Prep Room <i class="icon-arrow-right text-xs"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- END: MetricCardsGrid -->
+<!-- Main Dual Column Workspace Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Left 2 Cols: Main Operations & Broadcast Feed -->
+<div class="lg:col-span-2 space-y-6">
+<!-- BEGIN: BroadcastBanner -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-5 shadow-sm space-y-4" data-purpose="live-broadcast-controller">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#1e2638] pb-3">
+<div class="flex items-center space-x-2.5">
+<span class="bg-rose-500/20 text-rose-400 border border-rose-500/40 text-[10px] font-bold px-2 py-0.5 rounded uppercase flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-ping"></span>
+                  READY TO BROADCAST
+                </span>
+<span class="text-xs text-slate-400 font-mono">Room ID: APX-2025-THEORY-A</span>
+</div>
+<div class="text-xs text-slate-300">
+                Session Kickoff: <span class="font-bold text-ocean-400">18:30 SLST</span>
+</div>
+</div>
+<div>
+<h2 class="text-base sm:text-lg font-bold text-white">
+                2025 A/L Combined Mathematics Theory (Batch A)
+              </h2>
+<p class="text-xs text-slate-400 mt-0.5">
+                De Moivre's Theorem Proofs &amp; Trigonometric Expansions (Master Class Session #43)
+              </p>
+</div>
+<!-- Broadcast Telemetry Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="bg-[#151b2b] p-3 rounded-lg border border-[#1e2638]">
+<div class="text-[10px] uppercase font-semibold text-slate-400">Proxy Gateway</div>
+<div class="text-xs font-bold text-white mt-1 flex items-center gap-1.5">
+<i class="icon-shield text-ocean-400"></i> Zoom Enterprise Tunnel
+                </div>
+<div class="text-[10px] text-slate-400 mt-0.5">Anti-download encryption enabled</div>
+</div>
+<div class="bg-[#151b2b] p-3 rounded-lg border border-[#1e2638]">
+<div class="text-[10px] uppercase font-semibold text-slate-400">CDN Route Optimization</div>
+<div class="text-xs font-bold text-white mt-1 flex items-center gap-1.5">
+<i class="icon-zap text-emerald-400"></i> Mobitel &amp; Dialog Peered
+                </div>
+<div class="text-[10px] text-slate-400 mt-0.5">Adaptive bitrate (1080p60 &amp; 360p saver)</div>
+</div>
+<div class="bg-[#151b2b] p-3 rounded-lg border border-[#1e2638]">
+<div class="text-[10px] uppercase font-semibold text-slate-400">Student Waiting Hall</div>
+<div class="text-xs font-bold text-white mt-1 flex items-center gap-1.5">
+<i class="icon-users text-amber-400"></i> 842 Verified Registered
+                </div>
+<div class="text-[10px] text-slate-400 mt-0.5">Auto-admit by student NIC / Reg ID</div>
+</div>
+</div>
+<!-- Action Buttons for Stream Control -->
+<div class="flex flex-wrap items-center gap-3 pt-1">
+<button class="bg-ocean-600 hover:bg-ocean-500 text-white font-semibold text-xs px-4 py-2.5 rounded-lg flex items-center space-x-2 transition-colors">
+<i class="icon-video text-sm"></i>
+<span>Launch Instructor Studio</span>
+</button>
+<button class="bg-[#151b2b] hover:bg-[#1e2638] text-slate-200 border border-[#2a344d] font-semibold text-xs px-4 py-2.5 rounded-lg flex items-center space-x-2 transition-colors">
+<i class="icon-copy text-sm"></i>
+<span>Copy Student Portal URL</span>
+</button>
+<div class="flex items-center space-x-3 text-xs text-slate-400 ml-auto font-mono">
+<span><i class="icon-radio text-emerald-400 text-xs"></i> OBS RTMP: Ready</span>
+<span>•</span>
+<span><i class="icon-mic text-emerald-400 text-xs"></i> Mic Input: 48kHz OK</span>
+</div>
+</div>
+<!-- Pre-lecture Doubts Mini Queue -->
+<div class="bg-[#151b2b]/50 border border-[#1e2638] rounded-lg p-3 space-y-2 mt-2">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center space-x-2 text-slate-300 font-semibold">
+<i class="icon-message-square text-ocean-400 text-xs"></i>
+<span>Pre-lecture Student Doubts Queue (3 new submissions)</span>
+</div>
+<a class="text-[11px] text-ocean-400 hover:underline" href="#">Open Full Studio Chat</a>
+</div>
+<div class="space-y-2 text-xs">
+<div class="bg-[#0d1322] p-2.5 rounded border border-[#1e2638] flex items-start space-x-3">
+<div class="w-6 h-6 rounded bg-ocean-600/30 text-ocean-400 font-bold flex items-center justify-center text-[10px]">
+                    KG
+                  </div>
+<div class="flex-1">
+<div class="flex items-center justify-between text-[11px]">
+<span class="font-bold text-white">Kavindu Gamage <span class="text-slate-500 font-normal">Matara Center • #25-9081</span></span>
+<span class="text-slate-500 text-[10px]">5m ago</span>
+</div>
+<p class="text-slate-300 mt-1">
+                      “Sir, will we be covering the 2021 A/L De Moivre past paper question today during the problem solving session?”
+                    </p>
+</div>
+</div>
+<div class="bg-[#0d1322] p-2.5 rounded border border-[#1e2638] flex items-start space-x-3">
+<div class="w-6 h-6 rounded bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-[10px]">
+                    MN
+                  </div>
+<div class="flex-1">
+<div class="flex items-center justify-between text-[11px]">
+<span class="font-bold text-white">Methmi Nethsara <span class="text-slate-500 font-normal">Gampaha • #25-4122</span></span>
+<span class="text-slate-500 text-[10px]">12m ago</span>
+</div>
+<p class="text-slate-300 mt-1 sinhala-text">
+                      “Sir tutes pack 04 eka download karaganna ba link eka expired kiyala watenawa.”
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END: BroadcastBanner -->
+<!-- BEGIN: ActiveCoursesTable -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-5 shadow-sm space-y-4" data-purpose="course-engagement-registry">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-[#1e2638] gap-2">
+<div>
+<h3 class="text-base font-bold text-white">Active Courses &amp; Batch Engagement</h3>
+<p class="text-xs text-slate-400">Syllabus progression, monthly cohort dues, and live attendance metrics</p>
+</div>
+<span class="text-xs bg-[#151b2b] text-slate-300 border border-[#2a344d] px-3 py-1 rounded-full font-medium self-start sm:self-auto">
+                Academic Term 2025/2026
+              </span>
+</div>
+<!-- Course Card 1 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-4 space-y-3 hover:border-[#2a344d] transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-blue-600/20 text-ocean-400 border border-blue-500/30 text-[10px] font-bold px-2 py-0.5 rounded">Primary Theory</span>
+<span class="text-xs text-slate-400">Monthly Fee: <span class="text-slate-200 font-semibold">Rs. 4,500 LKR</span></span>
+<span class="text-xs text-emerald-400 font-semibold">• 94% Avg. Attendance</span>
+</div>
+<h4 class="text-sm font-bold text-white">2025 A/L Combined Maths Theory (Batch A)</h4>
+<p class="text-xs text-slate-400">Next Lesson: <span class="text-slate-300">Integration by Parts IV &amp; Differential Equations</span></p>
+</div>
+<div class="flex items-center space-x-6 text-right">
+<div>
+<div class="text-lg font-bold text-white">1,840</div>
+<div class="text-[10px] text-slate-400 uppercase">Enrolled</div>
+</div>
+<div>
+<div class="text-lg font-bold text-white">42</div>
+<div class="text-[10px] text-slate-400 uppercase">Lessons</div>
+</div>
+<div class="w-20">
+<div class="flex justify-between text-[10px] text-slate-400 mb-1">
+<span>Syllabus</span>
+<span class="text-ocean-400 font-bold">78%</span>
+</div>
+<div class="w-full bg-[#080e1d] rounded-full h-1.5 overflow-hidden">
+<div class="bg-ocean-500 h-1.5 rounded-full" style="width: 78%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2 border-t border-[#1e2638] flex flex-wrap items-center justify-between text-xs gap-2 text-slate-400">
+<div class="flex items-center space-x-2 text-[11px]">
+<i class="icon-youtube text-red-500"></i>
+<span>Unlisted YouTube Engine • DRM Watermark ID #APX-491</span>
+</div>
+<div class="flex items-center space-x-3 text-xs">
+<a class="text-ocean-400 hover:underline" href="#">Edit Syllabus</a>
+<span>•</span>
+<a class="text-ocean-400 hover:underline" href="#">View Students (1,840)</a>
+<span>•</span>
+<a class="text-ocean-400 hover:underline" href="#">Manage Lessons</a>
+<span>•</span>
+<a class="text-ocean-400 hover:underline" href="#">Analytics</a>
+</div>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-4 space-y-3 hover:border-[#2a344d] transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-purple-600/20 text-purple-400 border border-purple-500/30 text-[10px] font-bold px-2 py-0.5 rounded">Revision Cohort</span>
+<span class="text-xs text-slate-400">Monthly Fee: <span class="text-slate-200 font-semibold">Rs. 3,800 LKR</span></span>
+<span class="text-xs text-emerald-400 font-semibold">• 89% Avg. Attendance</span>
+</div>
+<h4 class="text-sm font-bold text-white">2026 Revision: Advanced Pure Vectors &amp; 3D Geometry</h4>
+<p class="text-xs text-slate-400">Next Lesson: <span class="text-slate-300">Coplanar Vectors &amp; Vector Product Proofs</span></p>
+</div>
+<div class="flex items-center space-x-6 text-right">
+<div>
+<div class="text-lg font-bold text-white">1,220</div>
+<div class="text-[10px] text-slate-400 uppercase">Enrolled</div>
+</div>
+<div>
+<div class="text-lg font-bold text-white">31</div>
+<div class="text-[10px] text-slate-400 uppercase">Lessons</div>
+</div>
+<div class="w-20">
+<div class="flex justify-between text-[10px] text-slate-400 mb-1">
+<span>Syllabus</span>
+<span class="text-ocean-400 font-bold">62%</span>
+</div>
+<div class="w-full bg-[#080e1d] rounded-full h-1.5 overflow-hidden">
+<div class="bg-ocean-500 h-1.5 rounded-full" style="width: 62%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2 border-t border-[#1e2638] flex flex-wrap items-center justify-between text-xs gap-2 text-slate-400">
+<div class="flex items-center space-x-2 text-[11px]">
+<i class="icon-cloud text-ocean-400"></i>
+<span>Zoom Cloud Sync • HD Video Backup Completed</span>
+</div>
+<div class="flex items-center space-x-3 text-xs">
+<a class="text-ocean-400 hover:underline" href="#">Edit Syllabus</a>
+<span>•</span>
+<a class="text-ocean-400 hover:underline" href="#">View Students (1,220)</a>
+<span>•</span>
+<a class="text-ocean-400 hover:underline" href="#">Manage Lessons</a>
+<span>•</span>
+<a class="text-ocean-400 hover:underline" href="#">Analytics</a>
+</div>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-4 space-y-3 hover:border-[#2a344d] transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-amber-600/20 text-amber-400 border border-amber-500/30 text-[10px] font-bold px-2 py-0.5 rounded">Special Drill</span>
+<span class="text-xs text-slate-400">Monthly Fee: <span class="text-slate-200 font-semibold">Rs. 4,000 LKR</span></span>
+<span class="text-xs text-emerald-400 font-semibold">• 91% Avg. Attendance</span>
+</div>
+<h4 class="text-sm font-bold text-white">Applied Mechanics &amp; Statics Speed Drill (Past Paper Target)</h4>
+<p class="text-xs text-slate-400">Next Lesson: <span class="text-slate-300">Friction on Inclined Planes &amp; Toppling Equilibrium</span></p>
+</div>
+<div class="flex items-center space-x-6 text-right">
+<div>
+<div class="text-lg font-bold text-white">890</div>
+<div class="text-[10px] text-slate-400 uppercase">Enrolled</div>
+</div>
+<div>
+<div class="text-lg font-bold text-white">18</div>
+<div class="text-[10px] text-slate-400 uppercase">Lessons</div>
+</div>
+<div class="w-20">
+<div class="flex justify-between text-[10px] text-slate-400 mb-1">
+<span>Syllabus</span>
+<span class="text-amber-400 font-bold">45%</span>
+</div>
+<div class="w-full bg-[#080e1d] rounded-full h-1.5 overflow-hidden">
+<div class="bg-amber-500 h-1.5 rounded-full" style="width: 45%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2 border-t border-[#1e2638] flex flex-wrap items-center justify-between text-xs gap-2 text-slate-400">
+<div class="flex items-center space-x-2 text-[11px]">
+<i class="icon-package text-amber-400"></i>
+<span>Model Paper Pack #03 Dispatched via Prompt Courier</span>
+</div>
+<div class="flex items-center space-x-3 text-xs">
+<a class="text-ocean-400 hover:underline" href="#">Edit Syllabus</a>
+<span>•</span>
+<a class="text-ocean-400 hover:underline" href="#">View Students (890)</a>
+<span>•</span>
+<a class="text-ocean-400 hover:underline" href="#">Manage Lessons</a>
+<span>•</span>
+<a class="text-ocean-400 hover:underline" href="#">Analytics</a>
+</div>
+</div>
+</div>
+<!-- Course Card 4 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-4 space-y-3 hover:border-[#2a344d] transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded">Foundation</span>
+<span class="text-xs text-slate-400">Fee: <span class="text-slate-200 font-semibold">Rs. 3,500 LKR</span></span>
+<span class="bg-emerald-500/20 text-emerald-300 text-[10px] font-semibold px-2 py-0.2 rounded border border-emerald-500/40">Pre-enrolling</span>
+</div>
+<h4 class="text-sm font-bold text-white">2026 A/L Foundation &amp; Pure Maths Bridge Course</h4>
+<p class="text-xs text-slate-400">Orientation kicks off on November 10th</p>
+</div>
+<div class="flex items-center space-x-6 text-right">
+<div>
+<div class="text-lg font-bold text-white">260</div>
+<div class="text-[10px] text-slate-400 uppercase">Pre-Enrolled</div>
+</div>
+<div>
+<div class="text-lg font-bold text-white">8</div>
+<div class="text-[10px] text-slate-400 uppercase">Planned Lessons</div>
+</div>
+<div class="w-20">
+<div class="flex justify-between text-[10px] text-slate-400 mb-1">
+<span>Curriculum</span>
+<span class="text-emerald-400 font-bold">100%</span>
+</div>
+<div class="w-full bg-[#080e1d] rounded-full h-1.5 overflow-hidden">
+<div class="bg-emerald-500 h-1.5 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2 border-t border-[#1e2638] flex flex-wrap items-center justify-between text-xs gap-2 text-slate-400">
+<div class="flex items-center space-x-2 text-[11px] text-emerald-400">
+<i class="icon-check-circle"></i>
+<span>Course Landing Page Published &amp; Accepting Bank Slips</span>
+</div>
+<div class="flex items-center space-x-3 text-xs">
+<a class="text-ocean-400 hover:underline" href="#">Edit Syllabus</a>
+<span>•</span>
+<a class="text-ocean-400 hover:underline" href="#">View Pre-registrations</a>
+<span>•</span>
+<a class="text-ocean-400 hover:underline" href="#">Campaign Link</a>
+</div>
+</div>
+</div>
+</div>
+<!-- END: ActiveCoursesTable -->
+</div>
+<!-- Right 1 Col: Operational Widgets & Queues -->
+<div class="space-y-6">
+<!-- BEGIN: LessonDoubtsWidget -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-4 shadow-sm space-y-3" data-purpose="student-doubts-inbox">
+<div class="flex items-center justify-between pb-2 border-b border-[#1e2638]">
+<div>
+<h3 class="text-sm font-bold text-white">Lesson Doubts (Q&amp;A)</h3>
+<p class="text-[11px] text-slate-400">Timestamped queries from video stream</p>
+</div>
+<span class="bg-ocean-600/20 text-ocean-400 border border-ocean-500/30 text-[10px] font-bold px-2 py-0.5 rounded">
+                12 Unanswered
+              </span>
+</div>
+<!-- Doubt Item 1 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-3 space-y-2">
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-ocean-400 font-semibold">Lesson 14: Quadratic Equations &amp; Complex</span>
+<span class="text-slate-500 text-[10px]">18m ago</span>
+</div>
+<div class="flex items-start space-x-2">
+<div class="w-6 h-6 rounded bg-ocean-600/20 text-ocean-400 font-bold text-[10px] flex items-center justify-center shrink-0">
+                  DA
+                </div>
+<div>
+<span class="text-xs font-bold text-white">Dinuka Abeykoon</span>
+<p class="text-xs text-slate-300 mt-0.5">
+                    "Sir, why is the discriminant negative in Step 3? Don't we take the real roots first before splitting $\pm i$?"
+                  </p>
+</div>
+</div>
+<div class="bg-[#0d1322] border border-[#2a344d] rounded p-2 text-[11px] text-slate-400 flex items-start space-x-2">
+<i class="icon-sparkles text-amber-400 text-xs shrink-0 mt-0.5"></i>
+<div class="flex-1">
+<span class="text-amber-400 font-semibold">Gemini Draft:</span> "Because $b^2 - 4ac &lt; 0$...
+                </div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="text-ocean-400 hover:text-ocean-300 text-xs font-semibold flex items-center gap-1">
+                  Reply in Sinhala/Math <i class="icon-arrow-right text-[10px]"></i>
+</button>
+</div>
+</div>
+<!-- Doubt Item 2 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-3 space-y-2">
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-ocean-400 font-semibold">Lesson 09: Vector Cross Products</span>
+<span class="text-slate-500 text-[10px]">44m ago</span>
+</div>
+<div class="flex items-start space-x-2">
+<div class="w-6 h-6 rounded bg-purple-600/20 text-purple-400 font-bold text-[10px] flex items-center justify-center shrink-0">
+                  SW
+                </div>
+<div>
+<span class="text-xs font-bold text-white">Sanduni Wickramasinghe</span>
+<p class="text-xs text-slate-300 mt-0.5">
+                    "Can we download the lecture worksheet PDF? The download button throws an auth token error on iOS."
+                  </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-xs">
+<button class="bg-[#0d1322] hover:bg-[#1e2638] text-slate-300 px-2 py-1 rounded border border-[#1e2638] text-[11px] flex items-center gap-1">
+<i class="icon-paperclip text-xs"></i> Attach Fixed PDF link
+                </button>
+<a class="text-ocean-400 hover:underline text-[11px]" href="#">Quick Reply -&gt;</a>
+</div>
+</div>
+</div>
+<!-- END: LessonDoubtsWidget -->
+<!-- BEGIN: PendingBankSlipsWidget -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-4 shadow-sm space-y-3" data-purpose="bank-deposit-slips-queue">
+<div class="flex items-center justify-between pb-2 border-b border-[#1e2638]">
+<div>
+<h3 class="text-sm font-bold text-white">Pending Bank Slips</h3>
+<p class="text-[11px] text-slate-400">Direct teacher fee deposit receipts</p>
+</div>
+<div class="flex items-center space-x-2">
+<span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold px-2 py-0.5 rounded">
+                  14 to Approve
+                </span>
+<a class="text-[11px] text-ocean-400 hover:underline" href="#">All Slips</a>
+</div>
+</div>
+<div class="space-y-2.5">
+<!-- Slip 1 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-3 flex items-center justify-between hover:border-[#2a344d] transition-all">
+<div class="space-y-0.5">
+<div class="text-xs font-bold text-white">Sahan Vihanga</div>
+<div class="text-[11px] text-slate-400">Rs. 4,500 LKR • Bank of Ceylon (CDM)</div>
+<div class="text-[10px] text-slate-500 font-mono">Ref #BOC-990231 • 2025 Theory Batch A</div>
+</div>
+<button class="bg-ocean-600 hover:bg-ocean-500 text-white font-semibold text-xs px-3 py-1.5 rounded transition-colors shadow-sm">
+                  Verify Slip
+                </button>
+</div>
+<!-- Slip 2 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-3 flex items-center justify-between hover:border-[#2a344d] transition-all">
+<div class="space-y-0.5">
+<div class="text-xs font-bold text-white">Nimash Dhananjaya</div>
+<div class="text-[11px] text-slate-400">Rs. 4,500 LKR • Sampath Bank (Vishwa)</div>
+<div class="text-[10px] text-slate-500 font-mono">Ref #SMP-441098 • 2025 Theory Batch A</div>
+</div>
+<button class="bg-ocean-600 hover:bg-ocean-500 text-white font-semibold text-xs px-3 py-1.5 rounded transition-colors shadow-sm">
+                  Verify Slip
+                </button>
+</div>
+<!-- Slip 3 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-3 flex items-center justify-between hover:border-[#2a344d] transition-all">
+<div class="space-y-0.5">
+<div class="text-xs font-bold text-white">Anjana Weerakkody</div>
+<div class="text-[11px] text-slate-400">Rs. 3,800 LKR • Commercial Bank (CEFT)</div>
+<div class="text-[10px] text-slate-500 font-mono">Ref #COMB-10294 • 2026 Revision Cohort</div>
+</div>
+<button class="bg-ocean-600 hover:bg-ocean-500 text-white font-semibold text-xs px-3 py-1.5 rounded transition-colors shadow-sm">
+                  Verify Slip
+                </button>
+</div>
+</div>
+</div>
+<!-- END: PendingBankSlipsWidget -->
+<!-- BEGIN: AnnouncementsDispatcher -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-4 shadow-sm space-y-3" data-purpose="urgent-broadcast-tool">
+<div class="flex items-center justify-between pb-2 border-b border-[#1e2638]">
+<div>
+<h3 class="text-sm font-bold text-white">Announcements Dispatcher</h3>
+<p class="text-[11px] text-slate-400">Send urgent class notices via multi-channel</p>
+</div>
+<i class="icon-megaphone text-ocean-400 text-base"></i>
+</div>
+<div class="space-y-3">
+<div>
+<label class="block text-[11px] font-semibold text-slate-300 mb-1">Target Batch / Cohort</label>
+<select class="w-full bg-[#151b2b] border border-[#2a344d] rounded-lg text-xs text-white p-2 focus:ring-1 focus:ring-ocean-500 focus:outline-none">
+<option>2025 A/L Combined Maths Theory (Batch A)</option>
+<option>2026 Revision: Advanced Pure Vectors</option>
+<option>All Enrolled Students (Apex Combined Maths)</option>
+</select>
+</div>
+<div>
+<label class="block text-[11px] font-semibold text-slate-300 mb-1">Delivery Channels</label>
+<div class="grid grid-cols-3 gap-2 text-[11px]">
+<label class="flex items-center space-x-1.5 bg-[#151b2b] p-1.5 rounded border border-[#1e2638] cursor-pointer">
+<input checked="" class="rounded border-slate-700 text-ocean-600 focus:ring-0 bg-[#0d1322] text-xs" type="checkbox"/>
+<span class="text-slate-300">Portal Push</span>
+</label>
+<label class="flex items-center space-x-1.5 bg-[#151b2b] p-1.5 rounded border border-[#1e2638] cursor-pointer">
+<input checked="" class="rounded border-slate-700 text-ocean-600 focus:ring-0 bg-[#0d1322] text-xs" type="checkbox"/>
+<span class="text-slate-300">SMS (Sri Lanka)</span>
+</label>
+<label class="flex items-center space-x-1.5 bg-[#151b2b] p-1.5 rounded border border-[#1e2638] cursor-pointer">
+<input class="rounded border-slate-700 text-ocean-600 focus:ring-0 bg-[#0d1322] text-xs" type="checkbox"/>
+<span class="text-slate-300">WhatsApp Bot</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-[11px] font-semibold text-slate-300 mb-1">Broadcast Message (Sinhala / English Unicode)</label>
+<textarea class="w-full bg-[#151b2b] border border-[#2a344d] rounded-lg text-xs text-white p-2.5 sinhala-text focus:ring-1 focus:ring-ocean-500 focus:outline-none" placeholder="e.g. අද දින රාත්‍රී 6.30 ට පැවැත්වෙන Complex Numbers Master Class එක සඳහා Tute 04 ලෑස්ති කරගන්න. Zoom link එක Dashboard එකෙන් ලබාගත හැක." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="text-[10px] text-slate-500">Est. SMS credits: 1,840</span>
+<button class="bg-ocean-600 hover:bg-ocean-500 text-white font-semibold text-xs px-4 py-2 rounded-lg flex items-center space-x-1.5 shadow-md shadow-ocean-600/20 transition-all">
+<i class="icon-send text-xs"></i>
+<span>Dispatch Broadcast</span>
+</button>
+</div>
+</div>
+</div>
+<!-- END: AnnouncementsDispatcher -->
+</div>
+</div>
+<!-- BEGIN: AssignmentGradingQueue -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-5 shadow-sm space-y-4" data-purpose="assignment-submissions-overview">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-[#1e2638] gap-2">
+<div>
+<div class="flex items-center space-x-2">
+<h3 class="text-base font-bold text-white">Assignment Grading Queue</h3>
+<span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold px-2 py-0.5 rounded">
+                28 Pending Review
+              </span>
+</div>
+<p class="text-xs text-slate-400">Subject-specific step marking and annotated feedback generator</p>
+</div>
+<a class="text-xs text-ocean-400 font-semibold hover:underline" href="#">Open Marking Workbench</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Submission 1 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-3.5 space-y-3 hover:border-[#2a344d] transition-all">
+<div class="flex items-start space-x-3">
+<div class="w-8 h-8 rounded-lg bg-blue-600/20 text-ocean-400 font-bold text-xs flex items-center justify-center shrink-0">
+                KJ
+              </div>
+<div class="flex-1 min-w-0">
+<h4 class="text-xs font-bold text-white truncate">Kasun C. Jayasinghe</h4>
+<div class="text-[10px] text-slate-400">Batch A • Reg #25-1049</div>
+<div class="text-[11px] text-slate-300 font-medium mt-1">Trigonometric Identities Problem Set #04</div>
+<div class="text-[10px] text-slate-500 mt-0.5">PDF • 2.1 MB • Submitted 2 hours ago via Student Portal</div>
+</div>
+</div>
+<div class="flex items-center space-x-2 pt-2 border-t border-[#1e2638]">
+<button class="flex-1 bg-[#0d1322] hover:bg-[#1e2638] text-slate-300 border border-[#2a344d] text-xs py-1.5 rounded font-medium flex items-center justify-center gap-1 transition-colors">
+<i class="icon-eye text-xs"></i> View PDF
+              </button>
+<button class="flex-1 bg-ocean-600 hover:bg-ocean-500 text-white text-xs py-1.5 rounded font-semibold flex items-center justify-center gap-1 transition-colors">
+<i class="icon-check-circle text-xs"></i> Review &amp; Mark
+              </button>
+</div>
+</div>
+<!-- Submission 2 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-3.5 space-y-3 hover:border-[#2a344d] transition-all">
+<div class="flex items-start space-x-3">
+<div class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 font-bold text-xs flex items-center justify-center shrink-0">
+                TS
+              </div>
+<div class="flex-1 min-w-0">
+<h4 class="text-xs font-bold text-white truncate">Tharushi Silva</h4>
+<div class="text-[10px] text-slate-400">Revision • Reg #26-8803</div>
+<div class="text-[11px] text-slate-300 font-medium mt-1">Calculus Limit Theorems Assignment #02</div>
+<div class="text-[10px] text-slate-500 mt-0.5">PDF • 3.8 MB • Submitted 3 hours ago via Mobile App</div>
+</div>
+</div>
+<div class="flex items-center space-x-2 pt-2 border-t border-[#1e2638]">
+<button class="flex-1 bg-[#0d1322] hover:bg-[#1e2638] text-slate-300 border border-[#2a344d] text-xs py-1.5 rounded font-medium flex items-center justify-center gap-1 transition-colors">
+<i class="icon-eye text-xs"></i> View PDF
+              </button>
+<button class="flex-1 bg-ocean-600 hover:bg-ocean-500 text-white text-xs py-1.5 rounded font-semibold flex items-center justify-center gap-1 transition-colors">
+<i class="icon-check-circle text-xs"></i> Review &amp; Mark
+              </button>
+</div>
+</div>
+<!-- Submission 3 -->
+<div class="bg-[#151b2b] border border-[#1e2638] rounded-lg p-3.5 space-y-3 hover:border-[#2a344d] transition-all">
+<div class="flex items-start space-x-3">
+<div class="w-8 h-8 rounded-lg bg-amber-600/20 text-amber-400 font-bold text-xs flex items-center justify-center shrink-0">
+                MR
+              </div>
+<div class="flex-1 min-w-0">
+<h4 class="text-xs font-bold text-white truncate">Mohamed Rizwan</h4>
+<div class="text-[10px] text-slate-400">Speed Drill • Reg #25-3312</div>
+<div class="text-[11px] text-slate-300 font-medium mt-1">Statics Equilibrium Practice Test (Full Paper Submission)</div>
+<div class="text-[10px] text-slate-500 mt-0.5">PDF • 5.4 MB • Submitted 5 hours ago via Web</div>
+</div>
+</div>
+<div class="flex items-center space-x-2 pt-2 border-t border-[#1e2638]">
+<button class="flex-1 bg-[#0d1322] hover:bg-[#1e2638] text-slate-300 border border-[#2a344d] text-xs py-1.5 rounded font-medium flex items-center justify-center gap-1 transition-colors">
+<i class="icon-eye text-xs"></i> View PDF
+              </button>
+<button class="flex-1 bg-ocean-600 hover:bg-ocean-500 text-white text-xs py-1.5 rounded font-semibold flex items-center justify-center gap-1 transition-colors">
+<i class="icon-check-circle text-xs"></i> Review &amp; Mark
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- END: AssignmentGradingQueue -->
+</main>
+<!-- END: MainContentArea -->
+</div>
+<!-- BEGIN: MasterFooter -->
+<footer class="bg-[#0d1322] border-t border-[#1e2638] px-6 py-3 text-[11px] text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2" data-purpose="system-telemetry-footer">
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+<span>MindBridge LMS Engine</span>
+<span>•</span>
+<span>Apex Combined Maths Dedicated Instance</span>
+<span>•</span>
+<span>Moratuwa Engineering Curriculum Aligned</span>
+</div>
+<div class="flex items-center space-x-4">
+<span class="flex items-center gap-1 text-slate-400">
+<i class="icon-activity text-emerald-400 text-xs"></i> Server Latency: 22ms
+      </span>
+<span>•</span>
+<span class="text-slate-400">Direct Teacher Billing Gateway: Active</span>
+</div>
+</footer>
+<!-- END: MasterFooter -->
+</body></html>

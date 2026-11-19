@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>MindBridge LMS</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "tertiary": "#4edea3", "tertiary-fixed": "#6ffbbe", "outline": "#8a919e", "inverse-on-surface": "#2a3040", "secondary-fixed-dim": "#ffb95f", "secondary-fixed": "#ffddb8", "surface-bright": "#33394a", "on-primary-container": "#002f5b", "surface-container": "#191f2f", "surface-container-highest": "#2f3445", "on-error-container": "#ffdad6", "on-background": "#dde2f8", "error": "#ffb4ab", "inverse-surface": "#dde2f8", "background": "#0d1322", "secondary": "#ffb95f", "surface-container-low": "#151b2b", "inverse-primary": "#005fad", "primary-fixed-dim": "#a4c8ff", "error-container": "#93000a", "on-secondary": "#472a00", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#080e1d", "on-secondary-container": "#5b3800", "on-tertiary-container": "#003623", "tertiary-container": "#00ab76", "on-tertiary-fixed-variant": "#005236", "on-error": "#690005", "surface-variant": "#2f3445", "primary-container": "#3898ff", "on-primary": "#00315e", "surface-dim": "#0d1322", "on-tertiary": "#003824", "on-secondary-fixed-variant": "#653e00", "secondary-container": "#ee9800", "on-surface": "#dde2f8", "surface-container-high": "#242a3a", "primary": "#a4c8ff", "surface": "#0d1322", "outline-variant": "#404753", "primary-fixed": "#d4e3ff", "on-primary-fixed": "#001c3a", "on-primary-fixed-variant": "#004784", "on-secondary-fixed": "#2a1700", "tertiary-fixed-dim": "#4edea3", "surface-tint": "#a4c8ff", "on-surface-variant": "#c0c7d5" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.5rem", "gutter": "1.5rem", "space-2xl": "3rem", "space-3xl": "4rem", "space-md": "1rem", "space-2xs": "0.125rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "2rem", "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "space-sm": "0.5rem" }, fontFamily: { "display-lg-mobile": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, fontSize: { "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface truncate">MindBridge</span><span class="px-space-xs py-space-2xs bg-surface-container-high text-primary font-label-sm text-label-sm rounded uppercase tracking-wider">Super Admin</span></div><div class="flex items-center gap-space-2xs"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary truncate">Cluster 01 Online</span></div></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full px-gutter-mobile py-space-sm gap-space-md">
+<!-- Status & Context Ribbon -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-md py-space-sm rounded-xl">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex items-center justify-center w-3 h-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-tertiary tracking-wider uppercase font-bold truncate">99.98% Active Cluster</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Master Nodes Sync: LK-Central</span>
+</div>
+</div>
+<div class="flex items-center gap-space-2xs bg-surface-container px-space-sm py-space-2xs rounded-lg shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">calendar_today</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold" id="live-date">Oct 24, 2025</span>
+</div>
+</div>
+<!-- Attention / Adjudication Banner -->
+<div class="bg-surface-container-high rounded-xl p-space-md relative overflow-hidden shadow-lg">
+<div class="absolute -right-8 -top-8 w-24 h-24 bg-secondary/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary/20 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Bursar Adjudication Required</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-lowest px-space-xs py-space-2xs rounded">3 Slips</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-space-2xs leading-snug">
+          Teller stamp overlaps detected via AI OCR on high-value transfers across <span class="font-semibold text-primary">Apex</span> and <span class="font-semibold text-primary">Rotary Hall</span>.
+        </p>
+<div class="mt-space-sm flex items-center gap-space-sm">
+<button class="bg-secondary text-on-secondary font-label-md text-label-md px-space-sm py-space-2xs rounded-lg font-bold flex items-center gap-space-2xs active:scale-95 transition-transform">
+<span>Review Slips</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md py-space-2xs">Dismiss</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Platform Executive Summary (2x2 Compact Bento Grid) -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Card 1: Total Learners -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Total Learners</span>
+<div class="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">school</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">48,920</div>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<span class="material-symbols-outlined text-tertiary text-[14px]">trending_up</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">+18.4%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">18 Institutes</span>
+</div>
+</div>
+<!-- Mini Sparkline Visualization -->
+<div class="mt-space-sm h-6 w-full flex items-end gap-1">
+<div class="flex-1 bg-surface-container-high rounded-t-sm h-[40%]"></div>
+<div class="flex-1 bg-surface-container-high rounded-t-sm h-[60%]"></div>
+<div class="flex-1 bg-surface-container-high rounded-t-sm h-[50%]"></div>
+<div class="flex-1 bg-surface-container-high rounded-t-sm h-[75%]"></div>
+<div class="flex-1 bg-surface-container-high rounded-t-sm h-[85%]"></div>
+<div class="flex-1 bg-primary rounded-t-sm h-[100%] shadow-[0_0_8px_rgba(56,152,255,0.4)]"></div>
+</div>
+</div>
+<!-- Card 2: Tuition Velocity -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Gross Tuition</span>
+<div class="w-7 h-7 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">LKR 142.8M</div>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">98.2%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Fee Velocity</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="mt-space-sm w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 98.2%;"></div>
+</div>
+</div>
+<!-- Card 3: DRM Streams -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">Active DRM</span>
+<div class="w-7 h-7 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[16px]">stream</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">14 Live</div>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<span class="animate-pulse w-1.5 h-1.5 rounded-full bg-error"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Widevine L1 Encrypted</span>
+</div>
+</div>
+<div class="mt-space-sm flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Combined Maths Peak</span>
+<span class="text-primary font-bold">4.2k VOD/s</span>
+</div>
+</div>
+<!-- Card 4: AI OCR Slips -->
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col justify-between shadow-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">AI OCR Slips</span>
+<div class="w-7 h-7 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">document_scanner</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface font-extrabold tracking-tight">1,840</div>
+<div class="flex items-center gap-space-2xs mt-space-2xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold">58 Review</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">96.8% Auto</span>
+</div>
+</div>
+<!-- Mini Visual Indicator -->
+<div class="mt-space-sm flex gap-1 items-center">
+<span class="h-1.5 flex-[96] bg-primary rounded-full"></span>
+<span class="h-1.5 flex-[4] bg-secondary rounded-full"></span>
+</div>
+</div>
+</div>
+<!-- Multi-Tenant Fleet Health List -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Academy Tenants</h2>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center gap-space-2xs">
+<span>View All 18</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+<!-- Tenant Card 1: Apex -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">A</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Apex Academy</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Master: K. Siripala (Pure &amp; Applied)</span>
+</div>
+</div>
+<span class="bg-tertiary/15 text-tertiary font-label-sm text-label-sm px-space-xs py-space-2xs rounded uppercase font-bold shrink-0">100% Up</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mt-space-md pt-space-sm border-t-0 bg-surface-container-lowest/60 rounded-lg p-space-sm text-center">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Active</div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">1,842</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Billed</div>
+<div class="font-label-lg text-label-lg text-primary font-bold">LKR 8.28M</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Cluster Node</div>
+<div class="font-label-lg text-label-lg text-tertiary font-bold">Primary</div>
+</div>
+</div>
+</div>
+<!-- Tenant Card 2: Rotary Hall -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">R</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Rotary Hall Physics</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Master: Eng. N. Wickramasinghe</span>
+</div>
+</div>
+<span class="bg-primary/15 text-primary font-label-sm text-label-sm px-space-xs py-space-2xs rounded uppercase font-bold shrink-0">Normal</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mt-space-md bg-surface-container-lowest/60 rounded-lg p-space-sm text-center">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Active</div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">1,450</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Billed</div>
+<div class="font-label-lg text-label-lg text-primary font-bold">LKR 5.80M</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Live P2P</div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">428 Nodes</div>
+</div>
+</div>
+</div>
+<!-- Tenant Card 3: Syzygy Chemistry -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">S</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Syzygy Chemistry</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Dr. D. Ranatunga (2026 Batch)</span>
+</div>
+</div>
+<span class="bg-tertiary/15 text-tertiary font-label-sm text-label-sm px-space-xs py-space-2xs rounded uppercase font-bold shrink-0">Transcode OK</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mt-space-md bg-surface-container-lowest/60 rounded-lg p-space-sm text-center">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Active</div>
+<div class="font-label-lg text-label-lg text-on-surface font-bold">2,100</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Billed</div>
+<div class="font-label-lg text-label-lg text-primary font-bold">LKR 9.45M</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">CDN Cache</div>
+<div class="font-label-lg text-label-lg text-tertiary font-bold">99.1%</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Master Visual Insight Banner -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container p-space-md flex flex-col justify-end min-h-[140px] shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center opacity-30" data-alt="A dark cinematic data center rack glowing with electric blue and cyan LED fiber optic lights in a midnight obsidian server facility representing Sri Lankan national cloud infrastructure" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAr6JnAJYDT2sHoPgwCH_3CA7yP7R3EjJnjgl12EVy135-aeutDQ2gRdNtWFiSfwcxk7m257PqGvN1Jeg64VmMFwWfi_81hp_NZsN88kqK7Yo6NnkDuaQhC480KoCzW7TUh7cgw0ccsWuDqN1TGT_0qacOc3n4KVcxGpHktIUlQFXpQ9N0qHZvvbXJlndxU4WWaSAO3crWM7YgxWOrwpdLmHaPamdUCb-uoOq_qagg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-surface-container/60 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Island-Wide Edge Routing</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-space-2xs">Dialog Axiata &amp; SLT Fiber PoPs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero-latency exam anti-cheat telemetry</p>
+</div>
+<div class="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+</div>
+</div>
+<!-- Super Admin Quick Action Dock -->
+<div class="flex flex-col gap-space-xs mt-space-xs pb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Cluster Operations</span>
+<div class="grid grid-cols-1 gap-space-xs">
+<!-- Action 1 -->
+<button class="w-full flex items-center justify-between bg-surface-container-low hover:bg-surface-container active:scale-[0.99] p-space-md rounded-xl transition-all text-left" id="btn-snapshot">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Emergency DB Snapshot</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Instant synchronous backup to AWS S3 (ap-south-1)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">bolt</span>
+</button>
+<!-- Action 2 -->
+<button class="w-full flex items-center justify-between bg-surface-container-low hover:bg-surface-container active:scale-[0.99] p-space-md rounded-xl transition-all text-left" id="btn-flush">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">cached</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">CDN Edge Flush</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Invalidate static asset cache on SLT &amp; Dialog nodes</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">arrow_forward</span>
+</button>
+<!-- Action 3 -->
+<button class="w-full flex items-center justify-between bg-surface-container-low hover:bg-surface-container active:scale-[0.99] p-space-md rounded-xl transition-all text-left" id="btn-broadcast">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-secondary/20 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-semibold truncate">Broadcast Notice</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Push banner to 48.9k student exam portals</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">send</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Ensure the Overview tab in the App Shell displays as active
+  (function() {
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'overview') {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('text-primary');
+        const icon = link.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.style.fontVariationSettings = "'FILL' 1";
+        }
+      }
+    });
+
+    // Simple interaction state feedback for dock buttons
+    const bindFeedback = (id, successMsg) => {
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const titleEl = btn.querySelector('.font-title-md');
+        if (!titleEl) return;
+        const originalText = titleEl.textContent;
+        titleEl.textContent = successMsg;
+        titleEl.classList.add('text-tertiary');
+        setTimeout(() => {
+          titleEl.textContent = originalText;
+          titleEl.classList.remove('text-tertiary');
+        }, 1800);
+      });
+    };
+
+    bindFeedback('btn-snapshot', 'S3 Snapshot Triggered!');
+    bindFeedback('btn-flush', 'CDN Purge Dispatched!');
+    bindFeedback('btn-broadcast', 'Broadcast Center Opened');
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-space-2xs transition-colors text-primary font-label-md" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm leading-none">Overview</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="tenants" href="#"><span class="material-symbols-outlined text-[22px]">domain</span><span class="font-label-sm text-label-sm leading-none">Tenants</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="backups-and-billing" href="#"><span class="material-symbols-outlined text-[22px]">cloud_sync</span><span class="font-label-sm text-label-sm leading-none">Backups</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm leading-none">Settings</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="support" href="#"><span class="material-symbols-outlined text-[22px]">support_agent</span><span class="font-label-sm text-label-sm leading-none">Support</span></a></div></nav></body></html>

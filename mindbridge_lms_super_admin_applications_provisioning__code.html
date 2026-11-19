@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Noto+Sans+Sinhala:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#dbe1ff", "on-surface-variant": "#414754", "on-primary": "#ffffff", "on-primary-container": "#fefcff", "on-primary-fixed": "#001b3f", "primary-container": "#0072e4", "primary": "#005ab6", "surface-container-lowest": "#ffffff", "primary-fixed": "#d7e3ff", "inverse-primary": "#abc7ff", "on-secondary-fixed-variant": "#354575", "surface-bright": "#faf8ff", "tertiary-container": "#a06900", "surface-container": "#eaedff", "on-tertiary-fixed-variant": "#633f00", "surface-container-highest": "#d9e2ff", "primary-fixed-dim": "#abc7ff", "tertiary-fixed": "#ffddb4", "surface": "#faf8ff", "on-primary-fixed-variant": "#00458f", "on-tertiary-container": "#fffbff", "on-tertiary-fixed": "#291800", "on-secondary": "#ffffff", "tertiary": "#7f5300", "on-surface": "#101b34", "surface-container-high": "#e1e7ff", "on-error-container": "#93000a", "inverse-on-surface": "#eef0ff", "on-tertiary": "#ffffff", "inverse-surface": "#25304a", "surface-container-low": "#f2f3ff", "tertiary-fixed-dim": "#ffb952", "outline-variant": "#c1c6d6", "background": "#faf8ff", "on-error": "#ffffff", "surface-variant": "#d9e2ff", "outline": "#717785", "on-secondary-container": "#405081", "surface-tint": "#005cba", "surface-dim": "#cfd9fb", "on-background": "#101b34", "secondary": "#4d5c8e", "secondary-container": "#b5c5fd", "on-secondary-fixed": "#041847", "error": "#ba1a1a", "error-container": "#ffdad6", "secondary-fixed-dim": "#b5c5fd" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "gutter": "1.5rem" }, "fontFamily": { "label-md": ["Inter"], "body-md": ["Inter"], "label-sm": ["Inter"], "body-lg": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "title": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"] }, "fontSize": { "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "title": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col shadow-[0_4px_24px_rgba(7,27,74,0.12)]"><div class="h-16 px-space-md flex items-center justify-between bg-on-secondary-fixed/40"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center p-1.5 shadow-[0_1px_3px_rgba(7,27,74,0.06)]"><img alt="MindBridge LMS Education Logo.png" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/></div><div><span class="font-title text-title text-inverse-on-surface tracking-tight block leading-tight">MindBridge</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-inverse-primary block">Control Plane</span></div></div><span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-error-container text-on-error-container font-semibold">ROOT</span></div><div class="px-space-md py-space-sm bg-on-secondary-fixed/20"><div class="flex items-center justify-between py-1 text-surface-container-highest"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span class="font-label-sm text-label-sm font-medium">Cluster: LK-Central</span></div><span class="font-label-sm text-label-sm text-inverse-primary font-mono">v4.18.2</span></div><div class="mt-1 flex items-center justify-between bg-inverse-surface/90 px-2 py-1.5 rounded"><span class="font-label-sm text-label-sm text-outline-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">lock_person</span>Mode</span><span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold">Super Admin Privileged</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-sm"><div class="px-space-sm pb-1 pt-space-xs font-label-sm text-label-sm uppercase text-outline-variant font-semibold tracking-wider">System Operations</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_2px_8px_rgba(0,114,228,0.25)]"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">dashboard</span><span class="font-body-md text-body-md">Overview</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 rounded-lg transition-colors group bg-primary-container text-on-primary-container font-semibold shadow-[0_2px_8px_rgba(0,114,228,0.25)]" data-path="applications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">domain_verification</span><span class="font-body-md text-body-md">Applications</span></div><span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed">14</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="tenants" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">corporate_fare</span><span class="font-body-md text-body-md">Tenants</span></div><span class="font-label-sm text-label-sm text-outline-variant">182</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="users" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">group</span><span class="font-body-md text-body-md">Users</span></div></a></nav><div class="px-space-sm pb-1 pt-space-md font-label-sm text-label-sm uppercase text-outline-variant font-semibold tracking-wider">Billing &amp; Governance</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_2px_8px_rgba(0,114,228,0.25)]"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="subscriptions" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">card_membership</span><span class="font-body-md text-body-md">Subscriptions</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="payments" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">payments</span><span class="font-body-md text-body-md">Payments</span></div><span class="font-label-sm text-label-sm text-inverse-primary font-mono">LKR</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="refunds" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">currency_exchange</span><span class="font-body-md text-body-md">Refunds</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="requests" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">assignment_late</span><span class="font-body-md text-body-md">Requests</span></div></a></nav><div class="px-space-sm pb-1 pt-space-md font-label-sm text-label-sm uppercase text-outline-variant font-semibold tracking-wider">Intelligence &amp; Audit</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_2px_8px_rgba(0,114,228,0.25)]"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="analytics" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">query_stats</span><span class="font-body-md text-body-md">Analytics</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="announcements" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">campaign</span><span class="font-body-md text-body-md">Announcements</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="security" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">shield_lock</span><span class="font-body-md text-body-md">Security</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="logs" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">terminal</span><span class="font-body-md text-body-md">Logs</span></div></a></nav><div class="px-space-sm pb-1 pt-space-md font-label-sm text-label-sm uppercase text-outline-variant font-semibold tracking-wider">Configuration</div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary-container font-semibold shadow-[0_2px_8px_rgba(0,114,228,0.25)]"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">settings</span><span class="font-body-md text-body-md">Settings</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-surface-container-highest hover:bg-on-secondary-fixed hover:text-surface-container-lowest transition-colors group" data-path="support" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px] text-inverse-primary group-hover:text-surface-container-lowest">headset_mic</span><span class="font-body-md text-body-md">Support</span></div></a></nav></div><div class="p-space-sm bg-on-secondary-fixed/50 mt-auto"><div class="p-2.5 rounded-lg bg-inverse-surface/80 flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary-fixed text-[18px]">backup</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-surface-container-lowest font-medium">Backup Mode</span><span class="font-label-sm text-label-sm text-tertiary-fixed-dim">Manual Only</span></div></div><button class="px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm hover:bg-primary transition-colors" type="button">Sync</button></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/95 backdrop-blur-md z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(7,27,74,0.04)]"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="hidden sm:flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none">MindBridge</span><span class="font-label-sm text-label-sm text-on-surface-variant">Enterprise Multi-Tenant Cloud</span></div></div><div class="h-5 w-px bg-outline-variant/40 hidden md:block"></div><div class="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container text-on-surface"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm font-medium">Colombo Node:</span><span class="font-label-sm text-label-sm font-semibold text-primary">99.98% SLA</span></div><div class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">schedule</span><span class="font-label-sm text-label-sm font-medium">SLST (GMT+5:30)</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center p-0.5 rounded-lg bg-surface-container"><button class="px-2 py-1 rounded font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-primary shadow-[0_1px_2px_rgba(0,0,0,0.05)]" type="button">EN</button><button class="px-2 py-1 rounded font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors font-['Noto_Sans_Sinhala']" type="button">සිංහල</button></div><button aria-label="Toggle Color Scheme" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><button aria-label="Global Platform Audit Notifications" class="relative w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="h-6 w-px bg-outline-variant/40"></div><div class="flex items-center gap-space-sm pl-1"><div class="hidden lg:flex flex-col text-right"><div class="flex items-center justify-end gap-1.5"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Platform Admin</span><span class="material-symbols-outlined text-[16px] text-primary">verified_user</span></div><div class="flex items-center justify-end gap-1"><span class="font-label-sm text-label-sm text-tertiary font-medium">Impersonation Active</span><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span></div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_2px_6px_rgba(0,90,182,0.24)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command & Breadcrumb Navigation Bar -->
+<div class="px-margin py-space-md bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Super Admin</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Applications</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="font-mono text-primary font-semibold">LK-TEN-2025-08948</span>
+</div>
+<div class="flex items-center gap-3">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Onboarding Application Reviews &amp; Tenant Provisioning</h1>
+<span class="px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-tertiary-fixed text-on-tertiary-fixed flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+          Pending Manual Due Diligence
+        </span>
+</div>
+</div>
+<!-- Quick Telemetry & Node Badge -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">dns</span>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Target Cluster</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold font-mono">pg-tenant-cluster-04</span>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">timer</span>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-none">SLST SLA Clock</span>
+<span class="font-label-md text-label-md text-tertiary font-bold font-mono">08h 14m Left</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Review Console Grid (65% / 35%) -->
+<div class="px-margin py-space-lg grid grid-cols-1 xl:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Detailed Dossier (65% -> 8 cols on xl) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg">
+<!-- Primary Institution Hero Dossier Card with Bridge-of-Knowledge Motif -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-md overflow-hidden [border-top-right-radius:28px]">
+<div class="h-2 w-full bg-gradient-to-r from-primary via-primary-container to-secondary-container"></div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-16 h-16 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[36px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">LK Registered Institution</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant">ID: LK-TEN-2025-08948</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Apex Combined Mathematics Academy</h2>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold bg-secondary-fixed text-on-secondary-fixed">
+                    Educational Institute / Academy
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Multi-Instructor Model (Max 2 Initial Staff)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-start md:items-end gap-1 bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Proposed FQDN / Routing</span>
+<div class="flex items-center gap-1.5 text-primary font-mono font-semibold text-body-md">
+<span class="material-symbols-outlined text-[18px]">domain</span>
+<span>apex-maths.mindbridge.lk</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+                Route53 DNS Zone Reserved
+              </span>
+</div>
+</div>
+<!-- Academic & Legal Matrix Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-md pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">person</span>
+                Master Lecturer / Principal
+              </span>
+<span class="font-title text-title text-on-surface">Eng. Kusal Senaratne</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">BSc. Eng Hons (Moratuwa)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">badge</span>
+                Identity &amp; Business Reg
+              </span>
+<div class="flex items-center gap-2">
+<span class="font-mono text-label-lg text-label-lg font-semibold text-on-surface">198714203981</span>
+<span class="px-1.5 py-0.2 rounded font-label-sm text-[10px] bg-primary-fixed text-on-primary-fixed">NIC Valid</span>
+</div>
+<span class="font-mono font-body-sm text-body-sm text-on-surface-variant">BR: PV0029810 (Western Prov.)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">phone_iphone</span>
+                Verified Communication
+              </span>
+<span class="font-mono text-title text-title text-on-surface">+94 71 987 6543</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">chat</span> WhatsApp Gateway Verified
+              </span>
+</div>
+</div>
+<!-- Curriculum Scope Banner -->
+<div class="p-space-md rounded-lg bg-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">functions</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title text-title text-on-surface">G.C.E. Advanced Level Combined Mathematics</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pure Mathematics &amp; Applied Mechanics • Dual Stream (Sinhala / English Medium)</span>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start sm:self-auto">
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">
+                AL-2025/2026
+              </span>
+<span class="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+                Island-wide Intake
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Compliance & Verification Documents Console -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Legal Evidence &amp; Credential Vault</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">3 / 3 Authenticated Assets</span>
+</div>
+<!-- Document Tab Strip & Inspector -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-sm" id="docTabGroup">
+<button class="doc-tab p-space-sm rounded-lg bg-primary-fixed text-on-primary-fixed text-left transition-all flex flex-col gap-1 shadow-sm" id="tab-nic" onclick="switchDoc('nic')" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm font-bold uppercase">National ID</span>
+<span class="material-symbols-outlined text-[16px]">fingerprint</span>
+</div>
+<span class="font-title text-[13px] leading-tight truncate">National_Identity_Card_Kusal.pdf</span>
+<span class="font-mono font-label-sm text-[11px] opacity-80">2.4 MB • SHA-256 Pass</span>
+</button>
+<button class="doc-tab p-space-sm rounded-lg bg-surface-container-low text-on-surface text-left hover:bg-surface-container transition-all flex flex-col gap-1" id="tab-degree" onclick="switchDoc('degree')" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-on-surface-variant">Degree Attestation</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">school</span>
+</div>
+<span class="font-title text-[13px] leading-tight truncate">University_Degree_BScEng.pdf</span>
+<span class="font-mono font-label-sm text-[11px] text-on-surface-variant">4.1 MB • Clean Pre-scan</span>
+</button>
+<button class="doc-tab p-space-sm rounded-lg bg-surface-container-low text-on-surface text-left hover:bg-surface-container transition-all flex flex-col gap-1" id="tab-br" onclick="switchDoc('br')" type="button">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-on-surface-variant">Business Registry</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">domain_verification</span>
+</div>
+<span class="font-title text-[13px] leading-tight truncate">Business_Reg_PV0029810.pdf</span>
+<span class="font-mono font-label-sm text-[11px] text-on-surface-variant">1.8 MB • ROC Certified</span>
+</button>
+</div>
+<!-- Document Preview Canvas Box -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md font-semibold text-on-surface font-mono" id="activeDocTitle">National_Identity_Card_Verification_Kusal.pdf</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1 transition-colors" onclick="toggleZoomModal()" type="button">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span> Fullscreen Inspection
+              </button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span> Export Artifact
+              </button>
+</div>
+</div>
+<!-- Document Visual Renderer Simulation -->
+<div class="relative w-full h-80 rounded-lg bg-surface-container-lowest overflow-hidden flex flex-col items-center justify-center p-space-lg shadow-inner" id="previewContainer">
+<div class="w-full max-w-xl p-space-lg bg-surface-container-lowest rounded-lg shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-primary-fixed flex items-center justify-center text-primary font-bold text-label-sm">LK</div>
+<div>
+<span class="font-label-sm text-label-sm font-bold uppercase text-on-surface block leading-tight">Democratic Socialist Republic of Sri Lanka</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-['Noto_Sans_Sinhala']">ජාතික හැඳුනුම්පත / National Identity Card</span>
+</div>
+</div>
+<span class="font-mono text-label-sm text-label-sm text-primary font-bold">198714203981</span>
+</div>
+<div class="grid grid-cols-3 gap-space-md items-center">
+<div class="col-span-1 h-32 rounded-lg bg-surface-container-high overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Official identity card portrait photo of a Sri Lankan male engineer with short dark hair in formal navy collared attire against a neutral light blue background, high clarity security photograph styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzwTQWAJRaNNExaUDu-b8NAhMNizUnXQnLeuLU2_Hdh9Nnphbk1vm6XaUM3tEAz8m_z_iTIxjd__g4yjHag967obFre_FJt7YCQAjypH452WSaVIgGxRAReVlFMRp958K2UaQ88ZZsTRxuDIKQmX1dFr3Kl0_Tkl_PD_YkNo3R4r0RvZp1jvYi7w3pqK2QogyXHM8BDv-NFV2qbjl8U_RzIhuIIbcstXc9JnAWY2o"/>
+<div class="absolute bottom-1 right-1 px-1 rounded bg-on-surface/80 text-surface-container-lowest font-mono text-[9px]">BIO-100</div>
+</div>
+<div class="col-span-2 flex flex-col gap-1 text-on-surface">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Full Name</span>
+<span class="font-title text-title font-bold">KUSAL SENARATNE</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-['Noto_Sans_Sinhala']">කුසල් සෙනරත්න</span>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Date of Birth</span>
+<span class="font-mono font-label-md text-label-md block font-semibold">1987-05-22</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Issued Division</span>
+<span class="font-label-md text-label-md block font-semibold">Moratuwa West</span>
+</div>
+</div>
+<div class="mt-1 pt-1 border-t border-surface-container flex items-center justify-between text-[11px] text-secondary font-mono">
+<span>SEAL: VERIFIED-REGISTRAR-LK</span>
+<span class="font-bold text-primary">STATUS: MATCHED</span>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-3 left-4 right-4 flex items-center justify-between bg-surface-container-highest/80 backdrop-blur-sm px-3 py-1.5 rounded-lg text-on-surface font-mono text-[11px]">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> SHA-256: 4f8b92d837a718c39e248b1d982181744bfa293c83492817293bca</span>
+<span class="font-sans font-semibold text-primary">Sri Lanka Identity Registrar Sync: 100% Match</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Super Admin Decision & Workflow Provisioning Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-lg p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">gavel</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Super Admin Final Decision</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Strict governance pipeline. Applications can only be Approved or Formally Rejected.
+            </p>
+</div>
+<div class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1.5 self-start md:self-auto">
+<span class="material-symbols-outlined text-[16px]">security</span>
+            Root Authorization Required
+          </div>
+</div>
+<!-- Strict Warning Callout -->
+<div class="p-space-md rounded-lg bg-surface-container-high flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[24px] shrink-0 mt-0.5">warning</span>
+<div class="flex flex-col">
+<span class="font-title text-title text-on-surface">Strict Provisioning Constraints</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Approving will instantly trigger isolated PostgreSQL schema migrations, an S3 enterprise media bucket, and map DNS routes for <span class="font-mono font-semibold text-on-surface">apex-maths.mindbridge.lk</span>. The master admin invitation will dispatch immediately via verified WhatsApp. Staff access is permanently limited to a maximum cap of <strong>2 initial members</strong> under this academy tier.
+            </p>
+</div>
+</div>
+<!-- Binary Action Buttons -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+<!-- Rejection Action (Structured Modal Trigger) -->
+<button class="w-full h-12 rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-all font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm" onclick="openRejectModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+            Reject Application
+          </button>
+<!-- Provisioning Action -->
+<button class="w-full h-12 rounded-lg bg-primary hover:bg-primary-container text-on-primary transition-all font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-xl" id="provisionBtn" onclick="executeProvisioning()" type="button">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+            Approve &amp; Provision Tenant DB
+          </button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Processing Queue & Governance Checklist (35% -> 4 cols on xl) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Verification & Compliance Checklist Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">checklist_rtl</span>
+<h3 class="font-title text-title text-on-surface">Audit Trail Checklist</h3>
+</div>
+<span class="font-label-sm text-label-sm font-mono font-semibold text-primary">3 / 4 Cleared</span>
+</div>
+<div class="space-y-2">
+<!-- Checklist Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Sri Lanka NIC &amp; DOB Match</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Validated against Department for Registration of Persons format standard (198714203981).</span>
+</div>
+</div>
+<!-- Checklist Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Subdomain RFC 1123 Validation</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">apex-maths.mindbridge.lk is syntax valid and unallocated across all global clusters.</span>
+</div>
+</div>
+<!-- Checklist Item 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Payment Protocol Assigned</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Direct manual bank slip deposit (LKR 85,000 / term) marked verified by finance clerk.</span>
+</div>
+</div>
+<!-- Checklist Item 4 (Pending) -->
+<div class="p-space-sm rounded-lg bg-surface-container-high flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-outline-variant flex items-center justify-center text-on-surface shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Super Admin Root Sign-off</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Awaiting physical review and one-click execution from platform admin session.</span>
+</div>
+</div>
+</div>
+<!-- SLA Warning Card -->
+<div class="mt-2 p-space-sm rounded-lg bg-tertiary-fixed/30 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0">speed</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-tertiary-fixed">Platform SLA Notice</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant leading-tight">All institution onboarding reviews must conclude within 12-24h to adhere to institutional onboarding guarantees.</span>
+</div>
+</div>
+</div>
+<!-- Application Processing Queue Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-md flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">format_list_bulleted</span>
+<h3 class="font-title text-title text-on-surface">Review Queue</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold bg-primary-fixed text-on-primary-fixed">14 Pending</span>
+</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Sorted by intake registration timestamp (SLST)</span>
+</div>
+<!-- Filter Segment -->
+<div class="flex items-center p-1 rounded-lg bg-surface-container">
+<button class="flex-1 py-1 rounded font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-primary shadow-sm text-center transition-all" id="qFilter-all" onclick="filterQueue('all')" type="button">All (14)</button>
+<button class="flex-1 py-1 rounded font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface text-center transition-all" id="qFilter-teacher" onclick="filterQueue('teacher')" type="button">Teachers (8)</button>
+<button class="flex-1 py-1 rounded font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface text-center transition-all" id="qFilter-institute" onclick="filterQueue('institute')" type="button">Institutes (6)</button>
+</div>
+<!-- Queue Item List -->
+<div class="space-y-2 overflow-y-auto max-h-[460px] pr-1" id="queueList">
+<!-- Active Current Application Item -->
+<div class="queue-item p-space-sm rounded-lg bg-primary-fixed text-on-primary-fixed flex flex-col gap-1 shadow-sm transition-all" data-type="institute">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Current Review</span>
+<span class="font-mono font-label-sm text-[11px] font-semibold">LK-TEN-08948</span>
+</div>
+<span class="font-title text-[14px] font-bold truncate">Apex Combined Mathematics Academy</span>
+<div class="flex items-center justify-between text-[11px] opacity-90 mt-1">
+<span>Eng. Kusal Senaratne</span>
+<span class="font-mono">Submitted 4h ago</span>
+</div>
+</div>
+<!-- Queue Item 2 -->
+<div class="queue-item p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex flex-col gap-1 transition-all cursor-pointer" data-type="institute">
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-secondary-fixed text-on-secondary-fixed font-semibold">Academy</span>
+<span class="font-mono font-label-sm text-[11px] text-on-surface-variant">LK-TEN-08949</span>
+</div>
+<span class="font-title text-[14px] font-semibold truncate">Vidyalankara Bio-Science Institute</span>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant mt-1">
+<span>Dr. Sunil Jayakody (Kandy)</span>
+<span class="font-mono">5h ago</span>
+</div>
+</div>
+<!-- Queue Item 3 -->
+<div class="queue-item p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex flex-col gap-1 transition-all cursor-pointer" data-type="teacher">
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-surface-container-highest text-on-surface-variant font-semibold">Solo Educator</span>
+<span class="font-mono font-label-sm text-[11px] text-on-surface-variant">LK-TEN-08950</span>
+</div>
+<span class="font-title text-[14px] font-semibold truncate">Prof. Nalin De Silva Physics Hub</span>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant mt-1">
+<span>Gampaha Regional Hub</span>
+<span class="font-mono">7h ago</span>
+</div>
+</div>
+<!-- Queue Item 4 -->
+<div class="queue-item p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex flex-col gap-1 transition-all cursor-pointer" data-type="teacher">
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-surface-container-highest text-on-surface-variant font-semibold">Solo Educator</span>
+<span class="font-mono font-label-sm text-[11px] text-on-surface-variant">LK-TEN-08951</span>
+</div>
+<span class="font-title text-[14px] font-semibold truncate">ChemEdge Advanced Chemistry</span>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant mt-1">
+<span>Devinda Wickramasinghe</span>
+<span class="font-mono">9h ago</span>
+</div>
+</div>
+<!-- Queue Item 5 -->
+<div class="queue-item p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex flex-col gap-1 transition-all cursor-pointer" data-type="institute">
+<div class="flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded font-label-sm text-[10px] bg-secondary-fixed text-on-secondary-fixed font-semibold">Academy</span>
+<span class="font-mono font-label-sm text-[11px] text-on-surface-variant">LK-TEN-08952</span>
+</div>
+<span class="font-title text-[14px] font-semibold truncate">Southern Maritime &amp; IT Academy</span>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant mt-1">
+<span>Galle Fort Campus</span>
+<span class="font-mono">11h ago</span>
+</div>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">history</span>
+          View Global Onboarding Audit History
+        </button>
+</div>
+</div>
+</div>
+<!-- Rejection Note Structured Modal (Controlled via Inline JS) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-md bg-inverse-surface/60 backdrop-blur-sm" id="rejectModal">
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl w-full max-w-lg overflow-hidden flex flex-col">
+<div class="p-space-lg bg-error-container text-on-error-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[24px]">report_problem</span>
+<h4 class="font-headline-sm text-headline-sm font-bold">Reject Application</h4>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-on-error-container/10 flex items-center justify-center text-on-error-container" onclick="closeRejectModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-on-surface">
+          Select a structured rejection category for <strong>Apex Combined Mathematics Academy</strong>. An immutable audit record will be logged and the applicant will receive an instant rejection notification.
+        </p>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-semibold uppercase text-on-surface-variant">Rejection Ground</label>
+<select class="h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none" id="rejectReasonSelect">
+<option value="invalid_nic">Invalid or Unverified NIC / Identity Documentation</option>
+<option value="duplicate_subdomain">Duplicate or Infringing Subdomain String</option>
+<option value="ineligible_credentials">Ineligible Institutional Credentials / BR Mismatch</option>
+<option value="unsupported_curriculum">Curriculum or Teaching Scope Violates Platform Policy</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm font-semibold uppercase text-on-surface-variant">Administrative Notes (Dispatched via WhatsApp &amp; Email)</label>
+<textarea class="p-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none" placeholder="Provide specific corrective feedback for Sri Lanka institutional registry compliance..." rows="3"></textarea>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high text-[12px] text-on-surface-variant">
+          This operation is irreversible. The applicant must re-submit a completely new application dossier.
+        </div>
+</div>
+<div class="p-space-md bg-surface-container flex items-center justify-end gap-space-sm">
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-container-high transition-colors" onclick="closeRejectModal()" type="button">
+          Cancel
+        </button>
+<button class="px-4 py-2 rounded-lg bg-error text-on-error font-label-md text-label-md font-semibold hover:opacity-90 transition-opacity" onclick="confirmRejection()" type="button">
+          Confirm Formal Rejection
+        </button>
+</div>
+</div>
+</div>
+<!-- Document Zoom / Inspector Modal -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-md bg-inverse-surface/80 backdrop-blur-md" id="zoomModal">
+<div class="bg-surface-container-lowest rounded-xl shadow-2xl w-full max-w-4xl max-h-[921px] overflow-hidden flex flex-col">
+<div class="px-space-lg py-space-md bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">visibility</span>
+<span class="font-title text-title text-on-surface" id="zoomModalTitle">Evidence Inspector: National Identity Card</span>
+</div>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container-highest flex items-center justify-center text-on-surface" onclick="toggleZoomModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-space-lg overflow-y-auto flex items-center justify-center bg-surface-container-low">
+<div class="w-full max-w-2xl bg-surface-container-lowest rounded-xl shadow-lg p-space-xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between border-b pb-space-md border-surface-container">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-bold">MINISTRY OF INTERNAL AFFAIRS • SRI LANKA</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">National Identity Verification Document</h2>
+</div>
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary font-bold">
+              ID
+            </div>
+</div>
+<div class="grid grid-cols-3 gap-space-md">
+<div class="col-span-1 h-44 rounded-lg bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up archival biometric portrait scan of Sri Lankan master educator with high detail identification markings and cryptographic hologram watermark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3sJJrBE2MznsGu1sRMQ7bRpBOTeYHLIMqHbS9v4ZEsuRQDc3Jiz2EpuxTNZPODEZBjL7gtKspPWRcQITEHLayayoIytWx6_N-5iS9u3O8BL0mFUfN6gTsN45wYqQ_oITnLiO5RiQo7Ot4TbUJn2YIJ0khV1sMLT3NHcw76wJJQz7jCsnykVslktUCB5xMWw77aIR00fWCl0zItJLxZKv4KmGN4u-cAhRA-9ffLmM"/>
+</div>
+<div class="col-span-2 space-y-2">
+<div>
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase">Full Legal Identity</span>
+<p class="font-title text-title font-bold text-on-surface">KUSAL INDRAJITH SENARATNE</p>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase">NIC Serial</span>
+<p class="font-mono font-semibold text-on-surface">198714203981</p>
+</div>
+<div>
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase">Academic Degree</span>
+<p class="font-mono font-semibold text-on-surface">BSc. Eng (Moratuwa)</p>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase">Residential Registration</span>
+<p class="font-body-sm text-body-sm text-on-surface">No. 42/B, Galle Road, Rawathawatte, Moratuwa, Sri Lanka</p>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container text-on-surface font-mono text-[12px] flex items-center justify-between">
+<span>Security Hash: a92f491c8019b8417c802</span>
+<span class="text-primary font-bold">DIGITALLY STAMPED BY SL-CERT</span>
+</div>
+</div>
+</div>
+<div class="px-space-lg py-space-sm bg-surface-container flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Press ESC or click close to return to review console</span>
+<button class="px-4 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold" onclick="toggleZoomModal()" type="button">Done Reviewing</button>
+</div>
+</div>
+</div>
+<!-- Automated Provisioning In-Progress Notification Toast Overlay -->
+<div class="hidden fixed bottom-8 right-8 z-50 p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-2xl flex items-center gap-space-md max-w-md animate-bounce" id="provisionToast">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shrink-0">
+<span class="material-symbols-outlined animate-spin text-[22px]">sync</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title text-title font-bold">Provisioning Tenant Cloud...</span>
+<span class="font-body-sm text-body-sm text-inverse-primary" id="provisionToastText">Deploying PostgreSQL Schema for apex-maths.mindbridge.lk</span>
+</div>
+</div>
+<!-- Inline Micro-Interaction Scripting -->
+<script>
+    function switchDoc(type) {
+      const tabs = ['nic', 'degree', 'br'];
+      tabs.forEach(t => {
+        const el = document.getElementById('tab-' + t);
+        if (t === type) {
+          el.className = 'doc-tab p-space-sm rounded-lg bg-primary-fixed text-on-primary-fixed text-left transition-all flex flex-col gap-1 shadow-sm';
+        } else {
+          el.className = 'doc-tab p-space-sm rounded-lg bg-surface-container-low text-on-surface text-left hover:bg-surface-container transition-all flex flex-col gap-1';
+        }
+      });
+
+      const titleEl = document.getElementById('activeDocTitle');
+      const zoomTitle = document.getElementById('zoomModalTitle');
+      if (type === 'nic') {
+        titleEl.textContent = 'National_Identity_Card_Verification_Kusal.pdf';
+        zoomTitle.textContent = 'Evidence Inspector: National Identity Card';
+      } else if (type === 'degree') {
+        titleEl.textContent = 'University_Degree_Certificate_BScEng.pdf';
+        zoomTitle.textContent = 'Evidence Inspector: Moratuwa Engineering Degree';
+      } else if (type === 'br') {
+        titleEl.textContent = 'Business_Registration_Certificate_PV0029810.pdf';
+        zoomTitle.textContent = 'Evidence Inspector: Registrar of Companies Certificate';
+      }
+    }
+
+    function toggleZoomModal() {
+      const modal = document.getElementById('zoomModal');
+      modal.classList.toggle('hidden');
+    }
+
+    function openRejectModal() {
+      document.getElementById('rejectModal').classList.remove('hidden');
+    }
+
+    function closeRejectModal() {
+      document.getElementById('rejectModal').classList.add('hidden');
+    }
+
+    function confirmRejection() {
+      const reason = document.getElementById('rejectReasonSelect').value;
+      closeRejectModal();
+      alert('Application LK-TEN-2025-08948 has been formally REJECTED under reason code: [' + reason + ']. Notification dispatched.');
+    }
+
+    function executeProvisioning() {
+      const btn = document.getElementById('provisionBtn');
+      const toast = document.getElementById('provisionToast');
+      const toastText = document.getElementById('provisionToastText');
+      
+      btn.disabled = true;
+      btn.classList.add('opacity-50', 'cursor-not-allowed');
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[20px]">sync</span> Provisioning Isolated Cluster...';
+      
+      toast.classList.remove('hidden');
+
+      setTimeout(() => {
+        toastText.textContent = 'Allocating dedicated AWS S3 bucket & CDN edge...';
+      }, 1200);
+
+      setTimeout(() => {
+        toastText.textContent = 'Binding apex-maths.mindbridge.lk with SSL Cert...';
+      }, 2400);
+
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        btn.className = 'w-full h-12 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm';
+        btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span> Tenant Activated (Staff Capped: 2)';
+        alert('SUCCESS: Apex Combined Mathematics Academy tenant has been successfully provisioned. Routing is now active on apex-maths.mindbridge.lk.');
+      }, 3800);
+    }
+
+    function filterQueue(type) {
+      const filters = ['all', 'teacher', 'institute'];
+      filters.forEach(f => {
+        const btn = document.getElementById('qFilter-' + f);
+        if (f === type) {
+          btn.className = 'flex-1 py-1 rounded font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-primary shadow-sm text-center transition-all';
+        } else {
+          btn.className = 'flex-1 py-1 rounded font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface text-center transition-all';
+        }
+      });
+
+      const items = document.querySelectorAll('.queue-item');
+      items.forEach(item => {
+        if (type === 'all' || item.getAttribute('data-type') === type) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</div></main></div></body></html>

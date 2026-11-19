@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary":"#472a00","on-error":"#690005","background":"#0d1322","on-primary-fixed":"#001c3a","on-surface-variant":"#c0c7d5","outline":"#8a919e","on-tertiary-container":"#003623","inverse-primary":"#005fad","on-background":"#dde2f8","secondary-fixed":"#ffddb8","secondary-container":"#ee9800","surface-tint":"#a4c8ff","primary-fixed-dim":"#a4c8ff","error-container":"#93000a","inverse-on-surface":"#2a3040","primary":"#a4c8ff","secondary-fixed-dim":"#ffb95f","on-secondary-container":"#5b3800","surface-dim":"#0d1322","inverse-surface":"#dde2f8","tertiary":"#4edea3","on-tertiary":"#003824","on-secondary-fixed-variant":"#653e00","primary-fixed":"#d4e3ff","on-tertiary-fixed":"#002113","surface-container":"#191f2f","surface-bright":"#33394a","on-primary-container":"#002f5b","on-tertiary-fixed-variant":"#005236","surface-container-highest":"#2f3445","secondary":"#ffb95f","on-error-container":"#ffdad6","on-primary":"#00315e","tertiary-fixed-dim":"#4edea3","on-secondary-fixed":"#2a1700","tertiary-fixed":"#6ffbbe","outline-variant":"#404753","on-primary-fixed-variant":"#004784","surface-container-lowest":"#080e1d","error":"#ffb4ab","surface-container-high":"#242a3a","surface-variant":"#2f3445","on-surface":"#dde2f8","surface":"#0d1322","tertiary-container":"#00ab76","primary-container":"#3898ff","surface-container-low":"#151b2b"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","gutter":"1.5rem","space-2xs":"0.125rem","space-2xl":"3rem","space-lg":"1.5rem","gutter-mobile":"0.75rem","space-3xl":"4rem","margin-mobile":"1rem","space-md":"1rem","space-xs":"0.25rem","space-sm":"0.5rem","margin":"2rem"},"fontFamily":{"headline-lg":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},"fontSize":{"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"0","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0","fontWeight":"600"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0","fontWeight":"400"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0","fontWeight":"400"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.025em","fontWeight":"800"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="flex flex-col"><div class="p-space-md bg-surface-container-low"><div class="flex items-center gap-space-sm mb-space-xs"><span class="px-space-xs py-space-2xs bg-secondary-container text-on-secondary font-label-sm text-label-sm rounded uppercase tracking-wider font-bold">ROOT</span><span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Cluster: LK-Central v4.18.2</span></div><p class="font-body-sm text-body-sm text-on-surface-variant font-medium">Mode: <span class="text-primary font-semibold">Super Admin Privileged</span></p></div><div class="px-space-md py-space-sm overflow-y-auto max-h-[calc(100vh-190px)]"><div class="mb-space-md"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">System Operations</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-[0_0_12px_rgba(56,152,255,0.2)]"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="overview" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span>Overview</span><span class="w-1.5 h-1.5 rounded-full bg-primary"></span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="applications" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">apps</span>Applications</span><span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">14</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs transition-all bg-primary-container text-on-primary-container font-bold rounded-lg shadow-[0_0_12px_rgba(56,152,255,0.2)]" data-path="tenants" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">domain</span>Tenants</span><span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">182</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="users" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">group</span>Users</span></a></nav></div><div class="mb-space-md"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Billing &amp; Governance</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-[0_0_12px_rgba(56,152,255,0.2)]"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="subscriptions" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">loyalty</span>Subscriptions</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="payments" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">payments</span>Payments</span><span class="px-space-xs py-space-2xs rounded bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold">LKR</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="refunds" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">currency_exchange</span>Refunds</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="requests" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">assignment_late</span>Requests</span></a></nav></div><div class="mb-space-md"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Intelligence &amp; Audit</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-[0_0_12px_rgba(56,152,255,0.2)]"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="analytics" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">insights</span>Analytics</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="announcements" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">campaign</span>Announcements</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="security" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">security</span>Security</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="logs" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">terminal</span>Logs</span></a></nav></div><div><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Configuration</div><nav class="flex flex-col gap-space-2xs mt-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-[0_0_12px_rgba(56,152,255,0.2)]"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="settings" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">settings</span>Settings</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-md text-label-md" data-path="support" href="#"><span class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">help</span>Support</span></a></nav></div></div></div><div class="p-space-md bg-surface-container-low flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline">Backup Mode</span><span class="font-body-sm text-body-sm text-secondary font-medium">Manual Only</span></div><button class="px-space-sm py-space-xs bg-surface-container-high hover:bg-surface-container hover:text-on-surface text-on-surface-variant font-label-md text-label-md rounded flex items-center gap-1 transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">sync</span>Sync</button></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.3)]"><div class="h-16 w-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col"><div class="flex items-center gap-space-sm"><span class="font-title-md text-title-md font-bold text-on-surface tracking-tight">MindBridge Enterprise</span><span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant uppercase tracking-wider">Multi-Tenant Cloud</span></div><div class="flex items-center gap-space-sm font-label-sm text-label-sm text-outline-variant"><span class="text-tertiary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Colombo Node 99.98% SLA</span><span>•</span><span>SLST (GMT+5:30)</span></div></div></div><div class="flex items-center gap-space-md"><div class="flex items-center rounded-lg bg-surface-container p-space-2xs text-on-surface-variant"><button class="px-space-xs py-space-2xs font-label-sm text-label-sm text-primary font-bold rounded bg-surface-container-high" type="button">EN</button><span class="px-space-2xs text-outline">/</span><button class="px-space-xs py-space-2xs font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors font-bold" type="button">සිංහල</button></div><button class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">dark_mode</span></button><div class="relative"><button class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-secondary-container ring-2 ring-surface-container-lowest"></span></div><div class="flex items-center gap-space-sm pl-space-sm bg-surface-container-low px-space-sm py-space-xs rounded-lg"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold">Platform Admin</span><span class="font-label-sm text-label-sm text-secondary font-medium">Impersonation Active</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<div class="w-full max-w-[1600px] mx-auto p-space-lg flex flex-col gap-space-lg">
+<!-- 1. Breadcrumb & Status Pill -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-md text-label-md">
+<span class="text-outline hover:text-on-surface cursor-pointer">SUPER ADMIN</span>
+<span class="text-outline-variant font-bold">&gt;</span>
+<span class="text-primary font-bold tracking-wide">TENANTS</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="tracking-wide uppercase font-semibold">Isolated Database Multi-Tenancy</span>
+</div>
+</div>
+<!-- 2. Header & Quick Actions -->
+<div class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1 max-w-3xl">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
+          Multi-Tenant Directory &amp; Institutional Lifecycle Governance
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Supervise tenant health, enforced 2-staff boundary thresholds, automated failover schemas, and cryptographic cold-retention vaults across Sri Lankan educational clusters.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm w-full xl:w-auto flex-wrap">
+<button class="flex-1 xl:flex-none flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-label-md text-label-md shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">history</span>
+          Audit Soft Deleted Tenants (8)
+        </button>
+<button class="flex-1 xl:flex-none flex items-center justify-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-md hover:brightness-110 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+          Export Tenant Directory (CSV)
+        </button>
+</div>
+</div>
+<!-- 3. Top Metrics Row (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-low rounded-xl shadow-md min-h-[148px]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">TOTAL ISOLATED SCHEMAS</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</div>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-extrabold text-on-surface">142</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">+6 this mo</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant truncate">
+<span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+<span class="truncate">Active clusters: <span class="font-mono text-outline">pg_multitenant_lk128</span></span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-low rounded-xl shadow-md min-h-[148px]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">SOFT DELETED (RECOVERABLE)</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</div>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-extrabold text-on-surface">8</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">in 90-day grace vault</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary font-medium">Earliest purge: 18 days</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-outline font-mono text-[10px] font-bold">auto_purge_safe</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-low rounded-xl shadow-md min-h-[148px]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">PENDING STAFF CEILING REQUESTS</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">group_add</span>
+</div>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-extrabold text-error">4</span>
+<span class="font-label-sm text-label-sm text-outline">Requires tier approval</span>
+</div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Max enforced: 2 staff/tenant</span>
+<a class="text-primary hover:underline font-label-sm text-label-sm font-bold flex items-center" href="#pending-requests">Review Queue -&gt;</a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="flex flex-col justify-between p-space-md bg-surface-container-low rounded-xl shadow-md min-h-[148px]">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">IMPERSONATIONS TODAY</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">security</span>
+</div>
+</div>
+<div class="my-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg font-extrabold text-on-surface">2</span>
+<span class="font-mono text-outline font-label-sm text-label-sm">(#SEC-8921)</span>
+</div>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="flex items-center gap-1 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            Root privilege locked
+          </span>
+<span class="text-primary font-label-sm text-label-sm font-bold cursor-pointer hover:underline">Audit Logs</span>
+</div>
+</div>
+</div>
+<!-- 4. Alert Banner (Amber) -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between p-space-md rounded-xl bg-surface-container-low shadow-md gap-space-md">
+<div class="flex items-start md:items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+<span class="font-bold text-secondary">Subdomain DNS &amp; Payment Grace Notice:</span>
+          3 institutions are currently operating under automated 7-day payment grace (Bank of Ceylon &amp; Commercial Bank gateway reconciliation). No student lockout has been triggered.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0 w-full md:w-auto justify-end">
+<span class="px-space-xs py-1 rounded bg-secondary-container text-on-secondary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+          3 In Grace
+        </span>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-secondary font-label-md text-label-md font-semibold transition-colors" type="button">
+          Inspect Grace Tenants
+        </button>
+</div>
+</div>
+<!-- 5. Search & Filters Bar -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md bg-surface-container-low p-space-sm rounded-xl shadow-md">
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md pl-10 pr-4 py-2 rounded-lg outline-none focus:bg-surface-container-high transition-colors" placeholder="Search tenants by Name, Subdomain, NIC..." type="text"/>
+</div>
+<div class="flex items-center gap-1 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
+<button class="px-space-sm py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold whitespace-nowrap shadow-sm" type="button">
+          All (142)
+        </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium whitespace-nowrap transition-colors" type="button">
+          Active (128)
+        </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-secondary font-label-md text-label-md font-medium whitespace-nowrap transition-colors" type="button">
+          In Grace Period (3)
+        </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-error font-label-md text-label-md font-medium whitespace-nowrap transition-colors" type="button">
+          Suspended (3)
+        </button>
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant font-label-md text-label-md font-medium whitespace-nowrap transition-colors" type="button">
+          Soft Deleted / Archived (8)
+        </button>
+</div>
+</div>
+<!-- 6. Institutional Directory Table -->
+<div class="flex flex-col bg-surface-container-low rounded-xl shadow-md overflow-hidden">
+<!-- Table Header Bar -->
+<div class="flex flex-wrap items-center justify-between p-space-md bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md font-bold text-on-surface">Institutional Directory</span>
+<span class="text-outline font-body-sm text-body-sm">— Showing 5 curated institutions</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md cursor-pointer hover:text-on-surface">
+<span>Sort: <strong class="text-on-surface">Highest Active Students</strong></span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Table responsive wrapper -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[1000px]">
+<thead>
+<tr class="bg-surface-container-lowest/60 text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md">TENANT INFO</th>
+<th class="py-space-sm px-space-md">DEPLOYMENT TYPE</th>
+<th class="py-space-sm px-space-md">MASTER CONTACT</th>
+<th class="py-space-sm px-space-md">STAFF LIMIT (MAX 2)</th>
+<th class="py-space-sm px-space-md">STUDENTS &amp; COURSES</th>
+<th class="py-space-sm px-space-md">SUBSCRIPTION</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-md text-body-md">
+<!-- Row 1: Apex Combined Maths -->
+<tr class="bg-surface-container-high/40 hover:bg-surface-container-high transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-bold font-title-md">
+                    ACM
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-title-md text-title-md font-bold text-on-surface">Apex Combined Maths</span>
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-primary font-mono">apex-maths.mindbridge.lk</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold uppercase">
+                  Individual Master
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">Niroshan Bandara</span>
+<span class="text-tertiary flex items-center gap-1 font-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+                    +94 77 123 9841
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-secondary font-bold">2/2 (Limit Reached)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary w-full"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="font-bold text-on-surface">4,210 Students</span>
+<span class="text-outline">8 Active Courses</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-sm py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-bold">
+                  Active (Plan #01)
+                </span>
+</td>
+</tr>
+<!-- Row 2: Rotary Nugegoda -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface font-bold font-title-md flex items-center justify-center">
+                    RN
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-title-md text-title-md font-bold text-on-surface">Rotary Nugegoda</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-outline font-label-sm text-[9px] uppercase font-bold">LEGACY</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline font-mono">rotary-nugegoda.mindbridge.lk</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase">
+                  Multi-Instructor
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">Dr. K. D. Wickramasinghe</span>
+<span class="text-tertiary flex items-center gap-1 font-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+                    +94 71 882 9410
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-primary font-bold">1/2 (1 Available)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary w-1/2"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="font-bold text-on-surface">8,940 Students</span>
+<span class="text-outline">24 Active Courses</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-sm py-1 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-bold">
+                  Active (Plan #01)
+                </span>
+</td>
+</tr>
+<!-- Row 3: Sigma Institute -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface font-bold font-title-md flex items-center justify-center">
+                    SI
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface">Sigma Institute</span>
+<span class="font-body-sm text-body-sm text-outline font-mono">sigma-edu.mindbridge.lk</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase">
+                  Multi-Instructor
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">Sunanda Alwis</span>
+<span class="text-tertiary flex items-center gap-1 font-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+                    +94 70 291 8273
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-secondary font-bold">2/2 (Limit Reached)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary w-full"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="font-bold text-on-surface">1,820 Students</span>
+<span class="text-outline">5 Active Courses</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-sm py-1 rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm font-bold">
+                  Expiring in 4 days
+                </span>
+</td>
+</tr>
+<!-- Row 4: Syzygy Gampaha -->
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-on-surface font-bold font-title-md flex items-center justify-center">
+                    SG
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold text-on-surface">Syzygy Gampaha</span>
+<span class="font-body-sm text-body-sm text-outline font-mono">syzygy.mindbridge.lk</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase">
+                  Individual Master
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">Chandika Perera</span>
+<span class="text-tertiary flex items-center gap-1 font-mono text-[11px]">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+                    +94 77 382 9104
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline font-bold">1/2 Locked</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-outline w-1/2"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="font-bold text-on-surface">3,120 Students</span>
+<span class="text-error font-medium">Locked Schema</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-sm py-1 rounded-full bg-error-container/30 text-error font-label-sm text-label-sm font-bold">
+                  Suspended
+                </span>
+</td>
+</tr>
+<!-- Row 5: Sasip Colombo -->
+<tr class="hover:bg-surface-container-high/40 transition-colors opacity-80">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-outline font-bold font-title-md flex items-center justify-center">
+                    SC
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-title-md text-title-md font-bold text-on-surface line-through">Sasip Colombo</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-secondary font-label-sm text-[9px] uppercase font-bold">RETAINED</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline font-mono">sasip.mindbridge.lk (Schema: mb_t_0104)</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-xs py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase">
+                  Multi-Instructor
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="text-on-surface font-semibold">Lalith Fernando</span>
+<span class="text-outline font-mono text-[11px]">+94 71 440 2911</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline font-bold">0/2 Active</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-surface-variant w-0"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="font-medium text-outline">2,410 Historical</span>
+<span class="text-secondary">Retention Day 24 of 90</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-sm py-1 rounded-full bg-surface-container-highest text-outline font-label-sm text-label-sm font-bold">
+                  Soft Deleted
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Footer -->
+<div class="flex flex-wrap items-center justify-between p-space-md bg-surface-container-lowest font-body-sm text-body-sm text-on-surface-variant">
+<div>
+<span>Rows per page: <strong class="text-on-surface">5</strong> | Showing 1-5 of 142 total tenants</span>
+</div>
+<div class="flex items-center gap-1 font-label-md text-label-md">
+<button class="px-2 py-1 rounded hover:bg-surface-container-high text-outline transition-colors" type="button">&lt;</button>
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-bold" type="button">1</button>
+<button class="px-2.5 py-1 rounded hover:bg-surface-container-high text-on-surface transition-colors" type="button">2</button>
+<button class="px-2.5 py-1 rounded hover:bg-surface-container-high text-on-surface transition-colors" type="button">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="px-2.5 py-1 rounded hover:bg-surface-container-high text-on-surface transition-colors" type="button">29</button>
+<button class="px-2 py-1 rounded hover:bg-surface-container-high text-outline transition-colors" type="button">&gt;</button>
+</div>
+</div>
+</div>
+<!-- 7. Selected Tenant Management Detail Card (Apex Combined Maths) -->
+<div class="flex flex-col bg-surface-container-low rounded-xl shadow-md p-space-lg gap-space-md" id="pending-requests">
+<!-- Card Top Info -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-headline-sm font-extrabold flex items-center justify-center shadow-sm">
+            ACM
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Apex Combined Maths</h2>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold uppercase">
+                Individual Master
+              </span>
+</div>
+<span class="font-mono text-outline font-body-sm text-body-sm">apex-maths.mindbridge.lk</span>
+</div>
+</div>
+<!-- Staff Ceiling Tracker -->
+<div class="flex flex-col md:items-end w-full md:w-auto">
+<div class="flex items-center gap-space-xs font-label-md text-label-md">
+<span class="text-outline">Staff Ceiling Tracker:</span>
+<span class="text-secondary font-bold">2 / 2 Seats Utilized</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Admin: N. Bandara, Operator: K. Perera</span>
+</div>
+</div>
+<!-- 2 Metric Boxes -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex items-center justify-between p-space-md bg-surface-container rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">TOTAL ENROLLMENTS</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">4,210</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-primary">LKR 3.8M MRR</span>
+<p class="font-body-sm text-body-sm text-outline">BOC &amp; Sampath Gateway</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-space-md bg-surface-container rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">CLOUD STORAGE</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">412 GB</span>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-tertiary">S3 Wasabi LK</span>
+<p class="font-body-sm text-body-sm text-outline">Colombo Glacier Mirror</p>
+</div>
+</div>
+</div>
+<!-- Request Notice (Amber) -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-space-md bg-surface-container-high rounded-lg gap-space-md">
+<div class="flex items-start sm:items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">info</span>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+<strong class="text-secondary">Staff Limit Increase Requested:</strong>
+            Master Teacher requested +1 Coordinator slot for G.C.E. A/L exam paper dispatching.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-space-md py-1.5 rounded-lg bg-secondary-container text-on-secondary font-label-md text-label-md font-bold hover:brightness-110 transition-all" type="button">
+            Grant +1 Add-on
+          </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-highest hover:bg-surface-bright text-outline hover:text-on-surface font-label-md text-label-md font-semibold transition-colors" type="button">
+            Dismiss
+          </button>
+</div>
+</div>
+<!-- Action Buttons Row -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm pt-space-xs">
+<button class="w-full sm:flex-1 flex items-center justify-center gap-space-xs py-2.5 px-space-md rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md font-bold transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+          Impersonate Tenant Admin
+        </button>
+<button class="w-full sm:w-auto px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-colors" type="button">
+          Custom DNS
+        </button>
+<button class="w-full sm:w-auto px-space-md py-2.5 rounded-lg bg-error-container/20 hover:bg-error-container/40 text-error font-label-md text-label-md font-medium transition-colors" type="button">
+          Soft Delete
+        </button>
+</div>
+</div>
+<!-- 8. Bottom Vault Section (Data Retention & Soft Deletion Vault) -->
+<div class="flex flex-col bg-surface-container-low rounded-xl shadow-md p-space-lg gap-space-md">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">archive</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Data Retention &amp; Soft Deletion Vault</h3>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-sm text-label-sm font-semibold">
+                PostgreSQL Multi-Schema Standard
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              In accordance with MindBridge LMS multi-tenant specifications, tenant deletions never truncate data permanently upon click.
+            </p>
+</div>
+</div>
+<div class="px-space-sm py-1 rounded bg-surface-container-highest text-outline font-mono text-[11px] font-bold">
+          8 Recoverable (2.1 TB)
+        </div>
+</div>
+<!-- 3 Bullet items -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex items-start gap-space-xs p-space-sm rounded-lg bg-surface-container">
+<span class="w-2 h-2 rounded-full bg-primary mt-1.5 flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">90-Day Cold Isolation</span>
+<span class="font-body-sm text-body-sm text-outline">PostgreSQL schema renamed to <code class="text-primary font-mono">archived_mb_*</code>.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs p-space-sm rounded-lg bg-surface-container">
+<span class="w-2 h-2 rounded-full bg-secondary mt-1.5 flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Media Snapshot</span>
+<span class="font-body-sm text-body-sm text-outline">Videos, student submissions, and question banks preserved in locked glacier S3 buckets.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs p-space-sm rounded-lg bg-surface-container">
+<span class="w-2 h-2 rounded-full bg-tertiary mt-1.5 flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">1-Click Full Restore</span>
+<span class="font-body-sm text-body-sm text-outline">Re-binds DNS certificates, subdomains, and instructor auth records instantly.</span>
+</div>
+</div>
+</div>
+<!-- Bottom action button -->
+<div class="flex justify-end pt-space-xs">
+<button class="w-full sm:w-auto px-space-lg py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold flex items-center justify-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">folder_open</span>
+          Open Soft Deletion Retention Ledger
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
