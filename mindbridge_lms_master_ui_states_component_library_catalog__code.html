@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-container": "#fefcff", "on-primary": "#ffffff", "outline": "#717785", "on-tertiary-container": "#fffbff", "surface": "#faf8ff", "primary": "#005ab6", "on-secondary-container": "#405081", "error-container": "#ffdad6", "on-primary-fixed": "#001b3f", "tertiary-fixed": "#ffddb4", "tertiary-fixed-dim": "#ffb952", "on-tertiary-fixed-variant": "#633f00", "secondary": "#4d5c8e", "on-surface-variant": "#414754", "surface-container-highest": "#d9e2ff", "tertiary-container": "#a06900", "surface-variant": "#d9e2ff", "outline-variant": "#c1c6d6", "on-error": "#ffffff", "tertiary": "#7f5300", "on-secondary-fixed-variant": "#354575", "inverse-surface": "#25304a", "surface-container": "#eaedff", "primary-fixed": "#d7e3ff", "on-primary-fixed-variant": "#00458f", "on-background": "#101b34", "primary-fixed-dim": "#abc7ff", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "secondary-fixed-dim": "#b5c5fd", "error": "#ba1a1a", "surface-bright": "#faf8ff", "inverse-primary": "#abc7ff", "surface-dim": "#cfd9fb", "on-tertiary": "#ffffff", "primary-container": "#0072e4", "on-secondary": "#ffffff", "inverse-on-surface": "#eef0ff", "surface-container-high": "#e1e7ff", "on-tertiary-fixed": "#291800", "on-secondary-fixed": "#041847", "surface-tint": "#005cba", "secondary-container": "#b5c5fd", "secondary-fixed": "#dbe1ff", "on-surface": "#101b34", "surface-container-low": "#f2f3ff", "background": "#faf8ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-xl": "2rem", "space-md": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin": "2rem", "space-lg": "1.5rem", "gutter": "1.5rem", "gutter-mobile": "1rem" }, "fontFamily": { "title": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "display-mobile": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "display": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-sm": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "title": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "display": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col shadow-[0_1px_8px_rgba(7,27,74,0.04)]"><div class="p-space-lg flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-title text-title text-on-surface leading-tight">MindBridge UI</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Design System Core</span></div></div><div class="mt-space-xs p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">v2.4.0 • Enterprise Spec</span></div><span class="font-label-sm text-label-sm text-primary font-semibold">LKR/EN</span></div></div><div class="px-space-lg py-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">System Architecture</span></div><nav class="flex-1 px-space-md py-space-xs flex flex-col gap-space-xs overflow-y-auto" data-active-classes="bg-primary text-on-primary font-semibold rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="design-tokens-and-theme" href="#"><span class="material-symbols-outlined text-[20px]">palette</span><span class="font-body-md text-body-md">Design Tokens &amp; Theme</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-2.5 transition-all bg-primary text-on-primary font-semibold rounded-lg shadow-sm" data-path="component-library" href="#"><span class="material-symbols-outlined text-[20px]">widgets</span><span class="font-body-md text-body-md">Component Library</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="interactive-ui-states" href="#"><span class="material-symbols-outlined text-[20px]">touch_app</span><span class="font-body-md text-body-md">Interactive UI States</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="form-and-validation-matrix" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-body-md text-body-md">Form &amp; Validation Matrix</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="empty-states-gallery" href="#"><span class="material-symbols-outlined text-[20px]">inbox</span><span class="font-body-md text-body-md">Empty States Gallery</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="error-and-resilience-catalog" href="#"><span class="material-symbols-outlined text-[20px]">warning</span><span class="font-body-md text-body-md">Error &amp; Resilience Catalog</span></a></nav><div class="p-space-md m-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">verified</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">Bridge of Knowledge</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Dual-script typography &amp; structural token compliance validated.</p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(7,27,74,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg flex-1"><div class="flex items-center gap-space-md"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col"><span class="font-title text-title text-on-surface leading-snug">MindBridge LMS</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Design System &amp; UI States Governance</span></div></div><div class="max-w-md w-full ml-space-lg relative"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-9 pr-space-md rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search tokens, components, variants..." type="text"/></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><button class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button></div><div class="flex items-center gap-space-md pl-space-md"><div class="flex flex-col text-right"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Senior Administrator</span><span class="font-body-sm text-body-sm text-on-surface-variant">Governance Directorate</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive View State Controller Scripts & Scoped Shimmer Animations -->
+<style>
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+    .animate-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .animate-shimmer::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+      transform: translateX(-100%);
+      animation: shimmer 1.8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.08); opacity: 0.3; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+    .animate-pulse-ring {
+      animation: pulse-ring 2.5s infinite ease-in-out;
+    }
+    @keyframes wave-bars {
+      0%, 100% { height: 6px; }
+      50% { height: 22px; }
+    }
+    .wave-bar-1 { animation: wave-bars 1s infinite ease-in-out; }
+    .wave-bar-2 { animation: wave-bars 1s infinite ease-in-out 0.2s; }
+    .wave-bar-3 { animation: wave-bars 1s infinite ease-in-out 0.4s; }
+    .wave-bar-4 { animation: wave-bars 1s infinite ease-in-out 0.1s; }
+  </style>
+<!-- TOP TELEMETRY & SYSTEM HERO ANCHOR -->
+<section class="w-full bg-surface-container-lowest shadow-sm px-space-xl py-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+            Design System Spec v2.4 LTS
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">
+            Plus Jakarta Sans • Round-12 Archetype
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+            Sri Lankan G.C.E. A/L Multi-Tenant EdTech
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          MindBridge LMS — Master UI States &amp; Component Library Catalog
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Production-grade design tokens, component matrix, loading skeletons, empty states, forensic error handlers, and form validation patterns for synchronous/asynchronous Sri Lankan A/L combined streams.
+        </p>
+</div>
+<!-- Quick Action / Interactive Toggle Panel -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm shrink-0">
+<div class="p-1 rounded-xl bg-surface-container-low flex items-center shadow-inner">
+<button class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-primary shadow-sm transition-all" id="btn-locale-en" onclick="setLocale('en')" type="button">English Spec</button>
+<button class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold text-on-surface-variant hover:text-on-surface transition-all" id="btn-locale-si" onclick="setLocale('si')" type="button">සිංහල (Sinhala Unicode)</button>
+</div>
+<button class="h-10 px-4 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-primary-container shadow-sm transition-all" onclick="window.scrollTo({top: document.getElementById('section-interactive').offsetTop - 80, behavior: 'smooth'})" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Explore Component Matrix</span>
+</button>
+</div>
+</div>
+<!-- Live Telemetry KPI Strip -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-sm pt-space-xs">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Atomic Components</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-primary font-bold">48</span>
+<span class="font-label-sm text-label-sm text-secondary">Verified v2.4</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">UI State Matrices</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-primary font-bold">6</span>
+<span class="font-label-sm text-label-sm text-secondary">Exhaustive</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Accessibility Standard</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-tertiary-container font-bold">AAA</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">WCAG 2.1</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Formula Engine</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-secondary font-bold">KaTeX</span>
+<span class="font-label-sm text-label-sm text-primary">GPU Accel</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Dual Currency</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">LKR</span>
+<span class="font-label-sm text-label-sm text-secondary">Rs. Sync</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Resilience Modes</span>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-primary font-bold">3G/SMS</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fallback Safe</span>
+</div>
+</div>
+</div>
+<!-- Quick Filter Navigation Bar -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1" id="filter-pills">
+<button class="filter-pill px-4 py-2 rounded-full font-label-sm text-label-sm font-semibold bg-primary text-on-primary shadow-sm shrink-0 transition-all" onclick="filterCatalog('all', this)" type="button">All Systems Catalog</button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-sm text-label-sm font-medium bg-surface-container text-on-surface-variant hover:text-on-surface shrink-0 transition-all" onclick="filterCatalog('skeletons', this)" type="button">Loading &amp; Skeletons</button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-sm text-label-sm font-medium bg-surface-container text-on-surface-variant hover:text-on-surface shrink-0 transition-all" onclick="filterCatalog('empty', this)" type="button">Empty States Gallery</button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-sm text-label-sm font-medium bg-surface-container text-on-surface-variant hover:text-on-surface shrink-0 transition-all" onclick="filterCatalog('validation', this)" type="button">Form Validation Matrix</button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-sm text-label-sm font-medium bg-surface-container text-on-surface-variant hover:text-on-surface shrink-0 transition-all" onclick="filterCatalog('errors', this)" type="button">Forensic Errors &amp; Alerts</button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-sm text-label-sm font-medium bg-surface-container text-on-surface-variant hover:text-on-surface shrink-0 transition-all" onclick="filterCatalog('success', this)" type="button">Success Receipts</button>
+<button class="filter-pill px-4 py-2 rounded-full font-label-sm text-label-sm font-medium bg-surface-container text-on-surface-variant hover:text-on-surface shrink-0 transition-all" onclick="filterCatalog('buttons', this)" type="button">Interactive Buttons &amp; Badges</button>
+</div>
+</section>
+<!-- MAIN CATALOG CONTENT CONTAINER -->
+<div class="px-space-xl py-space-xl flex flex-col gap-space-xl max-w-7xl mx-auto w-full">
+<!-- ========================================== -->
+<!-- SECTION A: LOADING SKELETONS & AI PROGRESS -->
+<!-- ========================================== -->
+<section class="catalog-section flex flex-col gap-space-md" id="section-skeletons">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Section 01 // Asynchronous Shimmers</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Loading Skeletons &amp; Socratic AI Synthesis States</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero Layout Shift (CLS &lt; 0.01)</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Cold Boot Splash Preview Card (Span 4) -->
+<div class="lg:col-span-4 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Cold Boot Splash Frame</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Mobile &amp; Web</span>
+</div>
+<div class="my-space-xl py-space-xl flex flex-col items-center justify-center relative">
+<!-- Pulsing ambient glow circle -->
+<div class="absolute w-36 h-36 rounded-full bg-primary-fixed-dim/40 animate-pulse-ring blur-xl pointer-events-none"></div>
+<!-- MindBridge Icon Archetype -->
+<div class="relative w-20 h-20 rounded-2xl bg-gradient-to-tr from-inverse-surface to-primary flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-on-primary text-[42px]">school</span>
+<div class="absolute -inset-1 rounded-2xl border border-primary/20 animate-ping opacity-25"></div>
+</div>
+<div class="mt-space-md flex flex-col items-center text-center">
+<span class="font-title text-title text-on-surface tracking-tight">MindBridge LMS</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold tracking-wider uppercase mt-1">Learn • Manage • Achieve</span>
+</div>
+<!-- Loader Progress Spinner & Status -->
+<div class="mt-space-lg flex flex-col items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full border-2 border-primary-fixed border-t-primary animate-spin"></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Authenticating Tenant Shard...</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Handshake Latency</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">42ms (Sri Lanka Telecom Cloud)</span>
+</div>
+</div>
+<!-- Metric Cards & Socratic AI State (Span 8) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- KPI Metric Shimmer Triplets -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm animate-shimmer">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container"></div>
+<div class="w-12 h-4 rounded-full bg-surface-container"></div>
+</div>
+<div class="w-24 h-6 rounded bg-surface-container-high mt-1"></div>
+<div class="w-36 h-3 rounded bg-surface-container"></div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm animate-shimmer">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container"></div>
+<div class="w-14 h-4 rounded-full bg-surface-container"></div>
+</div>
+<div class="w-28 h-6 rounded bg-surface-container-high mt-1"></div>
+<div class="w-32 h-3 rounded bg-surface-container"></div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm animate-shimmer">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container"></div>
+<div class="w-10 h-4 rounded-full bg-surface-container"></div>
+</div>
+<div class="w-20 h-6 rounded bg-surface-container-high mt-1"></div>
+<div class="w-40 h-3 rounded bg-surface-container"></div>
+</div>
+</div>
+<!-- Socratic AI Vector Retrieval Progress Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">psychology</span>
+</div>
+<div>
+<span class="font-title text-title text-on-surface">Socratic AI Hint Synthesizer</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Live NIE 2024 Past Paper Vector Archive</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+                Inference Stream Active
+              </span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<!-- Synthesizer Audio Wave bars -->
+<div class="flex items-center gap-1 h-8">
+<span class="w-1 rounded-full bg-primary wave-bar-1"></span>
+<span class="w-1 rounded-full bg-primary wave-bar-2"></span>
+<span class="w-1 rounded-full bg-primary wave-bar-3"></span>
+<span class="w-1 rounded-full bg-primary wave-bar-4"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Consulting NIE 2024 Vector Store (35-year archive)...</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Retrieving Combined Maths Pure Paper II • Integration by Parts</span>
+</div>
+</div>
+<div class="px-3 py-1 rounded-lg bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold shrink-0">
+                Generating hint 2 of 3
+              </div>
+</div>
+<!-- Shimmering Course & Roster Skeleton Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center">
+<!-- Left Mini Course Card Skeleton (Span 5) -->
+<div class="md:col-span-5 p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm animate-shimmer">
+<div class="w-full h-24 rounded-lg bg-surface-container"></div>
+<div class="w-16 h-3 rounded bg-surface-container-high"></div>
+<div class="w-3/4 h-4 rounded bg-surface-container-high"></div>
+<div class="flex items-center gap-2 mt-2">
+<div class="w-6 h-6 rounded-full bg-surface-container"></div>
+<div class="w-24 h-3 rounded bg-surface-container"></div>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container mt-1"></div>
+</div>
+<!-- Right Data Rows Skeleton (Span 7) -->
+<div class="md:col-span-7 flex flex-col gap-2">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between animate-shimmer">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container"></div>
+<div class="w-28 h-3.5 rounded bg-surface-container-high"></div>
+</div>
+<div class="w-16 h-3 rounded bg-surface-container"></div>
+<div class="w-12 h-6 rounded-md bg-surface-container"></div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between animate-shimmer">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container"></div>
+<div class="w-32 h-3.5 rounded bg-surface-container-high"></div>
+</div>
+<div class="w-20 h-3 rounded bg-surface-container"></div>
+<div class="w-12 h-6 rounded-md bg-surface-container"></div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between animate-shimmer">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container"></div>
+<div class="w-24 h-3.5 rounded bg-surface-container-high"></div>
+</div>
+<div class="w-16 h-3 rounded bg-surface-container"></div>
+<div class="w-12 h-6 rounded-md bg-surface-container"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION B: EMPTY STATES GALLERY -->
+<!-- ========================================== -->
+<section class="catalog-section flex flex-col gap-space-md" id="section-empty">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Section 02 // Zero State Guidance</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Context-Aware Empty States (Sri Lankan A/L Batches)</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Guiding action without frustration</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Empty State 1: No Batches Enrolled -->
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="w-full flex justify-end">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Enrollment Portal</span>
+</div>
+<div class="my-space-md flex flex-col items-center max-w-sm">
+<div class="w-16 h-16 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[36px]">auto_stories</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">No Active Course Batches Found</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              You haven't enrolled in any 2026/2027 Combined Mathematics or Physics theory courses yet.
+            </p>
+</div>
+<div class="w-full flex flex-col gap-space-xs pt-space-md">
+<button class="w-full h-10 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container shadow-sm transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+<span>Browse Apex Storefront</span>
+</button>
+<button class="w-full h-10 px-4 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Contact WhatsApp Desk</span>
+</button>
+</div>
+</div>
+<!-- Empty State 2: Zero Pending Bank Slips -->
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="w-full flex justify-end">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Cashier Queue</span>
+</div>
+<div class="my-space-md flex flex-col items-center max-w-sm">
+<div class="w-16 h-16 rounded-2xl bg-secondary-fixed flex items-center justify-center text-secondary mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[36px]">receipt_long</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Slip Adjudication Queue Clear</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              All Commercial Bank, BOC, and People's Bank vouchers have been verified via AI OCR or cashier override.
+            </p>
+</div>
+<div class="w-full flex flex-col gap-space-xs pt-space-md">
+<button class="w-full h-10 px-4 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>View Archive History</span>
+</button>
+<button class="w-full h-10 px-4 rounded-lg bg-surface-container-lowest text-primary font-label-lg text-label-lg hover:bg-surface-container-low transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Force Ledger Sync</span>
+</button>
+</div>
+</div>
+<!-- Empty State 3: No Exam Submissions Found -->
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col items-center text-center justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="w-full flex justify-end">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Saturday Trials</span>
+</div>
+<div class="my-space-md flex flex-col items-center max-w-sm">
+<div class="w-16 h-16 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-tertiary mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[36px]">assignment_turned_in</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">No Saturday Mock Trials Scheduled</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Upcoming Pure Math Paper II trial begins Saturday at 08:00 AM under synchronous invigilation.
+            </p>
+</div>
+<div class="w-full flex flex-col gap-space-xs pt-space-md">
+<button class="w-full h-10 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container shadow-sm transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Download Syllabus Revision Guide</span>
+</button>
+<button class="w-full h-10 px-4 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">event</span>
+<span>Sync with Google Calendar</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION C: FORM INPUT & VALIDATION MATRIX -->
+<!-- ========================================== -->
+<section class="catalog-section flex flex-col gap-space-md" id="section-validation">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Section 03 // Data Intake Architecture</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Form Input &amp; Forensic Validation Matrix</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant feedback • Multi-modal math • NIC verification</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- State 1: Inactive / Default State -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold">National Identity Card (NIC)</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Default / Inactive</span>
+</div>
+<div class="relative">
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none transition-all placeholder:text-outline" placeholder="e.g. 200578401923" type="text"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enter 12-digit digital NIC or 9-digit + V</span>
+</div>
+<!-- State 2: Focus / Active Glow State -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-primary font-semibold">Student Contact WhatsApp</label>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Focused / Typing</span>
+</div>
+<div class="relative">
+<div class="absolute left-3 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant font-semibold">
+                +94
+              </div>
+<input class="w-full h-11 pl-12 pr-3.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-md outline-none transition-all" type="text" value="77 123 "/>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-primary animate-ping"></div>
+</div>
+<span class="font-body-sm text-body-sm text-primary">Awaiting 7 more digits for OTP verification</span>
+</div>
+<!-- State 3: Validated / Success State -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold">A/L Index Registration</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Valid State</span>
+</div>
+<div class="relative">
+<input class="w-full h-11 pl-3.5 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none" readonly="" type="text" value="200578401923"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-primary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center gap-1.5 text-primary">
+<span class="font-body-sm text-body-sm font-semibold">Gov Verified • MOE Database Sync Match</span>
+</div>
+</div>
+<!-- State 4: Error / Invalid State -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-error font-semibold">National Identity Card (NIC)</label>
+<span class="font-label-sm text-label-sm text-error font-semibold">Error State</span>
+</div>
+<div class="relative">
+<input class="w-full h-11 pl-3.5 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none" type="text" value="9840192"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-error text-[20px]">cancel</span>
+</div>
+<span class="font-body-sm text-body-sm text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">error</span>
+              Invalid Sri Lankan NIC format. Must be 12 digits or 9 digits followed by V/X.
+            </span>
+</div>
+<!-- State 5: Disabled / Locked Multi-Tenant Code -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant font-semibold">Apex Combined Maths Institute Code</label>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tenant Locked</span>
+</div>
+<div class="relative">
+<input class="w-full h-11 pl-10 pr-3.5 rounded-lg bg-surface-container text-on-surface-variant font-body-md text-body-md cursor-not-allowed select-none" disabled="" type="text" value="APX-COL-MATHS-2026"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">lock</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Assigned by institutional principal via SSO</span>
+</div>
+<!-- State 6: Password Field with Live Entropy Meter -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Student Portal Password</label>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold">Medium Security</span>
+</div>
+<div class="relative">
+<input class="w-full h-11 pl-3.5 pr-10 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none" id="pwd-field" type="password" value="Kavindu@2026"/>
+<button class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface text-[20px]" onclick="togglePasswordVisibility()" type="button">visibility</button>
+</div>
+<!-- Strength Bar -->
+<div class="flex items-center gap-1.5 mt-1">
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-primary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-tertiary-container"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-container-high"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-1 font-semibold">Fair (3/4)</span>
+</div>
+</div>
+</div>
+<!-- State 7: Multimodal Math Latex Input Engine -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">functions</span>
+<span class="font-title text-title text-on-surface">Interactive Pure Maths KaTeX Evaluator</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-mono">LaTeX Render Engine Ready</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Raw Formula Source</span>
+<div class="w-full p-3 rounded-lg bg-surface-container-lowest font-mono text-body-sm text-primary shadow-inner">
+                \int_{0}^{\pi/2} \sin(x) \, dx = \left[ -\cos(x) \right]_{0}^{\pi/2} = -0 - (-1) = 1
+              </div>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Formatted Hardware-Accelerated Output</span>
+<div class="w-full p-3 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between">
+<div class="flex items-baseline gap-2 font-serif text-title text-on-surface italic">
+<span>∫<sub>0</sub><sup>π/2</sup> sin(x) dx = [-cos(x)]<sub>0</sub><sup>π/2</sup> = 1</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-sans font-semibold">QED Valid</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION D: FORENSIC ERROR & RESILIENCE -->
+<!-- ========================================== -->
+<section class="catalog-section flex flex-col gap-space-md" id="section-errors">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-error uppercase font-bold tracking-widest">Section 04 // Resilient Failovers</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Forensic Error Handlers &amp; Gateway Recovery</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Engineered for localized Sri Lankan network anomalies</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Error 1: Network / Offline Gateway Timeout -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start gap-space-sm mb-space-md">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[24px]">signal_cellular_connected_no_internet_4_bar</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">SMS Timeout</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">ERR-GW-504</span>
+</div>
+<h3 class="font-title text-title text-on-surface mt-1">Dialog / Mobitel SMS Gateway Unreachable</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            The localized OTP dispatch pipeline experienced a carrier routing delay. Secondary SMS dispatch queued. You can safely fallback to WhatsApp instant verification.
+          </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between mb-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Automated retry countdown:</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold" id="retry-timer">14s</span>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-xs">
+<button class="w-full sm:flex-1 h-10 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Retry SMS</span>
+</button>
+<button class="w-full sm:flex-1 h-10 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span>WhatsApp Bot</span>
+</button>
+</div>
+</div>
+<!-- Error 2: OCR Bank Slip Distortion -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start gap-space-sm mb-space-md">
+<div class="w-10 h-10 rounded-xl bg-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[24px]">document_scanner</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">OCR Failure</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">OCR-BLUR-701</span>
+</div>
+<h3 class="font-title text-title text-on-surface mt-1">Bank Slip Unreadable or Stamp Obscured</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            Teller circular red stamp obscures critical transaction digits (<code class="px-1 py-0.5 rounded bg-surface-container text-on-surface font-mono font-semibold">SL-LRN-9021?</code>). OCR confidence score: 41% (Threshold: 85%).
+          </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1 mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Diagnostic Tip:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Please upload a flat, high-contrast photo under natural light without specular reflection.</span>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-xs">
+<button class="w-full sm:flex-1 h-10 px-3 rounded-lg bg-error text-on-error font-label-md text-label-md hover:opacity-90 shadow-sm transition-all flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>Re-take Photo</span>
+</button>
+<button class="w-full sm:flex-1 h-10 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">person_check</span>
+<span>Escalate to Cashier</span>
+</button>
+</div>
+</div>
+<!-- Error 3: Anti-Cheat Breach Modal Variant -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start gap-space-sm mb-space-md">
+<div class="w-10 h-10 rounded-xl bg-inverse-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary-fixed text-[24px]">visibility_off</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm font-bold uppercase tracking-wider">Breach Alert</span>
+<span class="font-label-sm text-label-sm text-error font-mono">VIOLATION 1 OF 3</span>
+</div>
+<h3 class="font-title text-title text-on-surface mt-1">Full-Screen Focus Lost During Trial</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+            Tab switch or window defocus detected during the active Pure Maths Paper II mock examination. The proctor log has recorded window detachment duration: <strong>3.4 seconds</strong>.
+          </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Auto-Lock Action</span>
+<span class="font-label-sm text-label-sm text-error font-bold">2 Warnings Remaining</span>
+</div>
+<button class="w-full h-10 px-4 rounded-lg bg-inverse-surface text-inverse-on-surface font-label-lg text-label-lg hover:opacity-90 shadow-md transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+<span>Resume &amp; Re-lock Screen</span>
+</button>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION E: SUCCESS FEEDBACK & ENTITLEMENTS -->
+<!-- ========================================== -->
+<section class="catalog-section flex flex-col gap-space-md" id="section-success">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Section 05 // Entitlement Fulfillment</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Verified Transaction Receipt &amp; Access Unlocks</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cryptographic SHA-256 Ledger Audit Validated</span>
+</div>
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col lg:flex-row items-stretch justify-between gap-space-xl relative overflow-hidden">
+<!-- Left Side: Transaction Meta & Student Badge -->
+<div class="flex-1 flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-[28px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Bank Deposit Approved &amp; Active</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Transaction Hash: <strong class="font-mono text-on-surface">#MB-TXN-984210-COL</strong></span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mt-2">
+              Payment voucher verified for <strong>Kavindu Nirmal Perera</strong> (NIC: 200578401923). All multi-tenant learning entitlements for the <strong>2026 Combined Maths Comprehensive Batch</strong> have been provisioned across physical and virtual gateways.
+            </p>
+</div>
+<!-- Unlocked Entitlements Triplet -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">nfc</span>
+<span class="font-label-md text-label-md font-semibold">Rotary Hall NFC</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Physical Turnstile Pass Active</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Colombo 04 Gates 1 &amp; 3</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">play_circle</span>
+<span class="font-label-md text-label-md font-semibold">1080p DRM Stream</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Cloudflare Stream Active</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Watermarked Session Key</span>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+<span class="font-label-md text-label-md font-semibold">Tute Courier Dispatch</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">PromptXpress Waybill</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tracking #PX-4902-LK</span>
+</div>
+</div>
+</div>
+<!-- Right Side: Official Receipt Snippet Card -->
+<div class="w-full lg:w-80 p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between shrink-0 shadow-inner">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Official Payment Slip</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">PAID</span>
+</div>
+<div class="flex flex-col gap-1 py-space-sm">
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Tuition Base:</span>
+<span class="font-semibold text-on-surface">LKR 4,500.00</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Courier Pack &amp; Bind:</span>
+<span class="font-semibold text-on-surface">LKR 450.00</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Digital Lab Access:</span>
+<span class="font-semibold text-primary">FREE</span>
+</div>
+<div class="h-px bg-outline-variant my-1"></div>
+<div class="flex justify-between font-title text-title text-on-surface">
+<span>Total Settled:</span>
+<span class="text-primary font-bold">Rs. 4,950.00</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-md">
+<button class="w-full h-10 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container shadow-sm transition-all flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download PDF Receipt</span>
+</button>
+<button class="w-full h-10 px-3 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container transition-all flex items-center justify-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">video_library</span>
+<span>Launch Course Player</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SECTION F: INTERACTIVE BUTTONS & BADGES -->
+<!-- ========================================== -->
+<section class="catalog-section flex flex-col gap-space-md" id="section-buttons">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Section 06 // Action Matrix &amp; Status Taxonomy</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Buttons, Status Chips &amp; Interactive Variants</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Haptic touch sizes • Responsive 44px bounds</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-xl">
+<!-- Button Hierarchy Row -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Hierarchy Variants (Default / Hover Simulation)</span>
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- Primary Action -->
+<button class="h-10 px-5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container shadow-sm transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Primary Solid</span>
+</button>
+<!-- Secondary Institutional Navy -->
+<button class="h-10 px-5 rounded-lg bg-inverse-surface text-inverse-on-surface font-label-lg text-label-lg hover:opacity-90 shadow-sm transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">publish</span>
+<span>Publish Course</span>
+</button>
+<!-- Tertiary / Soft -->
+<button class="h-10 px-5 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Filter Options</span>
+</button>
+<!-- Destructive Danger -->
+<button class="h-10 px-5 rounded-lg bg-error-container text-on-error-container font-label-lg text-label-lg hover:bg-error hover:text-on-error transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+<span>Revoke Enrollment</span>
+</button>
+<!-- WhatsApp Green -->
+<button class="h-10 px-5 rounded-lg bg-[#25D366] text-white font-label-lg text-label-lg hover:opacity-90 shadow-sm transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp Direct</span>
+</button>
+<!-- Golden Milestone Achievement -->
+<button class="h-10 px-5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-lg text-label-lg font-bold hover:bg-tertiary-fixed-dim shadow-sm transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span>Issue Certificate</span>
+</button>
+</div>
+</div>
+<!-- Button States Row (Loading, Disabled, Active) -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">State Variations (Disabled, Busy Spinner, Active Focus)</span>
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- Disabled -->
+<button class="h-10 px-5 rounded-lg bg-surface-container text-outline font-label-lg text-label-lg cursor-not-allowed select-none flex items-center gap-2" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+<span>Disabled Action</span>
+</button>
+<!-- Loading Spinner State -->
+<button class="h-10 px-5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg opacity-90 cursor-wait shadow-sm flex items-center gap-2" type="button">
+<div class="w-4 h-4 rounded-full border-2 border-on-primary/30 border-t-on-primary animate-spin"></div>
+<span>Adjudicating Slip...</span>
+</button>
+<!-- Focus Emulated -->
+<button class="h-10 px-5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-md flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Active Focus Mode</span>
+</button>
+</div>
+</div>
+<!-- Status Badges & Academic Taxonomies -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Sri Lankan Academic Status Badges</span>
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              In Good Standing (ගෙවීම් සම්පූර්ණයි)
+            </span>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              Under Review (සමාලෝචනය වෙමින්)
+            </span>
+<span class="px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+              Fee Overdue (වාරිකය ප්‍රමාදයි)
+            </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+              Verified Cashier Override
+            </span>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">translate</span>
+              Bilingual EN/SI Active
+            </span>
+<span class="px-3 py-1 rounded-full bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-error">security</span>
+              Anti-Cheat Active (ProctorCam LK)
+            </span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Vanila Micro-Interaction Script for Tab Filtering, Locales & Passwords -->
+<script>
+    function filterCatalog(category, el) {
+      // Update pill styling
+      document.querySelectorAll('.filter-pill').forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        btn.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      el.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      el.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+      // Filter sections
+      const sections = document.querySelectorAll('.catalog-section');
+      sections.forEach(sec => {
+        if (category === 'all') {
+          sec.classList.remove('hidden');
+        } else {
+          if (sec.id.includes(category)) {
+            sec.classList.remove('hidden');
+          } else {
+            sec.classList.add('hidden');
+          }
+        }
+      });
+    }
+
+    function togglePasswordVisibility() {
+      const pwd = document.getElementById('pwd-field');
+      if (pwd) {
+        pwd.type = pwd.type === 'password' ? 'text' : 'password';
+      }
+    }
+
+    function setLocale(lang) {
+      const btnEn = document.getElementById('btn-locale-en');
+      const btnSi = document.getElementById('btn-locale-si');
+      if (lang === 'si') {
+        btnSi.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnSi.classList.remove('text-on-surface-variant');
+        btnEn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnEn.classList.add('text-on-surface-variant');
+      } else {
+        btnEn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnEn.classList.remove('text-on-surface-variant');
+        btnSi.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnSi.classList.add('text-on-surface-variant');
+      }
+    }
+
+    // Countdown mock ticker
+    let timeLeft = 14;
+    setInterval(() => {
+      const timer = document.getElementById('retry-timer');
+      if (timer) {
+        timeLeft = timeLeft > 1 ? timeLeft - 1 : 30;
+        timer.textContent = timeLeft + 's';
+      }
+    }, 1000);
+  </script>
+</div></main></div></body></html>

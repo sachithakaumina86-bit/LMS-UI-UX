@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container":"#eaedff","tertiary":"#7f5300","on-primary-container":"#fefcff","outline":"#717785","surface-tint":"#005cba","tertiary-container":"#a06900","surface-dim":"#cfd9fb","surface-container-lowest":"#ffffff","secondary-container":"#b5c5fd","on-error-container":"#93000a","surface-bright":"#faf8ff","error":"#ba1a1a","secondary-fixed":"#dbe1ff","on-tertiary-fixed-variant":"#633f00","on-primary-fixed-variant":"#00458f","secondary-fixed-dim":"#b5c5fd","inverse-primary":"#abc7ff","on-background":"#101b34","on-surface-variant":"#414754","secondary":"#4d5c8e","on-error":"#ffffff","inverse-surface":"#25304a","on-secondary-fixed":"#041847","surface-variant":"#d9e2ff","tertiary-fixed-dim":"#ffb952","on-tertiary-fixed":"#291800","primary-fixed":"#d7e3ff","primary-container":"#0072e4","surface":"#faf8ff","on-primary-fixed":"#001b3f","on-surface":"#101b34","outline-variant":"#c1c6d6","on-secondary":"#ffffff","surface-container-high":"#e1e7ff","on-primary":"#ffffff","primary":"#005ab6","tertiary-fixed":"#ffddb4","on-secondary-container":"#405081","surface-container-low":"#f2f3ff","surface-container-highest":"#d9e2ff","primary-fixed-dim":"#abc7ff","on-secondary-fixed-variant":"#354575","on-tertiary":"#ffffff","inverse-on-surface":"#eef0ff","on-tertiary-container":"#fffbff","background":"#faf8ff","error-container":"#ffdad6"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-sm":"0.5rem","margin-mobile":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","gutter-mobile":"1rem",gutter:"1.5rem",margin:"2rem","space-md":"1rem","space-xl":"2rem"},fontFamily:{"headline-md":["Plus Jakarta Sans"],title:["Plus Jakarta Sans"],"body-sm":["Inter"],"label-lg":["Inter"],"label-sm":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],display:["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"]},fontSize:{"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],title:["16px",{lineHeight:"24px",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.015em",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.015em",fontWeight:"700"}],display:["44px",{lineHeight:"52px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"display-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"800"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-surface-container-lowest"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col"><span class="font-title text-title text-on-surface tracking-tight leading-none">MindBridge</span><span class="font-label-sm text-label-sm text-tertiary font-bold tracking-wider uppercase mt-space-xs">Enterprise LMS</span></div></div><div class="mx-space-md my-space-sm p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-label-lg text-label-lg shrink-0">A</div><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate font-semibold">Apex Combined Math</span><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>Tenant Node</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div><div class="px-space-md py-space-xs"><span class="px-space-sm font-label-sm text-label-sm text-outline uppercase tracking-wider">Academic Suite</span></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span>Dashboard / Hub</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="courses-and-lessons" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Courses &amp; Lessons</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="examinations" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Examinations</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="assignments-and-homework" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Assignments &amp; HW</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="gradebook" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Gradebook</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-2.5 transition-all bg-primary-container text-on-primary-container font-semibold rounded-xl" data-path="notifications-and-messages" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">forum</span><span>Messages &amp; Alerts</span></div><span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm">5</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></a></nav></div><div class="p-space-md"><div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[20px]">cloud_sync</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface font-semibold">Gateway Sync</span><span class="font-label-sm text-label-sm text-outline">SMS / WhatsApp Live</span></div></div><span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md flex-1 max-w-md"><div class="w-full flex items-center gap-space-sm px-space-md py-2 rounded-xl bg-surface-container-low"><span class="material-symbols-outlined text-on-surface-variant text-[20px]">search</span><input class="w-full bg-transparent border-0 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search academic streams, alerts, tutors..." type="text"/></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface font-medium">Apex Combined Math (Colombo)</span></div><div class="relative flex items-center"><button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span></button><span class="absolute top-1 right-1 w-5 h-5 rounded-full bg-error text-on-error font-label-sm text-label-sm flex items-center justify-center font-bold">5</span></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-semibold">Prof. Gamage</span><span class="font-label-sm text-label-sm text-outline">Senior Instructor</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- Top Command Ribbon & Channel Navigation -->
+<section class="p-margin pb-0 space-y-space-md">
+<!-- Breadcrumb & Primary Context Banner -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="text-primary font-bold">Apex Combined Mathematics</span>
+<span>/</span>
+<span>SL-LRN-89401</span>
+<span>/</span>
+<span class="text-on-surface">Kavindu Nirmal Perera (Royal College '25)</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Communications &amp; Academic Dispatch
+        </h1>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- WhatsApp Guardian Sync Status Badge -->
+<div class="flex items-center gap-space-xs px-space-md py-2 rounded-xl bg-surface-container-low shadow-sm">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+</span>
+<div class="flex flex-col leading-none">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-emerald-600">verified_user</span>
+              Guardian Sync Active
+            </span>
+<span class="font-body-sm text-body-sm text-outline font-mono">+94 77 •••• 912</span>
+</div>
+</div>
+<!-- Mark All as Read Button -->
+<button class="px-space-md py-2 rounded-xl bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Mark All Read</span>
+</button>
+<!-- Primary Action Trigger -->
+<button class="px-space-lg py-2 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-all flex items-center gap-2 shadow-md">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ New Inquiries / Ask Tutor</span>
+</button>
+</div>
+</div>
+<!-- Segmented Channel Filter Bar -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-xs text-nowrap scrollbar-none">
+<button class="flex items-center gap-space-sm px-space-md py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-semibold shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">inbox</span>
+<span>All Inquiries &amp; Broadcasts</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-primary text-[11px] font-bold">5</span>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">school</span>
+<span>Direct Tutor &amp; TA Chat</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold">2</span>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+<span>Institute Announcements</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[11px] font-bold">1</span>
+</button>
+<button class="flex items-center gap-space-sm px-space-md py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant font-label-md text-label-md transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>Automated SMS/WhatsApp Gateway Logs</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant text-[11px] font-bold">2</span>
+</button>
+</div>
+</section>
+<!-- Main Multi-Column Split Console -->
+<section class="p-margin grid grid-cols-12 gap-gutter items-start">
+<!-- LEFT PANEL: Thread Stream & Dispatch Queue (4 Cols / ~380px Desktop) -->
+<div class="col-span-12 lg:col-span-4 xl:col-span-4 flex flex-col gap-space-md">
+<!-- Search & Status Filter Filter Bar -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm space-y-space-sm">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search conversations, announcements, tutors..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs overflow-x-auto scrollbar-none">
+<button class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold">All</button>
+<button class="px-3 py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Unread (5)</button>
+<button class="px-3 py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">push_pin</span> Pinned
+          </button>
+<button class="px-3 py-1 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Flagged</button>
+</div>
+</div>
+<!-- Urgent Pinned Institute Broadcast Card -->
+<div class="p-space-md rounded-2xl bg-gradient-to-br from-tertiary-fixed/30 to-surface-container-low shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-tertiary-container/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-2 mb-2">
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-[11px] font-bold">
+<span class="material-symbols-outlined text-[13px] animate-pulse">crisis_alert</span>
+            HIGH PRIORITY BROADCAST
+          </div>
+<span class="font-body-sm text-[11px] text-tertiary font-medium">Today 08:30 AM</span>
+</div>
+<h3 class="font-title text-title text-on-surface font-bold leading-snug">
+          Rotary Hall &amp; Web Broadcast: Unit 04 Differential Equations
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+          Live stream starts this Saturday at 08:00 AM SLST. Download your printed tute module 4 beforehand from the student lounge.
+        </p>
+<div class="mt-3 flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-tertiary text-on-tertiary font-label-sm text-[11px] flex items-center justify-center font-bold">A</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Apex Admin &amp; Eng. Kusal S.</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Feed / Conversation Threads List -->
+<div class="space-y-space-sm">
+<!-- Thread 1: Selected / Active Chat -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-md relative cursor-pointer ring-2 ring-primary">
+<div class="flex items-start gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-12 h-12 rounded-xl object-cover bg-surface-container" data-alt="Distinguished Sri Lankan senior mathematics lecturer and civil engineer wearing professional formal attire in front of advanced calculus chalkboard in lecture studio, natural warm lighting, professional headshot photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRpu37rko8Clk32ejAFA4Q8NtThaKSeheKIWYONfvcHLhViSof8qGwUSOPpMvh18qDtdONqjICPXUD4BcA32OUhR0j56bY3PlFMv21A2u7v7ceCCug6A1wstl-mG5h3K0UqzMPX6YYs-IRWaZquzGSGhfI3bul_dgeWKUL5fOUFtyk5lmH742ITEksYAcDUJ9LsUpyDcar8Kki8csZnY4ioMnUH5JfldgYxyQQ-so"/>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between mb-0.5">
+<span class="font-title text-label-lg text-primary font-bold truncate">Eng. Kusal Senaratne</span>
+<span class="font-body-sm text-[11px] text-primary font-bold">15m ago</span>
+</div>
+<div class="font-label-sm text-[11px] text-tertiary font-semibold uppercase tracking-wider mb-1">Head Master Tutor</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium truncate">
+                Re: Complex Numbers Root Conjugates question in Q18 assignment.
+              </p>
+<div class="flex items-center justify-between mt-2 pt-1">
+<span class="inline-flex items-center gap-1 font-body-sm text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary">mic</span> Voice Note (0:48)
+                </span>
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary text-[11px] font-bold flex items-center justify-center">1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Thread 2: Sandun TA -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm cursor-pointer transition-all">
+<div class="flex items-start gap-space-sm">
+<div class="relative shrink-0">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center font-title text-title font-bold">
+                ST
+              </div>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-surface-dim ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between mb-0.5">
+<span class="font-title text-label-lg text-on-surface font-semibold truncate">Sandun TA (Marking Panel)</span>
+<span class="font-body-sm text-[11px] text-outline">2h ago</span>
+</div>
+<div class="font-label-sm text-[11px] text-outline font-medium uppercase tracking-wider mb-1">Pure Maths Squad</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                Statics Drill 02 marked. Page 4 resubmission cleared with 85/100.
+              </p>
+<div class="mt-2 flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-on-surface-variant text-[11px] font-medium">Assignment Cleared</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Thread 3: MindBridge Billing Gateway -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm cursor-pointer transition-all">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between mb-0.5">
+<span class="font-title text-label-lg text-on-surface font-semibold truncate">MindBridge Billing Gateway</span>
+<span class="font-body-sm text-[11px] text-outline">Yesterday</span>
+</div>
+<div class="font-label-sm text-[11px] text-emerald-600 font-medium uppercase tracking-wider mb-1">Finance &amp; Access</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                Commercial Bank Slip #CMB-89401 Approved. Universal Turnstile unlocked.
+              </p>
+<div class="mt-2 flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 text-[11px] font-bold">LKR 6,500 Cleared</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Thread 4: Exam Sentinel Alert -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm cursor-pointer transition-all">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between mb-0.5">
+<span class="font-title text-label-lg text-on-surface font-semibold truncate">Exam Sentinel Alert</span>
+<span class="font-body-sm text-[11px] text-outline">2 days ago</span>
+</div>
+<div class="font-label-sm text-[11px] text-tertiary font-bold uppercase tracking-wider mb-1">Rank Analytics</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                Unit 03 Speed Exam (Pure Maths) Results Published. Your Score: 92/100.
+              </p>
+<div class="mt-2 flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-tertiary font-bold text-[11px]">Island Rank #14</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Thread 5: SMS Gateway Log -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-container-low shadow-sm cursor-pointer transition-all">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">sms</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-baseline justify-between mb-0.5">
+<span class="font-title text-label-lg text-on-surface font-semibold truncate">Dialog / Mobitel Gateway</span>
+<span class="font-body-sm text-[11px] text-outline">3 days ago</span>
+</div>
+<div class="font-label-sm text-[11px] text-outline font-medium uppercase tracking-wider mb-1">Parental Audit</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                Delivery Report: Monthly attendance summary sent to Parent WhatsApp (+94 71 987 6543).
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- CENTER PANEL: Active Conversation & Interactive Tutor Dispatch (5 Cols Desktop) -->
+<div class="col-span-12 lg:col-span-8 xl:col-span-5 flex flex-col gap-space-md">
+<!-- Conversation Master Header -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-14 h-14 rounded-2xl object-cover bg-surface-container shadow-sm" data-alt="Portrait photo of prominent Sri Lankan engineering lecturer smiling warmly with lecture studio monitors and combined math graphs in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhi0YLSZwuQRLqkdtSOn7tGpFtOALwRKI_PyTdjH11NQlGsSOMxu7SDgqcd1w61AAkhZtG_aYhrixgpNIH_xkFUzqCEVFcb7MTVlavZ9nnwnu-qlyMvojHNcQfje40NAJc7YOVCyT9pZX04c4PGT526l85kFzytZMHX7459vj9eY6FcdkMlZbEfAJj_bZYFCMgUPCKEmgWo9nbRJjqD8rBWbbqf4v-mHEh9-67_JM"/>
+<span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Eng. Kusal Senaratne</span>
+<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold">Studio 01 Live</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">B.Sc. Eng Hons, University of Moratuwa • Head Master Tutor</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-primary text-[11px] font-semibold">Batch 2025 Theory (Colombo Hub)</span>
+<span class="px-2 py-0.5 rounded-md bg-surface-container-low text-tertiary text-[11px] font-semibold">Combined Mathematics</span>
+</div>
+</div>
+</div>
+<!-- Utility Dropdown Actions -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>1-on-1 Doubt Clinic</span>
+</button>
+<button class="w-10 h-10 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-all">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Live Thread Message History Console -->
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-lg max-h-[580px] overflow-y-auto">
+<!-- Contextual Separator -->
+<div class="flex items-center gap-3">
+<div class="h-[1px] flex-1 bg-surface-container-high"></div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Assignment 04 • Complex Polynomials Thread</span>
+<div class="h-[1px] flex-1 bg-surface-container-high"></div>
+</div>
+<!-- Student Outbound Bubble -->
+<div class="flex flex-col items-end self-end max-w-[85%] space-y-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm text-outline">Today 10:14 AM</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">You (Kavindu N.)</span>
+</div>
+<div class="p-space-md rounded-2xl rounded-tr-sm bg-primary text-on-primary shadow-sm space-y-2">
+<p class="font-body-md text-body-md leading-relaxed">
+              Ayubowan Sir, regarding Assignment 04 Q18 on Quartic Polynomials: when the coefficients are real and we are given root α<sub>1</sub> = 1 + <em>i</em>, can we assume the conjugate 1 - <em>i</em> is also a root directly without deriving step-by-step in the structured exam?
+            </p>
+<div class="flex items-center justify-end gap-1 text-[11px] opacity-80 font-mono">
+<span>Delivered via MindBridge Web Portal</span>
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+</div>
+</div>
+</div>
+<!-- Tutor Inbound Response -->
+<div class="flex flex-col items-start self-start max-w-[90%] space-y-2">
+<div class="flex items-center gap-2 mb-1">
+<img class="w-6 h-6 rounded-full object-cover" data-alt="Micro avatar of Eng. Kusal Senaratne with blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANvDpf87rBZXTDHoJhmwtEtSjYMyLaV6jHORpfTClU0M063NcrBs4jkuQtOXTJJoy9jlJ9XqDrksNcuQ-bQdkhkB2_cwdIPkRCkDkN47Ov9_RNAPtbCqiU0AG0qWGArnDK8Jm-eEPmTfkddMsYH049crPwBMwl2PHs8HCjruvO9GtxtE8gvzc0gRZEodDQFkOOZbz5PQgMmsP41hhaOPy9ZxApQS0ogZT31O7it5c"/>
+<span class="font-label-md text-label-md font-bold text-on-surface">Eng. Kusal Senaratne</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">• Master Tutor</span>
+<span class="font-body-sm text-[11px] text-outline ml-auto">10:28 AM</span>
+</div>
+<!-- Tutor Audio Note Component -->
+<div class="w-full p-space-md rounded-2xl rounded-tl-sm bg-surface-container-low shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">graphic_eq</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Voice Note: Conjugate Root Theorem Examination Guidance</span>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-outline">0:48 / 0:48</span>
+</div>
+<!-- Waveform & Audio Player Controller -->
+<div class="flex items-center gap-3">
+<button class="w-10 h-10 rounded-full bg-primary hover:bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[22px]">play_arrow</span>
+</button>
+<!-- SVG Audio Waveform Visualizer -->
+<div class="flex-1 flex items-center h-8 gap-1 px-2 bg-surface-container rounded-lg">
+<span class="w-1 h-3 rounded-full bg-primary"></span>
+<span class="w-1 h-5 rounded-full bg-primary"></span>
+<span class="w-1 h-7 rounded-full bg-primary"></span>
+<span class="w-1 h-4 rounded-full bg-primary"></span>
+<span class="w-1 h-6 rounded-full bg-primary"></span>
+<span class="w-1 h-8 rounded-full bg-primary"></span>
+<span class="w-1 h-5 rounded-full bg-primary"></span>
+<span class="w-1 h-4 rounded-full bg-primary"></span>
+<span class="w-1 h-7 rounded-full bg-primary"></span>
+<span class="w-1 h-3 rounded-full bg-primary"></span>
+<span class="w-1 h-5 rounded-full bg-primary"></span>
+<span class="w-1 h-6 rounded-full bg-outline-variant"></span>
+<span class="w-1 h-4 rounded-full bg-outline-variant"></span>
+<span class="w-1 h-7 rounded-full bg-outline-variant"></span>
+<span class="w-1 h-5 rounded-full bg-outline-variant"></span>
+<span class="w-1 h-3 rounded-full bg-outline-variant"></span>
+<span class="w-1 h-6 rounded-full bg-outline-variant"></span>
+<span class="w-1 h-4 rounded-full bg-outline-variant"></span>
+<span class="w-1 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</button>
+</div>
+</div>
+<!-- Tutor In-depth Text Reply -->
+<div class="p-space-md rounded-2xl bg-surface-container-low shadow-sm space-y-3">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Yes Kavindu, under the G.C.E. A/L Marking Scheme, you may state: <em>“By the Complex Conjugate Root Theorem, since P(x) has real coefficients, 1 − i is also a root”</em>.
+            </p>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest font-mono text-body-sm text-primary font-medium">
+              Factor derivation required: [x - (1+i)][x - (1-i)] = x² - 2x + 2
+            </div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              However, for full 25 marks in Paper II, always show the quadratic factor expansion before initiating polynomial long division. Keep up the high standard!
+            </p>
+<!-- Interactive PDF Marking Formula Attachment -->
+<div class="mt-2 p-space-sm rounded-xl bg-surface-container-lowest flex items-center justify-between gap-space-sm hover:shadow-sm transition-all">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-lg bg-error/10 text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Master Scheme Extract: Q18_Marking_Rubric.pdf</span>
+<span class="font-body-sm text-body-sm text-outline">1.2 MB • Verified Official Scheme</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary font-label-sm text-label-sm transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Preview</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between text-outline font-label-sm text-[11px] pt-1">
+<span>Apex Combined Maths Verification Stamp #2025-A04</span>
+<span>10:28 AM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Rich Interactive Student Reply Composer -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-md space-y-space-sm">
+<!-- Quick Math Symbols Pallet Ribbon -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold mr-1">Math Quick Insert:</span>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface font-mono text-body-sm transition-all">∑</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface font-mono text-body-sm transition-all">∫</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface font-mono text-body-sm transition-all">α</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface font-mono text-body-sm transition-all">β</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface font-mono text-body-sm transition-all">π</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface font-mono text-body-sm transition-all">√</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface font-mono text-body-sm transition-all">∞</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface font-mono text-body-sm transition-all">θ</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-primary-container hover:text-on-primary-container text-on-surface font-mono text-body-sm transition-all">±</button>
+<button class="px-2 py-1 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm ml-auto flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">translate</span>
+<span>Sinhala IME (ක්‍රියාකාරීයි)</span>
+</button>
+</div>
+<!-- Input Textarea with Multi-Language / Script Support -->
+<div class="relative">
+<textarea class="w-full p-space-md rounded-xl bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none" placeholder="Type your query in English or Sinhala (සිංහල මාධ්‍යයෙන්)... You can also paste latex or equations." rows="3"></textarea>
+</div>
+<!-- Composer Bottom Action Bar -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-space-xs">
+<button class="w-10 h-10 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-all" title="Attach Handwritten Scan / Image">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+<button class="w-10 h-10 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-all" title="Record Voice Note">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+<button class="w-10 h-10 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface-variant flex items-center justify-center transition-all" title="Drawing / Math Canvas">
+<span class="material-symbols-outlined text-[20px]">draw</span>
+</button>
+</div>
+<!-- Dual-Target Send Action -->
+<div class="flex items-center">
+<button class="px-space-lg py-2.5 rounded-l-xl bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-all flex items-center gap-2 shadow-sm">
+<span>Send Query</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="px-2 py-2.5 rounded-r-xl bg-primary-container text-on-primary-container hover:bg-primary transition-all shadow-sm" title="Dispatch Target Options">
+<span class="material-symbols-outlined text-[18px]">arrow_drop_down</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Institutional Dispatch Widgets, Gateway Monitor & Triage (3 Cols Desktop) -->
+<div class="col-span-12 lg:col-span-12 xl:col-span-3 flex flex-col gap-space-md">
+<!-- Institutional Hub Info & Bridge Motif Card -->
+<div class="p-space-lg rounded-2xl rounded-tr-[28px] bg-gradient-to-br from-surface-container-highest to-surface-container-low shadow-sm relative overflow-hidden">
+<div class="absolute -right-10 -top-10 w-32 h-32 rounded-full bg-primary/10 blur-2xl"></div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-[22px]">corporate_fare</span>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Tenant Node Authority</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Apex Combined Maths</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Nugegoda &amp; Colombo Central Campuses. Direct digital linkage to Eng. Kusal Senaratne's academic core.
+        </p>
+<div class="mt-4 pt-3 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Active Academic Year: 2025</span>
+<span class="font-bold text-on-surface">Batch A-01</span>
+</div>
+</div>
+<!-- SMS & WhatsApp Carrier Gateway Live Audit Monitor -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<h5 class="font-title text-label-lg text-on-surface font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">cell_tower</span>
+            Telco Dispatch Pipeline
+          </h5>
+<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold">99.98% OK</span>
+</div>
+<div class="space-y-2 pt-1">
+<!-- Gateway Line 1: Dialog Axiata -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Dialog Axiata</span>
+<span class="font-body-sm text-[11px] text-outline">Latency: 142ms • SMS OTP/Push</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-600 font-bold">Online</span>
+</div>
+<!-- Gateway Line 2: SLT-Mobitel -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">SLT-Mobitel</span>
+<span class="font-body-sm text-[11px] text-outline">Latency: 168ms • Attendance Hook</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-600 font-bold">Online</span>
+</div>
+<!-- Gateway Line 3: WhatsApp Meta Cloud API -->
+<div class="p-2.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">WhatsApp Business API</span>
+<span class="font-body-sm text-[11px] text-outline">Guardian Broadcast Synced</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-600 font-bold">Active</span>
+</div>
+</div>
+</div>
+<!-- Quick Fast-Triage Academic Shortcuts -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm space-y-space-sm">
+<h5 class="font-title text-label-lg text-on-surface font-bold">Fast Student Triage</h5>
+<div class="space-y-1.5">
+<button class="w-full p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all flex items-center justify-between group text-left">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">upload_file</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Submit Slip Inquiry</span>
+<span class="font-body-sm text-[11px] text-outline">For pending bank turnstile activation</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform text-[18px]">chevron_right</span>
+</button>
+<button class="w-full p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all flex items-center justify-between group text-left">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">quiz</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Exam Resit Appeal</span>
+<span class="font-body-sm text-[11px] text-outline">Review marks or make-up session</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform text-[18px]">chevron_right</span>
+</button>
+<button class="w-full p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all flex items-center justify-between group text-left">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">local_shipping</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Request Physical Handout</span>
+<span class="font-body-sm text-[11px] text-outline">Courier via Pronto or PromptX</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Emergency Operational Hotline Card -->
+<div class="p-space-md rounded-2xl bg-surface-container-highest shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase">Apex Colombo Hotline</span>
+<span class="font-title text-title text-on-surface font-mono font-bold">+94 11 759 2000</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface hover:text-primary flex items-center justify-center shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</button>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

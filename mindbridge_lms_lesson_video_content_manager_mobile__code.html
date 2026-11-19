@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary": "#ffffff", "primary": "#005ab6", "on-tertiary-fixed-variant": "#633f00", "surface-container-high": "#e1e7ff", "outline": "#717785", "on-secondary-fixed-variant": "#354575", "on-tertiary-container": "#fffbff", "on-tertiary-fixed": "#291800", "secondary-fixed": "#dbe1ff", "tertiary": "#7f5300", "secondary-fixed-dim": "#b5c5fd", "surface-container-highest": "#d9e2ff", "on-primary-fixed-variant": "#00458f", "on-background": "#101b34", "surface-bright": "#faf8ff", "tertiary-fixed-dim": "#ffb952", "inverse-on-surface": "#eef0ff", "on-tertiary": "#ffffff", "outline-variant": "#c1c6d6", "on-error-container": "#93000a", "on-secondary-fixed": "#041847", "on-primary-container": "#fefcff", "secondary-container": "#b5c5fd", "background": "#faf8ff", "on-primary-fixed": "#001b3f", "tertiary-fixed": "#ffddb4", "on-primary": "#ffffff", "inverse-surface": "#25304a", "on-error": "#ffffff", "surface-container-low": "#f2f3ff", "surface-tint": "#005cba", "error-container": "#ffdad6", "surface-variant": "#d9e2ff", "error": "#ba1a1a", "primary-fixed-dim": "#abc7ff", "surface-dim": "#cfd9fb", "inverse-primary": "#abc7ff", "surface-container-lowest": "#ffffff", "surface": "#faf8ff", "tertiary-container": "#a06900", "on-surface": "#101b34", "primary-fixed": "#d7e3ff", "primary-container": "#0072e4", "surface-container": "#eaedff", "secondary": "#4d5c8e", "on-secondary-container": "#405081", "on-surface-variant": "#414754" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin": "2rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xl": "2rem", "space-md": "1rem", "gutter-mobile": "1rem" }, fontFamily: { "label-sm": ["Inter"], "label-md": ["Inter"], "title": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "display": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-lg": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"] }, fontSize: { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "title": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "display": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1"><span class="font-title text-title text-on-surface truncate">MindBridge</span><span class="px-1.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm truncate max-w-[130px]">Apex Combined Maths</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Eng. Kusal Senaratne • Lessons Manager</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary relative transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full pb-24 space-y-5 px-margin-mobile">
+<!-- Top Context Card & Stream Security Health -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_1px_3px_rgba(7,27,74,0.04),0_4px_12px_rgba(7,27,74,0.03)] border-t-[3px] border-primary relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm mb-3">
+<div class="flex-1 min-w-0">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm mb-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Apex Combined Mathematics (2025 A/L)
+        </span>
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Curriculum &amp; Video Content</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Stream CDN control, DRM protections &amp; lecture management</p>
+</div>
+<button class="h-10 px-3.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform flex-shrink-0" onclick="document.getElementById('upload-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>New</span>
+</button>
+</div>
+<!-- Storage & Security Health Grid -->
+<div class="grid grid-cols-2 gap-2 pt-2 border-t border-surface-container-high/60">
+<div class="bg-surface-container-low rounded-xl p-2.5">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-sm text-label-sm">Cloud Storage</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">42%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mb-1">
+<div class="bg-primary h-full rounded-full" style="width: 42%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>420 GB / 1 TB</span>
+<span class="text-on-surface font-medium">184 VODs</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-2.5 flex flex-col justify-between">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold">L3 DRM Shield</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span>Floating Watermark</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">SLT PeoTV • AWS CloudFront</span>
+</div>
+</div>
+</section>
+<!-- Filter & Module Bar -->
+<section class="space-y-2.5">
+<!-- Category Tabs Carousel -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 -mx-margin-mobile px-margin-mobile">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-sm">
+<span>All Lessons</span>
+<span class="bg-on-primary/20 px-1.5 py-0.2 rounded-full text-label-sm font-bold">184</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors">
+<span class="w-2 h-2 rounded-full bg-rose-500"></span>
+<span>Live Broadcasts</span>
+<span class="bg-surface-container-high px-1.5 py-0.2 rounded-full text-label-sm">2</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors">
+<span>Published VOD</span>
+<span class="bg-surface-container-high px-1.5 py-0.2 rounded-full text-label-sm">168</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap hover:bg-surface-container-high transition-colors">
+<span>Drafts</span>
+<span class="bg-surface-container-high px-1.5 py-0.2 rounded-full text-label-sm">14</span>
+</button>
+</div>
+<!-- Module Selector Dropdown Simulation -->
+<div class="flex items-center justify-between bg-surface-container-lowest rounded-xl p-2.5 shadow-[0_1px_3px_rgba(7,27,74,0.03)] border-l-4 border-tertiary">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[20px] flex-shrink-0">auto_stories</span>
+<div class="min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Module</p>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Unit 04: Complex Numbers &amp; De Moivre's Theorem</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">unfold_more</span>
+</button>
+</div>
+</section>
+<!-- Lesson Cards Feed -->
+<section class="space-y-4">
+<!-- Card 1: Featured Active Lesson (Complex Numbers) -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_1px_4px_rgba(7,27,74,0.06),0_6px_16px_rgba(7,27,74,0.04)] transition-all">
+<!-- Media Thumbnail with Bridge Arc -->
+<div class="relative w-full aspect-video bg-inverse-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High quality blackboard classroom video recording frame of Eng Kusal Senaratne explaining complex roots of unity with geometric Argand diagram and neon mathematical annotations in modern studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzzefRLiKTMcaj05_7HZyUn3zwteJfmpwXxYGv4pah-pB5vK00OZ2YynOhcU35mlzOI_M0OEEioxWhvAKh-y1kiN7lCJsWFtEY1MxjjEJr8Si0CwHSIfAl_ylBosX6GUOE40fMBlRNcbT_I2B19E5D1ap_cR07imrE3Fiq7OwOQOkUwKf98vbb0vwhveBp1BCqtSBfv-jqhRVUzee0edZCBgDSUzkNm8HoQb_pd2Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<!-- Live Preview Status Chips -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/90 text-white font-label-sm text-label-sm backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+            Published • DRM Shield
+          </span>
+</div>
+<div class="absolute top-3 right-3 flex items-center gap-1 bg-black/60 backdrop-blur-md px-2 py-0.5 rounded-md text-white font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-amber-400">hd</span>
+<span>1080p 60fps</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white">
+<div class="flex items-center gap-1.5 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">schedule</span>
+<span>1h 45m duration</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-highest/30 px-2 py-0.5 rounded backdrop-blur-sm text-slate-200">ID: MB-VOD-2025-048</span>
+</div>
+</div>
+<!-- Card Body Content -->
+<div class="p-space-md space-y-3">
+<div>
+<div class="flex items-center justify-between gap-2 mb-1">
+<span class="font-label-sm text-label-sm font-semibold text-primary uppercase">Lesson 14</span>
+<!-- Visibility switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+<span class="ml-1.5 font-label-sm text-label-sm text-on-surface-variant">Visible</span>
+</label>
+</div>
+<h2 class="font-title text-title text-on-surface line-clamp-2">Complex Numbers &amp; De Moivre's Theorem Application to Roots of Unity</h2>
+</div>
+<!-- Analytics Metric Micro-Bar -->
+<div class="grid grid-cols-3 gap-2 bg-surface-container-low rounded-xl p-2.5 text-center">
+<div>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">1,390</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Total Views</p>
+</div>
+<div class="border-x border-surface-container-high/70">
+<p class="font-headline-sm text-headline-sm text-tertiary font-bold">88%</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Avg Watch</p>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm text-secondary font-bold">42</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Tute Downloads</p>
+</div>
+</div>
+<!-- Management Actions -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="h-9 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px] text-primary">timer</span>
+<span>Timestamps (8)</span>
+</button>
+<button class="h-9 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors" onclick="toggleDrawer('handouts-drawer')">
+<span class="material-symbols-outlined text-[16px] text-tertiary">description</span>
+<span>Handouts (2 PDFs)</span>
+</button>
+</div>
+<button class="w-full h-9 rounded-lg bg-surface-container-low text-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container">
+<span class="material-symbols-outlined text-[16px]">how_to_reg</span>
+<span>View Student Attendance Log (418 attended)</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Published Lesson (Polar Coordinates) -->
+<article class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_1px_3px_rgba(7,27,74,0.04),0_4px_12px_rgba(7,27,74,0.03)] space-y-3">
+<div class="flex gap-3">
+<div class="relative w-28 h-20 rounded-xl overflow-hidden bg-inverse-surface flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Polar coordinates Argand graph on engineering graph paper with chalk sketches in online lecture studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM7oHcOYs3xNmCOZsULAXVX5_GWP9LkiHrLmw-Jj9flBbWO9tIyqyY3qreJuTnboXb3p-9RYOknO0b_lJDTR3GE2XB6LGgwNM5rLg3smOQnA2mU4UN6zWnKd7tLkVU5-etVqKM-lf6_Km0LG4LSwK5V-yBdbuO-Nxt5TyOk9w09nBUeRzJbppiNsx_72u9h0EOHilbfyroK13jPFDXz44gNgxaafx79WgFKciMRrI"/>
+<div class="absolute bottom-1 right-1 px-1.5 py-0.2 rounded bg-black/70 text-white font-label-sm text-[10px]">
+            55m
+          </div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Lesson 13</span>
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 font-label-sm text-[10px]">
+              Sync Verified
+            </span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold line-clamp-2">Modulus-Argument Form &amp; Polar Coordinates Fundamentals</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 truncate">1,410 Views • 94% Avg Watch</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-surface-container-low gap-2">
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+<span>Timestamps</span>
+</button>
+<button class="px-2.5 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span>CDN Stream</span>
+</button>
+</div>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Upcoming Live Session (Riemann Sums) -->
+<article class="bg-gradient-to-br from-surface-container-lowest to-surface-container-low rounded-2xl p-space-md shadow-[0_2px_8px_rgba(7,27,74,0.06)] border-l-4 border-rose-500 space-y-3">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-rose-500/10 text-rose-600 font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-rose-600 animate-ping"></span>
+            Scheduled: Saturday 08:00 AM
+          </span>
+<h3 class="font-title text-title text-on-surface mt-1.5">Studio 01 Live: Riemann Sums &amp; Integral Calculus Mastery</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live HD Broadcast with Dynamic Watermarking &amp; Live Q&amp;A</p>
+</div>
+</div>
+<!-- RTMP Credential Drawer Box -->
+<div class="bg-surface-container-lowest rounded-xl p-2.5 space-y-1.5 border border-surface-container-high/50">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">OBS / Wirecast RTMP Target</span>
+<span class="font-label-sm text-label-sm text-emerald-600 font-medium">Ready for Ingest</span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low px-2.5 py-1.5 rounded-lg text-on-surface">
+<span class="font-mono text-label-sm truncate max-w-[210px] text-on-surface-variant">rtmp://live.mindbridge.lk/apex/stream-key-2025</span>
+<button class="text-primary hover:text-primary-container p-1 rounded font-label-sm text-label-sm flex items-center gap-0.5" onclick="navigator.clipboard &amp;&amp; navigator.clipboard.writeText('rtmp://live.mindbridge.lk/apex/stream-key-2025')">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-10 rounded-lg bg-rose-600 text-white font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">podcasts</span>
+<span>Start Studio</span>
+</button>
+<button class="h-10 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-highest">
+<span class="material-symbols-outlined text-[16px] text-secondary">sms</span>
+<span>Send SMS Alert</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Draft Lesson (Polynomials) -->
+<article class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_1px_3px_rgba(7,27,74,0.03)] border-dashed border-2 border-surface-container-high space-y-2.5 opacity-90">
+<div class="flex items-start justify-between">
+<div>
+<span class="px-2 py-0.5 rounded-md bg-amber-100 text-amber-900 font-label-sm text-label-sm font-semibold">
+            Draft • Auto-Publish 28 Oct
+          </span>
+<h3 class="font-title text-title text-on-surface mt-1">Lesson 15: Roots of Complex Numbers &amp; Polynomials</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Video Transcoded: 1080p, 720p, 480p • Handout Pending</p>
+</div>
+</div>
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="h-8 px-3 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high">
+          Edit Content
+        </button>
+<button class="h-8 px-3 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm">
+          Publish Now
+        </button>
+</div>
+</article>
+</section>
+<!-- Attached Handouts Management Section -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-md shadow-[0_1px_3px_rgba(7,27,74,0.04)] space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">folder_open</span>
+<h3 class="font-title text-title text-on-surface">Lesson Handouts &amp; Model Answers</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unit 04 Assets</span>
+</div>
+<div class="space-y-2">
+<!-- File Item 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-red-100 text-red-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-semibold truncate">Complex_Numbers_Formula_Booklet.pdf</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">1.8 MB • 1,280 downloads</p>
+</div>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface-variant flex items-center justify-center" title="Replace File">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-rose-50 text-rose-600 flex items-center justify-center" title="Remove">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</div>
+<!-- File Item 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-9 h-9 rounded-lg bg-red-100 text-red-700 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-semibold truncate">De_Moivre_Practice_Tute_04.pdf</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">3.4 MB • 980 downloads</p>
+</div>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface-variant flex items-center justify-center" title="Replace File">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-rose-50 text-rose-600 flex items-center justify-center" title="Remove">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<button class="w-full h-10 rounded-xl border border-dashed border-primary/40 text-primary bg-primary/5 font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>+ Upload New Handout PDF</span>
+</button>
+</section>
+<!-- Upload Action Modal Dialog -->
+<div class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center p-3 bg-inverse-surface/60 backdrop-blur-sm" id="upload-modal">
+<div class="bg-surface-container-lowest w-full max-w-md rounded-2xl p-space-lg space-y-4 shadow-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">video_call</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Add Lesson or Broadcast</h3>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="document.getElementById('upload-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Choose how you would like to publish this content for Apex Combined Mathematics students:</p>
+<div class="space-y-2.5">
+<div class="p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">smart_display</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">Unlisted YouTube / Vimeo / CDN</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Instant stream sync with dynamic student watermarking</p>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">Upload Master MP4 File</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">SLT PeoTV + AWS S3 automated multi-bitrate transcoding</p>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">live_tv</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-semibold">Schedule Live RTMP / Zoom Session</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Generate stream keys and schedule student SMS notifications</p>
+</div>
+</div>
+</div>
+<button class="w-full h-11 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold shadow-sm" onclick="document.getElementById('upload-modal').classList.add('hidden')">
+        Continue to Setup
+      </button>
+</div>
+</div>
+<!-- Handouts Quick View Drawer Simulation -->
+<div class="hidden fixed inset-0 z-50 flex items-end justify-center bg-inverse-surface/60 backdrop-blur-sm" id="handouts-drawer">
+<div class="bg-surface-container-lowest w-full rounded-t-3xl p-space-lg space-y-4 shadow-2xl max-h-[707px] overflow-y-auto">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-high">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Lesson 14 Study Documents</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manage downloadable handouts for enrolled candidates</p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="toggleDrawer('handouts-drawer')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-red-600">description</span>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Complex_Numbers_Formula_Booklet.pdf</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Uploaded 3 days ago • Verified DRM Hash</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-red-600">description</span>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">De_Moivre_Practice_Tute_04.pdf</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Uploaded yesterday • 980 Student Downloads</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-emerald-600 text-[18px]">check_circle</span>
+</div>
+</div>
+<button class="w-full h-11 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-semibold" onclick="toggleDrawer('handouts-drawer')">
+        Done
+      </button>
+</div>
+</div>
+</div>
+<script>
+  function toggleDrawer(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.toggle('hidden');
+    }
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(7,27,74,0.06)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex-1 flex flex-col items-center justify-center h-full min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="teacher-dashboard" href="#"><span class="material-symbols-outlined text-[22px]">space_dashboard</span><span class="font-label-sm text-label-sm">Dashboard</span></a><a class="flex-1 flex flex-col items-center justify-center h-full min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="grading-queue" href="#"><span class="material-symbols-outlined text-[22px]">fact_check</span><span class="font-label-sm text-label-sm">Grading</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center h-full min-h-[44px] gap-0.5 transition-colors text-primary font-semibold" data-path="lessons-manager" href="#"><span class="material-symbols-outlined text-[22px]">play_lesson</span><span class="font-label-sm text-label-sm">Lessons</span></a><a class="flex-1 flex flex-col items-center justify-center h-full min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="student-roster" href="#"><span class="material-symbols-outlined text-[22px]">groups</span><span class="font-label-sm text-label-sm">Students</span></a></div></nav></body></html>

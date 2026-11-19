@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed":"#ffddb8","on-primary":"#00315e","tertiary-fixed":"#6ffbbe","on-tertiary":"#003824","secondary-fixed-dim":"#ffb95f","on-secondary-container":"#5b3800","surface-container-highest":"#2f3445","tertiary":"#4edea3","secondary":"#ffb95f","tertiary-fixed-dim":"#4edea3","error-container":"#93000a","primary":"#a4c8ff","on-tertiary-fixed-variant":"#005236","primary-container":"#3898ff","outline-variant":"#404753","secondary-container":"#ee9800","inverse-on-surface":"#2a3040","on-secondary-fixed":"#2a1700","surface-container-low":"#151b2b","on-secondary":"#472a00","on-tertiary-fixed":"#002113","surface-tint":"#a4c8ff","primary-fixed":"#d4e3ff","surface-variant":"#2f3445","inverse-surface":"#dde2f8","on-secondary-fixed-variant":"#653e00","on-primary-fixed":"#001c3a","tertiary-container":"#00ab76","outline":"#8a919e","on-primary-container":"#002f5b","surface":"#0d1322","surface-bright":"#33394a","background":"#0d1322","error":"#ffb4ab","on-surface-variant":"#c0c7d5","on-surface":"#dde2f8","on-error-container":"#ffdad6","on-tertiary-container":"#003623","inverse-primary":"#005fad","primary-fixed-dim":"#a4c8ff","surface-container":"#191f2f","surface-dim":"#0d1322","on-error":"#690005","on-primary-fixed-variant":"#004784","on-background":"#dde2f8","surface-container-high":"#242a3a","surface-container-lowest":"#080e1d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-3xl":"4rem","space-xl":"2rem","space-lg":"1.5rem","space-sm":"0.5rem","margin-mobile":"1rem","space-2xs":"0.125rem","space-xs":"0.25rem","gutter-mobile":"0.75rem","margin":"2rem","gutter":"1.5rem","space-md":"1rem","space-2xl":"3rem"},"fontFamily":{"body-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.025em","fontWeight":"800"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"0","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0","fontWeight":"400"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] overflow-y-auto"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">MindBridge</span><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">LMS Enterprise</span></div></div><div class="px-space-md"><div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-space-2xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Academic Tenant</span><span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span></div><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Apex Combined Mathematics</span><span class="font-label-sm text-label-sm text-primary truncate">LK-CENTRAL-04 • WP Division</span></div></div><nav class="flex flex-col gap-space-2xs px-space-sm" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(56,152,255,0.35)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard-hub" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard / Hub</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-learning-assistant" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span class="font-label-lg text-label-lg">AI Learning Assistant</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-prompt-studio" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span class="font-label-lg text-label-lg">AI Prompt Studio</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="courses-lessons" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span class="font-label-lg text-label-lg">Courses &amp; Lessons</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="examinations-question-bank" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span class="font-label-lg text-label-lg">Examinations &amp; Q-Bank</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="assignments-grading" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-label-lg text-label-lg">Assignments &amp; Grading</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tuition-payments" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-label-lg text-label-lg">Tuition &amp; Fee Slips</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_12px_rgba(56,152,255,0.35)]" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="px-space-md pt-space-md flex flex-col gap-space-sm"><div class="bg-surface-container rounded-lg p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-primary"><span class="material-symbols-outlined text-[18px]">headset_mic</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Support Hub</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Need assistance with student slip verification or exam setups?</p><a class="mt-space-2xs inline-flex items-center justify-between text-primary font-label-md text-label-md hover:text-primary-fixed transition-colors" data-path="help-desk" href="#"><span>Open Help Desk</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></div><div class="flex items-center justify-between px-space-xs"><span class="font-label-sm text-label-sm text-outline">v4.8.2-PROD</span><span class="font-label-sm text-label-sm text-tertiary flex items-center gap-space-2xs"><span class="h-1.5 w-1.5 rounded-full bg-tertiary"></span>Online</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline pl-10 pr-space-md py-space-xs rounded-lg font-body-sm text-body-sm outline-none focus:bg-surface-container-low transition-all" placeholder="Search students, index IDs, KaTeX proofs, slips..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 h-2 w-2 rounded-full bg-secondary"></span></button><button class="p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm pl-space-2xs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Kavindu Nirmal Perera</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Dr. Aruna Perera Senior Admin</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg flex flex-col gap-space-lg max-w-[1560px] mx-auto w-full">
+<!-- Top Bar Info & Breadcrumb Area -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs min-w-0">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider flex-wrap">
+<span class="hover:text-primary cursor-pointer transition-colors">MindBridge LMS</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Western Province Node</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-bold">Account Governance &amp; Settings</span>
+</div>
+<div class="flex items-baseline gap-space-sm flex-wrap mt-space-2xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">Settings &amp; Account Governance</h1>
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            All cloud settings synced at 10:42 AM (Asia/Colombo)
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Manage personal credentials, security keys, student profile verifications, and localized telemetry.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-start md:self-center">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Audit Log</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold hover:brightness-110 active:scale-95 transition-all shadow-[0_0_16px_rgba(56,152,255,0.35)]" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Changes</span>
+</button>
+</div>
+</div>
+<!-- Institute Node Banner Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-md flex flex-col lg:flex-row lg:items-center justify-between gap-space-md shadow-md">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center gap-space-md min-w-0 z-10">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 text-primary shadow-inner">
+<span class="material-symbols-outlined text-[28px]">domain_verification</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Apex Combined Mathematics</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Active Node
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+            Lead Instructor: <span class="text-on-surface font-medium">Eng. Kusal Senaratne</span> • Colombo &amp; Gampaha Center Batches
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap z-10">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">workspace_premium</span>
+<span>Plan: <span class="text-secondary font-semibold">Tier 2 Scale (Rs. 28,000/mo)</span></span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-primary">cloud</span>
+<span>Storage: <span class="text-primary font-semibold">142 GB / 500 GB (28.4%)</span></span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+<span>SL DPA Compliance: <span class="text-tertiary font-semibold">Verified</span></span>
+</div>
+</div>
+</div>
+<!-- Navigation Pills Row -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-2xs scrollbar-none">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-label-lg text-label-lg font-bold shadow-[0_0_12px_rgba(56,152,255,0.3)] shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span>Profile &amp; Identity</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-all shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+<span>Security &amp; 2FA</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-all shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">translate</span>
+<span>Localization &amp; Display</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-all shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">sms</span>
+<span>SMS &amp; WhatsApp Alerts</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition-all shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">devices</span>
+<span>Sessions &amp; Devices</span>
+</button>
+</div>
+<!-- Main Content Layout (2 Columns: 32% Left, 68% Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (4 of 12 cols = 33.3% ~ 32%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Student Profile Card -->
+<div class="rounded-xl bg-surface-container p-space-lg flex flex-col gap-space-md shadow-md relative overflow-hidden">
+<div class="flex items-start gap-space-md">
+<div class="relative shrink-0">
+<img class="w-16 h-16 rounded-xl object-cover shadow-md" data-alt="Close-up portrait of a sharp, ambitious young South Asian male Sri Lankan high school mathematics student with black hair, deep focused gaze, wearing a smart charcoal jacket, studio cinematic lighting with subtle electric cobalt rim light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD23ZKDVsiymiI8Um6KFXvRCAY4X3L9YOI6LNkIBrs7-1_3kd3UBY_9hjymBstQHY0EbEVz94TCQ1JalXnAfgGSvIaXdY4Jt3vc2SFKpy9qL-TOLkKwyCg1C-6d2bVNsu3Vff4r5IL_8OQRbIPp1_6WT-JbCuwNXTLTm3HT-7ezv_8SLFXPA82NcrFc4JyJ63r-tTcQRkD4fPqj8JqWpBSYLdBwpVUT5qTnBVi2yUU"/>
+<span class="absolute -bottom-1 -right-1 bg-primary text-on-primary rounded-full p-0.5 flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Kavindu Nirmal Perera</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Senior A/L Candidate</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">SL-LRN-89401 • Batch 2026/27 Regular</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm p-space-xs rounded-lg bg-surface-container-low">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">mail</span> Email
+              </span>
+<span class="text-on-surface font-medium truncate max-w-[190px]">kavindu.p@apexmaths.lk</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm p-space-xs rounded-lg bg-surface-container-low">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">call</span> Contact
+              </span>
+<span class="text-on-surface font-medium">+94 77 123 4567</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm p-space-xs rounded-lg bg-surface-container-low">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">map</span> Division
+              </span>
+<span class="text-on-surface font-medium">Western Province</span>
+</div>
+</div>
+<!-- Security Score -->
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col gap-space-sm mt-space-2xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Security Score</span>
+<span class="font-label-sm text-label-sm font-bold text-tertiary bg-tertiary/15 px-2 py-0.5 rounded-full">95% (High)</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full transition-all" style="width: 95%;"></div>
+</div>
+<div class="grid grid-cols-1 gap-1.5 pt-space-2xs">
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Two-Factor Authentication</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Recovery Phone verified</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span>Gov. National ID Digitally Matched</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-outline text-[16px]">radio_button_unchecked</span>
+<span>Hardware FIDO2 Security Key (optional)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Governance Actions List -->
+<div class="rounded-xl bg-surface-container p-space-sm flex flex-col shadow-md">
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-high text-on-surface transition-colors group" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">password</span>
+<span class="font-label-lg text-label-lg font-medium">Update Password</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface group-hover:translate-x-1 transition-all text-[18px]">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-high text-on-surface transition-colors group" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">download</span>
+<span class="font-label-lg text-label-lg font-medium">Download Learning Dossier</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface group-hover:translate-x-1 transition-all text-[18px]">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-surface-container-high text-on-surface transition-colors group" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">policy</span>
+<span class="font-label-lg text-label-lg font-medium">SL DPA Privacy Protocol</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface group-hover:translate-x-1 transition-all text-[18px]">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-space-sm rounded-lg hover:bg-error-container/20 text-error transition-colors group" href="#">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-error text-[20px]">person_off</span>
+<span class="font-label-lg text-label-lg font-medium">Deactivate Student Account</span>
+</div>
+<span class="material-symbols-outlined text-error group-hover:translate-x-1 transition-all text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- Multi-Tenant Cluster Node Info Box -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-space-xs shadow-inner">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Multi-Tenant Cluster Node</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Apex Combined Mathematics instance runs on <span class="text-on-surface font-semibold">Sri Lanka Central AWS Region</span> with low-latency Mobitel &amp; SLT Peering for zero packet loss during live formula streams.
+          </p>
+<div class="flex items-center justify-between pt-space-xs text-label-sm font-label-sm text-tertiary">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+              Ping: 12ms to Colombo exchange
+            </span>
+<span class="text-outline">TLS 1.3 Strict</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (8 of 12 cols = 66.7% ~ 68%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- 1. Personal & Academic Dossier Card -->
+<div class="rounded-xl bg-surface-container p-space-lg flex flex-col gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">contact_page</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Personal &amp; Academic Dossier</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Gov Verified • MOE
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-2xs">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Full Legal Name</label>
+<input class="w-full bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md outline-none focus:bg-surface-container-highest transition-all shadow-inner" type="text" value="Kavindu Nirmal Perera"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Preferred Calling Name</label>
+<input class="w-full bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md outline-none focus:bg-surface-container-highest transition-all shadow-inner" type="text" value="Kavindu"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant">National Identity Card (NIC) / Index</label>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Validated
+                </span>
+</div>
+<input class="w-full bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md outline-none focus:bg-surface-container-highest transition-all shadow-inner font-mono" type="text" value="200578401923"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Examination Target Stream</label>
+<input class="w-full bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md outline-none focus:bg-surface-container-highest transition-all shadow-inner" type="text" value="G.C.E. Advanced Level 2026 (Physical Science)"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface-variant">Student WhatsApp Alert Line</label>
+<span class="text-primary font-label-sm text-label-sm">Live Linked</span>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-low text-on-surface pl-10 pr-space-md py-2.5 rounded-lg font-body-md text-body-md outline-none focus:bg-surface-container-highest transition-all shadow-inner font-mono" type="text" value="+94 77 123 4567"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-tertiary text-[18px]">chat</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Parent / Guardian Verification Contact</label>
+<input class="w-full bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md outline-none focus:bg-surface-container-highest transition-all shadow-inner" type="text" value="+94 71 884 1290 (Mrs. H. D. Jayawardena)"/>
+</div>
+</div>
+<!-- Preferred Instructional Medium & Script Layout -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">Preferred Instructional Medium &amp; Script Layout</label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- 1. Bilingual Sync (Selected) -->
+<label class="cursor-pointer relative flex flex-col p-space-md rounded-lg bg-surface-container-high shadow-[0_0_12px_rgba(56,152,255,0.25)] transition-all">
+<input checked="" class="sr-only" name="script_medium" type="radio" value="bilingual"/>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-lg text-label-lg font-bold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">compare_arrows</span>
+                    Bilingual Sync
+                  </span>
+<span class="w-4 h-4 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+                  English terminology with Sinhala explanations (ද්විභාෂා). Recommended for G.C.E. A/L Combined Maths.
+                </p>
+</label>
+<!-- 2. Sinhala Medium -->
+<label class="cursor-pointer relative flex flex-col p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all">
+<input class="sr-only" name="script_medium" type="radio" value="sinhala"/>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Sinhala Medium</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-highest"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+                  සම්පූර්ණ සිංහල මාධ්‍ය ගණිත විවරණ හා සටහන් පෙළගැස්ම.
+                </p>
+</label>
+<!-- 3. English Medium -->
+<label class="cursor-pointer relative flex flex-col p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-all">
+<input class="sr-only" name="script_medium" type="radio" value="english"/>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">English Medium</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-highest"></span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+                  Complete English text, formulae &amp; Cambridge/Edexcel terms.
+                </p>
+</label>
+</div>
+</div>
+</div>
+<!-- 2. Security & Multi-Factor Authentication Card -->
+<div class="rounded-xl bg-surface-container p-space-lg flex flex-col gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">security</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Security &amp; Multi-Factor Authentication</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Grade 4 Shield Active
+            </span>
+</div>
+<!-- Toggles -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col pr-space-sm">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">SMS-Based 2FA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dialog/Mobitel gateway to +94 77 123 4567</span>
+</div>
+<div class="w-12 h-6 bg-primary-container rounded-full relative cursor-pointer p-0.5 shrink-0 flex items-center">
+<div class="w-5 h-5 bg-on-primary-container rounded-full ml-auto shadow"></div>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col pr-space-sm">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Biometrics &amp; Passkeys</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Apple Touch ID / Face ID / Windows Hello</span>
+</div>
+<div class="w-12 h-6 bg-primary-container rounded-full relative cursor-pointer p-0.5 shrink-0 flex items-center">
+<div class="w-5 h-5 bg-on-primary-container rounded-full ml-auto shadow"></div>
+</div>
+</div>
+</div>
+<!-- Credential Revision -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Credential Revision</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Current Password</label>
+<input class="w-full bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md outline-none focus:bg-surface-container-highest transition-all shadow-inner" type="password" value="••••••••••••"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">New Secure Password</label>
+<input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline px-space-md py-2.5 rounded-lg font-body-md text-body-md outline-none focus:bg-surface-container-highest transition-all shadow-inner" placeholder="At least 12 characters" type="password"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Confirm Password</label>
+<input class="w-full bg-surface-container-low text-on-surface placeholder:text-outline px-space-md py-2.5 rounded-lg font-body-md text-body-md outline-none focus:bg-surface-container-highest transition-all shadow-inner" placeholder="Re-type password" type="password"/>
+</div>
+</div>
+<!-- Password Strength -->
+<div class="flex items-center gap-space-md pt-space-2xs">
+<div class="flex items-center gap-1.5 flex-1">
+<div class="h-1.5 flex-1 rounded-full bg-tertiary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-tertiary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-tertiary"></div>
+<div class="h-1.5 flex-1 rounded-full bg-surface-container-highest"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold shrink-0">Strong (3/4 Criteria Met)</span>
+</div>
+</div>
+<!-- Active Authorized Sessions -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Active Authorized Sessions</span>
+<button class="text-error font-label-sm text-label-sm uppercase font-bold hover:underline" type="button">
+                Revoke Other Sessions
+              </button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Session 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">laptop_mac</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Google Chrome • macOS Sonoma</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-tertiary/15 text-tertiary">Current Device</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Colombo 03 • IP 112.134.82.14 • Active Now</span>
+</div>
+</div>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary mr-space-xs"></span>
+</div>
+<!-- Session 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">MindBridge Android App • Samsung S23</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Moratuwa • 2 hours ago</span>
+</div>
+</div>
+<button class="text-error font-label-sm text-label-sm hover:underline px-space-xs" type="button">Revoke</button>
+</div>
+<!-- Session 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">tablet_mac</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Safari • iPad Pro 11"</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nugegoda Study Center • Yesterday</span>
+</div>
+</div>
+<button class="text-error font-label-sm text-label-sm hover:underline px-space-xs" type="button">Revoke</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Localization & LaTeX Engine Preferences Card -->
+<div class="rounded-xl bg-surface-container p-space-lg flex flex-col gap-space-md shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">functions</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Localization &amp; LaTeX Engine Preferences</h2>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary/15 text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              KaTeX v0.16.8 Engine
+            </span>
+</div>
+<!-- LaTeX Rendering Subsystem -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface-variant">LaTeX Rendering Subsystem</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<label class="cursor-pointer p-space-md rounded-lg bg-surface-container-high shadow-[0_0_12px_rgba(56,152,255,0.25)] flex items-start gap-space-sm">
+<input checked="" class="sr-only" name="latex_engine" type="radio" value="katex"/>
+<span class="w-4 h-4 rounded-full bg-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-primary">KaTeX AMS-LaTeX (High Speed)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant synchronous client rendering for real-time calculus proof solving.</span>
+</div>
+</label>
+<label class="cursor-pointer p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container-high flex items-start gap-space-sm transition-all">
+<input class="sr-only" name="latex_engine" type="radio" value="mathjax"/>
+<span class="w-4 h-4 rounded-full bg-surface-container-highest shrink-0 mt-0.5"></span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">MathJax v3 (Full TeX Coverage)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Extensive symbol coverage; higher memory footprint during long multi-step mocks.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Regional Chronometry & Currency -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Timezone Target</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface px-space-md py-2.5 rounded-lg font-body-md text-body-md outline-none focus:bg-surface-container-highest transition-all appearance-none shadow-inner cursor-pointer">
+<option selected="">Asia/Colombo (UTC+05:30) Sri Lanka Standard Time</option>
+<option>UTC (Coordinated Universal Time)</option>
+<option>Asia/Dubai (UTC+04:00)</option>
+<option>Europe/London (UTC+00:00 / +01:00)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Accounting Currency Symbol</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2.5 px-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-[0_0_8px_rgba(56,152,255,0.25)] flex items-center justify-center gap-1" type="button">
+<span>LKR</span>
+<span class="text-xs">රු.</span>
+</button>
+<button class="py-2.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium transition-all flex items-center justify-center gap-1" type="button">
+<span>USD</span>
+<span class="text-xs">$</span>
+</button>
+<button class="py-2.5 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-label-md text-label-md font-medium transition-all flex items-center justify-center gap-1" type="button">
+<span>GBP</span>
+<span class="text-xs">£</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Communication & Urgent Dispatch Gateways Card -->
+<div class="rounded-xl bg-surface-container p-space-lg flex flex-col gap-space-md shadow-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">notifications_active</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Communication &amp; Urgent Dispatch Gateways</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Gateway 1: WhatsApp Bot -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-tertiary/15 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold uppercase">Active</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface mt-1">WhatsApp Bot</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Instant marks broadcast &amp; live Zoom links directly to +94 77 123...</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Instant Delivery
+              </span>
+</div>
+<!-- Gateway 2: Telco SMS Fallback -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-primary/15 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">sms</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/15 text-primary font-label-sm text-label-sm font-bold uppercase">Active</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface mt-1">Telco SMS Fallback</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-snug">National Dialog / Mobitel gateway triggered during offline hours or data drop.</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">priority_high</span> High Priority
+              </span>
+</div>
+<!-- Gateway 3: Weekly Academic Email -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">mark_email_read</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold uppercase">Digest</span>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface mt-1">Weekly Academic Email</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Consolidated question breakdown, percentile rankings and tuition slip logs.</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Every Sunday 7 PM
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Tenant Admin Note Bar -->
+<div class="rounded-xl bg-surface-container p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md shadow-md mt-space-2xs">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">admin_panel_settings</span>
+<span>
+          Tenant Administrator: <strong class="text-on-surface font-semibold">Apex Combined Mathematics Colombo</strong>. All changes audited under ISO/IEC 27001 standard.
+        </span>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all" type="button">
+          Discard Changes
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold hover:brightness-110 active:scale-95 transition-all shadow-[0_0_12px_rgba(56,152,255,0.35)]" type="button">
+          Save &amp; Apply Governance
+        </button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
