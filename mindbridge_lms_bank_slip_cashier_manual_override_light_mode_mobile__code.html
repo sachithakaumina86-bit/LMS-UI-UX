@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#faf8ff", "on-tertiary-container": "#fffbff", "on-secondary-container": "#405081", "primary-fixed": "#d7e3ff", "secondary-container": "#b5c5fd", "background": "#faf8ff", "tertiary": "#7f5300", "on-error-container": "#93000a", "on-surface": "#101b34", "secondary-fixed": "#dbe1ff", "on-tertiary-fixed-variant": "#633f00", "primary-container": "#0072e4", "surface-container-lowest": "#ffffff", "on-surface-variant": "#414754", "on-primary-fixed-variant": "#00458f", "secondary": "#4d5c8e", "surface-tint": "#005cba", "surface-container-highest": "#d9e2ff", "on-secondary": "#ffffff", "outline-variant": "#c1c6d6", "primary": "#005ab6", "on-background": "#101b34", "on-tertiary-fixed": "#291800", "on-primary-fixed": "#001b3f", "secondary-fixed-dim": "#b5c5fd", "on-tertiary": "#ffffff", "tertiary-container": "#a06900", "error-container": "#ffdad6", "surface": "#faf8ff", "on-secondary-fixed": "#041847", "tertiary-fixed": "#ffddb4", "on-primary": "#ffffff", "surface-dim": "#cfd9fb", "error": "#ba1a1a", "inverse-on-surface": "#eef0ff", "surface-container-low": "#f2f3ff", "outline": "#717785", "on-primary-container": "#fefcff", "inverse-surface": "#25304a", "surface-variant": "#d9e2ff", "on-error": "#ffffff", "surface-container-high": "#e1e7ff", "surface-container": "#eaedff", "primary-fixed-dim": "#abc7ff", "tertiary-fixed-dim": "#ffb952", "on-secondary-fixed-variant": "#354575", "inverse-primary": "#abc7ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-xl": "2rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "margin": "2rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "title": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["Inter"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "title": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(7,27,74,0.04)] pt-safe"><div class="h-16 px-space-sm flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors flex-shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="MindBridge LMS Education Logo.png" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><h1 class="font-title text-title text-on-surface truncate ml-space-xs">Fee Payment Checkout</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Context actions" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full pb-8">
+<!-- Sub-Header: Academic Tenant & Privileged Badge -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0">account_balance</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Apex Combined Mathematics</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] uppercase font-bold flex-shrink-0">
+<span class="material-symbols-outlined text-[12px]">security</span>
+        Override L2
+      </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="truncate">LK-CENTRAL-04 • WP Division</span>
+<span class="font-label-md text-label-md text-primary font-medium flex-shrink-0">Adjudication Ledger</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-md">
+<!-- Inspection Toolbar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center justify-between gap-space-xs overflow-x-auto">
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<button class="h-9 px-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors hover:bg-surface-container-high" id="zoomBtn">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+<span>110%</span>
+</button>
+<button class="h-9 px-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 transition-colors hover:bg-surface-container-high" id="contrastBtn">
+<span class="material-symbols-outlined text-[16px]">contrast</span>
+<span>B&amp;W</span>
+</button>
+<button class="h-9 px-2.5 rounded-lg bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">crop_free</span>
+<span>AI (3)</span>
+</button>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface-container text-primary font-label-md text-label-md flex items-center gap-1 flex-shrink-0 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>OCR v4.2</span>
+</button>
+</div>
+<!-- Section 1: Original Bank Deposit Voucher Graphic -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">receipt_long</span>
+          Counter Slip Artifact
+        </span>
+<span class="font-label-sm text-[10px] text-outline font-mono">SHA256: 9b2d...4a88</span>
+</div>
+<!-- Physical Deposit Slip Visual Mock -->
+<div class="relative rounded-xl bg-surface-container-lowest shadow-md overflow-hidden transition-all duration-200" id="voucherCard">
+<!-- Top Bridge-of-Knowledge Motif header strip -->
+<div class="bg-primary text-on-primary px-3 py-2 flex items-center justify-between text-[11px] font-medium" style="border-top-right-radius: 20px;">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]">account_balance</span>
+<span class="tracking-wide uppercase font-bold">PEOPLE'S BANK • මහජන බැංකුව</span>
+</div>
+<span class="font-mono text-[10px] bg-on-primary/15 px-1.5 py-0.5 rounded">PB-NUG-89210-994</span>
+</div>
+<div class="p-3.5 flex flex-col gap-2.5 bg-gradient-to-b from-surface-container-lowest via-surface-container-lowest to-surface-container-low/40">
+<div class="flex justify-between items-start gap-2">
+<div>
+<p class="font-label-sm text-[10px] uppercase text-outline">Special Cash Deposit Slip</p>
+<p class="font-headline-sm text-[13px] leading-tight font-bold text-on-surface">Institutional Collections Voucher</p>
+</div>
+<div class="text-right">
+<span class="text-[11px] font-mono text-outline">Branch: 045 (Nugegoda)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-[11px] bg-surface-container-low/60 p-2 rounded-lg">
+<div>
+<span class="text-outline text-[10px] block">Beneficiary Account</span>
+<span class="font-bold text-on-surface font-mono">045-200-189-445210</span>
+<span class="text-[10px] text-on-surface-variant block truncate">Apex Combined Maths Trust</span>
+</div>
+<div>
+<span class="text-outline text-[10px] block">Depositor (Self)</span>
+<span class="font-bold text-on-surface truncate block">Amanda Jayawardena</span>
+<span class="text-[10px] text-on-surface-variant">NIC: 200578401923</span>
+</div>
+</div>
+<!-- Highlight: Stamp Smudge Discrepancy Field -->
+<div class="relative p-2.5 rounded-lg bg-error-container/40">
+<div class="flex items-start justify-between gap-2">
+<div class="flex-1">
+<span class="text-[10px] uppercase font-bold text-on-error-container flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">warning</span>
+                  Detected ID Overlap Alert
+                </span>
+<div class="flex items-baseline gap-2 mt-0.5">
+<span class="font-mono font-bold text-[13px] text-on-surface">SL-LRN-90214</span>
+<span class="text-[11px] text-error line-through font-mono">90211</span>
+<span class="text-[10px] text-on-surface-variant">(Smudged by teller ink)</span>
+</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error/10 text-error font-label-sm text-[10px] font-bold">Uncertain 74%</span>
+</div>
+<!-- Absolute Visual Teller Stamp Representation -->
+<div class="mt-2 flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex flex-col items-center justify-center text-primary leading-none p-1 text-center rotate-[-6deg]">
+<span class="text-[8px] font-bold uppercase">PAID</span>
+<span class="text-[7px] font-mono">24 OCT 2025</span>
+<span class="text-[7px]">PEOPLE'S BANK</span>
+</div>
+<div class="text-[11px] leading-tight">
+<span class="font-semibold text-on-surface block">Teller #04 • Nugegoda City</span>
+<span class="text-[10px] text-on-surface-variant">Batch Clr: OK-2025-PB</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-[10px] text-outline block">Slip Cash Amount</span>
+<span class="font-headline-sm text-[16px] font-bold text-primary">LKR 4,000.00</span>
+</div>
+</div>
+</div>
+<!-- Counter Cash Adjustment Pill -->
+<div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-tertiary-fixed/60 text-on-tertiary-fixed">
+<span class="text-[11px] font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">payments</span>
+              Desk Cash Counter-Receipt Attached:
+            </span>
+<span class="font-bold text-[11px] font-mono">+ LKR 500.00 (#FD-4910)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Student Identity Resolution Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-title">
+            AJ
+          </div>
+<div class="min-w-0">
+<h2 class="font-title text-title text-on-surface truncate">Amanda Jayawardena</h2>
+<p class="font-label-md text-label-md text-on-surface-variant font-mono">SL-LRN-90214</p>
+</div>
+</div>
+<span class="px-2 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">school</span>
+          2026 Batch
+        </span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1 text-body-sm text-on-surface-variant">
+<div class="bg-surface-container-low p-2 rounded-lg">
+<span class="text-[10px] uppercase text-outline block font-medium">NIC Document</span>
+<span class="text-on-surface font-semibold font-mono text-[12px]">200578401923</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg">
+<span class="text-[10px] uppercase text-outline block font-medium">Mobile Phone</span>
+<span class="text-on-surface font-semibold font-mono text-[12px]">+94 71 884 1290</span>
+</div>
+</div>
+<div class="bg-surface-container-low px-2.5 py-2 rounded-lg flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant text-[12px] truncate">Combined Maths — Royal / Visakha Cohort</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-primary">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          Verified
+        </span>
+</div>
+</div>
+<!-- Section 3 & 4: Reconciliation Ledger & Fee Breakdown -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">Fee Reconciliation</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-bold">100% Balanced</span>
+</div>
+<!-- Financial Metrics Ribbon -->
+<div class="grid grid-cols-3 gap-2">
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="text-[10px] uppercase text-outline font-medium">Required</span>
+<span class="font-title text-[14px] font-bold text-on-surface mt-0.5">Rs. 4,500</span>
+<span class="text-[10px] text-on-surface-variant">October Due</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="text-[10px] uppercase text-outline font-medium">Bank Slip</span>
+<span class="font-title text-[14px] font-bold text-on-surface mt-0.5">Rs. 4,000</span>
+<span class="text-[10px] text-error font-medium">-500 Deficit</span>
+</div>
+<div class="bg-secondary-fixed p-2.5 rounded-lg flex flex-col">
+<span class="text-[10px] uppercase text-on-secondary-fixed-variant font-bold">Adjusted</span>
+<span class="font-title text-[14px] font-bold text-on-secondary-fixed mt-0.5">Rs. 4,500</span>
+<span class="text-[10px] text-primary font-bold">Resolved</span>
+</div>
+</div>
+<!-- Itemized Line breakdown -->
+<div class="flex flex-col gap-2">
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between gap-2">
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-on-surface truncate">01. Combined Maths Theory Module</p>
+<p class="text-[11px] text-on-surface-variant">October 2025 • Bank Slip PB-89210</p>
+</div>
+<span class="font-mono font-bold text-on-surface text-[13px] flex-shrink-0">LKR 4,000.00</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between gap-2">
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-on-surface truncate">02. Printed Monthly Tute Pack &amp; Courier</p>
+<p class="text-[11px] text-tertiary font-medium">Front Desk Cash Over-Counter (#FD-4910)</p>
+</div>
+<span class="font-mono font-bold text-tertiary text-[13px] flex-shrink-0">+ LKR 500.00</span>
+</div>
+</div>
+</div>
+<!-- Section 5: Discrepancy Reason & Immutable Audit Note -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">edit_note</span>
+<span class="font-headline-sm text-[15px] font-bold">Cashier Adjudication Note</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low text-body-md text-on-surface text-[13px] leading-relaxed">
+        “Student deposited Rs. 4,000 at People's Bank CDM and paid the balance Rs. 500 in physical cash at Nugegoda front desk (Receipt #FD-4910). Verified by Amanda's guardian. All clearances authorized.”
+      </div>
+<!-- Legal Certification Checkbox -->
+<label class="flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-low/70 cursor-pointer select-none">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-0" id="legalCheckbox" type="checkbox"/>
+<span class="font-body-sm text-[11px] leading-snug text-on-surface-variant">
+          I certify under penalty of administrative revocation that I have inspected physical cash or counter voucher, reconciled the shortfall of LKR 500.00, and verified that Student SL-LRN-90214 is fully clear for class admissions.
+        </span>
+</label>
+</div>
+<!-- Mobile Decision Actions -->
+<div class="flex flex-col gap-2.5 pt-2">
+<button class="w-full h-12 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-primary-container active:scale-[0.99] transition-all flex items-center justify-center gap-2" id="authorizeBtn">
+<span>Authorize Manual Override &amp; Unlock Student</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full h-11 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container active:scale-[0.99] transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-error">close</span>
+<span>Decline &amp; Request New Slip</span>
+</button>
+</div>
+<!-- Cryptographic Audit Session Footer -->
+<div class="text-center px-4 py-2 flex flex-col items-center gap-0.5">
+<div class="flex items-center gap-1 text-[11px] text-outline font-mono">
+<span class="material-symbols-outlined text-[13px]">fingerprint</span>
+<span>Cryptographically Signed by LK-CENTRAL-04</span>
+</div>
+<span class="text-[10px] text-outline font-mono">Session: #ADJ-20251024-889 • Terminal #03</span>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const zoomBtn = document.getElementById('zoomBtn');
+    const contrastBtn = document.getElementById('contrastBtn');
+    const voucherCard = document.getElementById('voucherCard');
+    const authorizeBtn = document.getElementById('authorizeBtn');
+    const legalCheckbox = document.getElementById('legalCheckbox');
+
+    let isZoomed = false;
+    let isBW = false;
+
+    if (zoomBtn && voucherCard) {
+      zoomBtn.addEventListener('click', () => {
+        isZoomed = !isZoomed;
+        voucherCard.style.transform = isZoomed ? 'scale(1.04)' : 'scale(1)';
+        voucherCard.style.transformOrigin = 'center top';
+        zoomBtn.classList.toggle('bg-primary-fixed');
+      });
+    }
+
+    if (contrastBtn && voucherCard) {
+      contrastBtn.addEventListener('click', () => {
+        isBW = !isBW;
+        voucherCard.style.filter = isBW ? 'grayscale(100%) contrast(140%)' : 'none';
+        contrastBtn.classList.toggle('bg-primary-fixed');
+      });
+    }
+
+    if (legalCheckbox && authorizeBtn) {
+      legalCheckbox.addEventListener('change', () => {
+        if (!legalCheckbox.checked) {
+          authorizeBtn.classList.add('opacity-50', 'pointer-events-none');
+        } else {
+          authorizeBtn.classList.remove('opacity-50', 'pointer-events-none');
+        }
+      });
+    }
+  })();
+</script></main></body></html>

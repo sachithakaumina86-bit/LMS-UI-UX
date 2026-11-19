@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-on-surface":"#eef0ff","outline-variant":"#c1c6d6","on-tertiary":"#ffffff","on-primary-fixed-variant":"#00458f","surface-container-high":"#e1e7ff","on-primary":"#ffffff","error":"#ba1a1a","tertiary-fixed":"#ffddb4","secondary-fixed":"#dbe1ff","surface":"#faf8ff","surface-dim":"#cfd9fb","on-secondary-fixed":"#041847","on-primary-fixed":"#001b3f","on-tertiary-fixed":"#291800","on-surface":"#101b34","surface-tint":"#005cba","on-surface-variant":"#414754","primary-container":"#0072e4","on-secondary-fixed-variant":"#354575","primary":"#005ab6","inverse-surface":"#25304a","tertiary-fixed-dim":"#ffb952","surface-container-low":"#f2f3ff","surface-container":"#eaedff","primary-fixed-dim":"#abc7ff","on-secondary-container":"#405081","on-tertiary-container":"#fffbff","primary-fixed":"#d7e3ff","on-error":"#ffffff","on-secondary":"#ffffff","on-primary-container":"#fefcff","secondary":"#4d5c8e","on-background":"#101b34","surface-bright":"#faf8ff","tertiary-container":"#a06900","inverse-primary":"#abc7ff","surface-container-lowest":"#ffffff","error-container":"#ffdad6","outline":"#717785","secondary-fixed-dim":"#b5c5fd","surface-variant":"#d9e2ff","surface-container-highest":"#d9e2ff","tertiary":"#7f5300","on-error-container":"#93000a","background":"#faf8ff","secondary-container":"#b5c5fd","on-tertiary-fixed-variant":"#633f00"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-md":"1rem","gutter":"1.5rem","space-xl":"2rem","space-xs":"0.25rem","margin":"2rem","space-sm":"0.5rem","gutter-mobile":"1rem","margin-mobile":"1rem"},fontFamily:{"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"title":["Plus Jakarta Sans"],"label-sm":["Inter"],"display":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"display-mobile":["Plus Jakarta Sans"]},fontSize:{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"title":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"display":["44px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-low"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm shadow-sm"><span class="material-symbols-outlined text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-title text-title text-on-surface tracking-tight leading-none">MindBridge</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-xs">Enterprise LMS</span></div></div><div class="p-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)] flex items-center justify-between gap-space-xs"><div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed"><span class="material-symbols-outlined text-[18px]">architecture</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-lg text-label-lg text-on-surface truncate leading-tight">Apex Combined Maths</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Colombo Central (LKR)</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div></div><div class="px-space-md pt-space-xs pb-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Navigation</span></div><nav class="flex flex-col px-space-sm gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-title shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="courses" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span>Courses</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="assignments" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span>Assignments</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="exams-results" href="#"><span class="material-symbols-outlined text-[20px]">grade</span>Exams &amp; Results</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="video-studio" href="#"><span class="material-symbols-outlined text-[20px]">video_camera_front</span>Video Studio</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-title shadow-sm" data-path="enrollment-management" href="#"><span class="material-symbols-outlined text-[20px]">how_to_reg</span>Enrollment Management</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="certificates-issuance" href="#"><span class="material-symbols-outlined text-[20px]">workspace_premium</span>Certificates &amp; Issuance</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="financials-bank-slips" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span>Financials &amp; Bank Slips</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="staff-governance" href="#"><span class="material-symbols-outlined text-[20px]">badge</span>Staff Governance</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="security-audit-logs" href="#"><span class="material-symbols-outlined text-[20px]">security</span>Security &amp; Audit Logs</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="reports-analytics" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span>Reports &amp; Analytics</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="announcements" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span>Announcements</a></nav></div><div class="p-space-md bg-surface-container-low"><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high text-on-surface"><div class="flex flex-col"><span class="font-label-md text-label-md leading-tight">Tenant Node</span><span class="font-label-sm text-label-sm text-on-surface-variant">v4.8.2 Enterprise</span></div><span class="material-symbols-outlined text-primary text-[20px]">dns</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search enrollments, index numbers, verified bank slips, courses..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed"><span class="material-symbols-outlined text-[16px]">domain</span><span class="font-label-sm text-label-sm font-semibold">Apex Math Institute</span></div><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><button class="p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">translate</span></button><button class="p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">tune</span></button><div class="h-6 w-px bg-outline-variant mx-space-xs"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Dr. Asela Perera</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Super Administrator</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-surface"><div class="flex flex-col w-full p-space-lg space-y-space-lg max-w-[1600px] mx-auto">
+<!-- Breadcrumb & Top Command Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-outline">
+<span>Administrative Operations</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Enrollment Management</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-medium">Lifecycle Hub</span>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Comprehensive Enrollment &amp; Lifecycle Governance</h1>
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          SYNC ACTIVE (G.C.E. A/L)
+        </div>
+</div>
+</div>
+<!-- Primary Page Actions -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm font-label-lg text-label-lg transition-all duration-150">
+<span class="material-symbols-outlined text-[18px] text-outline">settings</span>
+        Policy Settings
+      </button>
+<button class="flex items-center gap-space-xs px-3.5 py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container shadow-sm font-label-lg text-label-lg transition-all duration-150">
+<span class="material-symbols-outlined text-[18px] text-outline">file_download</span>
+        Export Registry (.CSV)
+      </button>
+<button class="flex items-center gap-space-xs px-4 py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container shadow-md font-label-lg text-label-lg transition-all duration-150">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+        + Invite / Manual Enroll
+      </button>
+</div>
+</div>
+<!-- Section 1: Tenant Admission Governance & Ingestion Policies -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">policy</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Tenant Admission Governance &amp; Ingestion Policies</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Control live admission pipelines, multi-channel payment auto-approval, and scholarship provisioning rules.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Policy Engine:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">Strict Enforcement</span>
+</div>
+</div>
+<!-- 4 Policy Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Toggle Card 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between space-y-space-md transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[22px]">credit_card</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-direct-purchase" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:border-surface-container after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div>
+<h3 class="font-title text-title text-on-surface">Direct Student Purchase</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Online payment gateway via FriMi, Genie, Cards &amp; automated bank deposit slip OCR indexing.</p>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1 text-primary"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Gateway Live</span>
+<span>SLA: Instant (&lt;4s)</span>
+</div>
+</div>
+<!-- Toggle Card 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between space-y-space-md transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-access-requests" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:border-surface-container after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div>
+<h3 class="font-title text-title text-on-surface">Access Requests &amp; Review</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Hardship waivers, sibling discount tiers, and term-merit bursaries requiring manual desk sign-off.</p>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1 text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>14 in Queue</span>
+<span>Requires 2-FA Desk</span>
+</div>
+</div>
+<!-- Toggle Card 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between space-y-space-md transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[22px]">hourglass_top</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-free-trial" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:border-surface-container after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div>
+<h3 class="font-title text-title text-on-surface">Open Free Trial Enrollment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">14-day gated sample access with selective paper download permissions &amp; watermarked playback.</p>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1 text-on-surface-variant"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Auto-expire Active</span>
+<span>Limit 1 / Student</span>
+</div>
+</div>
+<!-- Toggle Card 4 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between space-y-space-md transition-all hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-manual-grant" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:border-surface-container after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div>
+<h3 class="font-title text-title text-on-surface">Tutor Invitation &amp; Manual Grant</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Whitelist admission for physical branch cardholders (Rotary Hall / Nugegoda Apex Study Hall).</p>
+</div>
+<div class="pt-2 flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span class="flex items-center gap-1 text-on-surface"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Direct Bypass</span>
+<span>Audit Logged</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Metric Stat Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stat 1 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Total Enrolled Registry</span>
+<div class="p-1.5 rounded-lg bg-primary-fixed text-primary">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display text-on-surface tracking-tight font-bold">1,428</span>
+<span class="font-label-md text-label-md text-primary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +8.4%
+          </span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Capacity: 1,800 Max</span>
+<span>A/L 2025/2026</span>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Pending Access Requests</span>
+<div class="p-1.5 rounded-lg bg-tertiary-fixed text-tertiary">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display text-tertiary tracking-tight font-bold">14</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">Triage Required</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">Avg desk review turnaround: <strong class="text-on-surface">4.2 hours</strong></p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>8 Bank OCR / 6 Waivers</span>
+<span class="text-tertiary font-medium">Prioritize</span>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Manual &amp; Scholarship Grants</span>
+<div class="p-1.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display text-on-surface tracking-tight font-bold">48</span>
+<span class="font-label-md text-label-md text-secondary font-medium">3.3% of total</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">32 Island-Rank Merit, 16 Staff bursaries</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Dean Discretion</span>
+<span class="text-secondary font-semibold">Verified</span>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Revocations &amp; Batch Transfers</span>
+<div class="p-1.5 rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[18px]">sync_problem</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display text-on-surface tracking-tight font-bold">6</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Past 30d</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">4 Transferred (Colombo → Kandy), 2 Revoked</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Payment Bounce: 0</span>
+<span class="text-on-surface-variant">Audit Clear</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Pending Access Requests & Approval Queue -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pending Access Requests &amp; Approval Queue</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">14 Unresolved</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Evaluate fee concessions, bank deposits under slip OCR variance, and merit applications.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+          Filter Vector
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">done_all</span>
+          Batch Approve Verified (4)
+        </button>
+</div>
+</div>
+<!-- Table Roster -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<th class="py-3 px-space-lg font-semibold">Student Profile &amp; Index</th>
+<th class="py-3 px-space-md font-semibold">Target Syllabus / Cohort</th>
+<th class="py-3 px-space-md font-semibold">Request Vector</th>
+<th class="py-3 px-space-md font-semibold">Submission Date</th>
+<th class="py-3 px-space-md font-semibold">Attached Verification Notes</th>
+<th class="py-3 px-space-lg text-right font-semibold">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<img class="w-9 h-9 rounded-full object-cover shadow-xs" data-alt="Portrait photo of a young female Sri Lankan student Methmi Samarathunga in school uniform with high academic focus soft daylight corporate lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6YxjRaA66lFWzlzkVIcwdQ2NnTA67U32-bPly6JLAk0e_xavufMiSlT2vp_eVxKzBguYm0BypO-NHU2p1uWO74OjQNNWJgEaCxveJ0wylgfXnmb29lwAhqi6TmTCGYAQ_JmE2YY0rmlb4TKRSbJXEt89kyjtbFPZm1UjhUuj9DS55ejovDI2BBTUZn4JeFenIu5SnTtYKfv0MyPvo1ScAM4qA4jgZwJfFZTW5-c4"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Methmi Samarathunga</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">STU-2026-CM-8842</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">2026 Combined Maths (Theory + Revision)</span>
+<span class="font-label-sm text-label-sm text-outline">Section 01 - Dr. Asela Perera</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">school</span> Merit Scholarship
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Today, 09:42 AM</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">attachment</span>
+<span class="font-body-sm text-body-sm text-on-surface underline cursor-pointer truncate max-w-xs">Rank 03 Mid-Term Test, Ananda College (98%)</span>
+</div>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-colors shadow-xs">
+                  Approve &amp; Activate
+                </button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-error transition-colors" title="Reject Application">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<img class="w-9 h-9 rounded-full object-cover shadow-xs" data-alt="Portrait photo of a young male Sri Lankan mathematics student Dulantha Nimsara against a neutral background clean institutional portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB3j6nVEjLhRXDrQ8gG1uW99iUcFRxYbx4OQgCN7x5MgemsoT6MTqaK596N7-aR3t9RRt5LImlepTA_XmvsDtwdlAwQjQRotf20-mfEW0BEFp83z1fulkZkFF9atXc2KhL40dnnwh5SF4SEAtiVU0ZD1EctVukS4XXNE-R_eiGFmr5ePpeiiyqgY0GQy5A0h1JRdYz9wPGQFTOYVywWxWg8Z48MBjIqWD1LuajlO8"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Dulantha Nimsara</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">STU-2025-CM-4109</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">2025 Combined Maths Rapid Revision</span>
+<span class="font-label-sm text-label-sm text-outline">Paper Class Batch B</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">receipt</span> Bank Deposit Slip
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Yesterday, 18:14</span>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-outline text-[18px]">receipt_long</span>
+<span class="font-body-sm text-body-sm text-on-surface font-mono">BOC Ref #882941-K • LKR 4,500</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px]">OCR 94%</span>
+</div>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md transition-colors shadow-xs">
+                  Approve &amp; Activate
+                </button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-error transition-colors" title="Reject Application">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<img class="w-9 h-9 rounded-full object-cover shadow-xs" data-alt="Portrait photo of Sri Lankan student Sasanka Pathirana with glasses studying calculus outdoors clean academic profile lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM5QHkwzWEPnFL0qJ3757m8Fuou3Hxnv8liKjTcsSSUKBIrfyRAkYLfjl4ajMoSMBMyfPNBSsX9j4MBUAn_uUBvfn85XwXly6ynKkcbDXe9SuYWjpdGEEvClGATcpBDeR4jQCCQufWvy9vaTnIEaohakADct_BcrmHW9B51YVfAORKPKO1k8FZUKKXzEKWCUP-L_olWR2zSBS-vbbQoTI-ec5AX5FFclyXp_SUCbU"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Sasanka Pathirana</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">STU-2026-FT-9912</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Pure Mathematics Fundamentals</span>
+<span class="font-label-sm text-label-sm text-outline">Self-Paced Foundation</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span> Free Trial (14D)
+              </span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-mono">Nov 22, 11:30 AM</span>
+</td>
+<td class="py-3.5 px-space-md">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Self-onboarding trial • Device ID verified</span>
+</td>
+<td class="py-3.5 px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-colors shadow-xs">
+                  Grant Full Pass
+                </button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-error transition-colors" title="Decline">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Section 4: Master Enrollment Lifecycle Ledger -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg border-b border-surface-container flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Master Enrollment Lifecycle Ledger</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full active registry with access window control, LMS seat status, and direct privilege manipulation.</p>
+</div>
+<!-- Search & Filters -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<div class="relative min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-low text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search student name, index, NIC..." type="text"/>
+</div>
+<select class="h-10 px-3 rounded-lg bg-surface-container-low text-body-md font-body-md text-on-surface focus:outline-none">
+<option>Cohort: All Active (2025/2026)</option>
+<option>2026 Combined Maths Theory</option>
+<option>2025 Rapid Revision</option>
+<option>Physical Hall Synchronized</option>
+</select>
+<select class="h-10 px-3 rounded-lg bg-surface-container-low text-body-md font-body-md text-on-surface focus:outline-none">
+<option>Status: All States</option>
+<option>Active</option>
+<option>Grace Period</option>
+<option>Expired</option>
+<option>Suspended</option>
+</select>
+<button class="h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+          Filters
+        </button>
+</div>
+</div>
+<!-- Active Ledger Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<th class="py-3 px-space-lg font-semibold">Student &amp; Identification</th>
+<th class="py-3 px-space-md font-semibold">Enrolled Course / Batch</th>
+<th class="py-3 px-space-md font-semibold">Admission Origin</th>
+<th class="py-3 px-space-md font-semibold">Access Lifecycle Window</th>
+<th class="py-3 px-space-md font-semibold">Status</th>
+<th class="py-3 px-space-lg text-right font-semibold">Lifecycle Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface">
+<!-- Ledger Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-fixed text-primary font-bold flex items-center justify-center font-title text-title">
+                  KW
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Kavindu Wickramasinghe</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">NIC 200428109211 • Index: CM-9021</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-body-md text-body-md font-medium text-on-surface">2026 Combined Maths Theory</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span>Colombo Hall + Online Portal</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">receipt</span> Bank Slip (#SL-9102)
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Valid until Dec 31, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">Enrolled Oct 12, 2024 (Auto-Renewable)</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Active
+              </span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+                  Extend +30d
+                </button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+                  Transfer Batch
+                </button>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Ledger Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center justify-center font-title text-title">
+                  NS
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Nimna Senavirathna</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">NIC 200511890234 • Index: CM-7712</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-body-md text-body-md font-medium text-on-surface">2026 Combined Maths (Full Stream)</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span>Distinction Track • Kandy Section</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">card_membership</span> Merit Scholarship (100%)
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Valid until Jan 31, 2026</span>
+<span class="font-label-sm text-label-sm text-outline">Biannual Review: Aug 2025</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Active
+              </span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+                  Extend +30d
+                </button>
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">
+                  Transfer Batch
+                </button>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Ledger Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors bg-surface-container-low/20">
+<td class="py-4 px-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-surface-container-high text-on-surface-variant font-bold flex items-center justify-center font-title text-title">
+                  TB
+                </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Tharindu Bandara</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">NIC 200388492019 • Index: CM-3310</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="font-body-md text-body-md font-medium text-on-surface">2025 Applied Mathematics Module</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span>Self-Study Portal</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">mail</span> Manual Invite (Staff Code)
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-error">Expired on Nov 20, 2025</span>
+<span class="font-label-sm text-label-sm text-outline">Grace period elapsed</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Expired
+              </span>
+</td>
+<td class="py-4 px-space-lg text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md transition-colors shadow-xs">
+                  Re-activate / Extend
+                </button>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Registry Footer -->
+<div class="p-space-md border-t border-surface-container bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span>Showing <strong>1 - 3</strong> of <strong>1,428</strong> student lifecycle records</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-primary text-on-primary font-bold">1</button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-low text-on-surface hover:bg-surface-container">2</button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-low text-on-surface hover:bg-surface-container">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-low text-on-surface hover:bg-surface-container">48</button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Enrollment Share by Syllabus, Automated Ingestion Hooks, & Admission Standards Card -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Donut Chart: Enrollment Share by Syllabus -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Enrollment Share by Syllabus</h3>
+<span class="material-symbols-outlined text-outline text-[20px]">pie_chart</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Student volume distribution across academic programs.</p>
+</div>
+<div class="py-space-md flex flex-col items-center justify-center">
+<!-- SVG Donut Chart Under 2KB -->
+<div class="relative w-44 h-44">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<!-- 2026 Combined Maths (60%) -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#eaedff" stroke-width="12"></circle>
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#005ab6" stroke-dasharray="251.2" stroke-dashoffset="100.48" stroke-width="12"></circle>
+<!-- 2025 Rapid Revision (25%) -->
+<circle class="opacity-90" cx="50" cy="50" fill="transparent" r="40" stroke="#4d5c8e" stroke-dasharray="251.2" stroke-dashoffset="-150.72" stroke-width="12"></circle>
+<!-- Foundation & Trials (15%) -->
+<circle cx="50" cy="50" fill="transparent" r="40" stroke="#ffb952" stroke-dasharray="251.2" stroke-dashoffset="213.52" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-tight">1,428</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">Active Seats</span>
+</div>
+</div>
+</div>
+<!-- Legend -->
+<div class="space-y-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="text-on-surface">2026 Combined Maths Theory</span>
+</div>
+<span class="font-semibold text-on-surface">60% (856)</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="text-on-surface">2025 Rapid Revision Classes</span>
+</div>
+<span class="font-semibold text-on-surface">25% (357)</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="text-on-surface">Foundation &amp; 14-Day Free Trials</span>
+</div>
+<span class="font-semibold text-on-surface">15% (215)</span>
+</div>
+</div>
+</div>
+<!-- Automated Ingestion Hooks Status List -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Automated Ingestion Hooks</h3>
+<span class="material-symbols-outlined text-outline text-[20px]">sync</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Real-time gateway listeners and validation webhooks.</p>
+</div>
+<div class="divide-y divide-surface-container my-space-sm">
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div>
+<p class="font-label-lg text-label-lg font-semibold text-on-surface">Commercial Bank / BOC Slip OCR</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">AWS Textract parser active • Latency 1.8s</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">OPERATIONAL</span>
+</div>
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div>
+<p class="font-label-lg text-label-lg font-semibold text-on-surface">FriMi &amp; Genie Instant IPN</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Auto-enroll webhook with receipt generator</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">OPERATIONAL</span>
+</div>
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div>
+<p class="font-label-lg text-label-lg font-semibold text-on-surface">Physical Turnstile Barcode Sync</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nugegoda Hall gateway RFID sync daemon</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">IDLE</span>
+</div>
+<div class="py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+<div>
+<p class="font-label-lg text-label-lg font-semibold text-on-surface">Z-Score Merit Classifier</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">National rank verification queue active</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">PROCESSING</span>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+        Inspect Ingestion Gateway Logs
+      </button>
+</div>
+<!-- G.C.E. A/L Admission Standards Card with Audit Hash -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden">
+<!-- Asymmetric Top Border Motif Accent -->
+<div class="absolute top-0 right-0 w-28 h-28 bg-gradient-to-bl from-primary/10 via-transparent to-transparent pointer-events-none rounded-tr-xl"></div>
+<div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">A/L Admission Standards</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">Tier-1 Node</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Institutional accreditation guidelines for Apex Mathematical Board - 2025/2026 Academic Year.</p>
+</div>
+<div class="my-space-md p-space-md rounded-lg bg-surface-container-low space-y-space-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Strict Student Seat Limit:</span>
+<span class="font-semibold text-on-surface">1,800 Seats</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Concurrent Live Zoom Slots:</span>
+<span class="font-semibold text-on-surface">1,000 Streams</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Default Hardship Quota:</span>
+<span class="font-semibold text-on-surface">5.0% Max Allocation</span>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Verification Protocol:</span>
+<span class="font-semibold text-primary">Biometric ID + Slip Crosscheck</span>
+</div>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Cryptographic Governance Hash:</span>
+<span class="font-mono text-on-surface-variant">SHA256: 8a9f...e03b</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Signed by: <strong>Dr. Asela Perera</strong></span>
+<button class="text-primary hover:underline font-label-sm text-label-sm font-semibold flex items-center gap-0.5">
+            Download Seal
+            <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

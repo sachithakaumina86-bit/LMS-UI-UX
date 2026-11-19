@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-on-surface":"#eef0ff","outline-variant":"#c1c6d6","on-tertiary":"#ffffff","on-primary-fixed-variant":"#00458f","surface-container-high":"#e1e7ff","on-primary":"#ffffff","error":"#ba1a1a","tertiary-fixed":"#ffddb4","secondary-fixed":"#dbe1ff","surface":"#faf8ff","surface-dim":"#cfd9fb","on-secondary-fixed":"#041847","on-primary-fixed":"#001b3f","on-tertiary-fixed":"#291800","on-surface":"#101b34","surface-tint":"#005cba","on-surface-variant":"#414754","primary-container":"#0072e4","on-secondary-fixed-variant":"#354575","primary":"#005ab6","inverse-surface":"#25304a","tertiary-fixed-dim":"#ffb952","surface-container-low":"#f2f3ff","surface-container":"#eaedff","primary-fixed-dim":"#abc7ff","on-secondary-container":"#405081","on-tertiary-container":"#fffbff","primary-fixed":"#d7e3ff","on-error":"#ffffff","on-secondary":"#ffffff","on-primary-container":"#fefcff","secondary":"#4d5c8e","on-background":"#101b34","surface-bright":"#faf8ff","tertiary-container":"#a06900","inverse-primary":"#abc7ff","surface-container-lowest":"#ffffff","error-container":"#ffdad6","outline":"#717785","secondary-fixed-dim":"#b5c5fd","surface-variant":"#d9e2ff","surface-container-highest":"#d9e2ff","tertiary":"#7f5300","on-error-container":"#93000a","background":"#faf8ff","secondary-container":"#b5c5fd","on-tertiary-fixed-variant":"#633f00"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-md":"1rem","gutter":"1.5rem","space-xl":"2rem","space-xs":"0.25rem","margin":"2rem","space-sm":"0.5rem","gutter-mobile":"1rem","margin-mobile":"1rem"},fontFamily:{"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"title":["Plus Jakarta Sans"],"label-sm":["Inter"],"display":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"label-md":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"display-mobile":["Plus Jakarta Sans"]},fontSize:{"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.015em","fontWeight":"700"}],"title":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"display":["44px",{"lineHeight":"52px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"800"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-low"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm shadow-sm"><span class="material-symbols-outlined text-[20px]">hub</span></div><div class="flex flex-col"><span class="font-title text-title text-on-surface tracking-tight leading-none">MindBridge</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-xs">Enterprise LMS</span></div></div><div class="p-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)] flex items-center justify-between gap-space-xs"><div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed"><span class="material-symbols-outlined text-[18px]">architecture</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-lg text-label-lg text-on-surface truncate leading-tight">Apex Combined Maths</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Colombo Central (LKR)</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div></div><div class="px-space-md pt-space-xs pb-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Navigation</span></div><nav class="flex flex-col px-space-sm gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-title shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="courses" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span>Courses</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="assignments" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span>Assignments</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="exams-results" href="#"><span class="material-symbols-outlined text-[20px]">grade</span>Exams &amp; Results</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="video-studio" href="#"><span class="material-symbols-outlined text-[20px]">video_camera_front</span>Video Studio</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="enrollment-management" href="#"><span class="material-symbols-outlined text-[20px]">how_to_reg</span>Enrollment Management</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="certificates-issuance" href="#"><span class="material-symbols-outlined text-[20px]">workspace_premium</span>Certificates &amp; Issuance</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="financials-bank-slips" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span>Financials &amp; Bank Slips</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="staff-governance" href="#"><span class="material-symbols-outlined text-[20px]">badge</span>Staff Governance</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="security-audit-logs" href="#"><span class="material-symbols-outlined text-[20px]">security</span>Security &amp; Audit Logs</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="reports-analytics" href="#"><span class="material-symbols-outlined text-[20px]">bar_chart</span>Reports &amp; Analytics</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="announcements" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span>Announcements</a></nav></div><div class="p-space-md bg-surface-container-low"><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high text-on-surface"><div class="flex flex-col"><span class="font-label-md text-label-md leading-tight">Tenant Node</span><span class="font-label-sm text-label-sm text-on-surface-variant">v4.8.2 Enterprise</span></div><span class="material-symbols-outlined text-primary text-[20px]">dns</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search enrollments, index numbers, verified bank slips, courses..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed"><span class="material-symbols-outlined text-[16px]">domain</span><span class="font-label-sm text-label-sm font-semibold">Apex Math Institute</span></div><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><button class="p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">translate</span></button><button class="p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors"><span class="material-symbols-outlined text-[22px]">tune</span></button><div class="h-6 w-px bg-outline-variant mx-space-xs"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Dr. Asela Perera</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Super Administrator</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<div class="px-space-lg py-space-xl flex flex-col gap-space-lg max-w-[1600px] mx-auto w-full">
+<!-- Header Section with Badges & Primary Actions -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col max-w-4xl">
+<div class="flex flex-wrap items-center gap-space-xs mb-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+            STRICT GOVERNANCE PROTOCOL
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="material-symbols-outlined text-[14px]">vpn_key</span>
+            TWO-KEY AUTHORIZATION
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Certificates &amp; Credential Issuance
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+          Centralized credential authority. Automatic issuance is strictly disabled across all tenants: every certificate requires authenticated verification from the Course Master Tutor followed by cryptographic sign-off by the Tenant Administrator.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="inline-flex items-center gap-space-xs h-10 px-4 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">tune</span>
+          Configure Criteria
+        </button>
+<button class="inline-flex items-center gap-space-xs h-10 px-5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add_moderator</span>
+          Issue Certificate Manually
+        </button>
+</div>
+</div>
+<!-- Dual Governance Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="absolute right-0 top-0 bottom-0 w-64 bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md relative z-10">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0 shadow-inner">
+<span class="material-symbols-outlined text-[26px]">key</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-title text-title text-on-surface">Dual-Key Protocol (Non-Repudiation Architecture)</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold uppercase">Active Standard</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 max-w-2xl">
+              Manual-Only Enforcement: Certifications remain in locked staging until two cryptographic keys are committed. Course tutors authenticate academic parity, while administrators mint the immutable SHA-256 certificate ledger.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-stretch md:self-auto justify-end">
+<div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+            Course Teacher Key: <span class="font-semibold text-primary">Required (1st)</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+            Tenant Admin Key: <span class="font-semibold text-on-surface">Final Lock (2nd)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4 KPI Metrics Row with bespoke visual accents -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Issued Certificates</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">342</span>
+<span class="font-label-sm text-label-sm text-outline">Lifetime Total</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1 font-semibold text-primary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+            +28 this term
+          </span>
+<span class="text-outline">100% Cryptographic Match</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Pending Review Queue</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">18</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Awaiting Sign-Off</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-semibold">11 Teacher Sigs</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-semibold">7 Admin Keys</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Exam Score Threshold</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">65.0%</span>
+<span class="font-label-sm text-label-sm text-outline">Min Cutoff</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">grading</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold">Pass Grade C Standard</span>
+<span class="text-primary font-semibold">Weighted Aggregate</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Assignments Mandatory</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-lg text-headline-lg text-on-surface">100%</span>
+<span class="font-label-sm text-label-sm text-outline">12/12 Papers</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-semibold text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">lock</span>
+            Strict Zero Variance
+          </span>
+<span class="text-outline">Term Audited</span>
+</div>
+</div>
+</div>
+<!-- Main Two-Column Workflow Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Active Issuance Rulebook -->
+<div class="lg:col-span-5 flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-start justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Tenant Protocol Matrix</span>
+<h2 class="font-title text-title text-on-surface mt-0.5">Active Issuance Rulebook</h2>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+            v3.2 Enforcement
+          </span>
+</div>
+<!-- Target Scope Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[18px]">functions</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Combined Maths 2026 Theory</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Batch Apex-CMA-26 · Colombo Central</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">lock</span>
+</div>
+<!-- Rules Stack -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- Rule 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center text-[10px] font-bold">1</span>
+                Cumulative Exam Average
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-semibold">65.0% Min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Computed aggregate across Midterm Assessment, Pure Mathematics Part I &amp; Applied Mechanics.
+            </p>
+</div>
+<!-- Rule 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center text-[10px] font-bold">2</span>
+                Assignments Completion
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest text-primary font-semibold">12 of 12 (100%)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Every weekly tutorial script must carry authenticated grading by an accredited teaching assistant.
+            </p>
+</div>
+<!-- Rule 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center text-[10px] font-bold">3</span>
+                Teacher Key Validation
+              </span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Toggle ON
+              </div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Digital signature token generated from Dr. Asela Perera's private institutional key card.
+            </p>
+</div>
+<!-- Rule 4 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center text-[10px] font-bold">4</span>
+                Tenant Admin Cryptographic Lock
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-semibold">SHA-256 Stamp</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Mints high-resolution vector PDF, embed public verification QR URI (<span class="font-mono text-outline">verify.mindbridge.lk</span>), and registers hash to audit vault.
+            </p>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary font-semibold hover:underline" href="#">
+<span class="material-symbols-outlined text-[16px]">settings</span>
+            Edit Parameters
+          </a>
+<span class="font-label-sm text-label-sm text-outline">Locked by Apex Academic Council</span>
+</div>
+</div>
+<!-- Right Column: Manual Issuance Queue & Eligibility Roster -->
+<div class="lg:col-span-7 flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Pending Authorizations</span>
+<h2 class="font-title text-title text-on-surface mt-0.5">Manual Issuance Queue &amp; Eligibility Roster</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+              3 Candidates Flagged
+            </span>
+</div>
+</div>
+<!-- Candidates List -->
+<div class="flex flex-col gap-space-sm">
+<!-- Candidate 1: Kavindu Wickramasinghe -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-full bg-primary-fixed text-on-primary-fixed font-title text-title flex items-center justify-center font-bold">
+                KW
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Kavindu Wickramasinghe</span>
+<span class="font-mono text-outline font-body-sm text-body-sm">ID: APX-2026-8819</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1 font-medium text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">percent</span>
+                    Exam: <strong class="text-primary font-bold">88.5%</strong>
+</span>
+<span>•</span>
+<span class="flex items-center gap-1 font-medium text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">task_alt</span>
+                    Assignments: <strong class="text-on-surface font-semibold">12/12</strong>
+</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md justify-between md:justify-end">
+<div class="flex flex-col text-right">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+                  Eligible - Pending Teacher Issuance
+                </span>
+<span class="font-label-sm text-label-sm text-outline mt-1">Both keys uncommitted</span>
+</div>
+<button class="px-3.5 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors shrink-0 shadow-sm" type="button">
+                Commit 1st Key
+              </button>
+</div>
+</div>
+<!-- Candidate 2: Nimna Senavirathna -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-full bg-secondary-fixed text-on-secondary-fixed font-title text-title flex items-center justify-center font-bold">
+                NS
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Nimna Senavirathna</span>
+<span class="font-mono text-outline font-body-sm text-body-sm">ID: APX-2026-9042</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1 font-medium text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">percent</span>
+                    Exam: <strong class="text-primary font-bold">79.0%</strong>
+</span>
+<span>•</span>
+<span class="flex items-center gap-1 font-medium text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">task_alt</span>
+                    Assignments: <strong class="text-on-surface font-semibold">12/12</strong>
+</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md justify-between md:justify-end">
+<div class="flex flex-col text-right">
+<span class="px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock_clock</span>
+                  Teacher Approved - Pending Admin Sign-Off
+                </span>
+<span class="font-label-sm text-label-sm text-outline mt-1">Signed by Dr. A. Perera</span>
+</div>
+<button class="px-3.5 py-2 rounded-lg bg-tertiary-container text-on-tertiary-container font-label-md text-label-md font-semibold hover:opacity-90 transition-opacity shrink-0 shadow-sm" type="button">
+                Authorize Admin Key
+              </button>
+</div>
+</div>
+<!-- Candidate 3: Sachintha Perera (Ineligible) -->
+<div class="p-space-md rounded-xl bg-surface-container-low/60 opacity-80 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-full bg-surface-container-high text-on-surface-variant font-title text-title flex items-center justify-center font-bold">
+                SP
+              </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Sachintha Perera</span>
+<span class="font-mono text-outline font-body-sm text-body-sm">ID: APX-2026-7731</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="flex items-center gap-1 font-medium text-error">
+<span class="material-symbols-outlined text-[15px]">error</span>
+                    Exam: <strong class="font-bold text-error">61.2%</strong> (Req: 65.0%)
+                  </span>
+<span>•</span>
+<span class="flex items-center gap-1 font-medium text-error">
+<span class="material-symbols-outlined text-[15px]">cancel</span>
+                    Assignments: <strong class="font-bold text-error">10/12</strong>
+</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md justify-between md:justify-end">
+<div class="flex flex-col text-right">
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">block</span>
+                  Ineligible: Criteria Not Met
+                </span>
+<span class="font-label-sm text-label-sm text-outline mt-1">2 rules failed validation</span>
+</div>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-highest text-outline font-label-md text-label-md font-semibold cursor-not-allowed shrink-0" disabled="" type="button">
+                Action Locked
+              </button>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Displaying priority cohort queue</span>
+<span>Automatic audit logged on each sign-off</span>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Issued Certificate History & Cryptographic Archive -->
+<div class="flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md pb-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Ledger Registry</span>
+<h2 class="font-title text-title text-on-surface mt-0.5">Issued Certificate History &amp; Cryptographic Archive</h2>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search hash, serial ID, student..." type="text"/>
+</div>
+<button class="inline-flex items-center gap-1 h-9 px-3 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+            Filter
+          </button>
+<button class="inline-flex items-center gap-1 h-9 px-3 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+            Export Ledger
+          </button>
+</div>
+</div>
+<!-- Ledger Table -->
+<div class="overflow-x-auto -mx-space-lg px-space-lg">
+<table class="w-full text-left border-collapse min-w-[980px]">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">Serial Number</th>
+<th class="py-3 px-4">Student Name</th>
+<th class="py-3 px-4">Score &amp; Status</th>
+<th class="py-3 px-4">Authenticated Signatories</th>
+<th class="py-3 px-4">QR Hash &amp; Public URI</th>
+<th class="py-3 px-4 text-right rounded-r-lg">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-md font-body-md text-on-surface">
+<!-- Row 1: Dilani Jayawardena -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-4 px-4 font-mono font-bold text-primary">
+                MB-APX-2025-0142
+              </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-xs">
+                    DJ
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Dilani Jayawardena</span>
+<span class="font-body-sm text-body-sm text-outline">Batch 2025 Theory · Reg #9011</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-bold text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Score: 94.2% (Distinction)
+                  </div>
+<span class="font-body-sm text-body-sm text-outline">All 12 assignments graded</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">done_all</span>
+                    Eng. Roshan Wijesinghe
+                  </span>
+<span class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+                    Dr. K. Jayasuriya (Admin)
+                  </span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<a class="font-mono font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">qr_code_2</span>
+                    verify.mindbridge.lk/c/0142
+                  </a>
+<span class="font-mono text-[10px] text-outline truncate max-w-[170px]" title="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855">
+                    SHA: e3b0c44298fc1c149afbf4...
+                  </span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Inspect Record" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary hover:text-primary-container" title="Download PDF Certificate" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Share Ledger Node" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Thenuka Bandara -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-4 px-4 font-mono font-bold text-primary">
+                MB-APX-2025-0141
+              </td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-bold text-xs">
+                    TB
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Thenuka Bandara</span>
+<span class="font-body-sm text-body-sm text-outline">Batch 2025 Theory · Reg #8843</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-bold text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Score: 81.0% (Merit)
+                  </div>
+<span class="font-body-sm text-body-sm text-outline">All 12 assignments graded</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">done_all</span>
+                    Eng. Roshan Wijesinghe
+                  </span>
+<span class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+                    Dr. K. Jayasuriya (Admin)
+                  </span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<a class="font-mono font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">qr_code_2</span>
+                    verify.mindbridge.lk/c/0141
+                  </a>
+<span class="font-mono text-[10px] text-outline truncate max-w-[170px]" title="7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069">
+                    SHA: 7f83b1657ff1fc53b92dc1...
+                  </span>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Inspect Record" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-primary hover:text-primary-container" title="Download PDF Certificate" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface" title="Share Ledger Node" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination and Ledger Proof Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs text-body-sm font-body-sm text-outline">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span>Ledger state synced: Merkle root verified via Colombo Tier-4 Data Center</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface font-label-md text-label-md disabled:opacity-50" disabled="" type="button">Previous</button>
+<span class="px-2 font-label-sm text-label-sm text-on-surface font-semibold">Page 1 of 18</span>
+<button class="px-3 py-1 rounded bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high" type="button">Next</button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

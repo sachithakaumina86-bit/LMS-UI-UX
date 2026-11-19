@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindBridge LMS — Lesson &amp; YouTube Video Manager</title>
+<!-- Tailwind CSS v3 with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            midnight: {
+              950: '#060a15',
+              900: '#080e1d',
+              850: '#0d1322',
+              800: '#151b2b',
+              750: '#1a2236',
+              700: '#1e2638',
+              600: '#2a344d',
+            },
+            brand: {
+              400: '#3898ff',
+              500: '#0875e8',
+              600: '#065ec0',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+            sinhala: ['Noto Sans Sinhala', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles for Layout & Visual Details -->
+<style data-purpose="scrollbar-and-effects">
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0d1322;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2a344d;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3898ff;
+    }
+    .chalkboard-grid {
+      background-color: #0b111e;
+      background-image: 
+        radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0),
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+<!-- END: Custom Styles for Layout & Visual Details -->
+</head>
+<body class="bg-[#080e1d] text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+<!-- BEGIN: Top Navigation Bar -->
+<header class="h-16 bg-[#0d1322] border-b border-[#1e2638] px-4 lg:px-6 flex items-center justify-between sticky top-0 z-40" data-purpose="main-header">
+<div class="flex items-center space-x-4">
+<div class="flex items-center space-x-3 pr-4 border-r border-[#1e2638]">
+<div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-brand-500/20 font-bold text-white text-lg tracking-wider">
+          M
+        </div>
+<div>
+<div class="font-bold text-sm tracking-tight text-white flex items-center gap-1.5">
+            MindBridge <span class="text-brand-400 font-semibold">LMS</span>
+</div>
+<p class="text-[10px] text-slate-400 font-medium tracking-wider uppercase">Learn • Manage • Achieve</p>
+</div>
+</div>
+<div class="hidden md:flex items-center bg-[#151b2b] border border-[#1e2638] rounded-full px-3 py-1 text-xs text-slate-300">
+<svg class="w-3.5 h-3.5 mr-1.5 text-brand-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="font-medium text-slate-400 mr-1">Teacher Portal |</span>
+<span class="font-semibold text-slate-200">Apex Combined Maths</span>
+</div>
+</div>
+<!-- Header Actions & Meta -->
+<div class="flex items-center space-x-4">
+<div class="hidden sm:flex items-center space-x-1.5 text-xs text-slate-400 bg-[#151b2b] px-2.5 py-1 rounded border border-[#1e2638]">
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10" stroke-width="2"></circle>
+<path d="M12 6v6l4 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>SLST 14:35 <span class="text-slate-500">(GMT+5:30)</span></span>
+</div>
+<!-- Language Switcher -->
+<div class="flex items-center bg-[#151b2b] border border-[#1e2638] rounded-md text-xs font-medium p-0.5">
+<button class="px-2 py-0.5 rounded bg-brand-500 text-white shadow-sm font-semibold">EN</button>
+<span class="text-slate-600 px-1">|</span>
+<button class="px-2 py-0.5 rounded text-slate-400 hover:text-white transition">සිංහල</button>
+</div>
+<!-- Notification bell with badge -->
+<div class="relative cursor-pointer p-1.5 rounded-lg hover:bg-[#151b2b] text-slate-300">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="absolute top-1 right-1 w-4 h-4 bg-rose-500 text-[10px] font-bold text-white rounded-full flex items-center justify-center">4</span>
+</div>
+<!-- User Profile Dropdown -->
+<div class="flex items-center space-x-3 pl-3 border-l border-[#1e2638]">
+<div class="w-8 h-8 rounded-full bg-brand-600/30 border border-brand-400/40 flex items-center justify-center text-brand-300 font-semibold text-xs">
+          KS
+        </div>
+<div class="hidden xl:block text-left">
+<div class="text-xs font-semibold text-slate-200">Eng. Kusal Senaratne</div>
+<div class="text-[10px] text-slate-400">Master Lecturer / Tenant Owner</div>
+</div>
+<svg class="w-4 h-4 text-slate-400 cursor-pointer" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</header>
+<!-- END: Top Navigation Bar -->
+<div class="flex flex-1 overflow-hidden">
+<!-- BEGIN: Sidebar Navigation -->
+<aside class="w-64 bg-[#0d1322] border-r border-[#1e2638] flex-col justify-between hidden md:flex shrink-0" data-purpose="sidebar-navigation">
+<div class="p-3 overflow-y-auto">
+<!-- Tenant Switcher Selector -->
+<div class="p-2.5 rounded-lg bg-[#151b2b] border border-[#1e2638] mb-4 flex items-center justify-between">
+<div class="flex items-center space-x-2.5">
+<div class="w-7 h-7 rounded bg-brand-500/20 text-brand-400 border border-brand-500/30 flex items-center justify-center text-xs font-bold">
+              ACM
+            </div>
+<div class="truncate">
+<div class="text-xs font-bold text-slate-200 leading-tight">Apex Combined Maths</div>
+<div class="text-[10px] text-slate-400 truncate">apex-maths.mindbridge.lk</div>
+</div>
+</div>
+<svg class="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 9l4-4 4 4m0 6l-4 4-4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<nav class="space-y-6 text-xs font-medium">
+<!-- Plane: Instructional -->
+<div>
+<div class="px-2 text-[10px] uppercase font-bold tracking-wider text-slate-500 mb-2">Instructional Plane</div>
+<div class="space-y-1">
+<a class="flex items-center px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Dashboard
+              </a>
+<a class="flex items-center px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                My Courses
+              </a>
+<a class="flex items-center px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Course Builder
+              </a>
+<a class="flex items-center px-2.5 py-2 rounded-lg bg-brand-500/10 text-brand-400 font-semibold border-l-2 border-brand-500 transition" href="#">
+<svg class="w-4 h-4 mr-3 text-brand-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Lessons &amp; Materials
+              </a>
+<a class="flex items-center justify-between px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<div class="flex items-center">
+<svg class="w-4 h-4 mr-3 text-rose-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Live Classes</span>
+</div>
+<span class="text-[9px] bg-rose-500/20 text-rose-400 border border-rose-500/30 px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">LIVE</span>
+</a>
+</div>
+</div>
+<!-- Plane: Students & Delivery -->
+<div>
+<div class="px-2 text-[10px] uppercase font-bold tracking-wider text-slate-500 mb-2">Students &amp; Delivery</div>
+<div class="space-y-1">
+<a class="flex items-center px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Students
+              </a>
+<a class="flex items-center px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Assignments
+              </a>
+<a class="flex items-center px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Exams / Quizzes
+              </a>
+<a class="flex items-center px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Question Bank
+              </a>
+</div>
+</div>
+<!-- Plane: Operations & Intelligence -->
+<div>
+<div class="px-2 text-[10px] uppercase font-bold tracking-wider text-slate-500 mb-2">Operations &amp; Intelligence</div>
+<div class="space-y-1">
+<a class="flex items-center justify-between px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<div class="flex items-center">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Payments &amp; Slips</span>
+</div>
+<span class="text-[9px] bg-amber-500/10 text-amber-400 border border-amber-500/20 px-1 py-0.5 rounded font-mono">Rs. LK</span>
+</a>
+<a class="flex items-center px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Certificates
+              </a>
+<a class="flex items-center justify-between px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<div class="flex items-center">
+<svg class="w-4 h-4 mr-3 text-brand-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>AI Assistant</span>
+</div>
+<span class="text-[9px] bg-brand-500/20 text-brand-400 border border-brand-500/30 px-1 py-0.5 rounded font-mono">v2.4</span>
+</a>
+<a class="flex items-center px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Analytics
+              </a>
+<a class="flex items-center px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Messages
+              </a>
+<a class="flex items-center px-2.5 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-[#151b2b] transition" href="#">
+<svg class="w-4 h-4 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                Profile &amp; Settings
+              </a>
+</div>
+</div>
+</nav>
+</div>
+<!-- Tier Status Footer Card in Sidebar -->
+<div class="p-3 border-t border-[#1e2638]">
+<div class="bg-[#151b2b] rounded-lg p-3 border border-[#1e2638] flex items-center justify-between">
+<div class="flex items-center space-x-2.5">
+<div class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></div>
+<div>
+<div class="text-[11px] font-bold text-slate-200">Enterprise Tier</div>
+<div class="text-[9px] text-slate-400">SLA 99.98% • Online</div>
+</div>
+</div>
+<div class="w-2 h-2 rounded-full bg-brand-400"></div>
+</div>
+</div>
+</aside>
+<!-- END: Sidebar Navigation -->
+<!-- BEGIN: Main Work Area -->
+<main class="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8 space-y-6" data-purpose="lesson-manager-workspace">
+<!-- Breadcrumbs & Studio Header -->
+<section class="space-y-3" data-purpose="view-meta-header">
+<nav class="flex items-center space-x-2 text-xs text-slate-400">
+<span class="hover:text-slate-200 cursor-pointer">Teacher Portal</span>
+<span>/</span>
+<span class="hover:text-slate-200 cursor-pointer">Courses</span>
+<span>/</span>
+<span class="hover:text-slate-200 cursor-pointer">2025 A/L Combined Maths</span>
+<span>/</span>
+<span class="hover:text-slate-200 cursor-pointer">Module 03</span>
+<span>/</span>
+<span class="text-brand-400 font-semibold">Lesson 3.4</span>
+</nav>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div>
+<div class="flex items-center space-x-2 mb-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-medium bg-brand-500/10 text-brand-400 border border-brand-500/20">
+<svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Protected YouTube Stream Studio
+              </span>
+<span class="text-xs text-slate-500">• Tenant: Apex Combined Maths (Eng. Kusal Senaratne)</span>
+</div>
+<h1 class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight">Lesson &amp; Media Manager</h1>
+<p class="text-xs lg:text-sm text-slate-400 mt-1 max-w-3xl">
+              Manage unlisted YouTube video playback protection, dynamic anti-rip watermark security, downloadable PDF handouts, and timed student release.
+            </p>
+</div>
+<!-- Top Level Action Buttons -->
+<div class="flex items-center space-x-3 shrink-0">
+<button class="inline-flex items-center px-3.5 py-2 text-xs font-semibold rounded-lg bg-[#151b2b] hover:bg-[#1a2236] text-slate-200 border border-[#1e2638] transition shadow-sm">
+<svg class="w-4 h-4 mr-1.5 text-slate-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Preview as Student
+            </button>
+<button class="inline-flex items-center px-3.5 py-2 text-xs font-semibold rounded-lg bg-[#151b2b] hover:bg-[#1a2236] text-brand-400 border border-brand-500/40 transition shadow-sm">
+<svg class="w-4 h-4 mr-1.5 text-brand-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Save Changes
+            </button>
+<button class="inline-flex items-center px-4 py-2 text-xs font-bold rounded-lg bg-brand-500 hover:bg-brand-600 text-white shadow-lg shadow-brand-500/25 transition">
+<svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+              Publish Lesson
+            </button>
+</div>
+</div>
+</section>
+<!-- Two-Column Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- BEGIN: Left Column (Video Ingestion, Gate, Rich Notes) -->
+<div class="lg:col-span-8 space-y-6">
+<!-- CARD 1: Video Ingestion & High-Fidelity DRM Player -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-5 shadow-xl space-y-5" data-purpose="video-ingestion-card">
+<div class="flex items-center justify-between pb-3 border-b border-[#1e2638]">
+<div class="flex items-center space-x-2.5">
+<div class="p-2 rounded-lg bg-brand-500/10 text-brand-400 border border-brand-500/20">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h2 class="text-sm font-bold text-white">Lesson Details &amp; Video Ingestion</h2>
+<p class="text-xs text-slate-400">Configure authenticated delivery layer masking raw YouTube URLs.</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+<svg class="w-3 h-3 mr-1 text-emerald-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                DRM Safe
+              </span>
+</div>
+<!-- Title & Target Module Inputs -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="md:col-span-2 space-y-1.5">
+<label class="block text-xs font-semibold text-slate-300">Lesson Title</label>
+<input class="w-full bg-[#151b2b] border border-[#1e2638] focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-lg text-xs px-3 py-2.5 text-slate-100 placeholder-slate-500" type="text" value="Differential Equations &amp; Population Growth"/>
+</div>
+<div class="space-y-1.5">
+<label class="block text-xs font-semibold text-slate-300">Target Module</label>
+<select class="w-full bg-[#151b2b] border border-[#1e2638] focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-lg text-xs px-3 py-2.5 text-slate-100">
+<option selected="">Module 03: Calculus II</option>
+<option>Module 02: Vectors</option>
+<option>Module 01: Statics</option>
+</select>
+</div>
+</div>
+<!-- YouTube Unlisted Ingestion Input -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<label class="text-xs font-semibold text-slate-300">YouTube Unlisted URL</label>
+<span class="text-[11px] text-amber-400 flex items-center">
+<svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                  Restricted Embed Sandbox Enabled
+                </span>
+</div>
+<div class="relative flex rounded-lg shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-rose-500">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</div>
+<input class="w-full pl-9 pr-24 bg-[#151b2b] border border-[#1e2638] focus:border-brand-500 focus:ring-1 focus:ring-brand-500 rounded-lg text-xs py-2.5 font-mono text-slate-200" type="text" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
+<button class="absolute inset-y-1 right-1 px-3 bg-[#1e2638] hover:bg-[#2a344d] text-slate-200 text-xs font-medium rounded-md transition flex items-center">
+                  Re-Verify
+                </button>
+</div>
+</div>
+<!-- Ingestion Validation Meta Strip -->
+<div class="bg-[#151b2b] rounded-lg p-3 border border-[#1e2638] flex flex-wrap items-center justify-between gap-2 text-xs">
+<div class="flex items-center space-x-2 text-emerald-400 font-medium">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Unlisted YouTube Stream Validated &amp; Secure</span>
+</div>
+<div class="flex items-center space-x-3 text-slate-400 font-mono text-[11px]">
+<span>1 hr 48 min 22 sec</span>
+<span>•</span>
+<span>1080p FHD</span>
+<span>•</span>
+<span class="text-brand-400">Sinhala &amp; English (Dual Track)</span>
+</div>
+</div>
+<!-- BEGIN: Video Player Simulator with Dynamic Watermark -->
+<div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden border border-[#2a344d] shadow-2xl flex flex-col justify-between" data-purpose="video-player-preview">
+<!-- Chalkboard Simulation Canvas Background -->
+<div class="absolute inset-0 chalkboard-grid flex items-center justify-center pointer-events-none opacity-90">
+<div class="text-slate-400/80 font-mono text-xs md:text-sm p-8 leading-relaxed max-w-xl">
+<div class="text-slate-500 text-[11px] mb-2">// STREAM-ID: LK-ACM-2025-0849</div>
+<div class="text-emerald-400/80 text-sm md:text-base font-bold mb-1">
+                    \frac{dP}{dt} = k P \left(1 - \frac{P}{K}\right)
+                  </div>
+<div class="text-slate-300 text-xs mt-2">
+                    \int \frac{dP}{P(1 - P/K)} = \int k \, dt \implies P(t) = \frac{K}{1 + A e^{-kt}}
+                  </div>
+<div class="text-[11px] text-amber-300/70 mt-3 italic">
+                    [Teacher video feed active: Eng. Kusal Senaratne writing with stylus on digital canvas]
+                  </div>
+</div>
+</div>
+<!-- Top Player Bar with Rec-Shield Active Pill -->
+<div class="relative z-10 p-3 bg-gradient-to-b from-black/80 to-transparent flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<span class="text-white text-xs font-semibold drop-shadow">MindBridge LMS — Lesson &amp; YouTube Video Manager</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-rose-600/90 text-white shadow-lg shadow-rose-600/40 animate-pulse">
+<span class="w-1.5 h-1.5 rounded-full bg-white mr-1.5"></span>
+                    REC-SHIELD ON
+                  </span>
+</div>
+</div>
+<!-- DYNAMIC FLOATING WATERMARK (Anti-Piracy Screen Recording Tamper) -->
+<div class="relative z-10 self-center bg-black/45 backdrop-blur-sm border border-white/10 px-4 py-2 rounded text-center select-none shadow-2xl transform rotate-[-3deg]">
+<div class="text-[11px] font-bold text-amber-300/90 tracking-wide font-mono">
+                  Eng. Kusal Senaratne | Apex Combined Maths
+                </div>
+<div class="text-[10px] text-slate-300/80 font-mono">
+                  Student SL-LRN-89401 • 192.248.32.14 • Colombo
+                </div>
+</div>
+<!-- Bottom Controls Overlay -->
+<div class="relative z-10 p-3 bg-gradient-to-t from-black/90 via-black/60 to-transparent space-y-2">
+<!-- Scrubber bar -->
+<div class="w-full bg-slate-700/60 h-1 rounded cursor-pointer relative">
+<div class="bg-brand-500 h-1 rounded w-[38%] relative">
+<div class="absolute -right-1.5 -top-1 w-3 h-3 bg-white rounded-full shadow"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-white text-xs">
+<div class="flex items-center space-x-3">
+<button class="hover:text-brand-400 transition">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</button>
+<button class="hover:text-brand-400 transition">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path></svg>
+</button>
+<span class="text-[11px] font-mono text-slate-300">42:15 / 1:48:22</span>
+</div>
+<div class="flex items-center space-x-3">
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-white/10 hover:bg-white/20 cursor-pointer font-mono">1.25x</span>
+<span class="text-[10px] text-slate-300 hidden sm:inline-flex items-center">
+<svg class="w-3 h-3 mr-1 text-brand-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                      Ch. 2: Logistic Growth
+                    </span>
+<button class="hover:text-brand-400 transition">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- END: Video Player Simulator -->
+<div class="flex items-center justify-between text-[11px] text-slate-400 pt-1">
+<span class="flex items-center text-slate-400">
+<svg class="w-3.5 h-3.5 text-brand-400 mr-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Anti-Inspection Canvas Wrap active: Direct URL hidden from browser DOM.
+              </span>
+<span class="font-mono text-slate-500">Bitrate: 4,820 kbps (Adaptive HLS)</span>
+</div>
+</div>
+<!-- CARD 2: Release & Access Control -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-5 shadow-xl space-y-4" data-purpose="access-control-card">
+<div class="flex items-center space-x-2.5 pb-3 border-b border-[#1e2638]">
+<div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h2 class="text-sm font-bold text-white">Lesson Release &amp; Access Control</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Release Scheduling -->
+<div class="bg-[#151b2b] rounded-lg p-3.5 border border-[#1e2638] space-y-3">
+<label class="block text-xs font-semibold text-slate-300">Release Mode</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="px-3 py-2 text-xs font-semibold rounded-md bg-brand-500 text-white flex items-center justify-center shadow">
+<svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    Scheduled
+                  </button>
+<button class="px-3 py-2 text-xs font-semibold rounded-md bg-[#1a2236] text-slate-400 hover:text-white flex items-center justify-center border border-[#1e2638]">
+<svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    Instant
+                  </button>
+</div>
+<div>
+<span class="block text-[11px] text-slate-400 mb-1">Scheduled Unlock Time</span>
+<div class="relative">
+<input class="w-full bg-[#1a2236] border border-[#1e2638] rounded-md text-xs px-3 py-2 text-slate-200 font-mono" type="text" value="28 Oct 2025, 08:00 SLST"/>
+<div class="absolute inset-y-0 right-0 pr-2.5 flex items-center pointer-events-none text-slate-400">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+</div>
+</div>
+<!-- Enrollment Gates -->
+<div class="bg-[#151b2b] rounded-lg p-3.5 border border-[#1e2638] space-y-3">
+<label class="block text-xs font-semibold text-slate-300">Enrollment Restriction</label>
+<div class="flex items-center justify-between pt-1">
+<div>
+<div class="text-xs font-semibold text-slate-200">Verified Enrolled Only</div>
+<div class="text-[10px] text-slate-400">Requires valid monthly tuition slip</div>
+</div>
+<!-- Active Toggle -->
+<div class="w-10 h-5 bg-brand-500 rounded-full flex items-center justify-end px-0.5 cursor-pointer">
+<div class="w-4 h-4 rounded-full bg-white shadow-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-[#1e2638]">
+<div>
+<div class="text-xs font-semibold text-slate-200">Public Free Preview</div>
+<div class="text-[10px] text-slate-400">Allows 10-minute teaser</div>
+</div>
+<!-- Inactive Toggle -->
+<div class="w-10 h-5 bg-slate-700 rounded-full flex items-center justify-start px-0.5 cursor-pointer">
+<div class="w-4 h-4 rounded-full bg-slate-400 shadow-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Prerequisites Bar -->
+<div class="bg-[#151b2b] rounded-lg p-3 border border-[#1e2638] flex items-center justify-between text-xs">
+<div class="flex items-center space-x-2">
+<svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="text-slate-400">Prerequisite Completion Gate:</span>
+<span class="font-semibold text-slate-200">Lesson 3.3: First-Order Linear Equations (Must Complete First)</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] bg-brand-500/10 text-brand-400 border border-brand-500/30">Enforced (85% Watch Req.)</span>
+</div>
+</div>
+<!-- CARD 3: Sinhala Unicode & LaTeX Syllabus Notes -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-5 shadow-xl space-y-4" data-purpose="sinhala-rich-editor-card">
+<div class="flex items-center justify-between pb-3 border-b border-[#1e2638]">
+<div class="flex items-center space-x-2.5">
+<div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h2 class="text-sm font-bold text-white">Lesson Overview &amp; Sinhala Syllabus Notes</h2>
+</div>
+</div>
+<div class="flex items-center space-x-2 text-[11px] font-mono">
+<span class="px-2 py-0.5 rounded bg-[#151b2b] text-slate-300 border border-[#1e2638]">Unicode UTF-8</span>
+<span class="px-2 py-0.5 rounded bg-brand-500/10 text-brand-400 border border-brand-500/20">LaTeX Ready</span>
+</div>
+</div>
+<!-- Editor Toolbar -->
+<div class="flex items-center justify-between bg-[#151b2b] border border-[#1e2638] rounded-t-lg px-3 py-2 text-xs">
+<div class="flex items-center space-x-3 text-slate-300">
+<button class="hover:text-white font-bold px-1.5 py-0.5 rounded hover:bg-[#1e2638]">B</button>
+<button class="hover:text-white italic px-1.5 py-0.5 rounded hover:bg-[#1e2638]">I</button>
+<button class="hover:text-white underline px-1.5 py-0.5 rounded hover:bg-[#1e2638]">U</button>
+<span class="text-slate-600">|</span>
+<button class="hover:text-white font-mono px-1.5 py-0.5 rounded hover:bg-[#1e2638]">∑</button>
+<button class="hover:text-white px-1.5 py-0.5 rounded hover:bg-[#1e2638]">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="hover:text-white px-1.5 py-0.5 rounded hover:bg-[#1e2638]">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="text-[11px] text-slate-400">
+                Sinhala Keying: <span class="text-emerald-400">Direct Unicode</span>
+</div>
+</div>
+<!-- Notes Content Area -->
+<div class="bg-[#151b2b] border border-t-0 border-[#1e2638] rounded-b-lg p-4 space-y-4 text-xs leading-relaxed">
+<p class="text-slate-300">
+                In this session, we investigate continuous growth dynamics modeled by first-order separable differential equations:
+              </p>
+<!-- Math formula block -->
+<div class="p-3 rounded-lg bg-[#0d1322] border border-[#2a344d] font-mono text-brand-300 text-center font-bold tracking-wider">
+                dP/dt = kP (1 - P/K)   ⇒   P(t) = K / (1 + A e^(-kt))
+              </div>
+<!-- Sinhala Syllabus Overview -->
+<div class="space-y-1.5 bg-[#1a2236]/60 p-3 rounded-lg border border-[#1e2638]">
+<div class="font-bold text-slate-200">විෂය නිර්දේශ සටහන (G.C.E. A/L Combined Maths):</div>
+<p class="text-slate-300 text-justify font-sinhala leading-normal">
+                  ජනගහන වර්ධන ආකෘතිකරණය සහ විශේෂ විල්‍යස අවකල සමීකරණ විසඳීම මෙහිදී විස්තරාත්මකව සාකච්ඡා කෙරේ. සීමාකාරී අගයන් (Carrying Capacity - K) පවතින අවස්ථාවලදී සීමා අගයන් ලබාගන්නා ආකාරය පිළිබඳව පසුගිය විභාග ගැටලු (2018-2024 Past Papers) අභ්‍යාස මාලාව ආශ්‍රයෙන් පරීක්ෂා කරන්න.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- END: Left Column -->
+<!-- BEGIN: Right Column (Materials, Q&A, AI Copilot) -->
+<div class="lg:col-span-4 space-y-6">
+<!-- WIDGET 1: Lecture Materials & PDF DRM Shield -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-5 shadow-xl space-y-4" data-purpose="lecture-materials-card">
+<div class="flex items-center justify-between pb-3 border-b border-[#1e2638]">
+<div class="flex items-center space-x-2">
+<div class="p-1.5 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h2 class="text-sm font-bold text-white">Lecture Materials &amp; PDF DRM</h2>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/30">Watermark Engine Active</span>
+</div>
+<p class="text-xs text-slate-400">
+              Protect copyrighted handouts. When download is disabled, documents open solely within the secured student canvas viewer.
+            </p>
+<!-- File Item 1: Protected View-Only Handout -->
+<div class="p-3 bg-[#151b2b] rounded-lg border border-[#1e2638] space-y-2.5">
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-2.5">
+<div class="p-2 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20 mt-0.5">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<div class="text-xs font-semibold text-slate-200">Differential_Equations_Theory_Unit03.pdf</div>
+<div class="text-[10px] text-slate-400">4.2 MB • 24 Pages • High Resolution</div>
+</div>
+</div>
+<button class="text-slate-500 hover:text-rose-400">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- DRM Lock & Download Setting -->
+<div class="flex items-center justify-between pt-1 border-t border-[#1e2638]/60 text-xs">
+<div class="flex items-center space-x-1.5 text-amber-400">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="text-[11px] font-medium text-slate-300">Allow PDF Download</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="text-[10px] text-slate-400">Currently: In-Browser Watermarked View Only</span>
+<div class="w-8 h-4 bg-slate-700 rounded-full flex items-center justify-start px-0.5 cursor-pointer">
+<div class="w-3 h-3 rounded-full bg-slate-400"></div>
+</div>
+</div>
+</div>
+<!-- Dynamic Watermark notice for Handout -->
+<div class="text-[10px] text-amber-300/80 bg-amber-500/10 px-2 py-1 rounded border border-amber-500/20 flex items-center">
+<svg class="w-3 h-3 mr-1 text-amber-400 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                Active Watermark: Student NIC, Index &amp; WhatsApp Mobile stamped diagonally.
+              </div>
+</div>
+<!-- File Item 2: Downloadable Past Paper -->
+<div class="p-3 bg-[#151b2b] rounded-lg border border-[#1e2638] space-y-2">
+<div class="flex items-start justify-between">
+<div class="flex items-start space-x-2.5">
+<div class="p-2 rounded bg-brand-500/10 text-brand-400 border border-brand-500/20 mt-0.5">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<div class="text-xs font-semibold text-slate-200">Weekly_Speed_Drill_Exercises_Set_B.pdf</div>
+<div class="text-[10px] text-slate-400">1.8 MB • 6 Pages • Printable</div>
+</div>
+</div>
+<button class="text-slate-500 hover:text-rose-400">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-[#1e2638]/60 text-xs">
+<div class="flex items-center space-x-1.5 text-emerald-400">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="text-[11px] font-medium text-slate-300">Allow PDF Download</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="text-[10px] text-slate-400">Currently: ON (Students can print offline)</span>
+<div class="w-8 h-4 bg-brand-500 rounded-full flex items-center justify-end px-0.5 cursor-pointer">
+<div class="w-3 h-3 rounded-full bg-white shadow-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Upload New Resource Button -->
+<button class="w-full py-2.5 px-3 rounded-lg border border-dashed border-brand-500/40 hover:border-brand-400 hover:bg-brand-500/5 text-brand-400 text-xs font-semibold flex items-center justify-center transition">
+<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+              + Upload New Handout / Past Paper (PDF, Max 25MB)
+            </button>
+</div>
+<!-- WIDGET 2: Student Discussion & Q&A Timestamps -->
+<div class="bg-[#0d1322] border border-[#1e2638] rounded-xl p-5 shadow-xl space-y-4" data-purpose="student-qa-card">
+<div class="flex items-center justify-between pb-3 border-b border-[#1e2638]">
+<div class="flex items-center space-x-2">
+<div class="p-1.5 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/20">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h2 class="text-sm font-bold text-white">Student Discussion &amp; Q&amp;A</h2>
+</div>
+<div class="w-8 h-4 bg-brand-500 rounded-full flex items-center justify-end px-0.5 cursor-pointer">
+<div class="w-3 h-3 rounded-full bg-white shadow-sm"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs text-slate-400">
+<span>2 Pending Queries for Lesson 3.4</span>
+<span class="text-[11px] text-amber-400 font-mono">Avg. reply SLA: 3 hrs</span>
+</div>
+<div class="space-y-3">
+<!-- Q&A Item 1 -->
+<div class="p-3 bg-[#151b2b] rounded-lg border border-[#1e2638] space-y-2">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center space-x-2">
+<div class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-300 font-bold flex items-center justify-center text-[10px] border border-purple-500/30">
+                      KP
+                    </div>
+<div>
+<span class="font-semibold text-slate-200">Kavindu Perera</span>
+<span class="text-[10px] text-slate-500 ml-1">Colombo District (Rank #12)</span>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 font-mono">18m ago</span>
+</div>
+<p class="text-xs text-slate-300">
+                  "Sir, in minute <a class="text-brand-400 font-mono font-bold hover:underline" href="#">45:10</a>, can we use the integrating factor method directly instead of splitting variables?"
+                </p>
+<div class="flex items-center justify-end space-x-2 pt-1 border-t border-[#1e2638]/50 text-xs">
+<button class="px-2 py-1 text-[11px] text-slate-400 hover:text-slate-200 rounded">
+                    Pin Question
+                  </button>
+<button class="px-2.5 py-1 text-[11px] bg-brand-500 hover:bg-brand-600 text-white rounded font-medium flex items-center">
+<svg class="w-3 h-3 mr-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    Reply Video Note
+                  </button>
+</div>
+</div>
+<!-- Q&A Item 2 -->
+<div class="p-3 bg-[#151b2b] rounded-lg border border-[#1e2638] space-y-2">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center space-x-2">
+<div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-300 font-bold flex items-center justify-center text-[10px] border border-emerald-500/30">
+                      SW
+                    </div>
+<div>
+<span class="font-semibold text-slate-200">Sanduni Wickramasinghe</span>
+<span class="text-[10px] text-slate-500 ml-1">Kandy Batch</span>
+</div>
+</div>
+<span class="text-[10px] text-slate-500 font-mono">1h 05m ago</span>
+</div>
+<p class="text-xs text-slate-300">
+                  "Is formula sheet permitted for the practice test scheduled for this Friday night?"
+                </p>
+<div class="flex items-center justify-end pt-1 border-t border-[#1e2638]/50">
+<button class="px-2.5 py-1 text-[11px] bg-[#1a2236] hover:bg-[#222c44] text-slate-200 border border-[#1e2638] rounded font-medium">
+                    Quick Reply
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<!-- WIDGET 3: Gemini AI Teacher Copilot -->
+<div class="bg-gradient-to-br from-[#121a30] to-[#0d1322] border border-brand-500/30 rounded-xl p-5 shadow-xl space-y-4" data-purpose="gemini-ai-copilot-card">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-7 h-7 rounded-lg bg-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/30 font-bold text-xs">
+                  ✨
+                </div>
+<div>
+<h2 class="text-sm font-bold text-white">Gemini AI Teacher Copilot</h2>
+<p class="text-[10px] text-slate-400">Automate combined maths summaries &amp; translations</p>
+</div>
+</div>
+<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-500/20 text-brand-300 border border-brand-500/40">Gemini 2.5 Pro</span>
+</div>
+<div class="space-y-2 text-xs">
+<button class="w-full text-left p-2.5 rounded-lg bg-[#151b2b] hover:bg-[#1a2236] border border-[#1e2638] transition flex items-center justify-between text-slate-200">
+<span class="flex items-center">
+<svg class="w-3.5 h-3.5 mr-2 text-brand-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                  Generate Lesson Summary &amp; Key Formula Sheet
+                </span>
+<span class="text-slate-400 font-bold">→</span>
+</button>
+<button class="w-full text-left p-2.5 rounded-lg bg-[#151b2b] hover:bg-[#1a2236] border border-[#1e2638] transition flex items-center justify-between text-slate-200">
+<span class="flex items-center">
+<svg class="w-3.5 h-3.5 mr-2 text-brand-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                  Auto-translate Lesson Notes to Tamil &amp; Sinhala
+                </span>
+<span class="text-slate-400 font-bold">→</span>
+</button>
+</div>
+<div class="p-2.5 bg-brand-500/5 rounded-lg border border-brand-500/20 text-[11px] text-slate-400 flex items-start space-x-2">
+<svg class="w-4 h-4 text-brand-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Gemini scans the unlisted video transcript and automatically builds timestamped revision bookmarks for student dashboards.</span>
+</div>
+</div>
+</div>
+<!-- END: Right Column -->
+</div>
+</main>
+<!-- END: Main Work Area -->
+</div>
+<!-- BEGIN: Bottom Status & CDN Telemetry Bar -->
+<footer class="h-9 bg-[#0d1322] border-t border-[#1e2638] px-4 lg:px-6 flex items-center justify-between text-[11px] text-slate-400 shrink-0" data-purpose="system-status-footer">
+<div class="flex items-center space-x-4">
+<span class="flex items-center text-slate-300">
+<span class="w-2 h-2 rounded-full bg-emerald-400 inline-block mr-1.5 animate-pulse"></span>
+        Apex CDN Gateway Online
+      </span>
+<span class="hidden sm:inline text-slate-600">|</span>
+<span class="hidden sm:inline font-mono text-slate-400">
+        Storage consumed: 16.4 GB / 250 GB AWS S3 Sri Lanka Edge
+      </span>
+</div>
+<div class="flex items-center space-x-4">
+<span class="text-slate-400">Last saved by Eng. Kusal Senaratne at 14:18 SLST</span>
+<span class="text-slate-600">|</span>
+<a class="text-brand-400 hover:underline" href="#">Audit History Log</a>
+</div>
+</footer>
+<!-- END: Bottom Status & CDN Telemetry Bar -->
+</body></html>

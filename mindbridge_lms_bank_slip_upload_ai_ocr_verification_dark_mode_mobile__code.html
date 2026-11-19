@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "error-container": "#93000a", "surface-dim": "#0d1322", "surface-container-low": "#151b2b", "surface-variant": "#2f3445", "primary": "#a4c8ff", "inverse-primary": "#005fad", "on-primary": "#00315e", "outline": "#8a919e", "surface-container-lowest": "#080e1d", "secondary-fixed-dim": "#ffb95f", "error": "#ffb4ab", "inverse-on-surface": "#2a3040", "surface-container-highest": "#2f3445", "secondary-fixed": "#ffddb8", "background": "#0d1322", "secondary": "#ffb95f", "surface-tint": "#a4c8ff", "inverse-surface": "#dde2f8", "on-tertiary": "#003824", "on-primary-container": "#002f5b", "on-tertiary-container": "#003623", "primary-container": "#3898ff", "on-error-container": "#ffdad6", "surface-container": "#191f2f", "on-secondary-fixed": "#2a1700", "primary-fixed-dim": "#a4c8ff", "outline-variant": "#404753", "on-error": "#690005", "on-secondary-container": "#5b3800", "tertiary-container": "#00ab76", "surface-container-high": "#242a3a", "on-tertiary-fixed-variant": "#005236", "surface": "#0d1322", "surface-bright": "#33394a", "on-secondary": "#472a00", "on-background": "#dde2f8", "on-surface": "#dde2f8", "on-primary-fixed-variant": "#004784", "tertiary": "#4edea3", "on-secondary-fixed-variant": "#653e00", "tertiary-fixed-dim": "#4edea3", "primary-fixed": "d4e3ff", "tertiary-fixed": "#6ffbbe", "secondary-container": "#ee9800", "on-primary-fixed": "#001c3a", "on-surface-variant": "#c0c7d5", "on-tertiary-fixed": "#002113" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "margin": "2rem", "space-lg": "1.5rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-2xs": "0.125rem", "space-3xl": "4rem", "space-xl": "2rem", "gutter": "1.5rem", "margin-mobile": "1rem", "space-2xl": "3rem", "space-md": "1rem" }, "fontFamily": { "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.25)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface focus:outline-none shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col min-w-0 pl-1"><span class="font-title-md text-title-md text-on-surface truncate">Bank Slip Upload Details</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">MindBridge A/L Maths</span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-safe">
+<!-- Interactive Scan Canvas & Progress Container -->
+<div class="px-gutter-mobile pt-space-sm flex flex-col gap-space-md">
+<!-- Stepper & Subtitle Banner -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="flex h-2 w-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-md text-label-md text-primary">Step 2 of 2: AI OCR Verification</span>
+</div>
+<span class="font-label-sm text-label-sm bg-tertiary-container/20 text-tertiary px-space-xs py-0.5 rounded-full uppercase tracking-wider">
+        Live Analysis
+      </span>
+</div>
+<!-- Live Camera / Slip Scan Preview Container -->
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-lowest shadow-xl flex items-center justify-center">
+<!-- The Slip Image -->
+<img class="w-full h-full object-cover opacity-85 select-none" data-alt="A macro detailed photograph of a blue stamped official Bank of Ceylon deposit slip on a dark slate desk with visible handwritten figures of 4500 LKR, branch stamp of Nugegoda, and reference number BOC-9021, illuminated by sharp cobalt blue scanner light beams." id="slip-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvKSqPG0X79_olu-pJoiJDx0anSi161-y0w5iFmtnFtMrc908kNSkW7TMxVRvj2lrumpM98VSHSJyp6rfcYn3uZ1lw7hNRt1S0KceEcVtM1fVlJMAbeoSJqi3Mc-D3kKoXEVIVuOkC2tarXCoUXKU4Wuny6y5fd47UnfGYjdai1B4vEima46iHdX5AFgRdSOPcN1GK7rE4RfW8ykz6MbaB4CDUVIuGPjCiWfcsStQ"/>
+<!-- Scanning Sweep Grid & Laser Line -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary-container/15 to-transparent pointer-events-none animate-[pulse_2.5s_ease-in-out_infinite]"></div>
+<div class="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent shadow-[0_0_15px_#3898ff] pointer-events-none transition-all duration-700 ease-linear" id="scan-laser" style="top: 25%;"></div>
+<!-- OCR Bounding Box Anchors / Visual Delight Overlays -->
+<div class="absolute top-8 left-6 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-md shadow-lg flex items-center gap-1.5 animate-bounce" style="animation-duration: 3s;">
+<span class="material-symbols-outlined text-tertiary text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface">Amount: <strong class="text-tertiary">LKR 4,500</strong></span>
+</div>
+<div class="absolute bottom-14 left-5 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-md shadow-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface">Ref: <span class="text-primary font-mono">BOC-9021</span></span>
+</div>
+<div class="absolute top-12 right-6 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded-md shadow-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[14px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface">Branch: <span class="text-on-surface-variant">Nugegoda</span></span>
+</div>
+<!-- Scan Frame Corner Brackets -->
+<div class="absolute top-3 left-3 w-4 h-4 bg-transparent border-t-2 border-l-2 border-primary-container rounded-tl-sm pointer-events-none"></div>
+<div class="absolute top-3 right-3 w-4 h-4 bg-transparent border-t-2 border-r-2 border-primary-container rounded-tr-sm pointer-events-none"></div>
+<div class="absolute bottom-3 left-3 w-4 h-4 bg-transparent border-b-2 border-l-2 border-primary-container rounded-bl-sm pointer-events-none"></div>
+<div class="absolute bottom-3 right-3 w-4 h-4 bg-transparent border-b-2 border-r-2 border-primary-container rounded-br-sm pointer-events-none"></div>
+<!-- Floating Toolbar on Preview Container -->
+<div class="absolute bottom-2.5 right-2.5 flex items-center gap-1.5 z-10">
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-high/90 text-on-surface hover:text-primary backdrop-blur-md shadow-md active:scale-95 transition-all text-label-sm font-label-sm" id="btn-contrast" onclick="toggleContrast()" type="button">
+<span class="material-symbols-outlined text-[16px]">contrast</span>
+<span>Enhance</span>
+</button>
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-high/90 text-on-surface hover:text-secondary active:scale-95 transition-all text-label-sm font-label-sm" onclick="triggerRetake()" type="button">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>Retake</span>
+</button>
+</div>
+</div>
+<!-- AI Extracted Data Verification Card -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-lg flex flex-col gap-space-sm">
+<!-- Card Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-[20px]">document_scanner</span>
+<span class="font-title-md text-title-md text-on-surface">AI Parsed Voucher Details</span>
+</div>
+<div class="flex items-center gap-1 bg-tertiary-container/15 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-tertiary text-[14px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-tertiary">97.8% Match</span>
+</div>
+</div>
+<!-- Key Value Fields in Bento / Structured Split Tiles -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Student Index</span>
+<span class="font-title-md text-title-md text-on-surface truncate">SL-LRN-89401</span>
+<span class="font-body-sm text-body-sm text-outline truncate">Kavindu N. Perera</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Target Batch</span>
+<span class="font-title-md text-title-md text-primary truncate">Combined Maths</span>
+<span class="font-body-sm text-body-sm text-outline truncate">Nov 2025 Regular</span>
+</div>
+</div>
+<!-- Amount Highlight Banner with Interactive Micro-Edit -->
+<div class="bg-surface-container-high p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Verified Amount</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">LKR 4,500.00</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/20 px-1 rounded">MATCHED</span>
+</div>
+</div>
+<button aria-label="Edit detected amount" class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-primary active:scale-90 transition-transform" onclick="openQuickEdit()" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<!-- Bank & Slip Metadata List -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-2xs">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-2 rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">account_balance</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-outline">Bank</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Bank of Ceylon</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-2 rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">calendar_today</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-outline">Deposit Date</span>
+<span class="font-label-md text-label-md text-on-surface truncate">24 Nov 2025</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Instant Entitlement Unlock Notice (Emerald Delight Card) -->
+<div class="bg-gradient-to-br from-surface-container-low via-surface-container-low to-tertiary-container/10 p-space-md rounded-xl flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-label-lg text-label-lg text-on-surface">Automatic Unlocks Upon Submission</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+            Instant <strong>1080p DRM stream</strong> access to Live Masterclass
+          </span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">qr_code_2</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+<strong>Rotary Hall Nugegoda</strong> attendance entry pass generated
+          </span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">local_shipping</span>
+<span class="font-body-sm text-body-sm text-on-surface">
+            Express postal dispatch queue for <strong>Unit 08 Calculus Tute</strong>
+</span>
+</div>
+</div>
+</div>
+<!-- Certification & Acknowledgement Checkbox -->
+<label class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-lowest cursor-pointer select-none group">
+<input checked="" class="mt-1 w-5 h-5 rounded bg-surface-container-high text-primary-container focus:ring-0 focus:outline-none accent-primary-container" id="slip-consent" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">
+          I confirm this bank slip is authentic and unique.
+        </span>
+<span class="font-body-sm text-body-sm text-outline">
+          Duplicate submissions trigger automatic academy LMS suspension under Sri Lanka educational guidelines.
+        </span>
+</div>
+</label>
+<!-- Support Assistance Card -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">chat</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Stamp blurry or unreadable?</span>
+<span class="font-body-sm text-body-sm text-outline">WhatsApp Cashier (+94 71 987 6543)</span>
+</div>
+</div>
+<a class="px-2.5 py-1.5 rounded-lg bg-surface-container-high text-secondary hover:bg-secondary hover:text-on-secondary transition-colors font-label-sm text-label-sm flex items-center gap-1" href="https://wa.me/94719876543" rel="noopener noreferrer" target="_blank">
+<span>Assist</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Sticky Bottom Ergonomic Action Dock -->
+<div class="sticky bottom-0 w-full mt-space-md p-gutter-mobile bg-surface-dim/95 backdrop-blur-xl shadow-[0_-4px_24px_rgba(0,0,0,0.6)] flex flex-col gap-2">
+<button class="w-full h-12 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs shadow-[0_0_20px_rgba(56,152,255,0.35)] active:scale-[0.98] transition-all" id="submit-btn" onclick="handleSlipSubmission()" type="button">
+<span class="material-symbols-outlined text-[20px]" id="submit-icon">task_alt</span>
+<span id="submit-label">Submit &amp; Clear Tuition</span>
+</button>
+<div class="flex justify-center items-center gap-2">
+<span class="flex h-1.5 w-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-outline">Encrypted Bank Verification Engine • MindBridge LMS</span>
+</div>
+</div>
+<!-- Micro-Interaction Scripts for Laser Scanning and Dynamic State -->
+<script>
+    (function initScanAnimation() {
+      const laser = document.getElementById('scan-laser');
+      let down = true;
+      if (laser) {
+        setInterval(() => {
+          laser.style.top = down ? '85%' : '15%';
+          down = !down;
+        }, 1600);
+      }
+    })();
+
+    let contrastActive = false;
+    function toggleContrast() {
+      const img = document.getElementById('slip-image');
+      const btn = document.getElementById('btn-contrast');
+      contrastActive = !contrastActive;
+      if (img) {
+        img.style.filter = contrastActive ? 'contrast(175%) brightness(110%)' : 'none';
+      }
+      if (btn) {
+        btn.classList.toggle('text-primary', contrastActive);
+      }
+    }
+
+    function triggerRetake() {
+      const img = document.getElementById('slip-image');
+      if (img) {
+        img.style.opacity = '0.3';
+        setTimeout(() => {
+          img.style.opacity = '0.85';
+        }, 400);
+      }
+    }
+
+    function openQuickEdit() {
+      const current = prompt("Adjust Bank Deposit Amount (LKR):", "4500.00");
+      if (current) {
+        alert("Amount temporarily overridden to LKR " + current + " for manual auditor review.");
+      }
+    }
+
+    function handleSlipSubmission() {
+      const checkbox = document.getElementById('slip-consent');
+      if (!checkbox.checked) {
+        alert("Please confirm the slip validity check before submitting.");
+        return;
+      }
+      const btn = document.getElementById('submit-btn');
+      const label = document.getElementById('submit-label');
+      const icon = document.getElementById('submit-icon');
+
+      btn.disabled = true;
+      btn.classList.add('opacity-80');
+      label.textContent = "Verifying with BOC Gateway...";
+      icon.classList.add('animate-spin');
+      icon.textContent = "sync";
+
+      setTimeout(() => {
+        icon.classList.remove('animate-spin');
+        icon.textContent = "check_circle";
+        label.textContent = "Admission Unlocked!";
+        btn.classList.remove('bg-primary-container');
+        btn.classList.add('bg-tertiary-container', 'text-on-tertiary');
+      }, 1500);
+    }
+  </script>
+</div></main></body></html>

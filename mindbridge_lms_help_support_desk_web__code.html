@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-surface": "#101b34",
+          "primary-fixed-dim": "#abc7ff",
+          "tertiary-container": "#a06900",
+          "outline": "#717785",
+          "on-secondary-fixed-variant": "#354575",
+          "on-primary": "#ffffff",
+          "surface-dim": "#cfd9fb",
+          "on-background": "#101b34",
+          "on-primary-fixed-variant": "#00458f",
+          "on-tertiary-container": "#fffbff",
+          "surface-tint": "#005cba",
+          "tertiary-fixed": "#ffddb4",
+          "on-secondary": "#ffffff",
+          "on-surface-variant": "#414754",
+          "background": "#faf8ff",
+          "tertiary-fixed-dim": "#ffb952",
+          "tertiary": "#7f5300",
+          "on-tertiary-fixed-variant": "#633f00",
+          "on-secondary-fixed": "#041847",
+          "primary-fixed": "#d7e3ff",
+          "inverse-on-surface": "#eef0ff",
+          "secondary": "#4d5c8e",
+          "on-error": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "inverse-surface": "#25304a",
+          "surface-variant": "#d9e2ff",
+          "on-primary-fixed": "#001b3f",
+          "secondary-fixed": "#dbe1ff",
+          "inverse-primary": "#abc7ff",
+          "surface-container-high": "#e1e7ff",
+          "outline-variant": "#c1c6d6",
+          "on-error-container": "#93000a",
+          "error-container": "#ffdad6",
+          "surface-container-low": "#f2f3ff",
+          "primary": "#005ab6",
+          "surface-container-highest": "#d9e2ff",
+          "on-secondary-container": "#405081",
+          "on-tertiary-fixed": "#291800",
+          "secondary-fixed-dim": "#b5c5fd",
+          "surface": "#faf8ff",
+          "secondary-container": "#b5c5fd",
+          "surface-container": "#eaedff",
+          "primary-container": "#0072e4",
+          "surface-bright": "#faf8ff",
+          "on-primary-container": "#fefcff",
+          "on-tertiary": "#ffffff",
+          "error": "#ba1a1a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "2rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "gutter-mobile": "1rem",
+          "space-xs": "0.25rem",
+          "margin-mobile": "1rem",
+          "gutter": "1.5rem",
+          "space-xl": "2rem"
+        },
+        "fontFamily": {
+          "label-sm": [
+            "Inter"
+          ],
+          "title": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "label-lg": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "display-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-lg-mobile": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "display": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "body-md": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "title": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "20px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "800"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "700"
+            }
+          ],
+          "display": [
+            "44px",
+            {
+              "lineHeight": "52px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "800"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(7,27,74,0.04)]"><div class="h-16 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md min-w-[280px]"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><span class="font-title text-title text-on-surface tracking-tight hidden sm:inline-block">MindBridge LMS</span><div class="h-6 w-px bg-surface-container-highest mx-space-xs hidden md:block"></div><button class="hidden md:flex items-center gap-space-sm bg-surface-container-low hover:bg-surface-container hover:text-on-surface px-space-sm py-1.5 rounded-lg text-left transition-colors"><div class="w-6 h-6 rounded bg-primary-container flex items-center justify-center text-on-primary-container font-label-sm text-label-sm">AP</div><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface font-semibold leading-none">Apex Combined Mathematics</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-0.5">Tenant Node • Western Province</span></div><span class="material-symbols-outlined text-outline text-[18px]">unfold_more</span></button></div><div class="flex-1 max-w-xl mx-space-md hidden lg:block"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-outline text-[20px] pointer-events-none">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-lowest text-on-surface placeholder:text-outline rounded-lg font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-[0_1px_3px_rgba(7,27,74,0.03)]" placeholder="Search courses, questions, students, or system settings..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="relative w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors hidden sm:flex"><span class="material-symbols-outlined text-[22px]">help</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-none">Dr. Aruna Perera</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none mt-0.5">Senior Administrator</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-low z-40 flex flex-col justify-between py-space-md shadow-[1px_0_12px_rgba(7,27,74,0.03)] overflow-y-auto"><div class="px-space-md flex flex-col gap-space-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Core Navigation</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-body-md text-body-md">Dashboard / Hub</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-learning-study-assistant" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-body-md text-body-md">AI Learning &amp; Study Assistant</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ai-management-prompt-studio" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span class="font-body-md text-body-md">AI Management &amp; Prompt Studio</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="courses-lessons" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span class="font-body-md text-body-md">Courses &amp; Lessons</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="examinations-question-bank" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span class="font-body-md text-body-md">Examinations &amp; Question Bank</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="assignments-grading" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span class="font-body-md text-body-md">Assignments &amp; Grading</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tuition-fee-slips" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Tuition &amp; Fee Slips</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a></nav></div><div class="px-space-md pt-space-md mt-auto"><div class="bg-surface-container-highest rounded-xl p-space-md"><div class="flex items-center gap-space-sm mb-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">headset_mic</span><span class="font-title text-title text-on-surface font-semibold">Support Hub</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Need help with multi-tenant sync or AI prompts?</p><a class="w-full flex items-center justify-center gap-space-xs bg-primary text-on-primary py-2 px-space-sm rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors" data-path="support-tickets" href="#"><span>Open Help Desk</span><span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></div></div></aside><div class="pl-72"><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Hero / Search & Announcement Band -->
+<div class="relative w-full px-margin py-space-xl bg-gradient-to-b from-surface-container-high/60 via-surface to-background overflow-hidden">
+<!-- Ambient architectural bridge backdrop glow -->
+<div class="absolute -top-32 right-12 w-96 h-96 rounded-full bg-primary-fixed blur-3xl opacity-40 pointer-events-none"></div>
+<div class="absolute -bottom-24 left-1/4 w-80 h-80 rounded-full bg-secondary-fixed-dim blur-3xl opacity-30 pointer-events-none"></div>
+<div class="max-w-6xl mx-auto flex flex-col gap-space-lg relative z-10">
+<!-- Breadcrumb & Tenant Node Badge -->
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-outline">
+<span class="hover:text-primary transition-colors cursor-pointer">Apex Combined Maths</span>
+<span>/</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Learner Portal</span>
+<span>/</span>
+<span class="text-on-surface font-semibold">Help &amp; Resolution Desk</span>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest shadow-sm px-space-sm py-1 rounded-full">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Live Gateway Sync: Colombo Node 01</span>
+</div>
+</div>
+<!-- Main Heading Block -->
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider mb-space-sm">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+          Student &amp; Parent Assistance Desk
+        </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-space-xs">
+          MindBridge Help &amp; Support Desk
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Get instant assistance for course video playback, bank slip clearing, exam access, and tutor inquiries. Dedicated support for Apex Combined Mathematics students across Western Province.
+        </p>
+</div>
+<!-- Hero Search Bar -->
+<div class="relative w-full max-w-4xl shadow-md rounded-xl bg-surface-container-lowest p-2">
+<div class="relative flex items-center w-full">
+<span class="material-symbols-outlined absolute left-4 text-primary text-[24px]">search</span>
+<input class="w-full h-12 pl-12 pr-36 bg-transparent text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none" id="faq-search-input" placeholder="Search help articles, e.g., 'How to upload deposit slip', 'Video buffer issues', 'Zoom link missing'..." type="text"/>
+<button class="absolute right-2 top-1.5 bottom-1.5 px-5 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg hover:bg-primary-container transition-all flex items-center gap-space-xs shadow-sm">
+<span>Find Answers</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Quick Suggested Keywords -->
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-sm text-label-sm uppercase text-outline">Frequent Queries:</span>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm transition-colors">Bank slip OCR failed</button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm transition-colors">Saturday Model Exam link</button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm transition-colors">Tute courier Moratuwa</button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm transition-colors">Rotary Hall student card</button>
+</div>
+</div>
+</div>
+<!-- Channel Action Ribbon (4 Cards) -->
+<div class="max-w-6xl mx-auto w-full px-margin -mt-6 z-20">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- 1. WhatsApp Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">chat</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+              &lt; 3 mins avg
+            </span>
+</div>
+<h3 class="font-title text-title text-on-surface mb-1">WhatsApp Instant Desk</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Direct line with our academic coordination reps for quick slip verifications.</p>
+<div class="font-label-md text-label-md text-on-surface font-semibold tracking-wide mb-space-md">+94 71 987 6543</div>
+</div>
+<a class="w-full py-2 px-3 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" href="https://wa.me/94719876543" rel="noopener noreferrer" target="_blank">
+<span>Chat on WhatsApp</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+<!-- 2. Hotline & Voice Support -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">phone_in_talk</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">Mon - Sat</span>
+</div>
+<h3 class="font-title text-title text-on-surface mb-1">Hotline &amp; Voice Desk</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Direct call desk for video bandwidth and classroom admission queries.</p>
+<div class="font-label-md text-label-md text-on-surface font-semibold tracking-tight mb-space-md">011 2 890 890 / 077 456 7890</div>
+</div>
+<a class="w-full py-2 px-3 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-fixed-variant font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" href="tel:0112890890">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Call Desk Now</span>
+</a>
+</div>
+<!-- 3. Submit a Support Ticket -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">confirmation_number</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed">SLA 2h</span>
+</div>
+<h3 class="font-title text-title text-on-surface mb-1">Submit Support Ticket</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Formal record for accounting corrections, syllabus issues, or tutor escalations.</p>
+<div class="font-label-md text-label-md text-outline font-medium mb-space-md">Trackable unique ticket ID</div>
+</div>
+<button class="w-full py-2 px-3 rounded-lg bg-surface-container-highest hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" onclick="document.getElementById('ticket-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>New Ticket</span>
+</button>
+</div>
+<!-- 4. Branch Cashier Desks -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">account_balance</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">Physical Desk</span>
+</div>
+<h3 class="font-title text-title text-on-surface mb-1">Branch Cashier Desks</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">In-person fee deposits, NFC card replacements &amp; physical tute collection.</p>
+<div class="font-label-md text-label-md text-on-surface font-semibold mb-space-md">Nugegoda &amp; Rotary Hall</div>
+</div>
+<button class="w-full py-2 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors" onclick="document.getElementById('branch-modal').classList.remove('hidden')">
+<span>View Branch Hours</span>
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Content Grid (Left FAQ vs Right Direct Support & Tickets) -->
+<div class="max-w-6xl mx-auto w-full px-margin py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left Column: FAQ & Guided Troubleshooting (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Section Title with Bridge Motif Accent -->
+<div class="flex items-center justify-between pb-2">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Self-Service Solutions</span>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Frequently Asked Questions</h2>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">5 Topics</span>
+</div>
+<!-- Filter Category Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1" id="faq-category-filters">
+<button class="category-pill px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm" data-category="all">
+            All Topics
+          </button>
+<button class="category-pill px-3.5 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant font-label-md text-label-md transition-all" data-category="fees">
+            Bank Slip &amp; Fees
+          </button>
+<button class="category-pill px-3.5 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant font-label-md text-label-md transition-all" data-category="video">
+            Live Stream &amp; Video
+          </button>
+<button class="category-pill px-3.5 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant font-label-md text-label-md transition-all" data-category="exams">
+            Exam Anti-Cheat
+          </button>
+<button class="category-pill px-3.5 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant font-label-md text-label-md transition-all" data-category="courier">
+            Tute Courier &amp; Delivery
+          </button>
+</div>
+<!-- Accordion FAQ Container -->
+<div class="flex flex-col gap-space-sm" id="faq-accordion-list">
+<!-- FAQ 1 -->
+<div class="faq-card bg-surface-container-lowest rounded-xl shadow-sm transition-all overflow-hidden" data-category="fees">
+<button class="w-full p-space-md text-left flex items-start justify-between gap-space-md faq-trigger">
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-sm text-label-sm mt-0.5">01</span>
+<div>
+<h3 class="font-title text-title text-on-surface">How long does AI OCR bank slip verification take?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Automated validation criteria for Commercial Bank, BOC, and People's Bank slips</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px] transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<p>
+                  Apex LMS utilizes an instant <strong>30-second automated OCR approval engine</strong>. When you upload a high-resolution photo of your deposit slip, the neural scanner verifies the transaction reference number, account digits, and stamped amount against the daily bank ledger feed.
+                </p>
+<div class="flex items-center gap-2 mt-2 text-tertiary">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span class="font-body-sm text-body-sm font-medium">Manual cashier override takes a maximum of 2 hours during normal business operating hours (8:00 AM - 6:00 PM).</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ 2 -->
+<div class="faq-card bg-surface-container-lowest rounded-xl shadow-sm transition-all overflow-hidden" data-category="fees">
+<button class="w-full p-space-md text-left flex items-start justify-between gap-space-md faq-trigger">
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-sm text-label-sm mt-0.5">02</span>
+<div>
+<h3 class="font-title text-title text-on-surface">What should I do if my bank slip photo is rejected?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Resolving blur, low lighting, or unreadable stamp issues</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px] transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<p>
+                  Rejections occur when the optical scanner cannot extract the teller stamp. Please confirm:
+                </p>
+<ul class="list-disc pl-5 space-y-1 font-body-sm text-body-sm mt-1">
+<li>All 4 corners of the original bank deposit voucher or ATM receipt are strictly visible.</li>
+<li>No camera flash glare directly obscures the branch red/blue ink stamp or bank reference number.</li>
+<li>For online banking transfers, please upload the official generated PDF e-receipt rather than a phone screenshot.</li>
+</ul>
+<p class="mt-1 font-body-sm text-body-sm">
+                  You can immediately click <strong>"Request Manual Cashier Review"</strong> inside your Tuition &amp; Fee Slips portal to bypass OCR.
+                </p>
+</div>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="faq-card bg-surface-container-lowest rounded-xl shadow-sm transition-all overflow-hidden" data-category="fees">
+<button class="w-full p-space-md text-left flex items-start justify-between gap-space-md faq-trigger">
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-sm text-label-sm mt-0.5">03</span>
+<div>
+<h3 class="font-title text-title text-on-surface">Can I access recorded lessons if my fee slip is pending review?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Provisional course unlock policy during month-end rush</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px] transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+<div class="p-space-md rounded-lg bg-surface-container-low">
+<p>
+                  Yes. MindBridge grants an automated <strong>24-hour provisional grace period</strong> as soon as a slip receipt is uploaded. During this period, live lesson streams, video recordings, and past PDF worksheets remain completely unlocked while the cashier desk concludes reconciliation.
+                </p>
+</div>
+</div>
+</div>
+<!-- FAQ 4 -->
+<div class="faq-card bg-surface-container-lowest rounded-xl shadow-sm transition-all overflow-hidden" data-category="courier">
+<button class="w-full p-space-md text-left flex items-start justify-between gap-space-md faq-trigger">
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-sm text-label-sm mt-0.5">04</span>
+<div>
+<h3 class="font-title text-title text-on-surface">My physical tute pack courier has not arrived</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Tracking PromptXpress shipments and islandwide delivery intervals</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px] transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-2">
+<p>
+                  Physical theory and revision packs are dispatched every Tuesday and Thursday via PromptXpress. Check your <strong>Payments &amp; Logistics Hub</strong> for the 10-digit consignment tracking code.
+                </p>
+<div class="p-3 bg-surface-container-lowest rounded-lg">
+<span class="font-label-sm text-label-sm uppercase text-outline">Central Dispatch Hub</span>
+<div class="font-title text-title text-on-surface mt-0.5">Moratuwa Distribution Center: 011 2 645 645</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Western Province: 24-48 hrs • Outstation: 48-72 hrs</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ 5 -->
+<div class="faq-card bg-surface-container-lowest rounded-xl shadow-sm transition-all overflow-hidden" data-category="exams">
+<button class="w-full p-space-md text-left flex items-start justify-between gap-space-md faq-trigger">
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-sm text-label-sm mt-0.5">05</span>
+<div>
+<h3 class="font-title text-title text-on-surface">How does the anti-cheat proctor work during online exams?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Rules for timed Combined Mathematics Saturday Mock Trials</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px] transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+<div class="p-space-md rounded-lg bg-surface-container-low">
+<p>
+                  MindBridge Exam Shield tracks browser focus changes, unauthorized tab navigation, screen recording utilities, and dual-monitor configurations. Please take your test on a laptop or desktop computer with full-screen mode toggled on. If your internet briefly drops, the system caches your answers locally for 90 seconds.
+                </p>
+</div>
+</div>
+</div>
+<!-- FAQ 6 -->
+<div class="faq-card bg-surface-container-lowest rounded-xl shadow-sm transition-all overflow-hidden" data-category="video">
+<button class="w-full p-space-md text-left flex items-start justify-between gap-space-md faq-trigger">
+<div class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-sm text-label-sm mt-0.5">06</span>
+<div>
+<h3 class="font-title text-title text-on-surface">Video stream buffering on SLT Mobitel or Dialog Home 4G</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Optimizing adaptive bitrates for Sri Lankan internet providers</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px] transition-transform faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md">
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-2">
+<p>
+                  Our video engine hosts dedicated CDN peering in Colombo. If you experience buffering during peak evening hours (7 PM - 10 PM):
+                </p>
+<ol class="list-decimal pl-5 space-y-1 font-body-sm text-body-sm">
+<li>Click the player gear icon and switch video quality from 'Auto' to <strong>720p or 480p</strong>.</li>
+<li>Disable VPN services (such as Cloudflare WARP) which may reroute your streaming packets through Singapore nodes.</li>
+<li>Clear browser DNS cache or restart your home broadband fiber router.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<!-- Guided Troubleshooting Interactive Wizard Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">build_circle</span>
+</div>
+<div>
+<h3 class="font-title text-title text-on-surface font-semibold">Guided Quick Troubleshooter</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Step-by-step assistant for instant self-resolution</p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mt-space-md">
+<button class="p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-left transition-colors flex flex-col justify-between h-28">
+<span class="material-symbols-outlined text-primary text-[24px]">cloud_sync</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Reset Video Cache</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Fix continuous loading</div>
+</div>
+</button>
+<button class="p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-left transition-colors flex flex-col justify-between h-28">
+<span class="material-symbols-outlined text-secondary text-[24px]">pin</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Verify Zoom OTP</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">SMS code resend</div>
+</div>
+</button>
+<button class="p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-left transition-colors flex flex-col justify-between h-28">
+<span class="material-symbols-outlined text-tertiary text-[24px]">badge</span>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Sync Student ID</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Refresh NFC attendance</div>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Column: Active Tickets & System Health Status (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- 1. Active Support Tickets Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">inventory_2</span>
+<h3 class="font-title text-title text-on-surface font-semibold">My Open Tickets</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">1 Active</span>
+</div>
+<!-- Active Ticket Item -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Ticket #MB-8941</span>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold mt-0.5">
+                  Discrepancy on People's Bank slip branch stamp - Nugegoda
+                </h4>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container whitespace-nowrap">
+                In Progress
+              </span>
+</div>
+<!-- Metadata info -->
+<div class="flex flex-col gap-1 text-on-surface-variant font-body-sm text-body-sm mt-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-outline">person_outline</span>
+<span>Assigned Cashier: <strong>Amanda Jayasuriya</strong></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+<span>Last updated: 25 mins ago (Automated audit complete)</span>
+</div>
+</div>
+<!-- Action buttons inside card -->
+<div class="flex items-center gap-space-sm mt-space-xs">
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors shadow-sm" onclick="document.getElementById('ticket-view-modal').classList.remove('hidden')">
+<span>Open Discussion</span>
+<span class="material-symbols-outlined text-[16px]">forum</span>
+</button>
+<button class="py-2 px-3 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors">
+                Attach File
+              </button>
+</div>
+</div>
+<div class="mt-space-md text-center">
+<a class="font-label-sm text-label-sm text-primary hover:underline font-semibold" href="#">View All Past Closed Tickets (14) →</a>
+</div>
+</div>
+<!-- 2. System Health & Infrastructure Widget -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary animate-ping"></span>
+<h3 class="font-title text-title text-on-surface font-semibold">Infrastructure Status</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">
+              All Systems Operational
+            </span>
+</div>
+<div class="flex flex-col gap-space-sm font-body-sm text-body-sm">
+<!-- Row 1 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">play_circle</span>
+<span class="font-medium text-on-surface">LMS Video Streaming Engine</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">99.98% Normal</span>
+</div>
+<!-- Row 2 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">psychology</span>
+<span class="font-medium text-on-surface">AI Socratic Assistant &amp; OCR</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Optimal (320ms)</span>
+</div>
+<!-- Row 3 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">sms</span>
+<span class="font-medium text-on-surface">Dialog / Mobitel SMS Gateway</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Live (0 queue)</span>
+</div>
+<!-- Row 4 -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[18px]">contactless</span>
+<span class="font-medium text-on-surface">Rotary Hall Turnstile Gate Sync</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Synced 1m ago</span>
+</div>
+</div>
+<div class="mt-space-sm text-right">
+<span class="font-label-sm text-label-sm text-outline">Next scheduled server maintenance: Sunday 02:00 AM</span>
+</div>
+</div>
+<!-- 3. Saturday Exam Emergency Escalation Banner -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-tertiary-fixed via-tertiary-fixed-dim/30 to-background p-space-md shadow-sm">
+<div class="relative z-10 flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Exam Day Priority Escalation</span>
+</div>
+<h4 class="font-title text-title text-on-tertiary-fixed font-bold leading-tight">
+              Facing urgent login or streaming failure before Saturday mock trials?
+            </h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant">
+              Tutors Dr. Aruna Perera &amp; exam invigilators maintain a reserved fast-response channel starting 60 minutes prior to exam launch.
+            </p>
+<div class="mt-space-xs">
+<button class="w-full py-2.5 px-4 bg-tertiary text-on-tertiary rounded-lg font-label-md text-label-md hover:bg-tertiary-container transition-colors flex items-center justify-center gap-space-sm font-bold shadow-sm">
+<span class="material-symbols-outlined text-[18px]">emergency_home</span>
+<span>Trigger Saturday Emergency Alert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 4. Cashier & Study Hall Schedule Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-outline text-[20px]">store</span>
+<h4 class="font-title text-title text-on-surface font-semibold">Campus Assistance Counters</h4>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Nugegoda High Level Rd Center</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Open Now</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Mon - Sun: 7:30 AM - 6:30 PM • Slip Box 04</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Rotary Hall Colombo 04</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Open Now</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Fridays &amp; Saturdays: 7:00 AM - 7:00 PM • Desk B</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Modal 1: Create Ticket Dialog -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex items-center justify-center p-4" id="ticket-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-lg shadow-xl relative animate-in fade-in duration-200">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">support</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Submit a New Support Ticket</h3>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-high text-outline" onclick="document.getElementById('ticket-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-space-md" id="new-ticket-form" onsubmit="event.preventDefault(); alert('Ticket submitted successfully! Assigned SLA: 2 Hours.'); document.getElementById('ticket-modal').classList.add('hidden');">
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-outline mb-1">Issue Category</label>
+<select class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary">
+<option>Bank Deposit Slip OCR Rejection</option>
+<option>Live Stream Video Glitch or Black Screen</option>
+<option>Exam Proctor Access Code Error</option>
+<option>Courier Delivery &amp; Printed Tutes</option>
+<option>Account Email / WhatsApp Phone Update</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-outline mb-1">Subject</label>
+<input class="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="e.g. Bank of Ceylon transaction stamp unclear" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-outline mb-1">Detailed Description &amp; Bank Ref #</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Explain what happened. Mention your student index number and slip reference number..." required="" rows="3"></textarea>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase text-outline mb-1">Attach Bank Slip / Screenshot (Optional)</label>
+<div class="h-20 rounded-lg bg-surface-container-low flex flex-col items-center justify-center cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-outline text-[24px]">cloud_upload</span>
+<span class="font-body-sm text-body-sm text-outline mt-1">Click to browse or drop JPEG/PNG</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" onclick="document.getElementById('ticket-modal').classList.add('hidden')" type="button">
+            Cancel
+          </button>
+<button class="px-5 py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md font-semibold transition-colors shadow-sm" type="submit">
+            Create Ticket &amp; Get SLA
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Interactive Modal 2: View Ticket Discussion -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex items-center justify-center p-4" id="ticket-view-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-xl w-full p-space-lg shadow-xl relative animate-in fade-in duration-200">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Discussion Thread • Ticket #MB-8941</span>
+<h3 class="font-title text-title text-on-surface font-bold">People's Bank slip branch stamp - Nugegoda</h3>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-high text-outline" onclick="document.getElementById('ticket-view-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Chat Stream -->
+<div class="flex flex-col gap-space-sm max-h-72 overflow-y-auto pr-1 mb-space-md">
+<!-- Msg 1 (Student) -->
+<div class="p-3 rounded-lg bg-surface-container-low max-w-[85%] self-start">
+<div class="flex items-center justify-between gap-4 text-outline font-label-sm text-label-sm mb-1">
+<span>Student (You)</span>
+<span>Today 10:14 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Uploaded People's Bank slip for Rs. 4,500. OCR marked it unverified stating branch stamp faint. Attached original photo taken under table lamp.
+          </p>
+</div>
+<!-- Msg 2 (Staff) -->
+<div class="p-3 rounded-lg bg-primary-fixed max-w-[85%] self-end">
+<div class="flex items-center justify-between gap-4 text-on-primary-fixed font-label-sm text-label-sm mb-1">
+<span class="font-semibold">Amanda Jayasuriya (Cashier Desk)</span>
+<span>Today 10:39 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-fixed">
+            Ayubowan! I am verifying this against the People's Bank Nugegoda morning transmission ledger. Your provisional class access remains active. Please hold on.
+          </p>
+</div>
+</div>
+<!-- Quick Reply Form -->
+<div class="flex items-center gap-2">
+<input class="flex-1 h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Type a message to Amanda..." type="text"/>
+<button class="px-4 h-10 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Modal 3: Branch Hours Modal -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex items-center justify-center p-4" id="branch-modal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-lg shadow-xl relative animate-in fade-in duration-200">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[24px]">location_on</span>
+<h3 class="font-title text-title text-on-surface font-bold">Physical Branch Operating Hours</h3>
+</div>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-high text-outline" onclick="document.getElementById('branch-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Branch 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h4 class="font-title text-title text-on-surface font-bold">Nugegoda Study Center</h4>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">Main Branch</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No. 142, High Level Road, Nugegoda (Opposite Supermarket)</p>
+<div class="grid grid-cols-2 gap-2 mt-2 font-body-sm text-body-sm">
+<div><strong>Monday - Friday:</strong> 8:00 AM - 6:30 PM</div>
+<div><strong>Saturday - Sunday:</strong> 7:30 AM - 7:00 PM</div>
+</div>
+<div class="font-label-sm text-label-sm text-primary font-medium mt-1">Direct Landline: 011 2 820 820</div>
+</div>
+<!-- Branch 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h4 class="font-title text-title text-on-surface font-bold">Rotary Hall Colombo 04</h4>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed">Weekend Node</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rotary Hall, 70/1 Peterson Lane, Colombo 00600</p>
+<div class="grid grid-cols-2 gap-2 mt-2 font-body-sm text-body-sm">
+<div><strong>Friday:</strong> 1:00 PM - 7:00 PM</div>
+<div><strong>Saturday:</strong> 6:30 AM - 6:00 PM</div>
+</div>
+<div class="font-label-sm text-label-sm text-primary font-medium mt-1">Direct Desk: 077 345 6789</div>
+</div>
+</div>
+<div class="mt-space-md text-right">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" onclick="document.getElementById('branch-modal').classList.add('hidden')">
+          Close Window
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Accordion Expand/Collapse Functionality
+  document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const card = trigger.closest('.faq-card');
+      const content = card.querySelector('.faq-content');
+      const icon = trigger.querySelector('.faq-icon');
+      const isOpen = !content.classList.contains('hidden');
+
+      // Toggle this item
+      if (isOpen) {
+        content.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  // Category Filtering
+  const filterButtons = document.querySelectorAll('#faq-category-filters .category-pill');
+  const faqCards = document.querySelectorAll('#faq-accordion-list .faq-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update Active Button styling
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-primary', 'text-on-primary');
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+
+      const cat = btn.getAttribute('data-category');
+      faqCards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Real-time Text Filter in Hero Search Bar
+  const searchInput = document.getElementById('faq-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      faqCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+</script></main></div></body></html>

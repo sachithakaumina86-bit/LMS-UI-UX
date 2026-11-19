@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#4edea3", "surface-container-highest": "#2f3445", "on-surface": "#dde2f8", "inverse-primary": "#005fad", "on-tertiary-fixed": "#002113", "tertiary-fixed": "#6ffbbe", "on-secondary-fixed": "#2a1700", "on-tertiary-container": "#003623", "outline": "#8a919e", "primary-container": "#3898ff", "on-tertiary": "#003824", "on-error-container": "#ffdad6", "secondary-container": "#ee9800", "secondary": "#ffb95f", "on-secondary-fixed-variant": "#653e00", "error-container": "#93000a", "background": "#0d1322", "primary-fixed": "#d4e3ff", "surface-container-high": "#242a3a", "on-secondary-container": "#5b3800", "on-surface-variant": "#c0c7d5", "inverse-surface": "#dde2f8", "inverse-on-surface": "#2a3040", "surface-variant": "#2f3445", "on-background": "#dde2f8", "on-secondary": "#472a00", "on-tertiary-fixed-variant": "#005236", "surface": "#0d1322", "tertiary-container": "#00ab76", "primary": "#a4c8ff", "error": "#ffb4ab", "primary-fixed-dim": "#a4c8ff", "tertiary": "#4edea3", "surface-bright": "#33394a", "surface-tint": "#a4c8ff", "secondary-fixed": "#ffddb8", "on-primary": "#00315e", "surface-container": "#191f2f", "on-primary-container": "#002f5b", "surface-dim": "#0d1322", "on-error": "#690005", "surface-container-low": "#151b2b", "on-primary-fixed": "#001c3a", "secondary-fixed-dim": "#ffb95f", "outline-variant": "#404753", "on-primary-fixed-variant": "#004784", "surface-container-lowest": "#080e1d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-2xl": "3rem", "space-3xl": "4rem", "space-2xs": "0.125rem", "space-lg": "1.5rem", "gutter-mobile": "0.75rem", "space-xl": "2rem", "margin": "2rem", "gutter": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin-mobile": "1rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0", "fontWeight": "400" }], "headline-xl-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "600" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.025em", "fontWeight": "800" }], "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl z-50 shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="w-full h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface font-bold">MindBridge <span class="text-primary">LMS</span></span></div><div class="relative flex items-center bg-surface-container px-space-md py-space-xs rounded-lg shadow-inner"><span class="material-symbols-outlined text-secondary text-[18px] mr-space-xs">domain</span><select aria-label="Academy Branch" class="bg-transparent font-label-md text-label-md text-on-surface font-semibold focus:outline-none cursor-pointer pr-space-md"><option class="bg-surface-container text-on-surface" value="apex">Apex Combined Mathematics</option><option class="bg-surface-container text-on-surface" value="rotary">Rotary Physics Institute</option><option class="bg-surface-container text-on-surface" value="syzygy">Syzygy Chemistry Academy</option></select></div></div><div class="hidden lg:flex items-center flex-1 max-w-md mx-space-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full bg-surface-container-low font-body-sm text-body-sm text-on-surface pl-10 pr-4 py-space-xs rounded-lg placeholder-outline focus:outline-none focus:bg-surface-container focus:ring-1 focus:ring-primary shadow-inner" placeholder="Search syllabus index, index numbers, KaTeX proofs, bank slips..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="px-space-sm py-space-2xs rounded bg-tertiary-container/30 text-tertiary-fixed font-label-sm text-label-sm tracking-wide uppercase border border-tertiary/20 flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Master Tutor</span><span class="px-space-sm py-space-2xs rounded bg-primary-container/20 text-primary-fixed font-label-sm text-label-sm tracking-wide uppercase border border-primary/20">Super Admin</span></div><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface font-bold">Dr. K. Jayasuriya</div><div class="font-label-sm text-label-sm text-on-surface-variant">Combined Maths A/L</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-lowest z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><div class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-sm mb-space-xs">Academic Hub</div><nav class="space-y-space-2xs mb-space-lg" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-[0_0_12px_rgba(56,152,255,0.35)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="courses" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>Courses</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="assignments" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span>Assignments</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="exams-results" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span>Exams &amp; Results</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="video-studio" href="#"><span class="material-symbols-outlined text-[20px]">smart_display</span><span>Video Studio</span></a></nav><div class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-sm mb-space-xs">Administrative Operations</div><nav class="space-y-space-2xs mb-space-lg" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-[0_0_12px_rgba(56,152,255,0.35)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="enrollment-management" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Enrollment Management</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="certificates-issuance" href="#"><span class="material-symbols-outlined text-[20px]">workspace_premium</span><span>Certificates &amp; Issuance</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="financials-bank-slips" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Financials &amp; Bank Slips</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="staff-governance" href="#"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span>Staff Governance</span></a></nav><div class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-sm mb-space-xs">System Governance</div><nav class="space-y-space-2xs" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg shadow-[0_0_12px_rgba(56,152,255,0.35)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="security-audit-logs" href="#"><span class="material-symbols-outlined text-[20px]">shield</span><span>Security &amp; Audit Logs</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="reports-analytics" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Reports &amp; Analytics</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="announcements-broadcasts" href="#"><span class="material-symbols-outlined text-[20px]">campaign</span><span>Announcements &amp; Broadcasts</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-all" data-path="backups-export" href="#"><span class="material-symbols-outlined text-[20px]">cloud_sync</span><span>Backups &amp; Export</span></a></nav></div><div class="p-space-md bg-surface-container-low/70 m-space-md rounded-lg"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase">Batch Status</span><span class="font-label-sm text-label-sm text-tertiary-fixed font-bold">2025 A/L Live</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden"><div class="bg-tertiary h-1.5 rounded-full w-4/5"></div></div><div class="mt-space-xs font-label-sm text-label-sm text-on-surface-variant flex justify-between"><span>Capacity</span><span>1,842 / 2,000</span></div></div></aside><div class="pl-72"><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 right-20 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-64 left-10 w-80 h-80 bg-secondary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="p-margin space-y-space-xl">
+<!-- Top Action & Policy Banner -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="space-y-space-2xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-space-2xs rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+              Strict Governance Protocol
+            </span>
+<span class="px-space-sm py-space-2xs rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase">
+              Two-Key Authorization
+            </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface font-extrabold tracking-tight">
+            Certificates &amp; Credential Issuance
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            Centralized credential authority. Automatic issuance is strictly disabled across all tenants: every certificate requires authenticated verification from the Course Master Tutor followed by cryptographic sign-off by the Tenant Administrator.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-all shadow-sm" onclick="document.getElementById('criteria-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
+<span class="font-label-lg text-label-lg font-semibold">Configure Criteria</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container hover:bg-primary transition-all shadow-lg shadow-primary-container/25" onclick="document.getElementById('manual-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-lg text-label-lg font-bold">Issue Certificate Manually</span>
+</button>
+</div>
+</div>
+<!-- Critical Governance Warning Card -->
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-md flex items-start gap-space-md">
+<div class="p-space-xs rounded-lg bg-secondary/10 text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[24px]">lock_person</span>
+</div>
+<div class="flex-1 grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="space-y-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-bold tracking-wide">Manual-Only Enforcement</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zero auto-dispatch rules enabled. No student receives credentials without active multi-signature authorization.</p>
+</div>
+<div class="space-y-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-primary font-bold tracking-wide">Course Teacher Key</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Validates proof rigor, assignment submissions (12/12), and mock paper integrity checks.</p>
+</div>
+<div class="space-y-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-tertiary-fixed font-bold tracking-wide">Tenant Admin Key</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Conducts financial slip clearance, generates SHA-256 hash, and binds Apex academy seal.</p>
+</div>
+</div>
+</div>
+<!-- Metric Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Issued Certificates</span>
+<span class="material-symbols-outlined text-primary text-[20px]">workspace_premium</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-2xs">
+<span class="font-display-lg text-display-lg font-extrabold text-on-surface">342</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed uppercase font-semibold">Lifetime Total</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed">trending_up</span>
+<span class="font-bold text-on-surface">+28</span> issued this academic term
+          </p>
+<div class="mt-space-md h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Pending Review Queue</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">pending_actions</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-2xs">
+<span class="font-display-lg text-display-lg font-extrabold text-secondary">18</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Awaiting Sign-off</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            11 Teacher Signatures • 7 Admin Keys
+          </p>
+<div class="mt-space-md h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Exam Score Threshold</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">percent</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-2xs">
+<span class="font-display-lg text-display-lg font-extrabold text-on-surface">65.0%</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">Min. Cutoff</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Configurable by syllabus master per batch
+          </p>
+<div class="mt-space-md flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>Pass Grade: C</span>
+<span class="text-tertiary font-semibold">Apex Standard</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Assignments Mandatory</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[20px]">checklist</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-2xs">
+<span class="font-display-lg text-display-lg font-extrabold text-on-surface">100%</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold">12 / 12 Papers</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Zero tolerance on unsubmitted problem sets
+          </p>
+<div class="mt-space-md flex items-center justify-between font-label-sm text-label-sm text-outline">
+<span>All graded &amp; locked</span>
+<span class="text-primary font-semibold">Strict Rule</span>
+</div>
+</div>
+</div>
+<!-- Main Dual Panel: Configuration Spotlight & Live Manual Issuance Queue -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-xl">
+<!-- Criteria Configuration Card (4 Cols on XL) -->
+<div class="xl:col-span-4 rounded-xl bg-surface-container-low p-space-lg shadow-md space-y-space-md flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">settings_suggest</span>
+<h2 class="font-title-md text-title-md font-bold text-on-surface">Active Issuance Rulebook</h2>
+</div>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Active</span>
+</div>
+<div class="space-y-space-md mt-space-sm">
+<div class="p-space-md rounded-lg bg-surface-container-lowest space-y-space-2xs">
+<label class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Target Course Syllabus</label>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center justify-between">
+<span>Combined Maths 2026</span>
+<span class="px-space-xs py-space-2xs rounded bg-primary-container/20 text-primary-fixed font-label-sm text-label-sm">Theory</span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Apex Academy Colombo &amp; Gampaha Master Stream</div>
+</div>
+<!-- Rule 1 -->
+<div class="p-space-md rounded-lg bg-surface-container space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    Rule 1: Cumulative Exam Average
+                  </span>
+<span class="font-label-md text-label-md font-bold text-primary">65.0% Min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Calculated across 8 Monthly Term Papers and 4 Final Mock Exams.</p>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<!-- Rule 2 -->
+<div class="p-space-md rounded-lg bg-surface-container space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                    Rule 2: Assignments Completion
+                  </span>
+<span class="font-label-md text-label-md font-bold text-tertiary">12 of 12 (100%)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">All 12 Pure &amp; Applied Mathematics problem sheets submitted and tutor-graded.</p>
+</div>
+<!-- Rule 3 -->
+<div class="p-space-md rounded-lg bg-surface-container flex items-center justify-between">
+<div class="space-y-space-2xs pr-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface">Rule 3: Teacher Key Validation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Individual signature authorization required per student candidate.</p>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[22px]">toggle_on</span>
+</div>
+<!-- Rule 4 -->
+<div class="p-space-md rounded-lg bg-surface-container flex items-center justify-between">
+<div class="space-y-space-2xs pr-space-sm">
+<span class="font-label-md text-label-md font-bold text-on-surface">Rule 4: Tenant Admin Cryptographic Lock</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Generates public QR URL verification link &amp; SHA-256 ledger stamp.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[22px]">lock</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Last modified: Nov 18 by Super Admin</span>
+<button class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center gap-1" onclick="document.getElementById('criteria-modal').classList.remove('hidden')" type="button">
+              Edit Parameters
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Manual Issuance Queue & Student Eligibility Table (8 Cols on XL) -->
+<div class="xl:col-span-8 rounded-xl bg-surface-container-low p-space-lg shadow-md space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-space-xs">
+<span>Manual Issuance Queue &amp; Eligibility Roster</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-highest text-primary font-label-sm text-label-sm">3 Highlighted Records</span>
+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Evaluate candidates meeting threshold criteria. Click action to approve with your cryptographic credential.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Filter:</span>
+<select aria-label="Filter status" class="bg-surface-container-highest font-label-sm text-label-sm text-on-surface rounded-lg px-space-sm py-space-xs focus:outline-none cursor-pointer">
+<option>All Candidates (18)</option>
+<option>Ready for Teacher Signature (11)</option>
+<option>Ready for Admin Sign-Off (7)</option>
+<option>Disqualified / Deficiencies (4)</option>
+</select>
+</div>
+</div>
+<!-- Table Container -->
+<div class="w-full overflow-x-auto rounded-lg bg-surface-container-lowest">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-high/60 text-outline uppercase font-label-sm text-label-sm tracking-wider">
+<tr>
+<th class="py-space-sm px-space-md">Student / Index ID</th>
+<th class="py-space-sm px-space-md">Exam Avg (Min 65%)</th>
+<th class="py-space-sm px-space-md">Assignments (12)</th>
+<th class="py-space-sm px-space-md">Authorization Status</th>
+<th class="py-space-sm px-space-md text-right">Manual Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- Student 1: Kavindu Wickramasinghe -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-label-md text-label-md">
+                        KW
+                      </div>
+<div>
+<div class="font-title-md text-title-md font-bold text-on-surface">Kavindu Wickramasinghe</div>
+<div class="font-label-sm text-label-sm text-outline font-mono">APX-2026-0842 • 2026 Theory</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-extrabold text-tertiary-fixed">88.5%</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Distinction Tier</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-bold text-on-surface">12 / 12</div>
+<span class="px-space-xs py-space-2xs rounded bg-tertiary-container/30 text-tertiary-fixed font-label-sm text-label-sm uppercase font-semibold">100% Graded</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-sm py-space-xs rounded-full bg-secondary-container/20 text-secondary font-label-sm text-label-sm uppercase font-bold flex items-center gap-1.5 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                      Eligible - Pending Teacher Issuance
+                    </span>
+<span class="font-label-sm text-label-sm text-outline mt-1 block">Awaiting Dr. K. Jayasuriya</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" onclick="openCertificatePreview('Kavindu Wickramasinghe', 'APX-2026-0842', 'Combined Mathematics - 2026 Theory', '88.5%', 'Distinction')" title="Preview Draft PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold hover:bg-primary transition-all flex items-center gap-1" onclick="alert('Digital Key Authorization requested for Dr. K. Jayasuriya. Sign &amp; Seal prompt triggered.')" type="button">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+                        Issue Certificate
+                      </button>
+</div>
+</td>
+</tr>
+<!-- Student 2: Nimna Senavirathna -->
+<tr class="hover:bg-surface-container/60 transition-colors bg-surface-container-low/30">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-container/20 text-secondary font-bold flex items-center justify-center font-label-md text-label-md">
+                        NS
+                      </div>
+<div>
+<div class="font-title-md text-title-md font-bold text-on-surface">Nimna Senavirathna</div>
+<div class="font-label-sm text-label-sm text-outline font-mono">APX-2026-0719 • 2026 Theory</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">79.0%</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Very Good Pass</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-bold text-on-surface">12 / 12</div>
+<span class="px-space-xs py-space-2xs rounded bg-tertiary-container/30 text-tertiary-fixed font-label-sm text-label-sm uppercase font-semibold">100% Graded</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-sm py-space-xs rounded-full bg-primary-container/20 text-primary-fixed font-label-sm text-label-sm uppercase font-bold flex items-center gap-1.5 w-fit">
+<span class="material-symbols-outlined text-[14px]">edit_document</span>
+                      Teacher Approved - Pending Admin Sign-Off
+                    </span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed mt-1 block">Signed: Roshan Wijesinghe</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" onclick="openCertificatePreview('Nimna Senavirathna', 'APX-2026-0719', 'Combined Mathematics - 2026 Theory', '79.0%', 'Very Good Pass')" title="Preview PDF with Signature" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm font-bold hover:bg-secondary-fixed transition-all flex items-center gap-1" onclick="alert('Admin Master Key triggered: Cryptographic Hash generated. Certificate permanently locked in student ledger.')" type="button">
+<span class="material-symbols-outlined text-[16px]">vpn_key</span>
+                        Admin Approve &amp; Sign
+                      </button>
+</div>
+</td>
+</tr>
+<!-- Student 3: Sachintha Perera (Ineligible) -->
+<tr class="hover:bg-surface-container/60 transition-colors opacity-80">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-error-container/40 text-error font-bold flex items-center justify-center font-label-md text-label-md">
+                        SP
+                      </div>
+<div>
+<div class="font-title-md text-title-md font-bold text-on-surface">Sachintha Perera</div>
+<div class="font-label-sm text-label-sm text-outline font-mono">APX-2025-1104 • 2025 Revision</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-extrabold text-error">61.2%</span>
+<span class="material-symbols-outlined text-[16px] text-error">cancel</span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-mono">Below 65% Min</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-bold text-error">10 / 12</div>
+<span class="px-space-xs py-space-2xs rounded bg-error-container/30 text-error font-label-sm text-label-sm uppercase font-semibold">2 Pending</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="px-space-sm py-space-xs rounded-full bg-error-container/20 text-error font-label-sm text-label-sm uppercase font-bold flex items-center gap-1.5 w-fit">
+<span class="material-symbols-outlined text-[14px]">block</span>
+                      Ineligible (Criteria Not Met)
+                    </span>
+<span class="font-label-sm text-label-sm text-outline mt-1 block">Manual bypass strictly prohibited</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container-highest transition-all flex items-center gap-1" onclick="alert('Deficiency Breakdown for Sachintha Perera:\n- Cumulative Mock Avg: 61.2% (Short by 3.8%)\n- Missing Assignment #08: Integration by Parts\n- Missing Assignment #11: Statics &amp; Friction\nStudent must complete makeup assessments before eligibility unlock.')" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+                        View Deficiencies
+                      </button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-space-xs">
+<span>Showing 3 of 18 review candidates across all Combined Maths sections</span>
+<div class="flex items-center gap-space-xs mt-space-xs sm:mt-0">
+<button class="px-space-sm py-space-xs rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest text-label-sm font-label-sm" type="button">Previous</button>
+<button class="px-space-sm py-space-xs rounded bg-primary-container text-on-primary-container text-label-sm font-label-sm font-bold" type="button">1</button>
+<button class="px-space-sm py-space-xs rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest text-label-sm font-label-sm" type="button">2</button>
+<button class="px-space-sm py-space-xs rounded bg-surface-container-high text-on-surface hover:bg-surface-container-highest text-label-sm font-label-sm" type="button">Next</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Issued Certificate History & Verification Archive -->
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-md space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified</span>
+<span>Issued Certificate History &amp; Cryptographic Archive</span>
+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Immutable ledger of tamper-proof credentials issued with dual signatures and public verification hashes.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="bg-surface-container-lowest font-body-sm text-body-sm text-on-surface pl-9 pr-4 py-space-xs rounded-lg placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary w-64 shadow-inner" placeholder="Search Certificate ID or Hash..." type="text"/>
+</div>
+<button class="p-space-xs rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-all" onclick="alert('Exporting Complete Verification Ledger as CSV / Signed JSON Archive...')" title="Export Ledger" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</div>
+<!-- History Records Table -->
+<div class="w-full overflow-x-auto rounded-lg bg-surface-container-lowest">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-high/60 text-outline uppercase font-label-sm text-label-sm tracking-wider">
+<tr>
+<th class="py-space-sm px-space-md">Certificate Identifier</th>
+<th class="py-space-sm px-space-md">Student &amp; Batch</th>
+<th class="py-space-sm px-space-md">Issue Date &amp; Timestamp</th>
+<th class="py-space-sm px-space-md">Dual Signatories</th>
+<th class="py-space-sm px-space-md">Verification Hash &amp; QR</th>
+<th class="py-space-sm px-space-md text-right">Ledger Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<!-- Archived Certificate 1: Dilani Jayawardena -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md font-mono font-bold text-secondary">MB-APX-2025-0142</span>
+<button class="text-outline hover:text-on-surface" onclick="navigator.clipboard.writeText('MB-APX-2025-0142'); alert('Copied Certificate ID to clipboard');" title="Copy ID" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed uppercase font-semibold flex items-center gap-1 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Authenticated &amp; Sealed
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-title-md text-title-md font-bold text-on-surface">Dilani Jayawardena</div>
+<div class="font-label-sm text-label-sm text-outline font-mono">APX-2025-0489 • Score: 94.2% (Distinction)</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-bold text-on-surface">Nov 15, 2025</div>
+<div class="font-label-sm text-label-sm text-outline font-mono">14:28:44 UTC+5:30</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">edit_note</span>
+<span class="font-semibold">Eng. Roshan Wijesinghe</span>
+<span class="text-outline">(Teacher)</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary-fixed">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="font-semibold">Dr. K. Jayasuriya</span>
+<span class="text-outline">(Admin Approved)</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-high p-1 flex items-center justify-center shrink-0">
+<!-- Inline Micro QR Code Icon SVG -->
+<svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<rect height="6" rx="1" width="6" x="3" y="3"></rect>
+<rect height="6" rx="1" width="6" x="15" y="3"></rect>
+<rect height="6" rx="1" width="6" x="3" y="15"></rect>
+<path d="M15 15h2v2h-2zM19 15h2v2h-2zM15 19h2v2h-2zM19 19h2v2h-2zM9 9h6v2H9z"></path>
+</svg>
+</div>
+<div>
+<span class="font-label-sm text-label-sm font-mono text-outline block truncate w-32" title="SHA-256: 4f9e8a71b28c30d9418aa72f63810c9d7491">
+                        4f9e8a71...7491
+                      </span>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-bold" href="#" onclick="alert('Public Ledger: https://verify.mindbridge.lk/cert/MB-APX-2025-0142'); return false;">
+                        verify.mindbridge.lk
+                      </a>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container hover:text-primary transition-all" onclick="openCertificatePreview('Dilani Jayawardena', 'APX-2025-0489', 'Combined Mathematics - 2025 Advanced Revision', '94.2%', 'High Distinction')" title="View Digital Certificate" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container hover:text-tertiary transition-all" onclick="alert('Generating Vector PDF with Apex Academy Holographic Watermark...')" title="Download Vector PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-space-xs rounded-lg bg-error-container/20 text-error hover:bg-error-container hover:text-on-error transition-all" onclick="if(confirm('DANGER: Revoking certificate MB-APX-2025-0142 will invalidate the public QR and broadcast a void status to the national verification registry. Proceed?')) alert('Credential revoked by Admin Authorization.');" title="Revoke Credential" type="button">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Archived Certificate 2: Thenuka Bandara -->
+<tr class="hover:bg-surface-container/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md font-mono font-bold text-secondary">MB-APX-2025-0141</span>
+<button class="text-outline hover:text-on-surface" onclick="navigator.clipboard.writeText('MB-APX-2025-0141'); alert('Copied Certificate ID to clipboard');" title="Copy ID" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed uppercase font-semibold flex items-center gap-1 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Authenticated &amp; Sealed
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-title-md text-title-md font-bold text-on-surface">Thenuka Bandara</div>
+<div class="font-label-sm text-label-sm text-outline font-mono">APX-2025-0312 • Score: 81.0% (Distinction)</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-label-md text-label-md font-bold text-on-surface">Nov 14, 2025</div>
+<div class="font-label-sm text-label-sm text-outline font-mono">11:15:02 UTC+5:30</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="space-y-0.5">
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]">edit_note</span>
+<span class="font-semibold">Eng. Roshan Wijesinghe</span>
+<span class="text-outline">(Teacher)</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary-fixed">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span class="font-semibold">Dr. K. Jayasuriya</span>
+<span class="text-outline">(Admin Approved)</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container-high p-1 flex items-center justify-center shrink-0">
+<svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<rect height="6" rx="1" width="6" x="3" y="3"></rect>
+<rect height="6" rx="1" width="6" x="15" y="3"></rect>
+<rect height="6" rx="1" width="6" x="3" y="15"></rect>
+<path d="M15 15h2v2h-2zM19 15h2v2h-2zM15 19h2v2h-2zM19 19h2v2h-2zM9 9h6v2H9z"></path>
+</svg>
+</div>
+<div>
+<span class="font-label-sm text-label-sm font-mono text-outline block truncate w-32" title="SHA-256: d18b2f90a45c71e2338ff912a7846c10">
+                        d18b2f90...6c10
+                      </span>
+<a class="font-label-sm text-label-sm text-primary hover:underline font-bold" href="#" onclick="alert('Public Ledger: https://verify.mindbridge.lk/cert/MB-APX-2025-0141'); return false;">
+                        verify.mindbridge.lk
+                      </a>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="p-space-xs rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container hover:text-primary transition-all" onclick="openCertificatePreview('Thenuka Bandara', 'APX-2025-0312', 'Combined Mathematics - 2025 Advanced Revision', '81.0%', 'Distinction')" title="View Digital Certificate" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</button>
+<button class="p-space-xs rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container hover:text-tertiary transition-all" onclick="alert('Generating Vector PDF...')" title="Download Vector PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-space-xs rounded-lg bg-error-container/20 text-error hover:bg-error-container hover:text-on-error transition-all" onclick="if(confirm('Revoke credential MB-APX-2025-0141?')) alert('Revoked.');" title="Revoke Credential" type="button">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL: Certificate Live Preview (Student Gold Embossed Certificate) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-surface-container-lowest/85 backdrop-blur-xl hidden" id="cert-preview-modal">
+<div class="relative w-full max-w-4xl rounded-2xl bg-surface-container p-space-xl shadow-2xl space-y-space-lg max-h-[942px] overflow-y-auto">
+<!-- Modal Header -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="p-space-xs rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">MindBridge Official Academic Credential Preview</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live rendering of the student's authentic gold-embossed completion credential</p>
+</div>
+</div>
+<button class="p-space-xs rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="document.getElementById('cert-preview-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<!-- Realistic Gold Embossed Certificate Container -->
+<div class="relative w-full rounded-xl p-space-xl bg-gradient-to-b from-[#111827] via-[#0b1120] to-[#070b14] text-center shadow-2xl overflow-hidden">
+<!-- Subtle Decorative Corner Accents (No external borders used) -->
+<div class="absolute top-4 left-4 w-12 h-12 bg-secondary/15 rounded-tl-xl"></div>
+<div class="absolute top-4 right-4 w-12 h-12 bg-secondary/15 rounded-tr-xl"></div>
+<div class="absolute bottom-4 left-4 w-12 h-12 bg-secondary/15 rounded-bl-xl"></div>
+<div class="absolute bottom-4 right-4 w-12 h-12 bg-secondary/15 rounded-br-xl"></div>
+<!-- Academic Seal & Header -->
+<div class="space-y-space-sm relative z-10 pt-space-md">
+<div class="flex items-center justify-center gap-space-md">
+<div class="w-14 h-14 rounded-full bg-secondary/20 flex items-center justify-center shadow-lg shadow-secondary/20">
+<span class="material-symbols-outlined text-secondary text-[32px]">workspace_premium</span>
+</div>
+</div>
+<div class="font-label-sm text-label-sm tracking-[0.25em] text-secondary uppercase font-bold">
+            MindBridge LMS • Apex Combined Mathematics Academy
+          </div>
+<h2 class="font-display-lg text-display-lg font-extrabold text-on-surface tracking-tight">
+            Certificate of Academic Mastery
+          </h2>
+<div class="font-body-md text-body-md text-on-surface-variant italic max-w-lg mx-auto">
+            This official credential confirms rigorous completion of all syllabus modules, proof sets, and supervised mock examinations.
+          </div>
+</div>
+<!-- Recipient & Details -->
+<div class="py-space-xl space-y-space-md relative z-10">
+<div class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Proudly Conferred Upon</div>
+<div class="font-headline-xl text-headline-xl font-extrabold text-secondary tracking-wide" id="modal-cert-recipient">
+            Kavindu Wickramasinghe
+          </div>
+<div class="inline-flex items-center gap-space-md px-space-lg py-space-xs rounded-full bg-surface-container-high/80 text-on-surface font-mono font-label-md text-label-md">
+<span>Student Index: <span class="text-primary font-bold" id="modal-cert-index">APX-2026-0842</span></span>
+<span class="text-outline">•</span>
+<span>Award Level: <span class="text-tertiary-fixed font-bold" id="modal-cert-grade">Distinction Tier (88.5%)</span></span>
+</div>
+<div class="max-w-xl mx-auto font-body-sm text-body-sm text-on-surface-variant">
+            Having fulfilled with distinction the comprehensive G.C.E. Advanced Level syllabus for
+            <span class="font-bold text-on-surface" id="modal-cert-course">Combined Mathematics 2026 Theory</span>,
+            including all 12 analytical problem sets, differential calculus, mechanics, and complex coordinate geometry.
+          </div>
+</div>
+<!-- Signatures & Verification Hash Footer -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-end pt-space-lg pb-space-sm relative z-10">
+<!-- Signature 1: Master Tutor -->
+<div class="space-y-space-2xs text-left md:text-center">
+<div class="font-headline-sm text-headline-sm text-primary font-serif italic">K. Jayasuriya</div>
+<div class="h-0.5 w-40 bg-surface-container-highest mx-auto"></div>
+<div class="font-title-md text-title-md font-bold text-on-surface">Dr. K. Jayasuriya</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Master Tutor • Combined Maths</div>
+<div class="font-label-sm text-label-sm text-tertiary-fixed font-mono flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check</span> Digitally Signed
+            </div>
+</div>
+<!-- Center QR & Seal -->
+<div class="flex flex-col items-center space-y-space-2xs">
+<div class="p-space-xs rounded-xl bg-white text-surface-container-lowest shadow-xl">
+<!-- Rendered QR code simulation -->
+<svg class="w-16 h-16" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<rect height="7" rx="1" width="7" x="2" y="2"></rect>
+<rect height="7" rx="1" width="7" x="15" y="2"></rect>
+<rect height="7" rx="1" width="7" x="2" y="15"></rect>
+<path d="M15 15h2v2h-2zM19 15h3v2h-3zM15 19h3v3h-3zM19 19h2v2h-2zM9 9h6v2H9z"></path>
+</svg>
+</div>
+<div class="font-label-sm text-label-sm font-mono text-outline">Scan to Verify Public Ledger</div>
+<div class="font-label-sm text-label-sm font-mono text-secondary font-bold">MB-APX-2026-LIVE</div>
+</div>
+<!-- Signature 2: Tenant Admin -->
+<div class="space-y-space-2xs text-left md:text-center">
+<div class="font-headline-sm text-headline-sm text-secondary font-serif italic">Roshan Wijesinghe</div>
+<div class="h-0.5 w-40 bg-surface-container-highest mx-auto"></div>
+<div class="font-title-md text-title-md font-bold text-on-surface">Eng. Roshan Wijesinghe</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Director &amp; Tenant Administrator</div>
+<div class="font-label-sm text-label-sm text-tertiary-fixed font-mono flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[12px]">check</span> Admin Cryptographically Sealed
+            </div>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="font-label-sm text-label-sm text-outline flex items-center gap-1 font-mono">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+          SHA-256: e82b...9a41 | Timestamp: Realtime Preview
+        </div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-md text-label-md font-semibold" onclick="document.getElementById('cert-preview-modal').classList.add('hidden')" type="button">
+            Close Preview
+          </button>
+<button class="px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md font-bold flex items-center gap-1" onclick="alert('Exporting high-resolution 300 DPI vector PDF...')" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+            Download Official PDF
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- MODAL: Criteria Configuration -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-surface-container-lowest/85 backdrop-blur-xl hidden" id="criteria-modal">
+<div class="relative w-full max-w-xl rounded-2xl bg-surface-container p-space-xl shadow-2xl space-y-space-lg">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="p-space-xs rounded-lg bg-primary-container/20 text-primary">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Configure Issuance Criteria</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Update rules for syllabus completion and minimum thresholds</p>
+</div>
+</div>
+<button class="p-space-xs rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="document.getElementById('criteria-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<div class="space-y-space-md">
+<!-- Course Selection -->
+<div class="space-y-space-2xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Target Course Stream</label>
+<select aria-label="Target Course" class="w-full bg-surface-container-low font-body-md text-body-md text-on-surface p-space-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Combined Mathematics 2026 Theory (Apex Academy)</option>
+<option>Combined Mathematics 2025 Revision (Apex Academy)</option>
+<option>Pure Mathematics Fast-Track Mechanics (Rotary)</option>
+</select>
+</div>
+<!-- Rule 1: Cutoff Slider -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md font-bold text-on-surface">Minimum Cumulative Exam Average (%)</label>
+<span class="font-headline-sm text-headline-sm font-bold text-primary font-mono" id="slider-val">65.0%</span>
+</div>
+<input class="w-full accent-primary cursor-pointer" max="85" min="50" oninput="document.getElementById('slider-val').innerText = this.value + '.0%'" step="1" type="range" value="65"/>
+<div class="flex justify-between font-label-sm text-label-sm text-outline">
+<span>50% (Standard Pass)</span>
+<span>65% (Recommended)</span>
+<span>85% (High Honor)</span>
+</div>
+</div>
+<!-- Rule 2: Assignments -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-2xs">
+<label class="font-label-md text-label-md font-bold text-on-surface">Mandatory Assignment Completion</label>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface">Required Count</span>
+<span class="font-label-md text-label-md font-bold text-tertiary">12 / 12 (100%)</span>
+</div>
+<div class="p-space-sm rounded bg-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface">Allow Exemptions?</span>
+<span class="font-label-sm text-label-sm text-error font-bold uppercase">Disabled</span>
+</div>
+</div>
+</div>
+<!-- Rule 3 & 4 Toggles -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">Course Teacher Signature Requirement</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Requires tutor OTP confirmation</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[24px]">toggle_on</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<div class="font-label-md text-label-md font-bold text-on-surface">Tenant Administrator Dual-Sign Lock</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Generates SHA-256 hash &amp; binds registry QR</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">toggle_on</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md" onclick="document.getElementById('criteria-modal').classList.add('hidden')" type="button">
+          Cancel
+        </button>
+<button class="px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-md text-label-md font-bold" onclick="alert('Issuance criteria parameters updated and broadcast to all instructors.'); document.getElementById('criteria-modal').classList.add('hidden');" type="button">
+          Save Parameters
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL: Issue Certificate Manually (Direct Lookup & Authorize) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-space-md bg-surface-container-lowest/85 backdrop-blur-xl hidden" id="manual-modal">
+<div class="relative w-full max-w-xl rounded-2xl bg-surface-container p-space-xl shadow-2xl space-y-space-lg">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="p-space-xs rounded-lg bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Issue Certificate Manually</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Execute authorized manual grant for qualified candidates</p>
+</div>
+</div>
+<button class="p-space-xs rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="document.getElementById('manual-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<div class="space-y-space-md">
+<div class="space-y-space-2xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Search Student by Index or Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">badge</span>
+<input class="w-full bg-surface-container-low font-body-md text-body-md text-on-surface pl-10 pr-4 py-space-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-primary shadow-inner" type="text" value="APX-2026-0842 - Kavindu Wickramasinghe"/>
+</div>
+</div>
+<!-- Student Verification Summary Snapshot -->
+<div class="p-space-md rounded-lg bg-surface-container-low space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Eligibility Assessment</span>
+<span class="px-space-xs py-space-2xs rounded bg-tertiary-container/30 text-tertiary-fixed font-label-sm text-label-sm uppercase font-bold">Criteria Fully Met</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<div class="font-label-sm text-label-sm text-outline">Cumulative Average</div>
+<div class="font-headline-sm text-headline-sm font-bold text-tertiary-fixed font-mono">88.5% (&gt;= 65%)</div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-outline">Assignments Status</div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface font-mono">12 / 12 (100%)</div>
+</div>
+</div>
+</div>
+<!-- Sign-Off Authority Selection -->
+<div class="space-y-space-2xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Authorizing Authority Role</label>
+<div class="grid grid-cols-2 gap-space-sm">
+<label class="p-space-sm rounded-lg bg-surface-container-high flex items-center gap-space-xs cursor-pointer">
+<input checked="" class="accent-primary" name="sign_role" type="radio"/>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Course Master Tutor</span>
+</label>
+<label class="p-space-sm rounded-lg bg-surface-container-high flex items-center gap-space-xs cursor-pointer">
+<input class="accent-secondary" name="sign_role" type="radio"/>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Tenant Administrator</span>
+</label>
+</div>
+</div>
+<div class="space-y-space-2xs">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Digital Security Passcode / 2FA OTP</label>
+<input class="w-full bg-surface-container-low font-body-md text-body-md text-on-surface px-space-md py-space-sm rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary shadow-inner" placeholder="Enter your 6-digit security key..." type="password"/>
+<span class="font-label-sm text-label-sm text-outline">By clicking proceed, your signature token will be cryptographically etched into the verification hash.</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md" onclick="document.getElementById('manual-modal').classList.add('hidden')" type="button">
+          Cancel
+        </button>
+<button class="px-space-md py-space-sm rounded-lg bg-secondary text-on-secondary hover:bg-secondary-fixed font-label-md text-label-md font-bold flex items-center gap-1" onclick="alert('Manual authorization confirmed! Certificate MB-APX-2026-0842 generated and sealed.'); document.getElementById('manual-modal').classList.add('hidden');" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+          Sign &amp; Issue Credential
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function openCertificatePreview(name, index, course, score, grade) {
+    document.getElementById('modal-cert-recipient').innerText = name;
+    document.getElementById('modal-cert-index').innerText = index;
+    document.getElementById('modal-cert-course').innerText = course;
+    document.getElementById('modal-cert-grade').innerText = grade + ' (' + score + ')';
+    document.getElementById('cert-preview-modal').classList.remove('hidden');
+  }
+</script></main></div></body></html>

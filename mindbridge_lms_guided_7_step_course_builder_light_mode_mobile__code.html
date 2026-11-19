@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#faf8ff", "on-tertiary-container": "#fffbff", "on-secondary-container": "#405081", "primary-fixed": "#d7e3ff", "secondary-container": "#b5c5fd", "background": "#faf8ff", "tertiary": "#7f5300", "on-error-container": "#93000a", "on-surface": "#101b34", "secondary-fixed": "#dbe1ff", "on-tertiary-fixed-variant": "#633f00", "primary-container": "#0072e4", "surface-container-lowest": "#ffffff", "on-surface-variant": "#414754", "on-primary-fixed-variant": "#00458f", "secondary": "#4d5c8e", "surface-tint": "#005cba", "surface-container-highest": "#d9e2ff", "on-secondary": "#ffffff", "outline-variant": "#c1c6d6", "primary": "#005ab6", "on-background": "#101b34", "on-tertiary-fixed": "#291800", "on-primary-fixed": "#001b3f", "secondary-fixed-dim": "#b5c5fd", "on-tertiary": "#ffffff", "tertiary-container": "#a06900", "error-container": "#ffdad6", "surface": "#faf8ff", "on-secondary-fixed": "#041847", "tertiary-fixed": "#ffddb4", "on-primary": "#ffffff", "surface-dim": "#cfd9fb", "error": "#ba1a1a", "inverse-on-surface": "#eef0ff", "surface-container-low": "#f2f3ff", "outline": "#717785", "on-primary-container": "#fefcff", "inverse-surface": "#25304a", "surface-variant": "#d9e2ff", "on-error": "#ffffff", "surface-container-high": "#e1e7ff", "surface-container": "#eaedff", "primary-fixed-dim": "#abc7ff", "tertiary-fixed-dim": "#ffb952", "on-secondary-fixed-variant": "#354575", "inverse-primary": "#abc7ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-xl": "2rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "margin": "2rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "space-md": "1rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "title": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Inter"], "label-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "display-mobile": ["Plus Jakarta Sans"], "label-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-md": ["Inter"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }], "title": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "display": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "500" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(7,27,74,0.04)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="MindBridge LMS Education Logo.png" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrA7_rZ3ABV6yE4doz6kFiRiGfPGv2xtF9lnpJ7hdRh3BipsZ2ijO2rKVq3ub9uFm-dmD7EgE-7J7KtIU1J0kTkgZUsqVQ2mnW5PDeu2KCXBxOv6XCTmabZtAEzg_BGR_BTdAnHkxI_rrb1nS7k2-lISNQ4RaPqGS2xvXDnfCU1DNqQvh9ECrQheZJ0pGOPEYE2mZbGuHTdhrEfu48ynixn_w20CE4mqMB3iXCK-bs5H4RtkXF2vJiNDDQ"/><div class="flex flex-col min-w-0"><span class="font-title text-title text-on-surface truncate">MindBridge</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Curriculum Builder</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search portal" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-[22px]">search</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- Teacher Context Ribbon -->
+<section class="w-full bg-surface-container-low px-margin-mobile py-space-sm flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface truncate">Teacher Portal • Apex Combined Maths</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">SLST 14:35 • Eng. Kusal Senaratne</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-2 py-1 bg-surface-container-lowest rounded-full shadow-sm text-on-surface flex items-center gap-1 font-label-sm text-label-sm">
+<span class="text-primary font-title">සිං</span> / En
+      </button>
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-title text-label-sm">
+        KS
+      </div>
+</div>
+</section>
+<!-- Step Header & Builder Meta -->
+<section class="px-margin-mobile pt-space-md pb-space-sm bg-surface">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+        Step 5 of 7 Active
+      </span>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">cloud_done</span>
+<span>Auto-saved 14:34</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-sm">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Course Structure</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Syllabus modules, video lessons, and secured handouts</p>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-9 h-9 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center shadow-sm" title="Preview Storefront">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+<button class="w-9 h-9 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center shadow-sm" title="Save Draft">
+<span class="material-symbols-outlined text-[20px]">save</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Horizontal Touch Stepper -->
+<div class="w-full overflow-x-auto px-margin-mobile py-space-sm flex items-center gap-space-sm scrollbar-none bg-surface">
+<!-- Step 1 Done -->
+<div class="flex items-center gap-1.5 shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-sm">
+<span class="w-5 h-5 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1. Basic Info</span>
+</div>
+<!-- Step 2 Done -->
+<div class="flex items-center gap-1.5 shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-sm">
+<span class="w-5 h-5 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2. Category</span>
+</div>
+<!-- Step 3 Done -->
+<div class="flex items-center gap-1.5 shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-sm">
+<span class="w-5 h-5 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3. Outcomes</span>
+</div>
+<!-- Step 4 Done -->
+<div class="flex items-center gap-1.5 shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-sm">
+<span class="w-5 h-5 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[13px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4. Pricing</span>
+</div>
+<!-- Step 5 Active -->
+<div class="flex items-center gap-1.5 shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary shadow-md">
+<span class="w-5 h-5 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary font-title text-[11px]">
+        5
+      </span>
+<span class="font-label-sm text-label-sm">5. Structure</span>
+</div>
+<!-- Step 6 Inactive -->
+<div class="flex items-center gap-1.5 shrink-0 px-3 py-1.5 rounded-full bg-surface-container-low opacity-70">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant text-[11px] font-title">
+        6
+      </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">6. Lessons</span>
+</div>
+<!-- Step 7 Inactive -->
+<div class="flex items-center gap-1.5 shrink-0 px-3 py-1.5 rounded-full bg-surface-container-low opacity-70">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant text-[11px] font-title">
+        7
+      </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">7. Publish</span>
+</div>
+</div>
+<div class="px-margin-mobile flex flex-col gap-space-md py-space-sm">
+<!-- Course Overview Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden" style="border-top-right-radius: 24px;">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">school</span> Structured Masterclass
+        </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+          A/L Maths 2025/2026
+        </span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-snug">
+          2025/2026 G.C.E. A/L Combined Mathematics
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Pure &amp; Applied Theory Masterclass • සිංහල මාධ්‍ය (Sinhala Medium + English Terminology)
+        </p>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2">
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fee Tier</span>
+<span class="font-title text-title text-primary">Rs. 4,500 <span class="font-body-sm text-body-sm text-on-surface">/ mo</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Bank Slip Verification</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Content Scope</span>
+<span class="font-title text-title text-on-surface">5 Modules</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">44 Total Teaching Hours</span>
+</div>
+</div>
+</div>
+<!-- Publication Readiness Widget (Radial Meter & Checkpoints) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+<h3 class="font-title text-title text-on-surface">Publication Readiness</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+          Ready for Step 6
+        </span>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-low p-3 rounded-lg">
+<!-- Radial Gauge (Inline SVG) -->
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<svg class="w-16 h-16 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-title text-title text-on-surface leading-none">85%</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-lg text-label-lg text-on-surface">Pre-Flight Audit</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3 of 4 core criteria fully approved for Colombo batch publishing.</p>
+</div>
+</div>
+<!-- Readiness Checklist -->
+<div class="grid grid-cols-1 gap-1.5 pt-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1 px-2 rounded bg-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span class="text-on-surface">Curriculum Metadata &amp; Pricing</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">100% Complete</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1 px-2 rounded bg-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">pending</span>
+<span class="text-on-surface">Video Lessons Master Upload</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-title">8 of 24 Uploaded</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm py-1 px-2 rounded bg-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">security</span>
+<span class="text-on-surface">Dynamic NIC Watermark Profile</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-title">Active (SL DRM)</span>
+</div>
+</div>
+</div>
+<!-- Gemini AI Syllabus Assistant Banner -->
+<div class="w-full bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">auto_awesome</span>
+<span class="font-title text-title text-on-surface">Bilingual Gemini AI Engine</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm">
+          v2.4 Ready
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Generate lesson blueprints, Sinhala translations, or NIE past paper question mappings with one tap.
+      </p>
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full py-2 px-3 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-between text-label-md font-label-md shadow-sm active:scale-[0.99] transition-transform">
+<span class="flex items-center gap-1.5 text-left truncate">
+<span class="material-symbols-outlined text-primary text-[16px]">psychology</span>
+<span>Draft Module 02 Circular Outcomes (ත්‍රිකෝණමිතිය)</span>
+</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full py-2 px-3 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-between text-label-md font-label-md shadow-sm active:scale-[0.99] transition-transform">
+<span class="flex items-center gap-1.5 text-left truncate">
+<span class="material-symbols-outlined text-tertiary text-[16px]">quiz</span>
+<span>Create Calculus I Past Paper Quiz (Sinhala / English)</span>
+</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Curriculum Architecture List Section -->
+<div class="flex items-center justify-between pt-space-xs">
+<div>
+<h3 class="font-title text-title text-on-surface">Curriculum Architecture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Drag to reorder • 5 Modules total</p>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>New Module</span>
+</button>
+</div>
+<!-- MODULE 01 (Expanded Accordion) -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col">
+<!-- Module Header -->
+<div class="p-space-md bg-surface-container-low flex flex-col gap-2 cursor-pointer">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-primary text-on-primary flex items-center justify-center font-title text-[13px] shrink-0">
+              01
+            </span>
+<span class="font-title text-title text-on-surface leading-tight">
+              Foundations of Algebra &amp; Polynomials (Pure Maths)
+            </span>
+</div>
+<button class="text-on-surface-variant shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">expand_less</span>
+</button>
+</div>
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+            6 Lessons
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+            3 Worksheets
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+            1 Quiz
+          </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">schedule</span> 5h 50m
+          </span>
+</div>
+</div>
+<!-- Module 01 Items List -->
+<div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<!-- Item 1.1 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 shrink-0">play_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface leading-tight">
+                  1.1 Quadratic Equations &amp; Remainder Theorem
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Public Preview Demo • ID: yt_un1_8820a
+                </span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm shrink-0">
+              Free Demo
+            </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant pt-1 font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> 1h 45m • SLST Recorded
+            </span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">branding_watermark</span> NIC Watermark ON
+            </span>
+</div>
+</div>
+<!-- Item 1.2 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 shrink-0">lock</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface leading-tight">
+                  1.2 Partial Fractions Decomposition (භාගික භාග)
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Enrolled Only • Slip Verification Required • yt_un1_4401c
+                </span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm shrink-0">
+              Locked
+            </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant pt-1 font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> 2h 10m • HD 1080p
+            </span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">branding_watermark</span> NIC Watermark ON
+            </span>
+</div>
+</div>
+<!-- Item 1.3 -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5 shrink-0">lock</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface leading-tight">
+                  1.3 Mathematical Induction &amp; Finite Summation
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                  Enrolled Only • ID: yt_un1_9104f
+                </span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm shrink-0">
+              Locked
+            </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant pt-1 font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span> 1h 55m • SLST Studio
+            </span>
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">branding_watermark</span> NIC Watermark ON
+            </span>
+</div>
+</div>
+<!-- Resource 1.4 Handout -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2 min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[20px] mt-0.5 shrink-0">description</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface leading-tight">
+                  Resource: Polynomial Theory &amp; NIE Model Problems
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                  PDF • 14.8 MB • In-Browser Viewer (Print Disabled)
+                </span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm shrink-0">
+              DRM Encrypted
+            </span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant pt-1 font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[14px]">badge</span> Dynamic Student NIC Embed
+            </span>
+<button class="text-primary font-label-sm text-label-sm flex items-center gap-0.5">
+<span>Inspect</span>
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Action inside Module 01 -->
+<button class="w-full py-2.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1.5 active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Add Lesson, Worksheet, or Timed Quiz</span>
+</button>
+</div>
+</div>
+<!-- COLLAPSED MODULES -->
+<!-- Module 02 -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<span class="w-7 h-7 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center font-title text-[13px] shrink-0">
+          02
+        </span>
+<div class="flex flex-col min-w-0">
+<span class="font-title text-title text-on-surface truncate">Trigonometry &amp; Circular Functions (ත්‍රිකෝණමිතිය)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">8 Lessons • 4 Handouts • 1 Mid-Term Exam</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">expand_more</span>
+</div>
+<!-- Module 03 -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<span class="w-7 h-7 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center font-title text-[13px] shrink-0">
+          03
+        </span>
+<div class="flex flex-col min-w-0">
+<span class="font-title text-title text-on-surface truncate">Calculus I — Differential Calculus &amp; Curve Sketching</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">10 Lessons • 5 Past Papers Archive</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">expand_more</span>
+</div>
+<!-- Module 04 -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<span class="w-7 h-7 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center font-title text-[13px] shrink-0">
+          04
+        </span>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-title text-title text-on-surface truncate">Calculus II — Integral Calculus</span>
+<span class="px-1.5 py-0.2 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px]">In Progress</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Area Under Curves • 6 Draft Lessons</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">expand_more</span>
+</div>
+<!-- Module 05 -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-3 min-w-0">
+<span class="w-7 h-7 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center font-title text-[13px] shrink-0">
+          05
+        </span>
+<div class="flex flex-col min-w-0">
+<span class="font-title text-title text-on-surface truncate">Applied Mechanics — Statics of Rigid Bodies</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Scheduled Release: Nov 2025</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] shrink-0">expand_more</span>
+</div>
+<!-- Mobile Access Governance Card -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-sm mt-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">admin_panel_settings</span>
+<h3 class="font-title text-title text-on-surface">Access Governance &amp; Security</h3>
+</div>
+<div class="flex flex-col gap-2.5 pt-1">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Cohort Validity Expiry</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Enrolled access shuts off after A/L Exam</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-1 rounded text-on-surface">
+            30 Nov 2026
+          </span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Batch Size Limit</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Max concurrent live stream sessions</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-1 rounded text-on-surface">
+            2,500 Learners
+          </span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col pr-2">
+<span class="font-label-md text-label-md text-on-surface">SLT-Mobitel DRM Bridge</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Restricts screen recording on Android &amp; Windows</span>
+</div>
+<!-- Toggle Active -->
+<div class="w-11 h-6 bg-primary rounded-full relative p-0.5 cursor-pointer shrink-0">
+<div class="w-5 h-5 bg-surface-container-lowest rounded-full shadow-sm ml-auto"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Sticky Navigation Action Ribbon -->
+<section class="sticky bottom-16 left-0 right-0 z-40 bg-surface/95 backdrop-blur-md px-margin-mobile py-space-sm shadow-[0_-4px_16px_rgba(7,27,74,0.06)] flex items-center justify-between gap-space-sm mt-space-md">
+<button class="px-4 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1 active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Back: Step 4</span>
+</button>
+<button class="flex-1 py-2.5 px-4 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-md active:bg-primary-container transition-colors">
+<span>Proceed to Step 6: Lessons</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</section>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(7,27,74,0.05)]" data-active-classes="text-primary font-label-md"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 transition-colors text-primary font-label-md" data-path="curriculum-builder" href="#"><span class="material-symbols-outlined text-[22px]">auto_stories</span><span class="font-label-sm text-label-sm">Courses</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="exam-hub" href="#"><span class="material-symbols-outlined text-[22px]">quiz</span><span class="font-label-sm text-label-sm">Exams</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="financial-ledger" href="#"><span class="material-symbols-outlined text-[22px]">payments</span><span class="font-label-sm text-label-sm">Finance</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="tenant-profile" href="#"><span class="material-symbols-outlined text-[22px]">account_balance</span><span class="font-label-sm text-label-sm">Tenant</span></a></div></nav></body></html>

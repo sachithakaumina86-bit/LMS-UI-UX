@@ -1,0 +1,561 @@
+import React, { useState } from 'react';
+import {
+  X,
+  CheckCircle2,
+  AlertTriangle,
+  ZoomIn,
+  ZoomOut,
+  RotateCw,
+  FileText,
+  Building,
+  User,
+  Calendar,
+  CreditCard,
+  Hash,
+  MessageSquare,
+  ShieldAlert,
+  ChevronDown,
+  ExternalLink,
+  Download
+} from 'lucide-react';
+
+export interface BankSlipAuditRecord {
+  id: string;
+  invoiceId: string;
+  studentId: string;
+  studentName: string;
+  studentAvatarUrl?: string;
+  courseTitle: string;
+  courseCycle: string;
+  amountExpectedLkr: number;
+  amountDepositedLkr: number;
+  depositDate: string;
+  depositedBank: string;
+  branchName: string;
+  referenceNumber: string;
+  depositorName: string;
+  studentNotes?: string;
+  submittedAt: string;
+  slipFileUrl: string;
+  slipFileType: 'image' | 'pdf';
+  status: 'PENDING_REVIEW' | 'APPROVED' | 'REJECTED';
+}
+
+export interface BankSlipReviewModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  slipRecord: BankSlipAuditRecord;
+  onApprove: (recordId: string, approvalData: { approvedAmountLkr: number; cashierNotes?: string }) => Promise<void>;
+  onReject: (recordId: string, rejectionData: { reasonCode: string; cashierReason: string }) => Promise<void>;
+}
+
+const REJECTION_REASONS = [
+  { code: 'BLURRED_RECEIPT', label: 'Bank counterfoil / stamp is unreadable or blurry' },
+  { code: 'INCORRECT_AMOUNT', label: 'Deposited amount is less than total invoice amount' },
+  { code: 'NAME_MISMATCH', label: 'Depositor / Student name does not match enrolled account' },
+  { code: 'WRONG_ACCOUNT', label: 'Payment deposited into incorrect or unapproved bank account' },
+  { code: 'DUPLICATE_SLIP', label: 'Slip reference number has already been utilized' },
+  { code: 'DATE_OUT_OF_RANGE', label: 'Deposit date is outside the allowable billing period' },
+  { code: 'OTHER', label: 'Other discrepancies (Specify below)' },
+];
+
+export const BankSlipReviewModal: React.FC<BankSlipReviewModalProps> = ({
+  isOpen,
+  onClose,
+  slipRecord,
+  onApprove,
+  onReject,
+}) => {
+  // Viewer state
+  const [zoomLevel, setZoomLevel] = useState<number>(1);
+  const [rotationAngle, setRotationAngle] = useState<number>(0);
+
+  // Review action state
+  const [activeTab, setActiveTab] = useState<'APPROVE' | 'REJECT'>('APPROVE');
+  const [approvedAmount, setApprovedAmount] = useState<string>(slipRecord.amountDepositedLkr.toString());
+  const [approvalNotes, setApprovalNotes] = useState<string>('Verified bank teller stamp and deposit sequence.');
+  const [selectedReasonCode, setSelectedReasonCode] = useState<string>(REJECTION_REASONS[0].code);
+  const [customRejectionReason, setCustomRejectionReason] = useState<string>('');
+  const [isProcessing, setIsProcessing] = useState<boolean>(false);
+  const [actionError, setActionError] = useState<string | null>(null);
+
+  if (!isOpen) return null;
+
+  const isAmountDiscrepancy = Number(approvedAmount) !== slipRecord.amountExpectedLkr;
+
+  const handleZoomIn = () => setZoomLevel((prev) => Math.min(prev + 0.25, 3));
+  const handleZoomOut = () => setZoomLevel((prev) => Math.max(prev - 0.25, 0.75));
+  const handleRotate = () => setRotationAngle((prev) => (prev + 90) % 360);
+  const handleResetView = () => {
+    setZoomLevel(1);
+    setRotationAngle(0);
+  };
+
+  const handleApproveSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setActionError(null);
+    const numericAmount = Number(approvedAmount);
+
+    if (isNaN(numericAmount) || numericAmount <= 0) {
+      setActionError('Please enter a valid approved tuition amount in LKR.');
+      return;
+    }
+
+    try {
+      setIsProcessing(true);
+      await onApprove(slipRecord.id, {
+        approvedAmountLkr: numericAmount,
+        cashierNotes: approvalNotes.trim() || undefined,
+      });
+      onClose();
+    } catch (err: any) {
+      setActionError(err?.message || 'Failed to approve slip. Please try again.');
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  const handleRejectSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setActionError(null);
+
+    const reasonLabel = REJECTION_REASONS.find((r) => r.code === selectedReasonCode)?.label;
+    const finalReason = customRejectionReason.trim()
+      ? `${reasonLabel}: ${customRejectionReason.trim()}`
+      : reasonLabel || 'Bank deposit slip rejected by cashier.';
+
+    try {
+      setIsProcessing(true);
+      await onReject(slipRecord.id, {
+        reasonCode: selectedReasonCode,
+        cashierReason: finalReason,
+      });
+      onClose();
+    } catch (err: any) {
+      setActionError(err?.message || 'Failed to reject slip. Please try again.');
+    } finally {
+      setIsProcessing(false);
+    }
+  };
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-sm overflow-y-auto"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="review-modal-title"
+    >
+      <div className="relative w-full max-w-5xl bg-surface-lowest text-tx-primary rounded-modal border border-stroke shadow-2xl flex flex-col max-h-[92vh] overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
+        
+        {/* Top Header Bar */}
+        <div className="flex items-center justify-between px-5 py-3.5 border-b border-stroke bg-surface-low flex-shrink-0">
+          <div className="flex items-center space-x-3">
+            <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+              <ShieldAlert className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center space-x-2">
+                <h2 id="review-modal-title" className="text-base font-bold tracking-tight">
+                  Bank Deposit Slip Cashier Audit & Verification
+                </h2>
+                <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-feedback-warning-container text-feedback-warning font-semibold">
+                  Queue #{slipRecord.id}
+                </span>
+              </div>
+              <p className="text-xs text-tx-muted mt-0.5">
+                Ref: #{slipRecord.invoiceId} • Submitted: {new Date(slipRecord.submittedAt).toLocaleString()}
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="p-1.5 rounded-md text-tx-muted hover:text-tx-primary hover:bg-surface-container transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            aria-label="Close modal"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Modal Main Body (2-Column Inspection Grid) */}
+        <div className="flex-1 overflow-y-auto grid grid-cols-1 lg:grid-cols-12 min-h-0">
+          
+          {/* Left Column: High-Res Document Viewer (7 Cols) */}
+          <div className="lg:col-span-7 bg-surface-container-lowest border-b lg:border-b-0 lg:border-r border-stroke flex flex-col p-4">
+            
+            {/* Viewer Control Strip */}
+            <div className="flex items-center justify-between pb-3 border-b border-stroke text-xs text-tx-secondary">
+              <span className="font-semibold flex items-center space-x-1.5">
+                <CreditCard className="w-4 h-4 text-primary" />
+                <span>Uploaded Deposit Counterfoil</span>
+              </span>
+              <div className="flex items-center space-x-1 bg-surface-low p-1 rounded-card border border-stroke">
+                <button
+                  type="button"
+                  onClick={handleZoomIn}
+                  className="p-1 rounded hover:bg-surface-container text-tx-secondary hover:text-tx-primary"
+                  title="Zoom In"
+                  aria-label="Zoom in"
+                >
+                  <ZoomIn className="w-4 h-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={handleZoomOut}
+                  className="p-1 rounded hover:bg-surface-container text-tx-secondary hover:text-tx-primary"
+                  title="Zoom Out"
+                  aria-label="Zoom out"
+                >
+                  <ZoomOut className="w-4 h-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={handleRotate}
+                  className="p-1 rounded hover:bg-surface-container text-tx-secondary hover:text-tx-primary"
+                  title="Rotate 90deg"
+                  aria-label="Rotate"
+                >
+                  <RotateCw className="w-4 h-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={handleResetView}
+                  className="px-1.5 py-0.5 text-[10px] font-mono rounded hover:bg-surface-container text-tx-muted hover:text-tx-primary"
+                  title="Reset viewport"
+                >
+                  Reset
+                </button>
+                <a
+                  href={slipRecord.slipFileUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  download
+                  className="p-1 rounded hover:bg-surface-container text-tx-secondary hover:text-tx-primary ml-1"
+                  title="Open Full File"
+                  aria-label="Download or open original"
+                >
+                  <Download className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Interactive Image / PDF Canvas */}
+            <div className="flex-1 mt-3 rounded-card bg-surface-lowest border border-stroke flex items-center justify-center p-3 overflow-hidden min-h-[320px] max-h-[500px]">
+              {slipRecord.slipFileType === 'image' ? (
+                <div className="w-full h-full flex items-center justify-center overflow-auto">
+                  <img
+                    src={slipRecord.slipFileUrl}
+                    alt={`Bank slip deposit for ${slipRecord.studentName}`}
+                    style={{
+                      transform: `scale(${zoomLevel}) rotate(${rotationAngle}deg)`,
+                      transition: 'transform 0.15s ease-out',
+                    }}
+                    className="max-h-[460px] max-w-full object-contain origin-center select-none shadow-md rounded"
+                  />
+                </div>
+              ) : (
+                <div className="flex flex-col items-center justify-center p-6 text-center">
+                  <FileText className="w-16 h-16 text-primary mb-2" />
+                  <p className="text-sm font-bold text-tx-primary">PDF Bank Confirmation Document</p>
+                  <p className="text-xs text-tx-muted mt-1 max-w-xs">
+                    This deposit receipt was provided as an electronic or scanned PDF document.
+                  </p>
+                  <a
+                    href={slipRecord.slipFileUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-4 inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-card bg-primary/10 hover:bg-primary/20 text-primary text-xs font-semibold transition-colors"
+                  >
+                    <span>Inspect Full PDF in New Window</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              )}
+            </div>
+
+            {/* Teller Stamp & Audit Tip */}
+            <div className="mt-3 p-2.5 rounded bg-surface-low border border-stroke flex items-center justify-between text-[11px] text-tx-muted">
+              <span>Zoom Scale: <strong>{Math.round(zoomLevel * 100)}%</strong> • Rotation: <strong>{rotationAngle}°</strong></span>
+              <span>Confirm bank teller ink stamp & date of deposit</span>
+            </div>
+          </div>
+
+          {/* Right Column: Ledger Verification & Cashier Actions (5 Cols) */}
+          <div className="lg:col-span-5 flex flex-col p-5 space-y-4 overflow-y-auto">
+            
+            {/* Student & Course Summary Card */}
+            <div className="p-3.5 rounded-card bg-surface-low border border-stroke space-y-2.5">
+              <div className="flex items-start justify-between">
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-tx-muted">Student Account</span>
+                  <div className="flex items-center space-x-2 mt-0.5">
+                    <User className="w-4 h-4 text-primary flex-shrink-0" />
+                    <span className="text-xs font-bold text-tx-primary truncate">{slipRecord.studentName}</span>
+                  </div>
+                </div>
+                <span className="text-[10px] font-mono bg-surface-container px-2 py-0.5 rounded text-tx-secondary">
+                  {slipRecord.studentId}
+                </span>
+              </div>
+
+              <div className="pt-2 border-t border-stroke/70 text-xs">
+                <p className="text-[11px] text-tx-muted">Target Course & Cycle:</p>
+                <p className="font-semibold text-tx-primary truncate mt-0.5">{slipRecord.courseTitle}</p>
+                <p className="text-[10px] text-primary font-medium mt-0.5">{slipRecord.courseCycle}</p>
+              </div>
+            </div>
+
+            {/* Financial Ledger Comparison Matrix */}
+            <div className="p-3.5 rounded-card bg-surface-low border border-stroke space-y-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-tx-muted">
+                Transaction Reconciliation
+              </span>
+              
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="p-2 rounded bg-surface-lowest border border-stroke">
+                  <p className="text-[10px] text-tx-muted">Expected Tuition</p>
+                  <p className="text-sm font-bold text-tx-primary font-mono mt-0.5">
+                    LKR {slipRecord.amountExpectedLkr.toLocaleString()}
+                  </p>
+                </div>
+                <div className={`p-2 rounded border ${
+                  slipRecord.amountDepositedLkr >= slipRecord.amountExpectedLkr
+                    ? 'bg-feedback-success-container/30 border-feedback-success/40'
+                    : 'bg-feedback-error-container/30 border-feedback-error/40'
+                }`}>
+                  <p className="text-[10px] text-tx-muted">Deposited Claim</p>
+                  <p className="text-sm font-bold font-mono mt-0.5 text-tx-primary">
+                    LKR {slipRecord.amountDepositedLkr.toLocaleString()}
+                  </p>
+                </div>
+              </div>
+
+              {/* Data Verification Strips */}
+              <div className="space-y-1.5 pt-1 text-[11px] text-tx-secondary">
+                <div className="flex items-center justify-between">
+                  <span className="text-tx-muted flex items-center space-x-1">
+                    <Calendar className="w-3.5 h-3.5 text-tx-muted" />
+                    <span>Deposit Date:</span>
+                  </span>
+                  <span className="font-medium text-tx-primary">{slipRecord.depositDate}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-tx-muted flex items-center space-x-1">
+                    <Building className="w-3.5 h-3.5 text-tx-muted" />
+                    <span>Bank & Branch:</span>
+                  </span>
+                  <span className="font-medium text-tx-primary truncate max-w-[170px] text-right">
+                    {slipRecord.depositedBank} ({slipRecord.branchName})
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-tx-muted flex items-center space-x-1">
+                    <Hash className="w-3.5 h-3.5 text-tx-muted" />
+                    <span>Slip Ref / Seq:</span>
+                  </span>
+                  <span className="font-mono font-semibold text-tx-primary">
+                    {slipRecord.referenceNumber || 'N/A (Cash Counter)'}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-tx-muted">Depositor Name:</span>
+                  <span className="font-medium text-tx-primary truncate max-w-[170px] text-right">
+                    {slipRecord.depositorName}
+                  </span>
+                </div>
+              </div>
+
+              {slipRecord.studentNotes && (
+                <div className="mt-2 p-2 rounded bg-surface-lowest border border-stroke text-[11px]">
+                  <p className="text-tx-muted font-semibold flex items-center space-x-1">
+                    <MessageSquare className="w-3 h-3 text-tx-muted" />
+                    <span>Student Note:</span>
+                  </p>
+                  <p className="text-tx-secondary italic mt-0.5 leading-snug">{slipRecord.studentNotes}</p>
+                </div>
+              )}
+            </div>
+
+            {/* Error Banner */}
+            {actionError && (
+              <div className="p-3 rounded-card bg-feedback-error-container text-feedback-error border border-feedback-error/30 flex items-start space-x-2 text-xs">
+                <AlertTriangle className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span className="font-medium">{actionError}</span>
+              </div>
+            )}
+
+            {/* Action Segment Switcher (Approve vs Reject) */}
+            <div className="flex rounded-card p-1 bg-surface-low border border-stroke text-xs font-semibold">
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('APPROVE');
+                  setActionError(null);
+                }}
+                className={`flex-1 py-1.5 rounded transition-all flex items-center justify-center space-x-1.5 ${
+                  activeTab === 'APPROVE'
+                    ? 'bg-primary text-on-primary shadow-sm font-bold'
+                    : 'text-tx-muted hover:text-tx-primary'
+                }`}
+              >
+                <CheckCircle2 className="w-4 h-4" />
+                <span>Approve & Grant</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setActiveTab('REJECT');
+                  setActionError(null);
+                }}
+                className={`flex-1 py-1.5 rounded transition-all flex items-center justify-center space-x-1.5 ${
+                  activeTab === 'REJECT'
+                    ? 'bg-feedback-error text-white shadow-sm font-bold'
+                    : 'text-tx-muted hover:text-tx-primary'
+                }`}
+              >
+                <AlertTriangle className="w-4 h-4" />
+                <span>Reject with Reason</span>
+              </button>
+            </div>
+
+            {/* Action Forms */}
+            {activeTab === 'APPROVE' ? (
+              <form onSubmit={handleApproveSubmit} className="space-y-3">
+                <div>
+                  <label htmlFor="approvedAmount" className="block text-xs font-semibold text-tx-secondary mb-1">
+                    Confirmed Amount (LKR)
+                  </label>
+                  <input
+                    id="approvedAmount"
+                    name="approvedAmount"
+                    type="number"
+                    required
+                    min="1"
+                    step="any"
+                    value={approvedAmount}
+                    onChange={(e) => setApprovedAmount(e.target.value)}
+                    className="w-full px-3 py-2 text-xs font-semibold rounded-card border border-stroke bg-surface-lowest text-tx-primary focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none font-mono"
+                  />
+                  {isAmountDiscrepancy && (
+                    <p className="text-[11px] text-feedback-warning mt-1 flex items-center space-x-1">
+                      <AlertTriangle className="w-3.5 h-3.5 flex-shrink-0" />
+                      <span>Differs from invoice fee (LKR {slipRecord.amountExpectedLkr.toLocaleString()}).</span>
+                    </p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="approvalNotes" className="block text-xs font-semibold text-tx-secondary mb-1">
+                    Cashier Audit Memo <span className="text-tx-muted font-normal">(Internal)</span>
+                  </label>
+                  <textarea
+                    id="approvalNotes"
+                    name="approvalNotes"
+                    rows={2}
+                    value={approvalNotes}
+                    onChange={(e) => setApprovalNotes(e.target.value)}
+                    placeholder="e.g. Verified BOC counterfoil seal. Full tuition credited."
+                    className="w-full px-3 py-2 text-xs rounded-card border border-stroke bg-surface-lowest text-tx-primary placeholder:text-tx-muted focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none resize-none"
+                  />
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    disabled={isProcessing}
+                    className="w-full py-2.5 px-4 text-xs font-bold rounded-card bg-primary text-on-primary hover:bg-primary-hover shadow-sm hover:shadow transition-all disabled:opacity-50 flex items-center justify-center space-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    {isProcessing ? (
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    ) : (
+                      <>
+                        <CheckCircle2 className="w-4 h-4" />
+                        <span>Confirm Approval & Unlock Course</span>
+                      </>
+                    )}
+                  </button>
+                  <p className="text-[10px] text-tx-muted text-center mt-1.5">
+                    Unlocks video DRM and schedules printed tute courier dispatch immediately.
+                  </p>
+                </div>
+              </form>
+            ) : (
+              <form onSubmit={handleRejectSubmit} className="space-y-3">
+                <div>
+                  <label htmlFor="reasonCode" className="block text-xs font-semibold text-tx-secondary mb-1">
+                    Standard Rejection Reason <span className="text-feedback-error">*</span>
+                  </label>
+                  <div className="relative">
+                    <select
+                      id="reasonCode"
+                      value={selectedReasonCode}
+                      onChange={(e) => setSelectedReasonCode(e.target.value)}
+                      className="w-full pl-3 pr-8 py-2 text-xs rounded-card border border-stroke bg-surface-lowest text-tx-primary focus:border-feedback-error focus:ring-1 focus:ring-feedback-error focus:outline-none appearance-none"
+                    >
+                      {REJECTION_REASONS.map((r) => (
+                        <option key={r.code} value={r.code}>
+                          {r.label}
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="w-4 h-4 absolute right-2.5 top-1/2 -translate-y-1/2 text-tx-muted pointer-events-none" />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="customRejection" className="block text-xs font-semibold text-tx-secondary mb-1">
+                    Additional Instructions for Student
+                  </label>
+                  <textarea
+                    id="customRejection"
+                    rows={2}
+                    value={customRejectionReason}
+                    onChange={(e) => setCustomRejectionReason(e.target.value)}
+                    placeholder="Specify why slip was rejected and guide student to re-upload clear counterfoil..."
+                    className="w-full px-3 py-2 text-xs rounded-card border border-stroke bg-surface-lowest text-tx-primary placeholder:text-tx-muted focus:border-feedback-error focus:ring-1 focus:ring-feedback-error focus:outline-none resize-none"
+                  />
+                </div>
+
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    disabled={isProcessing}
+                    className="w-full py-2.5 px-4 text-xs font-bold rounded-card bg-feedback-error text-white hover:bg-feedback-error/90 shadow-sm hover:shadow transition-all disabled:opacity-50 flex items-center justify-center space-x-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-feedback-error"
+                  >
+                    {isProcessing ? (
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    ) : (
+                      <>
+                        <AlertTriangle className="w-4 h-4" />
+                        <span>Reject Slip & Notify Student via SMS/WhatsApp</span>
+                      </>
+                    )}
+                  </button>
+                  <p className="text-[10px] text-tx-muted text-center mt-1.5">
+                    Student receives instant push alert with your specific feedback to re-upload.
+                  </p>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>
+
+        {/* Modal Footer Bar */}
+        <div className="px-5 py-3 border-t border-stroke bg-surface-low flex items-center justify-between text-xs text-tx-muted flex-shrink-0">
+          <span className="font-mono text-[11px]">Audit Protocol: ISO/IEC 27001 Financial Ledger Compliance</span>
+          <button
+            type="button"
+            onClick={onClose}
+            disabled={isProcessing}
+            className="px-4 py-1.5 rounded-card border border-stroke bg-surface-lowest text-tx-secondary hover:text-tx-primary hover:bg-surface-container transition-colors disabled:opacity-50"
+          >
+            Close Viewer
+          </button>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default BankSlipReviewModal;
